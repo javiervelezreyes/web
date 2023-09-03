@@ -1,0 +1,68 @@
+---
+import Config  from '../../config/config.js'
+import Section from '../commons/commons.band.astro'
+
+let quotes = Config.key ('site.home.quotes')
+let tcolor = Config.key ('site.colors.texts.primary')
+let hsize  = Config.key ('site.sizes.large')
+let tsize  = Config.key ('site.sizes.medium')
+---
+<Section light>
+    <div class="ui container">
+      <div class="quotes">
+      {
+        quotes.map (function (quote) {
+          let title   = quote.key ('title')
+          let caption = quote.key ('caption')
+          let icon    = quote.key ('icon')
+          return (
+            <div class="quote hide">
+              <i class={icon}></i>
+              <h1>{title}</h1>
+              <p>{caption}</p>
+            </div>
+          )
+        })
+      }
+      </div>
+    </div>
+
+</Section>
+
+<style define:vars={{ tcolor, hsize, tsize }}>
+  .quote {
+    margin  : 40px auto;
+    padding : 20px 200px;
+    width   : 100%;
+    color   : var(--tcolor);
+  }
+  .quote i  { font-size: 92px;         }
+  .quote h1 { font-size: var(--hsize); }
+  .quote p  { 
+    margin    : 40px auto;
+    font-size : var(--tsize); 
+  }
+
+  .begin {
+    animation: bounceInRight;
+    animation-duration: 1s;
+  }
+  .end {
+    animation: bounceOutLeft;
+    animation-duration: 1s;
+  }
+  .hide { display: none; }
+
+  @media (max-width: 992px) {
+    .quote {
+      padding : 0;
+    }
+  }
+</style>
+
+<script>
+  const READY = 'DOMContentLoaded'
+  const ITEM  = '.quote'
+  
+  document.addEventListener (READY, Animate (ITEM).start)
+</script>

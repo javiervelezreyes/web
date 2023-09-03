@@ -1,0 +1,34 @@
+---
+import Config from '../../../config/config.js'
+import Layout from '../../../layouts/layout.section.astro'
+import Head   from '../../../components/events/interview.head.astro'
+import Body   from '../../../components/events/interview.body.astro'
+
+let { iview } = Astro.props
+
+let title   = Config .key ('site.brand')
+let page    = Config .key ('site.pages.events')
+let section = page   .key ('label')
+let path    = page   .key ('path')
+
+export function getStaticPaths () {
+  let IViews   = Config.key ('site.events.interviews')
+  let iviews   = IViews.key ('items')
+  let response = []
+  for (let iview of iviews) {
+    let draft  = iview.key ('draft')
+    let hidden = iview.key ('hidden')
+    let path   = iview.key ('path')
+    let slug   = path.split ('/').pop ()
+    let params = {slug}
+    let props  = {iview}
+    !draft && !hidden && response.push ({ params, props })
+  }
+  return response
+}
+---
+
+<Layout title={title} section={section} path={path}>
+  <Head iview={iview} />
+  <Body iview={iview} />
+</Layout>

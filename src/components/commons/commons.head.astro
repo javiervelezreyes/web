@@ -1,0 +1,43 @@
+---
+import Config  from '../../config/config.js'
+
+let tsize   = Config.key ('site.sizes.xlarge')
+let csize   = Config.key ('site.sizes.regular')
+let tweight = Config.key ('site.weights.bold')
+let cweight = Config.key ('site.weights.medium')
+let color   = Config.key ('site.colors.texts.primary')
+
+let title   = Astro.props.title
+let caption = Astro.props.caption
+---
+
+<div class="ui center aligned container">
+  <h1 class="title">{title}</h1>
+  <p class="caption">{caption}</p>
+  <div class="separator"></div>
+</div>
+
+<style define:vars={{tsize, csize, tweight, cweight, color}}>
+  .container {
+    margin : 0px auto;
+    color  : var(--color);
+  }
+  .title {
+    font-size   : var(--tsize);
+    font-weight : var(--tweight);
+    line-height : 1.5;
+  }
+  .caption {
+    margin-top  : -15px !important;
+    font-size   : var(--csize);
+    font-weight : var(--cweight);
+    line-height : 1.5;
+  }
+  .separator {
+    width       : 60px;
+    height      : 8px;
+    margin      : 40px auto;
+    text-align  : center;
+    background  : var(--color);
+  }
+</style>

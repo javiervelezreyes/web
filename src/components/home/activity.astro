@@ -1,0 +1,41 @@
+---
+import Config  from '../../config/config.js'
+import Head    from '../commons/commons.head.astro' 
+import Section from '../commons/commons.band.astro'
+import Left    from './activity.left.astro'
+import Right   from './activity.right.astro'
+
+const LEFT  = 'left'
+const RIGHT = 'right'
+
+let activity   = Config  .key ('site.home.activity')
+let title      = activity.key ('title')
+let caption    = activity.key ('caption')
+let activities = [...activity.key ('activities')]
+
+function side (idx) {
+  return !(idx%2) && LEFT || RIGHT
+}
+---
+
+<Head title={title} caption={caption}/>
+
+<Section>
+  <div class="ui middle aligned stackable grid container">
+    { 
+      activities.map (function (activity, idx) {
+        let head  = activity.key ('head')
+        let text  = activity.key ('text')
+        let image = activity.key ('image')
+        let link  = activity.key ('link')
+        let path  = link.key ('path')
+        let open  = link.key ('open')
+        
+        return (
+          (side (idx) == LEFT)  && <Left  head={head} link={path} open={open} text={text} image={image} /> ||
+          (side (idx) == RIGHT) && <Right head={head} link={path} open={open} text={text} image={image} />
+        )
+      })
+    }
+  </div>
+</Section>

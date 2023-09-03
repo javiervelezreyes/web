@@ -1,0 +1,94 @@
+---
+import Config from '../../config/config.js'
+
+let {section} = Astro.props
+let {path   } = Astro.props
+
+let pages  = Config.key ('site.pages')
+let tcolor = Config.key ('site.colors.texts.reverse')
+let hcolor = Config.key ('site.colors.texts.primary')
+let scolor = Config.key ('site.colors.palette.aqua.50')
+let links  = Links (pages)
+
+function Links (pages) {
+  return [...pages]
+    .map (function (page) {
+      let label  = page.key ('label')
+      let path   = page.key ('path')
+      let open   = page.key ('open')
+      let active = label == section 
+      return { label, path, active, open }
+    })
+}
+---
+
+<div class="top">
+  <div class="ui container">
+    <div class="ui stackable two column grid">
+      <div class="column section">
+        <a class="link" href={path}>{section}</a>
+      </div>
+      <div class="column">
+        <div class="links">
+          {
+            links.map (function (link) {
+              let {label}  = link
+              let {path}   = link
+              let {active} = link
+              let {open}   = link
+              return (
+                <>{ open && <a class="item link" active={active} href={path}>{label}</a>}</>
+                <>{!open && <span class="item link">{label}</span>}</>
+              )
+            })
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style define:vars={{ tcolor, hcolor, scolor }}>
+  .top  {
+    height         : 80px;
+    background     : var(--scolor);
+    text-transform : uppercase;
+  }
+  .top .section .link {
+    line-height    : 65px;
+    font-size      : 18px;
+    font-weight    : 900;
+    color          : var(--tcolor);
+  }
+  .top .links {
+    display        : flex;
+    line-height    : 65px;
+    font-size      : 16px;
+    justify-content: space-between;
+  }
+  .top .links .link {
+    color          : var(--tcolor);
+    transition     : all 1s;
+  }
+  .top .links a:hover {
+    color          : var(--hcolor);
+    transition     : all 1s; 
+  }
+  .top .links a[active] {
+    color          : var(--hcolor);
+  }
+
+  @media (max-width: 767px) {
+    .top  {
+      height         : 100%;
+    }
+    .top .section {
+      line-height    : 65px;
+      text-align     : center
+    }
+    .top .links {
+      line-height    : 20px;
+      font-size      : clamp(10px, 4vw, 16px);
+    }
+  }
+</style>

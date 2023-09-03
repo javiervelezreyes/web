@@ -1,0 +1,71 @@
+---
+import Config  from '../../config/config.js'
+
+let pages  = Config.key ('site.pages')
+let links  = Links (pages)
+let tcolor = Config.key ('site.colors.texts.primary')
+let hcolor = Config.key ('site.colors.texts.reverse')
+let scolor = Config.key ('site.colors.surfaces.regular.tertiary')
+
+function Links (pages) {
+  return [...pages]
+    .map (function (page) {
+      let label  = page.key ('label')
+      let path   = page.key ('path')
+      let open   = page.key ('open')
+      let active = label == 'Home'
+      return { label, path, active, open }
+    })
+}
+---
+
+<div class="links">
+  <div class="container">
+    {
+      links.map (function (link) {
+        let {label}  = link
+        let {path}   = link
+        let {active} = link
+        let {open}   = link
+        return (
+          <>{ open && <a class="item link" active={active} href={path}>{label}</a>}</>
+          <>{!open && <span class="item link">{label}</span>}</>
+        )
+      })
+    }
+  </div>
+</div>
+
+
+<style define:vars={{ scolor, tcolor, hcolor }}>
+  .links {
+    background     : var(--scolor);
+  }
+  .links .container {
+    display        : flex;
+    align-items    : center;
+    justify-content: space-around;
+    max-width      : 1127px;
+    margin         : 0 auto;
+  }
+  .links .container .link {
+    padding: 20px 40px;
+    color          : var(--hcolor);
+    text-transform : uppercase;
+    font-size      : 18px;
+    transition     : all 1s;
+  }
+  .links .container a:hover {
+    color          : var(--tcolor);
+    transition     : all 1s;
+  }
+
+  @media (max-width: 768px) {
+    .links .container  {
+      display    : block;
+    }
+    .links .container .link {
+      text-align : center;
+    }
+  }
+</style>

@@ -1,0 +1,50 @@
+---
+import Config  from '../../../../config/config.js'
+import Content from '../../../../helpers/helper.content.js'
+import Layout  from '../../../../layouts/layout.section.astro'
+import Article from '../../../../components/articles/article.astro'
+
+let { category } = Astro.props
+let { serie    } = Astro.props
+let { article  } = Astro.props
+
+let title   = Config .key ('site.brand')
+let page    = Config .key ('site.pages.articles')
+let section = page   .key ('label')
+let path    = page   .key ('path')
+
+export async function getStaticPaths () {
+  let response   = []
+  let categories = Config.key ('site.articles.categories')
+  for (let category of categories) {
+    let series = category.key ('series')  
+    for (let serie of series) {
+      let path     = serie.key ('path')
+      let articles = await Content.getAll (path)
+      for (let article of articles) {
+        let params = {
+          category : category .key ('key'),
+          serie    : serie    .key ('slug'),
+          article  : article.mdata.slug
+        }
+        let props  = { category, serie, article }  
+        let draft  = !!article.mdata.draft
+        !draft && response.push ({ params, props })
+      }
+    }
+  }
+  return response
+}
+---
+
+<Layout title={title} section={section} path={path}>
+  <Article category={category} serie={serie} article={article} />
+</Layout>
+
+
+
+
+
+
+
+

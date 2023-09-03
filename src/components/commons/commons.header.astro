@@ -1,0 +1,90 @@
+---
+import Config  from '../../config/config.js'
+
+let title  = Config .key ('site.brand')
+let logo   = Config .key ('site.logo')
+let mail   = Config .key ('site.links.mail')
+let phone  = Config .key ('site.links.phone')
+let iMail  = mail   .key ('icon')
+let iPhone = phone  .key ('icon')
+let lMail  = mail   .key ('label')
+let lPhone = phone  .key ('label')
+let hMail  = mail   .key ('href')
+let hPhone = phone  .key ('href')
+let year   = (new Date ()).getFullYear ()
+
+let tcolor = Config.key ('site.colors.texts.reverse')
+let scolor = Config.key ('site.colors.surfaces.dark.secondary')
+---
+
+<div class="ui vertical top segment -inverted">
+  <div class="ui two column stackable centered grid container">
+    <div class="floated left aligned column brand">
+      <div class="box">
+        <a class="link" href="/">
+          <span class="logo"><img src={logo} alt="Logo"></span>
+          <span class="title">{title}</span> · 
+          <span class="year">{year}</span>
+        </a>    
+      </div>
+    </div>
+    <div class="floated right aligned eight wide column contacts">
+      <div class="box">
+        <div class="block">
+          <a class="link" href={hMail}>
+            <i class={iMail}></i>
+            <p>{lMail}</p>
+          </a>
+        </div>
+        <div class="block">
+          <a class="link" href={hPhone}>
+            <i class={iPhone}></i>
+            <p>{lPhone}</p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style define:vars={{ tcolor, scolor }}>
+  .top, .top .column {
+    color          : var(--tcolor) !important;
+    background     : var(--scolor) !important;
+  }
+  .top .column {
+    height         : 50px;
+  }
+  .top .column * {
+    display        : inline-block;
+  }
+  .top .box * {
+    margin         : -20px 2px;
+  }
+  .top .box .logo img {
+    position       : relative;
+    top            : -10px;
+    width          : 40px;
+  }
+  .top .box .title,
+  .top .box .year  {
+    font-size      : 14px;
+    text-transform :uppercase;
+  }
+  .top .link {
+    color          : var(--tcolor);
+  }
+
+  @media (max-width: 772px) {
+    .top .contacts {
+      display         : none !important;
+    }
+    .top .brand .box {
+      margin          : 0 auto !important;
+      display         : flex;
+      justify-content : center;
+      align-items     : center;
+      line-height     : 60px;
+    }
+  }
+</style>

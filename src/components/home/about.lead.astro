@@ -1,0 +1,9 @@
+---
+import Config from '../../config/config.js'
+import Lead   from '../commons/commons.lead.astro'
+
+let about   = Config.key ('site.home.about')
+let caption = about .key ('description')
+---
+
+<Lead caption={caption}>

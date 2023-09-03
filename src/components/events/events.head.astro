@@ -1,0 +1,31 @@
+---
+import Config from '../../config/config.js'
+import Head   from '../commons/commons.head.astro'
+import Lead   from '../commons/commons.lead.astro'
+import Mark   from '../commons/commons.mark.astro'
+
+let header  = Config .key ('site.events.header')
+let title   = header .key ('title')
+let caption = header .key ('caption')
+let lead    = header .key ('lead')
+---
+
+
+<div class="head">
+  <div class="title"><Head title={title} caption={caption}/></div>
+  <div class="lead"><Lead class="lead" caption={lead}/></div>
+  <div class="mark"><Mark key="Events"/></div>
+</div>
+
+<style>
+  .head {
+    margin-top : 100px;
+  }
+  .head .lead {
+    margin     : -50px auto;
+    max-width  : 700px;
+  }
+  .head .mark {
+    margin     : 80px auto;
+  }
+</style>

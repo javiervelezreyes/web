@@ -1,0 +1,155 @@
+---
+import Config  from '../../config/config.js'
+import Section from '../commons/commons.section.astro'
+import Box     from '../commons/commons.box.text.astro'
+
+let { talk } = Astro.props
+
+let title   = talk.key ('title')
+let caption = talk.key ('caption')
+let video   = talk.key ('video')
+let author  = talk.key ('author')
+let place   = talk.key ('place')
+let date    = talk.key ('date')
+let time    = talk.key ('time')
+let lead    = talk.key ('lead')
+let talks   = Links (talk)
+let mdata   = [author, place, date, time].join (' · ')
+
+let icon    = Config.key ('site.icons.light.talk')
+let tcolor  = Config.key ('site.colors.texts.primary')
+let lcolor  = Config.key ('site.colors.lines.secondary')
+let tsize   = Config.key ('site.sizes.lite')
+let msize   = Config.key ('site.sizes.short')
+
+function Links (talk) { 
+  let talks = Config.key ('site.events.talks.items')
+  let links = talk  .key ('links')
+  return links.map (function (link) {
+    return [...talks].find (function (talk) {
+      return talk.key ('key') == link
+    })
+  })
+}
+---
+
+<div class="ui container">
+  <div class="talk">
+    <div class="frame">
+      <div class="video">
+        <video class="player" title={title} controls>
+          <source src={video} type="video/mp4">
+          Parece que tu navegador no soporta la reproducción de videos.
+        </video>
+      </div>
+    </div>
+    <div class="mdata">{mdata}</div>
+    <div class="lead">{lead}</div>
+    <div class="links">
+      <div class="head">
+        <Section title="Charlas Relacionadas" caption={caption} icon={icon}/>
+      </div> 
+      <div class="body">
+        {
+          talks.map (function (talk) {
+            let title   = talk.key ('title')
+            let caption = talk.key ('caption')
+            let author  = talk.key ('author')
+            let place   = talk.key ('place')
+            let date    = talk.key ('date')
+            let time    = talk.key ('time')
+            let lead    = talk.key ('lead')
+            let draft   = talk.key ('draft')
+            let path    = talk.key ('path')
+            let mdata   = [author, place, date, time].join (' · ')
+            return (
+              <div class="link">
+                <Box 
+                    title={title}
+                    caption={caption}
+                    mdata={mdata}
+                    lead={lead}
+                    draft={draft}
+                    path={path}
+                    />
+              </div>
+            )
+          })
+        }
+      </div>
+    </div>
+  </div>  
+</div>
+
+<style define:vars={{ tcolor, lcolor, tsize, msize }}>
+  .talk {
+    margin         : 0 20px;
+    color          : var(--tcolor);
+  }
+  .talk .frame {
+    border         : 1px solid var(--lcolor);
+    padding        : 10px;
+    box-shadow     : 0 1px 2px 0 rgba(34,36,38,.15);
+    border-radius  : 5px;
+  }
+  .talk .video {
+    position       : relative;
+    width          : 100%;
+    padding-bottom : 56.25%;
+  }
+  .talk .video .player {
+    position       : absolute;
+    top            : 0;
+    left           : 0;
+    width          : 100%;
+    height         : 100%;
+    border         : 0;
+    border-radius  : 3px;
+  }
+  .talk .mdata {
+    margin         : 30px 0;
+    padding        : 5px;
+    font-size      : var(--msize);
+    border-top     : 1px dotted #ccc;
+    border-bottom  : 1px dotted #ccc; 
+    line-height    : 1.5;
+    text-align     : center;
+  }
+  .talk .lead {
+    margin         : 10px 0;
+    font-size      : var(--tsize);
+    text-align     : justify;
+    line-height    : 1.8;
+  }
+  .talk .links .head {
+    margin          : 50px auto;
+    text-align      : center;
+  }
+  .talk .links .body {
+    display         : flex;
+    justify-content : center;
+    align-items     : flex-start;
+    flex-wrap       : wrap;
+    gap             : 10px;
+    margin          : 20px auto;
+  }
+  .talk .links .body .link {
+    flex            : 0 1 32%;
+  }
+  @media (max-width: 1200px) {
+    .talk .links .body .link {
+      flex          : 0 1 49%;
+    }
+  }
+  @media (max-width: 720px) {
+    .talk .links .body .link {
+      margin        : 0 20px;
+      flex          : 0 1 100%;
+    }
+    .talk .lead {
+      font-size      : 16px;
+      line-height    : 1.8;
+    }
+  }
+</style>
+

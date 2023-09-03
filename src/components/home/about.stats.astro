@@ -1,0 +1,84 @@
+---
+import Config  from '../../config/config.js'
+import Section from '../commons/commons.band.astro'
+
+function Days (year) {
+  let time   = Date.parse (year)
+  let now    = Date.now ()
+  let factor = 1000*60*60*24
+  let days   = (now-time) / factor
+  return days
+}
+
+let stats  = Config.key ('site.home.stats')
+let tcolor = Config.key ('site.colors.texts.primary')
+---
+
+<script>
+  const MAX = 200
+  const MIN = 10
+  const KEY = 'value'
+
+  function counter (node) {
+    let value = + node.getAttribute (KEY)
+    let data  = 0
+    let delta = value / MAX | 0
+    let idx = setInterval (function () {
+       (data < value) && (data = data + delta)
+      !(data < value) && clearInterval (idx)
+      node.innerText = data
+    }, MIN)
+  }
+
+  document
+    .querySelectorAll ('.statistic .value')
+    .forEach (counter)
+</script>
+
+<Section light>
+  <div class="stats">
+    <div class="ui four column doubling stackable grid container">
+      {
+        stats.map (function (stat) {
+          let label = stat.key ('label')
+          let value = stat.key ('value')
+          let days  = Days (value)
+          return (
+            <div class="column">
+              <div class="ui statistic">
+                <div class="days">Días</div>
+                <div class="value" value={days}></div>
+                <div class="label">{label}</div>
+              </div>
+            </div>
+          )
+        })
+      }
+    </div>
+  </div>
+  
+</Section>
+
+<style define:vars={{ tcolor }}>
+  .stats {
+    padding : 80px 0;
+  }
+  .stats .statistic {
+    padding : 20px 0;
+  }
+  .stats .statistic .value {
+    color : var(--tcolor);
+  }
+  .stats .statistic .label {
+    margin : 10px auto !important;
+    color  : var(--tcolor);
+  }
+  .stats .statistic .days {
+    margin         : 10px auto !important;
+    color          : var(--tcolor);
+    font-size      : 20px;
+    text-transform :uppercase;
+  }
+</style>
+
+

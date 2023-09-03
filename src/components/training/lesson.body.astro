@@ -1,0 +1,136 @@
+---
+import Config  from '../../config/config.js'
+import Section from '../commons/commons.section.astro'
+import Box     from '../commons/commons.box.link.astro'
+
+let { course } = Astro.props
+let { lesson } = Astro.props
+let { index  } = Astro.props
+
+let title    = lesson.key ('title')
+let caption  = course.key ('title')
+let video    = lesson.key ('video')
+let lessons  = course.key ('lessons')
+let category = course.key ('caption')
+let author   = course.key ('author')
+let time     = lesson.key ('time')
+let lead     = course.key ('lead')
+let head     = 'Lección ' + index
+let mdata    = [head, category, author, time].join (' · ')
+
+let icon     = Config.key ('site.icons.light.class')
+let tcolor   = Config.key ('site.colors.texts.primary')
+let lcolor   = Config.key ('site.colors.lines.secondary')
+let tsize    = Config.key ('site.sizes.lite')
+let msize    = Config.key ('site.sizes.short')
+---
+
+<div class="ui container">
+  <div class="lesson">
+    <div class="frame">
+      <div class="video">
+        <video class="player" title={title} controls>
+          <source src={video} type="video/mp4">
+          Parece que tu navegador no soporta la reproducción de videos.
+        </video>
+      </div>
+    </div>
+    <div class="mdata">{mdata}</div>
+    <div class="lead">{lead}</div>
+    <div class="lessons">
+      <div class="head">
+        <Section title="Lecciones del Curso" caption={caption} icon={icon}/>
+      </div> 
+      <div class="body">
+        {
+          lessons.map (function (lesson, idx) {
+            let title = lesson.key ('title')
+            let index = 'Lección ' + (1 + idx)
+            let time  = lesson.key ('time')
+            let draft = lesson.key ('draft')
+            let path  = course.key ('path') + '/' + (1 + idx)
+            let mdata = [index, author, time].join (' · ')
+            return (
+              <div class="link">
+                <Box 
+                  title={title}
+                  caption={caption}
+                  mdata={mdata}
+                  draft={draft}
+                  path={path} />
+              </div>
+            )
+          })
+        }
+      </div>
+    </div>
+  </div>  
+</div>
+
+<style define:vars={{ tcolor, lcolor, tsize, msize }}>
+  .lesson {
+    margin         : 0 20px;
+    color          : var(--tcolor);
+  }
+  .lesson .frame {
+    border         : 1px solid var(--lcolor);
+    padding        : 10px;
+    box-shadow     : 0 1px 2px 0 rgba(34,36,38,.15);
+    border-radius  : 5px;
+  }
+  .lesson .video {
+    position       : relative;
+    width          : 100%;
+    padding-bottom : 56.25%;
+  }
+  .lesson .video .player {
+    position       : absolute;
+    top            : 0;
+    left           : 0;
+    width          : 100%;
+    height         : 100%;
+    border         : 0;
+    border-radius  : 3px;
+  }
+  .lesson .mdata {
+    margin         : 30px 0;
+    padding        : 5px;
+    font-size      : var(--msize);
+    border-top     : 1px dotted #ccc;
+    border-bottom  : 1px dotted #ccc; 
+    line-height    : 1.5;
+    text-align     : center;
+  }
+  .lesson .lead {
+    margin         : 10px 0;
+    font-size      : var(--tsize);
+    text-align     : justify;
+    line-height    : 1.8;
+  }
+  .lesson .lessons .head {
+    margin          : 50px auto;
+    text-align      : center;
+  }
+  .lesson .lessons .body {
+    display         : flex;
+    justify-content : center;
+    align-items     : flex-start;
+    flex-wrap       : wrap;
+    gap             : 10px;
+    margin          : 20px auto;
+  }
+  .lesson .lessons .body .link {
+    flex          : 0 1 49%;
+  }
+  @media (max-width: 1050px) {
+    .lesson .lessons .body .link {
+      margin        : 0 20px;
+      flex          : 0 1 100%;
+    }
+    .lesson .lead {
+      font-size      : 16px;
+      line-height    : 1.8;
+    }
+  }
+</style>
+

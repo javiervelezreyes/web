@@ -1,0 +1,103 @@
+---
+import Config  from '../../config/config.js'
+import Head    from '../commons/commons.head.astro' 
+import Section from '../commons/commons.band.astro'
+
+let contact  = Config   .key ('site.home.contact')
+let title    = contact  .key ('title')
+let caption  = contact  .key ('caption')
+let channels = contact  .key ('channels')
+let web      = channels .key ('web')
+let phone    = channels .key ('phone')
+let mail     = channels .key ('mail')
+let wtitle   = web      .key ('title')
+let wicon    = web      .key ('icon')
+let wlinks   = web      .key ('links')
+let ptitle   = phone    .key ('title')
+let picon    = phone    .key ('icon')
+let plinks   = phone    .key ('links')
+let mtitle   = mail     .key ('title')
+let micon    = mail     .key ('icon')
+let mlinks   = mail     .key ('links')
+
+let scolor   = Config.key ('site.colors.surfaces.light.primary')
+let tcolor   = Config.key ('site.colors.texts.primary')
+---
+
+<Head title={title} caption={caption}/>
+
+<Section>
+  <div class="ui three column stackable grid">
+    <div class="column">
+      <div class="ui center aligned segment">
+        <div class="contact">
+          <h2 class="header">{wtitle}</h2>
+          <div class="icon"><i class={wicon}></i></div>
+          <div> 
+          {
+            wlinks.map (function (wlink) {
+              let label = wlink.key ('label')
+              let ref   = wlink.key ('href')
+              return <a class="link" href={ref}>{label}</a>
+            })
+          }
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="column">
+      <div class="ui center aligned segment">
+        <div class="contact">
+          <h2 class="header">{ptitle}</h2>
+          <div class="icon"><i class={picon}></i></div>
+          <div> 
+            {
+              plinks.map (function (plink) {
+                let label = plink.key ('label')
+                let ref   = plink.key ('href')
+                return <a class="link" href={ref}>{label}</a>
+              })
+            }
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="column">
+      <div class="ui center aligned segment">
+        <div class="contact">
+          <h2 class="header">{mtitle}</h2>
+          <div class="icon"><i class={micon}></i></div>
+          <div> 
+            {
+              mlinks.map (function (mlink) {
+                let label = mlink.key ('label')
+                let ref   = mlink.key ('href')
+                return <a class="link" href={ref}>{label}</a>
+              })
+            }
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</Section>
+
+<style define:vars={{ scolor, tcolor }}>
+  .segment {
+    margin     : 0 auto !important;
+    height     : 180px ;
+    max-width  : 360px;
+    background : var(--scolor) !important;
+    color      : var(--tcolor) !important;
+  }
+  .contact   { margin    : 20px auto; }
+  .contact p { font-size : 16px;      }
+  .contact .icon {
+    margin     : 10px auto; 
+    font-size  : 28px;
+  }
+  .contact .link {
+    margin     : 0 5px;
+    color      : inherit;
+  }
+</style>

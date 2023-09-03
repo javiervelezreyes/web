@@ -1,0 +1,70 @@
+---
+import Config  from '../../config/config.js'
+import Section from '../commons/commons.band.astro'
+
+let hlights = Config.key ('site.home.highlights')
+let scolor  = Config.key ('site.colors.surfaces.light.primary')
+let lcolor  = Config.key ('site.colors.lines.tertiary')
+let tcolor  = Config.key ('site.colors.texts.primary')
+let hsize   = Config.key ('site.sizes.medium')
+let tsize   = Config.key ('site.sizes.short')
+---
+
+<Section>
+  <div class="hlights">
+    <div class="ui four column doubling stackable grid container">
+      <div class="row">
+        {
+          hlights.map (function (hlight) {
+            let icon = hlight.key ('icon')
+            let head = hlight.key ('head')
+            let text = hlight.key ('text')
+            return (
+              <div class="column">
+                <div class="icon">
+                  <i class={icon}></i>
+                </div> 
+                <h3 class="head">{head}</h3>
+                <p class="text">{text}</p>
+              </div>
+            )
+          })
+        }
+      </div>
+    </div>
+  </div>
+</Section>
+
+<style define:vars={{ scolor, lcolor, tcolor,  hsize, tsize }}>
+  .hlights .icon {
+    width          : 100px;
+    height         : 100px;
+    margin         : 0 auto;
+    border         : 1px solid var(--lcolor);
+    border-radius  : 100%;  
+    text-align     : center;
+    vertical-align : middle;
+    background     : var(--scolor);
+  }
+  .hlights .icon {
+    font-size   : 50px;
+    font-weight : 100;
+    line-height : 100px;
+    color       : var(--tcolor);
+  }
+  .hlights .head {
+    font-size      : var(--hsize);
+    text-transform : uppercase;
+  }
+  .hlights .text {
+    font-size : var(--tsize);
+  }
+
+  @media (max-width: 768px) {
+    .hlights .text {
+      max-width : 250px;
+      margin    : 0 auto;
+    }
+  }
+</style>
+

@@ -1,0 +1,73 @@
+---
+import Config  from '../../config/config.js'
+
+let { title   } = Astro.props
+let { caption } = Astro.props
+let { image   } = Astro.props
+
+let color = Config.key ('site.colors.texts.primary')
+let hsize = Config.key ('site.sizes.xlarge')
+let csize = Config.key ('site.sizes.big')
+---
+
+<div class="ui container">
+  <div class="error">
+    <div class="image">
+      <img src={image} alt={caption}>
+    </div>
+    <div class="message">
+      <h1 class="title">{title}</h1>
+      <h2 class="caption">{caption}</h2>
+    </div>
+    <div class="action">
+      <a href="/" class="massive ui button">Volver a la Web</a>
+    </div>
+  </div>
+</div>
+
+<style define:vars={{ color, hsize, csize }}>
+  .container {
+    position    : relative;
+    height      : 80vh;
+  }
+  .error {
+    position    : absolute;
+    top         : 50%;
+    margin      : 0 auto;
+    width       : 80%;
+    color       : var(--color);
+    text-align  : center;
+    transform   : translate(15%, -40%);
+    text-align  : center;
+  }
+  .error .image {
+    margin      : 0 auto;
+  }
+  .error .image img {
+    width       : 100%; 
+    height      : 100%; 
+  }
+  .error .message {
+    margin      : 0 auto;
+  }
+  .error .message .title {
+    font-size   : var(--hsize);
+  }
+  .error .message .caption {
+    margin-top  : -10px;
+    font-size   : var(--csize);
+  } 
+  .error .action {
+    margin-top  : 50px;
+  }
+
+  @media (max-width: 720px) {
+    .error .message .title {
+      font-size   : 9.5vw;
+    }
+    .error .message .caption {
+      font-size   : 5.5vw;
+      margin : auto;
+    } 
+  }
+</style>

@@ -1,0 +1,23 @@
+---
+import Config  from '../../config/config.js'
+import Head    from '../commons/commons.head.astro' 
+import Lead    from './about.lead.astro'
+import HLights from './about.hlights.astro' 
+import Stats   from './about.stats.astro'
+
+let about   = Config.key ('site.home.about')
+let title   = about .key ('title')
+let caption = about .key ('caption')
+---
+
+<div class="about">
+  <div class="head"><Head title={title} caption={caption}/></div>
+  <div class="lead"><Lead/></div>
+  <div class="hlights"><HLights/></div>
+  <div class="stats"><Stats/></div>
+</div>
+
+<style>
+  .about .head    { margin-top    : 100px; }
+  .about .hlights { margin-bottom : 100px; }
+</style>

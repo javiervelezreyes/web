@@ -1,0 +1,26 @@
+---
+import Config from '../../config/config.js'
+
+let {key} = Astro.props
+
+let activities = Config.key ('site.home.activity.activities')
+let activity   = activities.key (key)
+let head       = activity  .key ('head')
+let image      = activity  .key ('image')
+
+---
+<div class="ui container mark">
+  <div class="image">
+    <img src={image} alt={head}>
+  </div>
+</div>
+
+<style>
+  .mark .image {
+    margin     : 0 auto !important;
+    text-align : center;
+  }
+  .mark .image img {
+    width      : 300px;
+  }
+</style>

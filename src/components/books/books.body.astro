@@ -1,0 +1,41 @@
+---
+import Config  from '../../config/config.js'
+import Left    from '../commons/commons.box.image.left.astro'
+import Right   from '../commons/commons.box.image.right.astro'
+
+const LEFT   = 'left'
+const RIGHT  = 'right'
+
+let catalog = [...Config.key ('site.books.catalog')]
+
+function side (idx) {
+  return !(idx%2) && LEFT || RIGHT
+}
+---
+
+<div class="ui container catalog">
+  { 
+    catalog.map (function (book, idx) {
+      let title   = book.key ('title')
+      let caption = book.key ('caption')
+      let author  = book.key ('author')
+      let pages   = book.key ('pages') + ' páginas'
+      let icon    = book.key ('icon')
+      let image   = book.key ('image')
+      let path    = book.key ('path')
+      let lead    = book.key ('lead')
+      let draft   = book.key ('draft')
+      let mdata   = [caption, author, pages].join (' · ')
+      return (
+        (side (idx) == LEFT)  && <Left  title={title} caption={caption} icon={icon} image={image} mdata={mdata} lead={lead} path={path} draft={draft} /> ||
+        (side (idx) == RIGHT) && <Right title={title} caption={caption} icon={icon} image={image} mdata={mdata} lead={lead} path={path} draft={draft} />
+      )
+    })
+  }
+</div>
+
+<style>
+  .categories {
+    margin : 50px auto;
+  }
+</style>

@@ -1,0 +1,52 @@
+---
+import Config from '../../config/config.js'
+import Head   from '../commons/commons.head.astro'
+import Mark   from '../commons/commons.mark.astro'
+
+let { category } = Astro.props
+
+let title   = category.key ('title')
+let caption = category.key ('caption')
+let lead    = category.key ('lead')
+let tags    = [...category.key ('tags')].join (' · ')
+
+let tcolor  = Config.key ('site.colors.texts.primary')
+let scolor  = Config.key ('site.colors.surfaces.light.tertiary')
+let lsize   = Config.key ('site.sizes.medium')
+let msize   = Config.key ('site.sizes.short')
+---
+
+<div class="ui container">
+  <div class="category">
+    <div class="head"><Head title={title} caption={caption}/></div>
+    <div class="lead">{lead}</div>
+    <div class="mdata">{tags}</div>
+    <div class="mark"><Mark key="Articles"/></div>
+  </div>
+</div>
+
+<style define:vars={{ tcolor, scolor, lsize, msize }}>
+  .category {
+    margin          : 100px 20px;
+    color           : var(--tcolor);
+  }
+  .category .lead {
+    font-size       : var(--lsize);
+    font-weight     : 100;
+    line-height     : 1.5;
+    text-align      : justify;
+  }
+  .category .mdata {
+    margin-top      : 30px;
+    padding         : 10px;
+    border-top      : 1px dotted #ccc;
+    border-bottom   : 1px dotted #ccc;
+    font-size       : var(--msize);
+    font-weight     : 100;
+    line-height     : 1.5;
+    text-align      : center;
+  }
+  .category .mark {
+    margin          : 50px auto;
+  }
+</style>

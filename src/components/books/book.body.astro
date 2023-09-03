@@ -1,0 +1,87 @@
+---
+import Config  from '../../config/config.js'
+import Section from '../commons/commons.section.astro'
+import Box     from '../commons/commons.box.link.astro'
+
+let { book } = Astro.props
+
+let title   = book.key ('title')
+let caption = book.key ('caption')
+let image   = book.key ('image')
+let author  = book.key ('author')
+let pages   = book.key ('pages')
+let lead    = book.key ('lead')
+let path    = book.key ('path')
+let draft   = book.key ('draft')
+let mdata   = [caption, author, pages].join (' · ')
+
+let tcolor  = Config.key ('site.colors.texts.primary')
+let lcolor  = Config.key ('site.colors.lines.secondary')
+let tsize   = Config.key ('site.sizes.lite')
+let msize   = Config.key ('site.sizes.short')
+---
+
+<div class="ui container">
+  <div class="book">
+    <div class="frame">
+      <div class="image">
+        <img src={image} alt={title}>
+      </div>
+    </div>
+    <div class="mdata">{mdata}</div>
+    <div class="lead">{lead}</div>
+    <div class="start">
+      {!draft && <a href={path} class="massive ui big button">Descargar</a> } 
+      {draft  && <a href={path} class="massive ui big button disabled">Proximamente</a> } 
+    </div>
+  </div>  
+</div>
+
+<style define:vars={{ tcolor, lcolor, tsize, msize }}>
+  .book {
+    margin         : 0 20px;
+    color          : var(--tcolor);
+  }
+  .book .frame {
+    width          : 50%;
+    margin         : 0 auto;
+    padding        : 10px;
+    border         : 1px solid var(--lcolor);
+    box-shadow     : 0 1px 2px 0 rgba(34,36,38,.15);
+    border-radius  : 5px;
+  }
+  .book .image {
+    -height         : 100% !important;
+  }
+  .book .image img {
+    width          : 100%;
+    height         : 100%;
+    object-fit     : cover;
+  }
+  .book .mdata {
+    margin         : 30px 0;
+    padding        : 5px;
+    font-size      : var(--msize);
+    border-top     : 1px dotted #ccc;
+    border-bottom  : 1px dotted #ccc; 
+    line-height    : 1.5;
+    text-align     : center;
+  }
+  .book .lead {
+    margin         : 10px 0;
+    font-size      : var(--tsize);
+    text-align     : justify;
+    line-height    : 1.8;
+  }
+  .book .start {
+    margin         : 50px auto;
+    text-align: center;
+  }
+  @media (max-width: 1050px) {
+    .book .lead {
+      font-size    : 16px;
+      line-height  : 1.8;
+    }
+  }
+</style>
+

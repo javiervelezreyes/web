@@ -1,0 +1,18 @@
+---
+import Document from './commons/layout.document.astro'
+import Head     from './commons/layout.head.astro'
+import Page     from './commons/layout.page.astro'
+import Header   from '../components/commons/commons.header.astro'
+import Footer   from '../components/commons/commons.footer.astro'
+
+let { title } = Astro.props
+---
+
+<Document>
+	<Head title={title}/>
+	<Page>
+		<Header/>
+		<slot/>
+		<Footer/>
+	</Page>
+</Document>

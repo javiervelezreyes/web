@@ -1,0 +1,112 @@
+---
+import Config from '../../config/config.js'
+
+let { title   } = Astro.props 
+let { caption } = Astro.props
+let { icon    } = Astro.props
+let { mdata   } = Astro.props
+let { lead    } = Astro.props
+let { path    } = Astro.props
+
+let tcolor  = Config.key ('site.colors.texts.primary')
+let lcolor  = Config.key ('site.colors.lines.secondary')
+let hsize   = Config.key ('site.sizes.large')
+let csize   = Config.key ('site.sizes.regular')
+let tsize   = Config.key ('site.sizes.regular')
+---
+
+<div class="right">
+  <div class="box">
+    <div class="head">
+      <div class="content">
+        <div class="title">{title}</div>
+        <div class="caption">{caption}</div>
+      </div>
+      <div class="icon"><i class={icon}></i></div>
+    </div>
+    <div class="body">
+      <div class="mdata">{mdata}</div>
+      <div class="lead">{lead}</div>
+      <div class="actions">
+        <a class="ui big button" href={path}>Acceder</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<style define:vars={{ tcolor, lcolor, hsize, csize, tsize }}>
+  .right {
+    display         : flex;
+    justify-content : end;
+    align-items     : center;
+  }
+  .box {
+    width           : 100%;
+    margin-top      : 30px;
+    padding         : 20px;
+    color           : var(--tcolor);
+    border          : 1px solid var(--lcolor);
+    box-shadow      : 0 1px 2px 0 rgba(34,36,38,.15);
+    border-radius   : 5px;
+  }
+  .box .head {
+    text-align      : right;
+  }
+  .box .head .icon {
+    display         : inline-block;
+    margin          : 0 20px;
+    font-size       : 70px;
+    font-weight     : 200;
+  }
+  .box .head .content {
+    display         : inline-block;
+  }
+  .box .head .content .title {
+    font-size       : var(--hsize);
+    font-weight     : 600;
+    line-height     : 1.5;
+  }
+  .box .head .content .caption {
+    font-size       : var(--csize);
+    font-weight     : 600;
+    line-height     : 1.5;
+  }
+  .box .body {
+    position        : relative;
+    margin          : 20px;
+  }
+  .box .body .mdata {
+    font-size       : var(--tsize);
+    font-size       : 16px;
+    border-top      : 1px dotted #ccc;
+    border-bottom   : 1px dotted #ccc;
+    padding         : 5px 0;
+    line-height     : 1.5;
+    text-align      : center;
+  }
+  .box .body .lead {
+    height          : 165px;
+    margin          : 20px 0;
+    font-size       : 18px;
+    line-height     : 1.5;
+    text-align      : justify;
+    overflow        : hidden;
+  }
+  .box .body .actions {
+    text-align: right;
+  }
+
+  @media (max-width : 715px) {
+    .box .head .icon  {
+      display         : block;
+      font-size       : 10vw !important;
+    }
+    .box .head .title {
+      font-size       : 6vw !important;
+    }
+    .box .head .caption {
+      font-size       : 3vw !important;
+    }
+  }
+</style>

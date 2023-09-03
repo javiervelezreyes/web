@@ -1,0 +1,117 @@
+---
+import Config  from '../../config/config.js'
+import Section from '../commons/commons.section.astro'
+import Box     from '../commons/commons.box.image.astro'
+
+let Talks  = Config.key ('site.events.talks')
+let IViews = Config.key ('site.events.interviews')
+
+let talks  = {
+  title   : Talks.key ('title'),
+  caption : Talks.key ('caption'),
+  icon    : Talks.key ('icon'),
+  items   : [...Talks.key ('items')].filter (isHidden)
+}
+let iviews = {
+  title   : IViews.key ('title'),
+  caption : IViews.key ('caption'),
+  icon    : IViews.key ('icon'),
+  items   : [...IViews.key ('items')].filter (isHidden)
+}
+
+function isHidden (item) {
+  return !item.key ('hidden')
+}
+---
+
+<div class="ui container events">
+  <div class="head">
+    <Section title={talks.title} caption={talks.caption} icon={talks.icon}/>
+  </div>
+  <div class="talks">
+    {
+      talks.items.map (function (item) {
+        let title   = item.key ('title')
+        let caption = item.key ('caption')
+        let image   = item.key ('image')
+        let place   = item.key ('place')
+        let date    = item.key ('date')
+        let time    = item.key ('time')
+        let lead    = item.key ('lead')
+        let path    = item.key ('path')
+        let draft   = !!item.key ('draft')
+        let mdata   = [place, date, time].join (' · ')
+        return (
+          <div class="talk">
+            <Box 
+              title={title} 
+              caption={caption} 
+              image={image} 
+              mdata={mdata} 
+              lead={lead} 
+              path={path}
+              draft={draft} />
+          </div> 
+        )
+      })
+    }
+  </div>
+  <div class="head">
+    <Section title={iviews.title} caption={iviews.caption} icon={iviews.icon}/>
+  </div>
+  <div class="interviews">
+    {
+      iviews.items.map (function (item) {
+        let title   = item.key ('title')
+        let caption = item.key ('caption')
+        let image   = item.key ('image')
+        let place   = item.key ('place')
+        let date    = item.key ('date')
+        let time    = item.key ('time')
+        let lead    = item.key ('lead')
+        let path    = item.key ('path')
+        let draft   = item.key ('draft')
+        let mdata   = [place, date, time].join (' · ')
+        return (
+          <div class="interview">
+            <Box 
+              title={title} 
+              caption={caption}
+              image={image} 
+              mdata={mdata} 
+              lead={lead} 
+              path={path}
+              draft={draft} />
+          </div> 
+        )
+      })
+    }
+  </div>
+</div> 
+
+<style>
+  .events .head {
+    margin          : 100px auto 50px auto;
+    text-align      : center;
+  }
+  .events .talks,
+  .events .interviews {
+    display         : flex;
+    justify-content : center;
+    align-items     : flex-start;
+    flex-wrap       : wrap;
+    gap             : 10px;
+    margin          : 20px auto;
+  }
+  .events .talks .talk,
+  .events .interviews .interview {
+    flex            : 0 1 49%;
+  }
+  @media (max-width: 720px) {
+    .events .talks .talk,
+    .events .interviews .interview {
+      margin        : 0 20px;
+      flex          : 0 1 100%;
+    }
+  }
+</style>

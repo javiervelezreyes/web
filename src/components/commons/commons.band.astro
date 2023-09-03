@@ -1,0 +1,34 @@
+---
+import Config from '../../config/config.js'
+
+let slight = Config.key ('site.colors.surfaces.light.primary')
+let sdark  = Config.key ('site.colors.surfaces.dark.secondary')
+let llight = Config.key ('site.colors.lines.secondary')
+let ldark  = Config.key ('site.colors.lines.primary')
+let tlight = Config.key ('site.colors.texts.primary')
+let tdark  = Config.key ('site.colors.texts.reverse')
+
+let light = Astro.props.light
+let dark  = Astro.props.dark
+
+let scolor = light && slight || dark && sdark
+let lcolor = light && llight || dark && ldark
+let tcolor = light && tlight || dark && tdark
+---
+
+<div class="section">
+  <div class="ui center aligned container">
+    <slot/>  
+  </div>
+</div>
+
+
+<style define:vars={{scolor, lcolor, tcolor}}>
+  .section {
+    width      : 100% !important;
+    margin     : 80px 0;
+    border     : 1px solid var(--lcolor) !important;
+    background : var(--scolor) !important;
+    color      : var(--tcolor) !important;
+  }
+</style>

@@ -1,0 +1,104 @@
+---
+import Config  from '../../config/config.js'
+
+let { title   } = Astro.props
+let { caption } = Astro.props
+let { image   } = Astro.props
+let { mdata   } = Astro.props
+let { lead    } = Astro.props
+let { path    } = Astro.props
+let draft       = !!Astro.props.draft
+
+let tcolor = Config.key ('site.colors.texts.primary')
+let lcolor = Config.key ('site.colors.lines.secondary')
+let hsize  = Config.key ('site.sizes.regular')
+let csize  = Config.key ('site.sizes.xshort')
+let tsize  = Config.key ('site.sizes.medium')
+---
+
+<div class="box">
+  {draft && <span class="ribon">Próximamente</span> }
+  <div class="head">
+    <div class="title">{title}</div>
+    <div class="caption">{caption}</div>
+    <div class="image">
+      {!draft && <a href={path}><img src={image} alt={title}></a> } 
+      {draft  && <img class="draft" src={image} alt={title}> } 
+    </div>
+  </div>
+  <div class="body">
+    <div class="mdata">{mdata}</div>
+    <div class="lead">{lead}</div>
+    <div class="actions">
+      {draft  && <a class="ui button disabled" href={path}>Próximamente</a> } 
+      {!draft && <a class="ui button"          href={path}>Acceder</a> } 
+    </div>
+  </div>
+</div>
+
+<style define:vars={{ tcolor, lcolor, hsize, csize, tsize }}>
+  .box {
+    position        : relative;
+    width           : 100%;
+    padding         : 20px;
+    color           : var(--tcolor);
+    border          : 1px solid var(--lcolor);
+    box-shadow      : 0 1px 2px 0 rgba(34,36,38,.15);
+    border-radius   : 5px;
+  }
+  .box .ribon {
+    position        : absolute;
+    right           : 20px;
+    top : 110px;
+    padding         : 5px 15px;
+    font-size       : 16px;
+    color           : #fff;
+    background      : #2f8ae0;
+    border-top-left-radius    : 15px;
+    border-bottom-left-radius : 15px;
+    display         : none;
+  }
+  .box .head {
+    display         : inline-block;
+    width           : 100%;
+  }
+  .box .head .title {
+    font-size       : var(--hsize);
+    font-weight     : 600;
+    line-height     : 1.5;
+  }
+  .box .head .caption {
+    font-size       : var(--csize);
+    font-weight     : 100;
+    line-height     : 1.5;
+  }
+  .box .head .image {
+    width           : 100%;
+    height          : 300px;
+  }
+  .box .head .image  img {
+    width           : 100%;
+    height          : 100%;
+    margin-top      : 10px;
+    object-fit      : cover !important;
+    border-radius   : 3px;
+  }
+  
+  .box .body .mdata {
+    font-size       : 14px;
+    border-top      : 1px dotted #ccc;
+    border-bottom   : 1px dotted #ccc;
+    margin          : 10px 0;
+    padding         : 5px 0;
+    line-height     : 1.5;
+    text-align      : left;
+  }
+  .box .body .lead {
+    height          : 80px;
+    margin          : 20px 0;
+    font-size       : 18px;
+    line-height     : 1.5;
+    text-align      : justify;
+    overflow        : hidden;
+  }
+</style>

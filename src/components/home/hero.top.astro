@@ -1,0 +1,212 @@
+---
+import Config from '../../config/config.js'
+
+let title   = Config.key ('site.home.header.title')
+let mark    = Config.key ('site.home.header.watermark')
+let image   = Config.key ('site.home.header.image')
+let caption = Config.key ('site.home.header.caption')
+let links   = Config.key ('site.home.header.links')
+let figures = Config.key ('site.home.header.figures')
+
+let scolor  = Config.key ('site.colors.surfaces.dark.primary')
+let rcolor  = Config.key ('site.colors.texts.reverse')
+let tcolor  = Config.key ('site.colors.palette.gray.70')
+let bcolor  = Config.key ('site.colors.palette.aqua.50')
+---
+
+  <div class="hero">
+    <div class="image">
+      <img src={image} alt={title}>
+    </div>
+    <div class="watermark">{mark}</div>
+    <div class="figures">
+      {
+        figures.map (function (figure) {
+          let ref   = figure.key ('ref')
+          let title = figure.key ('title')
+          return (
+            <div class="figure hide">
+              <img src={ref} alt={title}>
+            </div>
+          )
+        })
+      }
+    </div>
+    <div class="about">
+      <h1 class="title">Javier Vélez Reyes</h1>
+      <h2 class="caption">{caption}</h2>
+      <h3 class="follow">Sígueme</h3>
+      <ul class="links">
+        {
+          links.map (function (link) {
+            let ref  = link.key ('href')
+            let icon = link.key ('icon')
+            return (
+              <li>
+                <a href={ref} target="_blank">
+                  <i class={icon}></i>
+                </a>
+              </li>
+            )
+          })
+        }
+      </ul>
+    </div>
+  </div>
+
+<style define:vars={{ scolor, bcolor, tcolor, rcolor }}>
+  .hero {
+    position        : relative;
+    height          : 900px;
+    background      : var(--scolor);
+    user-select     : none;
+  }
+  .hero img {
+    pointer-events: none;
+  }
+  .hero .image {
+    position        : absolute;
+    top             : 103px;
+    left            : calc(50% - 783px);
+    
+  }
+  .hero .watermark {
+    padding         : 250px 20px;
+    overflow-x      : hidden;
+    white-space     : nowrap;
+    font-size       : 400px;
+    font-weight     : 900;
+    color           : rgba(255, 255, 255, .01);
+  }
+  .hero .about {
+    position        : absolute;
+    top             : 320px;    
+    left            : 100px;    
+    width           : 600px;
+  }
+  .hero .about .title {
+    position        : relative;
+    font-size       : 110px;
+    text-align      : right;
+    color           : var(--rcolor);
+  }
+  .hero .about .caption {
+    position        : relative;
+    margin-left     : 20px;
+    width           : 460px;
+    font-size       : 20px !important;
+    font-weight     : 100 !important;
+    text-align      : left;
+    line-height     : 1.5;
+    color           : rgba(255, 255, 255, .7) !important;
+  }
+  .hero .about .follow {
+    position        : relative;
+    margin          : 50px 0 0 20px;
+    font-size       : 20px !important;
+    font-weight     : 900 !important;
+    text-transform  : uppercase;
+    color           : var(--rcolor) !important;
+  }
+  .hero .about .links {  
+    position        : relative;
+    margin-left     : 20px;
+    padding         : 0;
+    font-size       : 20px;
+    list-style      : none;
+  }
+  .hero .about .links li {
+    display         : inline;
+    margin-right    : 10px;
+  }
+  .hero .about .links a {
+    color           : var(--rcolor) !important;
+  }
+  .hero .figures {
+    position        : absolute;
+    width           : 50%;
+    top             : 100px;
+    left            : 50vw;
+  }
+  .hero .figure {
+    position        : relative;
+    width           : 800px;
+    margin          : 0 auto;
+  }
+  .hero .figure img {
+    width: 90%;
+  }
+  .begin {
+    animation          : fadeIn;
+    animation-duration : 1s;
+  }
+  .end {
+    animation          : fadeOut;
+    animation-duration : 1s;
+  }
+  .hide { display: none; }
+
+  @media (max-width: 1550px) {
+    .hero .image {
+      left    : calc(90% - 783px);
+    }
+    .hero .figures {
+      display : none;
+    }
+  }
+  @media (max-width: 730px) {
+    .hero .about {
+      position : absolute;
+      top      : 70px !important;  
+    }
+    .hero .image img {
+      position  : relative;
+      bottom    : -400px;
+      left      : 50%;
+      width     : 50%;
+      min-width : 50px;
+    }
+    .hero .about {
+      position        : absolute;
+      top             : 110px;    
+      left            : 0;    
+      width           : 100%;
+      padding         : 0 20px;
+    }
+    .hero .about .title {
+      font-size: 15vw !important;
+    }
+  }
+
+  @media (max-width: 450px) {
+    .hero {
+      height: 800px;
+    }
+    .hero .about .title,
+    .hero .about .follow,
+    .hero .about .links {
+      text-align: center;
+    }
+    .hero .about .links {
+      padding-left: 10px !important;
+    }
+    .hero .about .caption {
+      display: none
+    }
+    .hero .image img {
+      position  : relative;
+      bottom    : -300px;
+      left      : 50%;
+      width     : 50%;
+      min-width : 50px;
+    }
+  }
+</style>
+
+<script>
+  const READY = 'DOMContentLoaded'
+  const ITEM  = '.figure'
+  
+  document.addEventListener (READY, Animate (ITEM).start)
+</script>
+

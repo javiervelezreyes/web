@@ -1,0 +1,20 @@
+---
+import Head from '../commons/commons.head.astro'
+
+let { iview } = Astro.props
+
+let title   = iview.key ('title')
+let caption = iview.key ('caption')
+---
+
+<div class="ui container">
+  <div class="interview">
+    <div class="head"><Head title={title} caption={caption}/></div>
+  </div>
+</div>
+
+<style>
+  .interview {
+    margin-top: 100px;
+  }
+</style>

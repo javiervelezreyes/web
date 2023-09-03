@@ -1,0 +1,15 @@
+---
+import Config from '../config/config.js'
+import Layout from '../layouts/layout.home.astro'
+import Error  from '../components/commons/commons.error.astro'
+
+let brand = Config.key ('site.brand')
+---
+
+<Layout title={brand}>
+  <Error 
+    title="La página que buscas no existe" 
+    caption="Será mejor que demos marcha atrás" 
+    image="/images/home/404.png" />
+</Layout>
+

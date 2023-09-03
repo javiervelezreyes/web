@@ -1,0 +1,25 @@
+---
+import Config  from '../../config/config.js'
+import Section from './commons.band.astro'
+
+let tsize     = Config.key ('site.sizes.medium')
+let tweight   = Config.key ('site.weights.light')
+let {caption} = Astro.props
+---
+
+<Section>
+  <div class="lead">
+    <p>{caption}</p>
+  </div>
+</Section>
+
+<style define:vars={{ tsize, tweight }}>
+  .lead {
+    margin      : 40px auto;
+    font-size   : var(--tsize);
+    font-weight : var(--tweight);
+  }
+  .lead p {
+    line-height : 35px;
+  }
+</style>

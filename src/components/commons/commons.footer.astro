@@ -1,0 +1,99 @@
+---
+import Config from '../../config/config.js'
+
+let head      = Config   .key ('site.home.footer.head')
+let sections  = Config   .key ('site.home.footer.sections')
+let contact   = Config   .key ('site.home.footer.contact')
+let htitle    = head     .key ('title')
+let htext     = head     .key ('text')
+let stitle    = sections .key ('title')
+let slinks    = sections .key ('links')
+let ctitle    = contact  .key ('title')
+let clinks    = contact  .key ('links')
+let brand     = Config   .key ('site.brand')
+let location  = Config   .key ('site.location')
+let year      = (new Date ()).getFullYear ()
+
+let tcolor    = Config.key ('site.colors.texts.secondary')
+let rcolor    = Config.key ('site.colors.texts.reverse')
+let scolor    = Config.key ('site.colors.surfaces.dark.primary')
+let ecolor    = Config.key ('site.colors.surfaces.dark.secondary')
+---
+
+<div class="ui vertical footer segment foot">
+  <div class="ui container">
+    <div class="ui stackable grid">
+      <div class="eight wide column">
+        <h1 class="ui header primary">{htitle}</h1>
+        <cite class="cite secondary">{htext}</cite>
+      </div>
+      <div class="four wide column">
+        <h4 class="ui header primary">{stitle}</h4>
+        <div class="ui link list">
+          { 
+            slinks.map (function (slink) {
+              let label = slink.key ('label')
+              let path  = slink.key ('path')
+              return <a href={path} class="item secondary">{label}</a>
+            })
+          }
+        </div>
+      </div>
+      <div class="four wide column">
+        <h4 class="ui header primary">{ctitle}</h4>
+        <div class="ui link list">
+          { 
+            clinks.map (function (clink) {
+              let label = clink.key ('label')
+              let ref   = clink.key ('href')
+              return <a href={ref} class="item secondary" target="_blank">{label}</a>
+            })
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="ui vertical footer segment">
+  <div class="secondary edge">
+    {brand} · {year} · {location}
+  </div>
+</div>
+
+<style define:vars={{ tcolor, rcolor, scolor, ecolor }}>
+  .foot {
+    margin-top : 200px !important; 
+    min-height : 280px;
+    background : var(--scolor) !important;
+  }
+  .foot .container {
+    margin: 30px auto 60px auto;
+  }
+  .foot .primary   { color : var(--rcolor) !important; }
+  .foot .secondary { color : var(--tcolor) !important; 
+    font-size: 1.1rem;
+  }
+  .foot .cite {
+    display     : inline-block;
+    max-width   : 300px;
+    font-size   : 16px;
+    line-height : 1.5;
+  }
+  .edge {
+    position    : absolute;
+    bottom      : 0;
+    width       : 100%;
+    height      : 70px;
+    line-height : 70px;
+    text-align  : center;
+    background  : var(--ecolor) !important;
+    color       : var(--tcolor) !important;  
+  }
+
+  @media (max-width: 767px) {
+    .footer {
+      text-align: center;
+    }
+  }
+</style>
