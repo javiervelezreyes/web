@@ -26,12 +26,11 @@ concurrency:
 
 env:
   BUILD_PATH: "." # default value when not using subfolders
+  BASE_URL: "/web"
   # BUILD_PATH: subfolder
 
 jobs:
-  build:
-    environment: 
-      - BASE_URL: ${{ steps.pages.outputs.base_path }}
+  build:      
     name: Build
     runs-on: ubuntu-latest
     steps:
