@@ -1,24 +1,21 @@
-import Fs       from 'node:fs/promises'
 import Path     from 'node:path'
-import {glob}   from 'glob'
 import * as Web from 'cheerio'
+import HLoader  from './helper.loader.js'
 
 
-const BASE     = 'src/content/'
+const BASE     = 'src/contents/'
 const LINE     = '\n'
 const WORD     = ' '
 const LETTER   = ''
 const LINES    = 'p'
-const EXT      = '/**/*.md'
 const PWD      = '.'
 
 function CHelper () {
 
-  async function load (file) {
-    let response = await import (file)
-    let path     = response.file
-    let head     = response.frontmatter
-    let Render   = response.Content
+  async function MData (resource) {
+    let path     = resource.file
+    let head     = resource.frontmatter
+    let Render   = resource.Content
     let html     = await Html (Render)
     let text     = Text  (html)
     let stats    = Stats (text)
@@ -35,7 +32,7 @@ function CHelper () {
 
   async function Html (render) {
     let content = await render ()
-   return String (content.props.children)
+    return String (content.props.children)
   }
 
   function Text (html) {
@@ -75,16 +72,16 @@ function CHelper () {
   }
 
   async function get (path) {
-    let rpath = Path.resolve (BASE, path)
-    let mdata = await load (rpath)
+    let rpath    = Path.resolve (BASE, path)
+    let resource = await HLoader.load (rpath)
+    let mdata    = await MData (resource)
     return mdata
   }
 
   async function getAll (path) {
-    path = path || PWD
-    let base  = Path.resolve (BASE, path) + EXT
-    let files = await glob (base, {})
-    let mdata = await Promise.all (files.sort ().map (load))
+    let base      = Path.resolve (BASE, path || PWD)
+    let resources = await HLoader.loadAll (base)
+    let mdata     = await Promise.all (resources.map (MData))
     return mdata
   }
 

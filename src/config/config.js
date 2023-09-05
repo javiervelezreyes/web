@@ -50,6 +50,7 @@ export default Config.define ({
     { key: 'development'  , icon : 'pe-7s-plugin'   },
     { key: 'talk'         , icon : 'pe-7s-display2' },
     { key: 'interview'    , icon : 'pe-7s-micro'    },
+    { key: 'class'        , icon : 'pe-7s-display1' },
   ],
 
   'site.colors.palette.gray' : [

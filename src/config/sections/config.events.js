@@ -625,7 +625,7 @@ Config.define ({
         en este tipo de iniciativas. 
       `,
       links   : [
-        'bbva.2015',
+        'codemotion.2016',
         'polymer.2016',
         'codemotion.2016'
       ]
@@ -848,8 +848,8 @@ Config.define ({
       caption : 'Arquitectura Agile & Gobierno',
       image   : '/images/events/interviews/interview.23.01.png',
       video   : '/videos/events/interviews/interview.23.01.mp4',
-      path    : '/eventos/entrevistas/cto-2019',
-      place   : 'CTO Summit',
+      path    : '/eventos/entrevistas/codemotion-2023',
+      place   : 'Codemotion 2023',
       author  : 'Javier Vélez & Otros',
       date    : '2023',
       time    : '45:16',

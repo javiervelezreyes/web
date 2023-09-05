@@ -18,7 +18,7 @@ Config.define ({
     title   : 'Lenguajes & Paradigmas',
     caption : 'Desarrollo & Construcción de Software',
     icon    : '@site.icons.light.development',
-    path    : 'articulos/lenguajes',
+    path    : '/articulos/lenguajes',
     lead    : `
       Todo proceso de digitalización nace de un esfuerzo de desarrollo articulado a través del uso de lenguajes. 
       Más allá de sintaxis particulares y modelos o estilos de codificación, resulta especialmente importante 
@@ -49,7 +49,7 @@ Config.define ({
     title   : 'Arquitectura & Diseño',
     caption : 'Modelos, Patrones y Reflexiones',
     icon    : '@site.icons.light.architecture',
-    path    : 'articulos/arquitectura',
+    path    : '/articulos/arquitectura',
     lead    : `
       Arquitectura es muchas cosas a la vez. Hacemos arquitectura al idear modelos de solución. Lo hacemos cuando
       planteamos esquemas de integración y composición. También creamos arquitecturas al establecer ecosistemas de
@@ -80,7 +80,7 @@ Config.define ({
     title   : 'Data & Inteligencia Artificial',
     caption : 'Arquitecturas del Dato IA & ML',
     icon    : '@site.icons.light.data',
-    path    : 'articulos/data',
+    path    : '/articulos/data',
     lead    : `
       La data se ha convertido en un revulsivo en los últimos años. Las organizaciones parecen haber hecho, de manera
       consciente o inconsciente, un giro copernicano hacia nuevos modelos de operación donde los datos toman el protagonismo
@@ -111,7 +111,7 @@ Config.define ({
     title   : 'User & Customer Experience',
     caption : 'Experiencia de Usuario & Cliente',
     icon    : '@site.icons.light.experience',
-    path    : 'articulos/cliente',
+    path    : '/articulos/cliente',
     lead    : `
       La experiencia lo es todo. Cuando creamos productos o servicios ante todo estamos creando experiencias. La calidad
       de esta experiencia a lo largo del viaje del usuario conforma un camino hacia el éxito o fracaso de cualquiera 
@@ -142,7 +142,7 @@ Config.define ({
     title   : 'Agile & Gobierno',
     caption : 'Cultura & Desarrollo Profesional',
     icon    : '@site.icons.light.governance',
-    path    : 'articulos/gobierno',
+    path    : '/articulos/gobierno',
     lead    : `
       Crear una organización implica crear un colectivo social. Cuando ese colectivo se pone a trabajar de forma intencional 
       en relación a un marco de objetivos se crea una cultura de desarrollo y desempeño. Las costumbres, ceremonias, actitudes, 

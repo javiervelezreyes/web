@@ -38,7 +38,7 @@ let Series = Category.key ('series')
           let cpath       = Category .key ('key')
           let spath       = Serie    .key ('slug')
           let apath       = slug
-          let path        = [cpath, spath, apath].join ('/')
+          let path        = ['/articulos', cpath, spath, apath].join ('/')
           return (
             <div class="article">
               <Box title={title} 

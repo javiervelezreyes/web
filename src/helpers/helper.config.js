@@ -78,7 +78,10 @@ function Helper (config) {
       let family = resolve (path.join (DOT))
       let cfg    = GConfig[family]
       if (cfg && head) return cfg.key (head)
-      else error ({ family, head })
+      else { 
+        debugger
+        error ({ family, head, exp })
+      }
     }
   }
 
