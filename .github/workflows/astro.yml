@@ -30,6 +30,8 @@ env:
 
 jobs:
   build:
+    environment: 
+      - BASE_URL: ${{ steps.pages.outputs.base_path }}
     name: Build
     runs-on: ubuntu-latest
     steps:
