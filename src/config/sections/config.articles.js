@@ -174,19 +174,19 @@ Config.define ({
     key      : 'ornitorrinco',
     title    : 'El Efecto Ornitorrinco',
     caption  : 'Entendiendo a tu lenguaje',
-    path     : 'articles/markdown/lenguajes/ornitorrinco',
+    path     : 'lenguajes/ornitorrinco',
     slug     : 'efecto-ornitorrinco',
   }, {
     key      : 'brujo',
     title    : 'El Aprendiz de Brujo',
     caption  : 'Los trucos que nunca te dije',
-    path     : 'articles/markdown/lenguajes/brujo',
+    path     : 'lenguajes/brujo',
     slug     : 'aprendiz-de-brujo',
   },{
     key      : 'funcional',
     title    : 'Programación Funcional',
     caption  : 'Un paradigma diferente',
-    path     : 'articles/markdown/lenguajes/funcional',
+    path     : 'lenguajes/funcional',
     slug     : 'programacion-funcional',
   }]
 

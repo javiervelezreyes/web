@@ -3,7 +3,7 @@ import * as Web from 'cheerio'
 import HLoader  from './helper.loader.js'
 
 
-const BASE     = 'src/contents/'
+const BASE     = 'src/articles/'
 const LINE     = '\n'
 const WORD     = ' '
 const LETTER   = ''
