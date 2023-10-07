@@ -93,7 +93,7 @@ let bcolor  = Config.key ('site.colors.palette.aqua.50')
   .hero .about .caption {
     position        : relative;
     margin-left     : 20px;
-    width           : 460px;
+    max-width       : 460px;
     font-size       : 20px !important;
     font-weight     : 100 !important;
     text-align      : left;
@@ -161,7 +161,7 @@ let bcolor  = Config.key ('site.colors.palette.aqua.50')
     }
     .hero .image img {
       position  : relative;
-      bottom    : -400px;
+      bottom    : -399px;
       left      : 50%;
       width     : 50%;
       min-width : 50px;
@@ -178,7 +178,7 @@ let bcolor  = Config.key ('site.colors.palette.aqua.50')
     }
   }
 
-  @media (max-width: 450px) {
+  @media (max-width: 455px) {
     .hero {
       height: 800px;
     }
@@ -195,7 +195,7 @@ let bcolor  = Config.key ('site.colors.palette.aqua.50')
     }
     .hero .image img {
       position  : relative;
-      bottom    : -300px;
+      bottom    : -299px;
       left      : 50%;
       width     : 50%;
       min-width : 50px;
@@ -206,7 +206,6 @@ let bcolor  = Config.key ('site.colors.palette.aqua.50')
 <script>
   const READY = 'DOMContentLoaded'
   const ITEM  = '.figure'
-  
   document.addEventListener (READY, Animate (ITEM).start)
 </script>
 

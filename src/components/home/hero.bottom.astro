@@ -4,7 +4,7 @@ import Config  from '../../config/config.js'
 let pages  = Config.key ('site.pages')
 let links  = Links (pages)
 let tcolor = Config.key ('site.colors.texts.primary')
-let hcolor = Config.key ('site.colors.texts.reverse')
+let rcolor = Config.key ('site.colors.texts.reverse')
 let scolor = Config.key ('site.colors.surfaces.regular.tertiary')
 
 function Links (pages) {
@@ -28,8 +28,8 @@ function Links (pages) {
         let {active} = link
         let {open}   = link
         return (
-          <>{ open && <a class="item link" active={active} href={path}>{label}</a>}</>
-          <>{!open && <span class="item link">{label}</span>}</>
+          <>{ open && <a class="link" active={active} href={path}>{label}</a>}</>
+          <>{!open && <span class="link">{label}</span>}</>
         )
       })
     }
@@ -37,9 +37,10 @@ function Links (pages) {
 </div>
 
 
-<style define:vars={{ scolor, tcolor, hcolor }}>
+<style define:vars={{ scolor, tcolor, rcolor }}>
   .links {
     background     : var(--scolor);
+    height         : 60px;
   }
   .links .container {
     display        : flex;
@@ -49,8 +50,8 @@ function Links (pages) {
     margin         : 0 auto;
   }
   .links .container .link {
-    padding: 20px 40px;
-    color          : var(--hcolor);
+    padding        : 20px 40px;
+    color          : var(--rcolor);
     text-transform : uppercase;
     font-size      : 18px;
     transition     : all 1s;
@@ -59,13 +60,23 @@ function Links (pages) {
     color          : var(--tcolor);
     transition     : all 1s;
   }
+  .links .container a[active] {
+    color          : var(--tcolor);
+    font-weight    : 900;
+  }
 
   @media (max-width: 768px) {
+    .links {
+      height       : 100%;
+    }
     .links .container  {
-      display    : block;
+      display      : block;
+      padding : 10px 0;
     }
     .links .container .link {
-      text-align : center;
+      display      : block;
+      text-align   : center;
+      line-height  : 20px;
     }
   }
 </style>

@@ -47,7 +47,7 @@ Config.define ({
   'site.home.highlights' : [{
     icon : '@site.icons.light.architecture',
     head : 'Arquitectura',
-    text : 'Modelos de soluciones innovadores con tengologías emergentes'
+    text : 'Ideación de modelos de solución innovadores con tengologías emergentes'
   }, {
     icon : '@site.icons.light.data',
     head : 'Data & IA',

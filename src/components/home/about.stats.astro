@@ -19,6 +19,14 @@ let tcolor = Config.key ('site.colors.texts.primary')
   const MIN = 10
   const KEY = 'value'
 
+  function isVisible (node) {
+    let mdata = node.getBoundingClientRect ()
+    return (
+      mdata.top < (window.innerHeight || document.documentElement.clientHeight) && mdata.top > 0 ||
+      mdata.top < 0 && mdata.bottom > 0
+    )
+  }
+  
   function counter (node) {
     let value = + node.getAttribute (KEY)
     let data  = 0
@@ -30,9 +38,21 @@ let tcolor = Config.key ('site.colors.texts.primary')
     }, MIN)
   }
 
-  document
-    .querySelectorAll ('.statistic .value')
-    .forEach (counter)
+  let started = false
+  function start () {
+    let node = document.querySelector ('.stats')
+    let ok   = !started && isVisible (node)
+    if (ok) {
+      [...document
+        .querySelectorAll ('.statistic .value')]
+        .forEach (counter)
+      started = true
+    }
+  }
+  
+  document.addEventListener ('scroll', start)
+  start ()
+
 </script>
 
 <Section light>
