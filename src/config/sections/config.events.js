@@ -433,7 +433,7 @@ Config.define ({
       title   : 'Técnicas & Modelos de Metaprogramación',
       caption : 'Arquitecturas de Software Adaptativas',
       image   : '/images/events/interviews/interview.15.01.png',
-      video   : '/videos/events/interviews/interview.15.01.mp4',
+      video   : 'https://www.dropbox.com/scl/fi/y1vfvxp9z29r154t0gfe9/talk.15.01.mp4?rlkey=3kmv5zv2jcxluf5l50b8ipvht&dl=1', //'/videos/events/interviews/interview.15.01.mp4',
       path    : '/eventos/entrevistas/techfest-2015',
       place   : 'TechFest',
       author  : 'Javier Vélez',
