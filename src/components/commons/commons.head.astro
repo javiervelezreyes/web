@@ -19,36 +19,28 @@ let caption = Astro.props.caption
 
 <style define:vars={{tsize, csize, tweight, cweight, color}}>
   .container {
-    margin : 0px auto;
-    color  : var(--color);
+    margin        : 0px auto;
+    color         : var(--color);
   }
   .title {
-    padding     : 0 10px;
-    font-size   : var(--tsize);
-    font-weight : var(--tweight);
-    line-height : 1.5;
+    padding       : 0 10px;
+    font-size     : var(--tsize);
+    font-weight   : var(--tweight);
+    line-height   : 1.3;
+    overflow-wrap : break-word;
   }
   .caption {
-    margin-top  : -15px !important;
-    font-size   : var(--csize);
-    font-weight : var(--cweight);
-    line-height : 1.5;
+    margin-top    : 0px !important;
+    font-size     : var(--csize);
+    font-weight   : var(--cweight);
+    line-height   : 1.5;
+    overflow-wrap : break-word;
   }
   .separator {
-    width       : 60px;
-    height      : 8px;
-    margin      : 40px auto;
-    text-align  : center;
-    background  : var(--color);
-  }
-
-  @media (max-width: 767px) {
-    .title {
-      font-size   : 8vw;
-    }
-    .caption {
-      margin-top  : 0 !important;
-      font-size   : 4vw;
-    }
+    width         : 60px;
+    height        : 8px;
+    margin        : 40px auto;
+    text-align    : center;
+    background    : var(--color);
   }
 </style>
