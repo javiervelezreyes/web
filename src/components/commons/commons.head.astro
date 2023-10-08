@@ -23,6 +23,7 @@ let caption = Astro.props.caption
     color  : var(--color);
   }
   .title {
+    padding     : 0 10px;
     font-size   : var(--tsize);
     font-weight : var(--tweight);
     line-height : 1.5;
@@ -39,5 +40,15 @@ let caption = Astro.props.caption
     margin      : 40px auto;
     text-align  : center;
     background  : var(--color);
+  }
+
+  @media (max-width: 767px) {
+    .title {
+      font-size   : 8vw;
+    }
+    .caption {
+      margin-top  : 0 !important;
+      font-size   : 4vw;
+    }
   }
 </style>
