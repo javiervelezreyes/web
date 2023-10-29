@@ -6,7 +6,7 @@ import Box     from '../commons/commons.box.text.astro'
 let Category = Astro.props.category
 
 let icon   = Category.key ('icon')
-let Series = Category.key ('series').filter (isHidden)
+let Series = [...Category.key ('series')].filter (isHidden)
 
 function isHidden (item) {
   return !item.key ('hidden')

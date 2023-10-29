@@ -2,7 +2,7 @@
 import Config from '../../config/config.js'
 import Box    from '../commons/commons.box.image.astro'
 
-let Courses = Config.key ('site.training.courses').filter (isHidden)
+let Courses = [...Config.key ('site.training.courses')].filter (isHidden)
 
 function isHidden (item) {
   return !item.key ('hidden')
