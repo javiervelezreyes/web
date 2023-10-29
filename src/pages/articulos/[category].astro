@@ -16,9 +16,11 @@ export function getStaticPaths () {
   let response   = []
   for (let category of categories) {
     let key    = category.key ('key') 
+    let hidden = category.key ('hidden') 
+    let draft  = category.key ('draft') 
     let props  = { category }
     let params = { category : key }
-    response.push ({ params, props })
+    !draft && !hidden && response.push ({ params, props })
   }
   return response
 }

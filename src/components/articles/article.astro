@@ -23,6 +23,7 @@ let lcolor      = Config.key ('site.colors.lines.secondary')
 let hsize       = Config.key ('site.sizes.large')
 let csize       = Config.key ('site.sizes.regular')
 let tsize       = Config.key ('site.sizes.xshort')
+
 ---
 
 <div class="ui container">
@@ -34,7 +35,6 @@ let tsize       = Config.key ('site.sizes.xshort')
       <h1 class="title">{title}</h1>
       <p class="caption">{serie}</p>
       <div class="mdata">
-        <span class="category">{category}</span>
         <span class="author">{author}</span>
         <span class="date">{date}</span>
         <span class="time">{time} mins</span>
@@ -75,7 +75,6 @@ let tsize       = Config.key ('site.sizes.xshort')
     border-top        : 1px dotted #ccc;
     border-bottom     : 1px dotted #ccc;
   }
-  .article .body .mdata .author::before { content : '· '; padding: 5px; }
   .article .body .mdata .date::before   { content : '· '; padding: 5px; }
   .article .body .mdata .time::before   { content : '· '; padding: 5px; }
 
@@ -83,6 +82,13 @@ let tsize       = Config.key ('site.sizes.xshort')
     .article .body {
       padding : 50px;
     }
+  }
+
+  @media (max-width: 500px) {
+    .article .body    { padding : 20px; }
+    .article .title   { text-align : center !important; }
+    .article .caption { text-align : center !important; }
+    .article .mdata   { text-align : center !important; }
   }
 </style>
 
@@ -100,19 +106,23 @@ let tsize       = Config.key ('site.sizes.xshort')
     line-height  : 1.8;
   }
   .article .content ul li {
-    margin            : 10px auto;
+    margin            : 20px auto;
     padding-left      : 10px;
     list-style        : square;
     font-size         : 18px;
   }
   .article .content ol li {
-    margin            : 10px auto;
+    margin            : 20px auto;
     padding-left      : 10px;
     list-style        : decimal;
     font-size         : 18px;
   }
   .article .content blockquote {
-    margin            : 30px 50px;
+    margin            : 20px;
+    padding           : 20px;
+    background        : #F2F5F7;
+    border-left       : 3px solid #C1CCD6;
+    border-radius     : 5px;
   }
   .article .content figure img {
     display           : block;
@@ -131,19 +141,32 @@ let tsize       = Config.key ('site.sizes.xshort')
     content           : 'Figura ' counter(figures) '. ';
     font-weight       : 900;
   }
+  .article .content pre {
+    margin            : 20px;
+    padding           : 10px 20px;
+    line-height       : 1.8;
+    background        : #F2F5F7 !important;
+    border-radius     : 5px;
+  }
+  .article .content .video {
+    margin            : 20px auto;
+    aspect-ratio      : 16 / 9;
+    width             : 100%;
+    border            : 0px;
+  }
 
   @media (max-width: 1200px) {
     .article .content figure figcaption {
-      margin      : 0;
-      font-size   : 1.2rem;
+      margin          : 0;
+      font-size       : 1.2rem;
     }
     .article .content ul li {
-      margin-left : -20px;
-      padding     : 0;
+      margin-left     : -20px;
+      padding         : 0;
     }
     .article .content ol li {
-      margin-left : -20px;
-      padding     : 0;
+      margin-left     : -20px;
+      padding         : 0;
     }
   }
 </style>

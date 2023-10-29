@@ -51,6 +51,7 @@ export default Config.define ({
     { key: 'talk'         , icon : 'pe-7s-display2' },
     { key: 'interview'    , icon : 'pe-7s-micro'    },
     { key: 'class'        , icon : 'pe-7s-display1' },
+    { key: 'clipping'     , icon : 'pe-7s-scissors' },
   ],
 
   'site.colors.palette.gray' : [
@@ -153,11 +154,28 @@ export default Config.define ({
     { key: 'xbold'  , value : '800' },
   ],
 
+  'site.redirects' : [
+    { key: 'el-efecto-ornitorrinco'                             , path : '/articulos/recortes/javascript/el-efecto-ornitorrinco'                },
+    { key: 'la-funcion-que-no-lo-era'                           , path : '/articulos/recortes/javascript/la-funcion-que-no-lo-era'              },
+    { key: 'las-tres-evaluaciones-de-la-programacion-funcional' , path : '/articulos/recortes/javascript/las-tres-evaluaciones-del-funcional'   },
+    { key: 'optimizacion-por-recursion-en-la-cola'              , path : '/articulos/recortes/javascript/optimizacion-por-recursion-en-la-cola' },
+    { key: 'taller-de-programacion-funcional-en-javascript'     , path : '/articulos/recortes/javascript/taller-de-programacion-funcional'      },
+    
+    { key: 'orientacion-a-componentes-como-empezo-todo'         , path : '/articulos/recortes/componentes/como-empezo-todo'      },
+    { key: 'orientacion-a-componentes-los-objetivos'            , path : '/articulos/recortes/componentes/componentes-objetivos'      },
+    { key: 'orientacion-a-componentes-el-proceso'               , path : '/articulos/recortes/componentes/componentes-proceso'      },
+    { key: 'componentes-modelos-de-componente'                  , path : '/articulos/recortes/componentes/componentes-modelos'      },
+    
+    { key: 'java-el-cobol-del-futuro'                           , path : '/articulos/recortes/opinion/java-el-cobol-del-futuro'      },
+    { key: 'el-feudalismo-llega-a-la-web'                       , path : '/articulos/recortes/opinion/el-feudalismo-llega-a-la-web'      },
+    { key: 'ni-nueva-ni-arquitectura-ni-hexagonal'              , path : '/articulos/recortes/opinion/ni-nueva-ni-arquitectura-ni-hexagonal'      },
+  ],
+
   'site.references' : [
-   { key : 'color'         , ref: 'tinyurl.com/2eh9t2cf' },
-   { key : 'icons.general' , ref: 'tinyurl.com/y8rrtn2v' },
-   { key : 'icons.light'   , ref: 'tinyurl.com/2zctchhp' },
-   { key : 'animation'     , ref: 'tinyurl.com/2hlvu3by' },
+    { key : 'color'         , ref: 'tinyurl.com/2eh9t2cf' },
+    { key : 'icons.general' , ref: 'tinyurl.com/y8rrtn2v' },
+    { key : 'icons.light'   , ref: 'tinyurl.com/2zctchhp' },
+    { key : 'animation'     , ref: 'tinyurl.com/2hlvu3by' },
   ],
 
 })

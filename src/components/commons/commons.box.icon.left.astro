@@ -7,6 +7,7 @@ let { icon    } = Astro.props
 let { mdata   } = Astro.props
 let { lead    } = Astro.props
 let { path    } = Astro.props
+let { draft   } = Astro.props
 
 let tcolor = Config.key ('site.colors.texts.primary')
 let lcolor = Config.key ('site.colors.lines.secondary')
@@ -28,7 +29,8 @@ let tsize  = Config.key ('site.sizes.regular')
       <div class="mdata">{mdata}</div>
       <div class="lead">{lead}</div>
       <div class="actions">
-        <a class="ui big button" href={path}>Acceder</a>
+        {draft  && <a class="ui button disabled" href={path}>Próximamente</a> } 
+        {!draft && <a class="ui button"          href={path}>Acceder</a> } 
       </div>
     </div>
   </div>

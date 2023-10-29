@@ -17,8 +17,13 @@ export async function getStaticPaths () {
   let response   = []
   let categories = Config.key ('site.articles.categories')
   for (let category of categories) {
-    let series = category.key ('series')  
+    let series = category.key ('series')
+    let ok = true
+    ok = ok && !category.key ('draft')
+    ok = ok && !category.key ('hidden')
     for (let serie of series) {
+      ok = ok && !serie.key ('draft')
+      ok = ok && !serie.key ('hidden')
       let path     = serie.key ('path')
       let articles = await Content.getAll (path)
       for (let article of articles) {
@@ -28,8 +33,8 @@ export async function getStaticPaths () {
           article  : article.mdata.slug
         }
         let props  = { category, serie, article }  
-        let draft  = !!article.mdata.draft
-        !draft && response.push ({ params, props })
+        ok = ok && !article.mdata.draft
+        ok && response.push ({ params, props })
       }
     }
   }

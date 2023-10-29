@@ -39,11 +39,9 @@ Config.define ({
       'Modelos'    , 'Patrones'    , 
       'Principios' 
     ], 
-    series  : [
-      '@site.articles.series.ornitorrinco',
-      '@site.articles.series.brujo',
-      '@site.articles.series.funcional',
-    ]
+    series  : [],
+    draft   : false,
+    hidden  : false
   }, {
     key     : 'arquitectura',
     title   : 'Arquitectura & Diseño',
@@ -70,11 +68,9 @@ Config.define ({
       'Patrones'     , 'Estilos'    , 
       'Gobierno' 
     ], 
-    series  : [
-      '@site.articles.series.ornitorrinco',
-      '@site.articles.series.brujo',
-      '@site.articles.series.funcional',
-    ]
+    series  : [],
+    draft   : false,
+    hidden  : false
   }, {
     key     : 'data',
     title   : 'Data & Inteligencia Artificial',
@@ -101,11 +97,9 @@ Config.define ({
       'Análisis'      , 'Decisioning'  , 
       'Valor' 
     ], 
-    series  : [
-      '@site.articles.series.ornitorrinco',
-      '@site.articles.series.brujo',
-      '@site.articles.series.funcional',
-    ]
+    series  : [],
+    draft   : false,
+    hidden  : false
   }, {
     key     : 'cliente',
     title   : 'User & Customer Experience',
@@ -132,17 +126,15 @@ Config.define ({
       'Canales'    , 'Interacción' , 
       'Diálogo' 
     ], 
-    series  : [
-      '@site.articles.series.ornitorrinco',
-      '@site.articles.series.brujo',
-      '@site.articles.series.funcional',
-    ]
+    series  : [],
+    draft   : false,
+    hidden  : false
   }, {
     key     : 'cultura',
     title   : 'Agile & Gobierno',
     caption : 'Cultura & Desarrollo Profesional',
     icon    : '@site.icons.light.governance',
-    path    : '/articulos/gobierno',
+    path    : '/articulos/cultura',
     lead    : `
       Crear una organización implica crear un colectivo social. Cuando ese colectivo se pone a trabajar de forma intencional 
       en relación a un marco de objetivos se crea una cultura de desarrollo y desempeño. Las costumbres, ceremonias, actitudes, 
@@ -163,31 +155,68 @@ Config.define ({
       'Progreso'   , 'Objetivos'     , 
       'Alineamiento' 
     ], 
+    series  : [],
+    draft   : false,
+    hidden  : false
+  }, {
+    key     : 'recortes',
+    title   : 'Opinión & Recortes',
+    caption : 'Miscelanea de mi Web Anterior',
+    icon    : '@site.icons.light.clipping',
+    path    : '/articulos/recortes',
+    lead    : `
+      El contenido de esta categoría es un compendio de todos los artículos relevantes que he podido rescatar de mi web anterior.
+      Está en mi intención revisitar todos estos textos para crear nuevas versiones actualizadas y extendidas de los mismos.
+      Hecho esto, todo el contenido actualizado será adecuadamente movido a las categorías y series de artículos donde mejor encajen.
+      Esto quiere decir que idealmente la categoría de recortes tendrá un tiempo de vida limitado y desaparecerá cuando la integración
+      de contenidos a esta nueva web haya finalizado.
+
+      De cara a no perder las referencias a los artículos más populares ni generar enlaces rotos mantendremos una política conservadora 
+      que redirija los antiguos enlaces a artículos publicados en la web anterior hacia los nuevos contenidos publicados en esta web.
+      Si en el proceso de revisitado y actualización de contenidos un artículo se viera sometido a cambios severos mantendríamos un 
+      enlace desde la nueva versión para poder acceder a la versión antigua aun cuando ésta no esté accesible directamente desde el
+      índice general de categorías.
+    `,
+    tags    : [
+      'Desarrollo' , 'Paradigmas'  , 
+      'Componentes', 'Lenguajes'   ,  
+      'tecnología' , 'Arquitectura', 
+      'Diseño'     , 'Profesión'   , 
+      'Cultura' 
+    ], 
     series  : [
-      '@site.articles.series.ornitorrinco',
-      '@site.articles.series.brujo',
-      '@site.articles.series.funcional',
-    ]
+      '@site.articles.series.javascript',
+      '@site.articles.series.componentes',
+      '@site.articles.series.opinion',
+    ],
+    draft   : false,
+    hidden  : false
   }],
 
   'site.articles.series' : [{
-    key      : 'ornitorrinco',
-    title    : 'El Efecto Ornitorrinco',
-    caption  : 'Entendiendo a tu lenguaje',
-    path     : 'lenguajes/ornitorrinco',
-    slug     : 'efecto-ornitorrinco',
+    key      : 'javascript',
+    title    : 'El Lenguaje JavaScript',
+    caption  : 'El Aprendiz de Brujo',
+    path     : 'recortes/javascript',
+    slug     : 'javascript',
+    draft    : false,
+    hidden   : false
   }, {
-    key      : 'brujo',
-    title    : 'El Aprendiz de Brujo',
-    caption  : 'Los trucos que nunca te dije',
-    path     : 'lenguajes/brujo',
-    slug     : 'aprendiz-de-brujo',
-  },{
-    key      : 'funcional',
-    title    : 'Programación Funcional',
-    caption  : 'Un paradigma diferente',
-    path     : 'lenguajes/funcional',
-    slug     : 'programacion-funcional',
+    key      : 'componentes',
+    title    : 'Orientación a Componentes',
+    caption  : 'Hacia una Web Modular y Reutilizable',
+    path     : 'recortes/componentes',
+    slug     : 'componentes',
+    draft    : false,
+    hidden   : false
+  }, {
+    key      : 'opinion',
+    title    : 'Opinión y Reflexiones',
+    caption  : 'Predicando en el Desierto',
+    path     : 'recortes/opinion',
+    slug     : 'opinion',
+    draft    : false,
+    hidden   : false
   }]
 
 })

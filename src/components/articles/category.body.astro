@@ -6,16 +6,20 @@ import Box     from '../commons/commons.box.text.astro'
 let Category = Astro.props.category
 
 let icon   = Category.key ('icon')
-let Series = Category.key ('series')
+let Series = Category.key ('series').filter (isHidden)
+
+function isHidden (item) {
+  return !item.key ('hidden')
+}
 ---
 
 <div class="series">
   {
-    Series.map (async function (Serie) {
-      let title    = Serie.key ('title')
+    [...Series].map (async function (Serie) {
+      let serie    = Serie.key ('title')
       let caption  = Serie.key ('caption')
       let path     = Serie.key ('path')
-      let articles = await Content.getAll (path)       
+      let articles = await Content.getAll (path)    
       let boxes    = articles
         .filter (function (article) {
           let {mdata} = article
@@ -39,21 +43,24 @@ let Series = Category.key ('series')
           let spath       = Serie    .key ('slug')
           let apath       = slug
           let path        = ['/articulos', cpath, spath, apath].join ('/')
+          let ok = true
+          ok = ok && !Serie.key ('draft')
+          ok = ok && !draft
           return (
             <div class="article">
               <Box title={title} 
-                caption={caption}
+                caption={serie}
                 mdata={tags}
                 lead={lead}
                 path={path}
-                draft={draft}/>
+                draft={!ok}/>
             </div>
           )
         })
       return (
         <div class="ui container serie">
           <div class="title">
-            <Section title={title} caption={caption} icon={icon}/>
+            <Section title={serie} caption={caption} icon={icon}/>
           </div>
           <div class="articles">
             {boxes}

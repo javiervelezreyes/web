@@ -79,7 +79,6 @@ function Helper (config) {
       let cfg    = GConfig[family]
       if (cfg && head) return cfg.key (head)
       else { 
-        debugger
         error ({ family, head, exp })
       }
     }
