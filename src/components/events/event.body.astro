@@ -3,38 +3,38 @@ import Config  from '../../config/config.js'
 import Section from '../commons/commons.section.astro'
 import Box     from '../commons/commons.box.text.astro'
 
-let { talk } = Astro.props
+let { event  } = Astro.props
+let { events } = Astro.props
 
-let title   = talk.key ('title')
-let caption = talk.key ('caption')
-let video   = talk.key ('video')
-let author  = talk.key ('author')
-let place   = talk.key ('place')
-let date    = talk.key ('date')
-let time    = talk.key ('time')
-let lead    = talk.key ('lead')
-let talks   = Links (talk)
+let title   = event.key ('title')
+let caption = event.key ('caption')
+let video   = event.key ('video')
+let author  = event.key ('author')
+let place   = event.key ('place')
+let date    = event.key ('date')
+let time    = event.key ('time')
+let lead    = event.key ('lead')
+let others  = Links (event, events)
 let mdata   = [author, place, date, time].join (' · ')
 
-let icon    = Config.key ('site.icons.light.talk')
+let icon    = Config.key ('site.icons.light.event')
 let tcolor  = Config.key ('site.colors.texts.primary')
 let lcolor  = Config.key ('site.colors.lines.secondary')
 let tsize   = Config.key ('site.sizes.lite')
 let msize   = Config.key ('site.sizes.short')
 
-function Links (talk) { 
-  let talks = Config.key ('site.events.talks.items')
-  let links = talk  .key ('links')
+function Links (event, events) { 
+  let links = event.key ('links')
   return links.map (function (link) {
-    return [...talks].find (function (talk) {
-      return talk.key ('key') == link
+    return [...events].find (function (event) {
+      return event.key ('key') == link
     })
   })
 }
 ---
 
 <div class="ui container">
-  <div class="talk">
+  <div class="event">
     <div class="frame">
       <div class="video">
         <video class="player" title={title} controls>
@@ -47,20 +47,21 @@ function Links (talk) {
     <div class="lead">{lead}</div>
     <div class="links">
       <div class="head">
-        <Section title="Charlas Relacionadas" caption={caption} icon={icon}/>
+        <Section title="Eventos Relacionadas" caption={caption} icon={icon}/>
       </div> 
       <div class="body">
         {
-          talks.map (function (talk) {
-            let title   = talk.key ('title')
-            let caption = talk.key ('caption')
-            let author  = talk.key ('author')
-            let place   = talk.key ('place')
-            let date    = talk.key ('date')
-            let time    = talk.key ('time')
-            let lead    = talk.key ('lead')
-            let draft   = talk.key ('draft')
-            let path    = talk.key ('path')
+          others.map (function (other) {
+            debugger
+            let title   = other.key ('title')
+            let caption = other.key ('caption')
+            let author  = other.key ('author')
+            let place   = other.key ('place')
+            let date    = other.key ('date')
+            let time    = other.key ('time')
+            let lead    = other.key ('lead')
+            let draft   = other.key ('draft')
+            let path    = other.key ('path')
             let mdata   = [author, place, date, time].join (' · ')
             return (
               <div class="link">
@@ -82,22 +83,22 @@ function Links (talk) {
 </div>
 
 <style define:vars={{ tcolor, lcolor, tsize, msize }}>
-  .talk {
+  .event {
     margin         : 0 20px;
     color          : var(--tcolor);
   }
-  .talk .frame {
+  .event .frame {
     border         : 1px solid var(--lcolor);
     padding        : 10px;
     box-shadow     : 0 1px 2px 0 rgba(34,36,38,.15);
     border-radius  : 5px;
   }
-  .talk .video {
+  .event .video {
     position       : relative;
     width          : 100%;
     padding-bottom : 56.25%;
   }
-  .talk .video .player {
+  .event .video .player {
     position       : absolute;
     top            : 0;
     left           : 0;
@@ -106,7 +107,7 @@ function Links (talk) {
     border         : 0;
     border-radius  : 3px;
   }
-  .talk .mdata {
+  .event .mdata {
     margin         : 30px 0;
     padding        : 5px;
     font-size      : var(--msize);
@@ -115,17 +116,17 @@ function Links (talk) {
     line-height    : 1.5;
     text-align     : center;
   }
-  .talk .lead {
+  .event .lead {
     margin         : 10px 0;
     font-size      : var(--tsize);
     text-align     : justify;
     line-height    : 1.8;
   }
-  .talk .links .head {
+  .event .links .head {
     margin          : 50px auto;
     text-align      : center;
   }
-  .talk .links .body {
+  .event .links .body {
     display         : flex;
     justify-content : center;
     align-items     : flex-start;
@@ -133,20 +134,20 @@ function Links (talk) {
     gap             : 10px;
     margin          : 20px auto;
   }
-  .talk .links .body .link {
+  .event .links .body .link {
     flex            : 0 1 32%;
   }
   @media (max-width: 1200px) {
-    .talk .links .body .link {
+    .event .links .body .link {
       flex          : 0 1 49%;
     }
   }
   @media (max-width: 720px) {
-    .talk .links .body .link {
+    .event .links .body .link {
       margin        : 0 20px;
       flex          : 0 1 100%;
     }
-    .talk .lead {
+    .event .lead {
       font-size      : 16px;
       line-height    : 1.8;
     }

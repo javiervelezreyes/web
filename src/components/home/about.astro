@@ -3,6 +3,7 @@ import Config  from '../../config/config.js'
 import Head    from '../commons/commons.head.astro' 
 import Lead    from './about.lead.astro'
 import HLights from './about.hlights.astro' 
+import Promo   from './about.promo.astro'
 import Stats   from './about.stats.astro'
 
 let about   = Config.key ('site.home.about')
@@ -14,6 +15,7 @@ let caption = about .key ('caption')
   <div class="head"><Head title={title} caption={caption}/></div>
   <div class="lead"><Lead/></div>
   <div class="hlights"><HLights/></div>
+  <div class="videp"><Promo/></div>
   <div class="stats"><Stats/></div>
 </div>
 

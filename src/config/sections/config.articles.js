@@ -4,11 +4,11 @@ import Config from '../../helpers/helper.config.js'
 Config.define ({
 
   'site.articles.header' : {
-    title   : 'Articulos & Opinión',
+    title   : 'Artículos & Opinión',
     caption : 'Publicaciones Técnicas & Opinión',
     lead    : `
-      Esta sección reune la colección de articulos publicados organizados por categorías temáticas. 
-      Cada categoría agrupa series de interés y cada serie ordena una secuencia de articulos sobre
+      Esta sección reúne la colección de artículos publicados organizados por categorías temáticas. 
+      Cada categoría agrupa series de interés y cada serie ordena una secuencia de artículos sobre
       el mismo tópico. 
     `
   },
@@ -27,7 +27,7 @@ Config.define ({
       al que da soporte y cada esfuerzo de arquitectura hoy vive desplegado directamente sobre el código. 
       
       Dentro de Lenguajes & Paradigmas centraremos nuestra atención en describir diferentes modelos, patrones,
-      estilos, principios, tecnicas y mecanismos que conforman la base conceptual de los más relevantes paradigmas 
+      estilos, principios, técnicas y mecanismos que conforman la base conceptual de los más relevantes paradigmas 
       de construcción de software y ello lo haremos desde los ojos del desarrollador de soluciones de software.
       Si se dedica a desarrollar software, tal vez esta categoría le resulte un punto de referencia relevante 
       para aprender sobre la actividad de desarrollo desde una perspectiva no tan habitual.
@@ -39,7 +39,10 @@ Config.define ({
       'Modelos'    , 'Patrones'    , 
       'Principios' 
     ], 
-    series  : [],
+    series  : [
+      '@site.articles.series.abstraccion',
+      '@site.articles.series.ejecucion',
+    ],
     draft   : false,
     hidden  : false
   }, {
@@ -52,11 +55,11 @@ Config.define ({
       Arquitectura es muchas cosas a la vez. Hacemos arquitectura al idear modelos de solución. Lo hacemos cuando
       planteamos esquemas de integración y composición. También creamos arquitecturas al establecer ecosistemas de
       componentes que responden a las necesidades del negocio. Incluso estamos haciendo arquitectura cuando lanzamos
-      screening de mercado, cuando escogemos y prescribimos stack tecbológico, al crear marcos de referencia para la
+      screening de mercado, cuando escogemos y prescribimos stack tecnológico, al crear marcos de referencia para la
       construcción de software o en la definición de modelos de madurez y hojas de ruta de estrategia empresarial.
 
-      Aquitectura es muchas cosas en una y los arquitetos son con frecuencia expertos que operan a muchos niveles
-      dentro de la piramide de gobierno de una organización. La categoría de Arquitectura & Diseño tiene por objeto 
+      Arquitectura es muchas cosas en una y los arquitectos son con frecuencia expertos que operan a muchos niveles
+      dentro de la pirámide de gobierno de una organización. La categoría de Arquitectura & Diseño tiene por objeto 
       hacer un recorrido de todas estas preocupaciones. Se trata de crear un espacio donde poder discutir los 
       elementos nucleares de un perímetro de conocimiento tan amplio y fundamental como transversal y en constante
       movimiento al devenir de la transformación digital y tecnológica.
@@ -91,10 +94,10 @@ Config.define ({
       arquitecturas, principios y aproximaciones de innovación dentro de este área.
     `,
     tags    : [
-      'Datos'         , 'Información'  , 
-      'Conocimientos' , 'Arquitectura' ,  
-      'Aprendizaje'   , 'Reconomiento' , 
-      'Análisis'      , 'Decisioning'  , 
+      'Datos'         , 'Información'    , 
+      'Conocimientos' , 'Arquitectura'   ,  
+      'Aprendizaje'   , 'Reconocimiento' , 
+      'Análisis'      , 'Decisioning'    , 
       'Valor' 
     ], 
     series  : [],
@@ -115,8 +118,8 @@ Config.define ({
       
       Cuando hablamos de experiencia de cliente, negocio o desarrollador hablamos de tres perímetros claramente disjuntos
       pero a la vez elementos complementarios y contrapuestos que se conectan por vasos comunicantes para dar forma al 
-      paráguas UX. En User & Customer Experiences recorreremos los principales tópicos de interés de estas tres arenas de
-      de trabajo. Pero lo haremos desde una perspectiva diferencial, preocupandonos en cómo las arquiteturas digitales 
+      paraguas UX. En User & Customer Experiences recorreremos los principales tópicos de interés de estas tres arenas de
+      de trabajo. Pero lo haremos desde una perspectiva diferencial, preocupándonos en cómo las arquitecturas digitales 
       pueden servir como vectores de empuje.
     `,
     tags    : [
@@ -161,7 +164,7 @@ Config.define ({
   }, {
     key     : 'recortes',
     title   : 'Opinión & Recortes',
-    caption : 'Miscelanea de mi Web Anterior',
+    caption : 'Miscelánea de mi Web Anterior',
     icon    : '@site.icons.light.clipping',
     path    : '/articulos/recortes',
     lead    : `
@@ -194,6 +197,22 @@ Config.define ({
   }],
 
   'site.articles.series' : [{
+    key      : 'abstraccion',
+    title    : 'Paradigmas & Modelos de Abstracción',
+    caption  : 'El Software en la Fase de Diseño',
+    path     : 'lenguajes/abstraccion',
+    slug     : 'javascript',
+    draft    : false,
+    hidden   : false
+  }, {
+    key      : 'ejecucion',
+    title    : 'Paradigmas & Modelos de Ejecución',
+    caption  : 'El Software en la Fase de Ejecución',
+    path     : 'lenguajes/ejecucion',
+    slug     : 'javascript',
+    draft    : false,
+    hidden   : false
+  }, {
     key      : 'javascript',
     title    : 'El Lenguaje JavaScript',
     caption  : 'El Aprendiz de Brujo',

@@ -6,6 +6,7 @@ let quotes = Config.key ('site.home.quotes')
 let tcolor = Config.key ('site.colors.texts.primary')
 let hsize  = Config.key ('site.sizes.large')
 let tsize  = Config.key ('site.sizes.medium')
+
 ---
 <Section light>
     <div class="ui container">
@@ -30,11 +31,12 @@ let tsize  = Config.key ('site.sizes.medium')
 </Section>
 
 <style define:vars={{ tcolor, hsize, tsize }}>
-  .quote {
-    margin  : 40px auto;
-    padding : 20px 200px;
-    width   : 100%;
-    color   : var(--tcolor);
+
+  .quotes .quote {
+    margin    : 40px auto;
+    padding   : 20px 200px;
+    width     : 100%;
+    color     : var(--tcolor);
   }
   .quote i  { font-size: 92px;         }
   .quote h1 { font-size: var(--hsize); }
@@ -44,11 +46,11 @@ let tsize  = Config.key ('site.sizes.medium')
   }
 
   .begin {
-    animation: bounceInRight;
+    animation: backInLeft;
     animation-duration: 1s;
   }
   .end {
-    animation: bounceOutLeft;
+    animation: backOutRight;
     animation-duration: 1s;
   }
   .hide { display: none; }
@@ -64,5 +66,5 @@ let tsize  = Config.key ('site.sizes.medium')
   const READY = 'DOMContentLoaded'
   const ITEM  = '.quote'
   
-  document.addEventListener (READY, Animate (ITEM).start)
+  window.addEventListener (READY, Animate (ITEM).start)
 </script>

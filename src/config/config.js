@@ -5,12 +5,11 @@ import             './sections/config.books.js'
 import             './sections/config.events.js'
 import             './sections/config.training.js'
 
-
 export default Config.define ({
 
   'site.brand'    : 'Javier Vélez Reyes',
   'site.slogan'   : 'Speaking In Silver',
-  'site.location' : 'Madrid Spain',
+  'site.location' : 'Madrid (Spain)',
   'site.logo'     : '/images/commons/logo.png',
 
   'site.pages'  : [
@@ -18,7 +17,7 @@ export default Config.define ({
     { key: 'courses'   , label: 'Cursos'    , path: '/cursos'    , open : false },
     { key: 'books'     , label: 'Libros'    , path: '/libros'    , open : false },
     { key: 'articles'  , label: 'Artículos' , path: '/articulos' , open : true  },
-    { key: 'events'    , label: 'Eventos'   , path: '/eventos'   , open : true  },
+    { key: 'events'    , label: 'Comunidad' , path: '/comunidad' , open : true  },
   ],
 
   'site.links' : [
@@ -50,6 +49,7 @@ export default Config.define ({
     { key: 'development'  , icon : 'pe-7s-plugin'   },
     { key: 'talk'         , icon : 'pe-7s-display2' },
     { key: 'interview'    , icon : 'pe-7s-micro'    },
+    { key: 'workshop'     , icon : 'pe-7s-tools'    },
     { key: 'class'        , icon : 'pe-7s-display1' },
     { key: 'clipping'     , icon : 'pe-7s-scissors' },
   ],

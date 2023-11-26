@@ -16,6 +16,7 @@ function isHidden (item) {
 <div class="series">
   {
     [...Series].map (async function (Serie) {
+      let key      = Serie.key ('key')
       let serie    = Serie.key ('title')
       let caption  = Serie.key ('caption')
       let path     = Serie.key ('path')
@@ -60,7 +61,7 @@ function isHidden (item) {
       return (
         <div class="ui container serie">
           <div class="title">
-            <Section title={serie} caption={caption} icon={icon}/>
+            <Section title={serie} caption={caption} icon={icon} key={key}/>
           </div>
           <div class="articles">
             {boxes}
@@ -73,7 +74,7 @@ function isHidden (item) {
 
 <style>
   .series .serie .title {
-    margin          : 100px auto 50px auto;
+    margin          : 100px auto 0px auto;
     text-align      : center;
   }
   .series .serie .articles {

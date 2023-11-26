@@ -1,5 +1,7 @@
 import Config from '../../helpers/helper.config.js'
 
+const VIDEO = 'https://storage.googleapis.com/assets.javiervelezreyes.com'
+const IMAGE = ''
 
 Config.define ({
 
@@ -47,11 +49,11 @@ Config.define ({
   'site.home.highlights' : [{
     icon : '@site.icons.light.architecture',
     head : 'Arquitectura',
-    text : 'Ideación de modelos de solución innovadores con tengologías emergentes'
+    text : 'Ideación de modelos de solución innovadores con tecnologías emergentes'
   }, {
     icon : '@site.icons.light.data',
     head : 'Data & IA',
-    text : 'Arquitectura de datos, analitica, big data, IA & ML, data mesh & data fabric'
+    text : 'Arquitectura de datos, analítica, big data, IA & ML, data mesh & data fabric'
   }, {
     icon : '@site.icons.light.governance',
     head : 'Gobierno',
@@ -62,11 +64,16 @@ Config.define ({
     text : 'Evangelización de conocimiento y actividades de difusión en comunidad'
   }],
 
+  'site.home.promo' : {
+    image : IMAGE + '/images/home/promo.png',
+    video : VIDEO + '/videos/promo/2021/promo.03.mp4',
+  },
+
   'site.home.stats' : [
-    { label : 'Researching & Innovacion',    value  : 2003 },
+    { label : 'Researching & Innovación',    value  : 2003 },
     { label : 'Training & Mentoring',        value  : 1998 },
     { label : 'Diseño & Arquitectura',       value  : 1995 },
-    { label : 'Difusión & Evagelización',    value  : 2012 },
+    { label : 'Difusión & Evangelización',   value  : 2012 },
   ],
 
   'site.home.activity' : {
@@ -90,7 +97,7 @@ Config.define ({
         manera completa y precisa`,
     }, { 
       key   : 'Articles',
-      head  : 'Articulos & Opinión',
+      head  : 'Artículos & Opinión',
       link  : '@site.pages.articles',
       image : '/images/home/activity.03.png',
       text  : `Publicaciones periódicas de carácter abierto que dan forma a 
@@ -98,7 +105,7 @@ Config.define ({
         implicado`,
      }, { 
       key   : 'Events',
-      head  : 'Charlas & Difusión',
+      head  : 'Comunidad & Difusión',
       link  : '@site.pages.events',
       image : '/images/home/activity.04.png',
       text  : `Entrevistas, conferencias, eventos en los que he participado
@@ -166,7 +173,7 @@ Config.define ({
   }, {
     icon     : '@site.icons.light.experience',
     title    : 'La omnicanalidad es sin duda una de las señas de identidad más preponderantes de la digitalización',
-    caption  : `El esfuerzo de los arquitectos de software de los próximos años no conistirá en la 
+    caption  : `El esfuerzo de los arquitectos de software de los próximos años no consistirá en la 
       creación de nuevos canales para atraer el tráfico de clientes sino de crear procesos que nos
       acerquen a aquellos canales donde los clientes quieren estar.`
   }, {

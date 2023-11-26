@@ -3,7 +3,7 @@ const OBJECT = 'object'
 const NULL   = 'undefined'
 const DOT    = '.'
 const REF    = '@'
-const ERROR  = 'Access Error'
+const ERROR  = 'Access Error - '
 
 let isString    = x => typeof (x)  == STRING
 let isObject    = x => typeof (x)  == OBJECT
@@ -13,7 +13,7 @@ let isArray     = x => Array.isArray (x) && !isList (x)
 let isList      = x => Array.isArray (x) && x.every (isObject) && x.every (isKey) 
 let isSimple    = x => !isObject (x) && !isArray (x) && !isList (x)
 let isReference = x => isString (x) && x.startsWith (REF)
-let error       = x => console.log (`${ERROR} - ${JSON.stringify(x)}}`)
+let error       = x => console.log (ERROR, x)
 
 let GConfig
 
@@ -70,6 +70,7 @@ function Helper (config) {
   } 
 
   function key (exp) {
+    if (exp == 'site.events.talks.commit-2018') debugger
     let value = LConfig[exp]
     if (isOk (value)) return resolve (value)
     else {

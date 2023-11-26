@@ -7,26 +7,27 @@ const IMAGE = ''
 Config.define ({
 
   'site.events.header' : {
-    title   : 'Charlas & Difusión',
-    caption : 'Eventos & Entrevistas',
+    title   : 'Comunidad & Difusión',
+    caption : 'Eventos & Intervenciones',
     lead    : `
       En esta sección se recogen las intervenciones más relevantes dentro de la comunidad. Desde 
-      charlas y talleres impartidas en diferentes eventos hasta entrevistas generalmente vinvuladas 
+      charlas y talleres impartidas en diferentes eventos hasta entrevistas generalmente vinculadas 
       a estos mismos eventos.
     `
   },
 
   'site.events.talks' : {
+    key     : 'comunicacion',
     title   : 'Comunicación & Evangelización',
     caption : 'Principales charlas en comunidad',
     icon    : '@site.icons.light.talk',
     items   : [{
-      key     : 'techfest.2015',
+      key     : 'techfest-2015',
       title   : 'Técnicas & Modelos de Metaprogramación',
       caption : 'Arquitecturas de Software Adaptativas',
       image   : IMAGE + '/images/events/talks/talk.15.01.png',
       video   : VIDEO + '/videos/events/talks/talk.15.01.mp4',
-      path    : '/eventos/charlas/techfest-2015',
+      path    : '/comunidad/charlas/techfest-2015',
       place   : 'TechFest',
       author  : 'Javier Vélez',
       date    : '2015',
@@ -43,23 +44,23 @@ Config.define ({
         determinadas técnicas y modelos de diseño arquitectónico tal es como el uso de traits, mixins, 
         roles, aspectos o subjects, propios del paradigma de la orientación a componentes, es de aplicación
         en estos casos. Muchos lenguajes, de hecho, invitan a llevar a cabo un proceso de ideación de 
-        soluciones basado en estas técnicas dando lugar a soluciones más flexibles y dinamicamente 
+        soluciones basado en estas técnicas dando lugar a soluciones más flexibles y dinámicamente 
         cambiantes a tenor de las condiciones ambientales. A lo largo de esta charla se hace un recorrido
         exhaustivo de este paradigma arquitectónico revisando los principios, técnicas y modelos sobre
         la base del stack tecnológico de la plataforma web.
         `,
       links   : [
-        'commit.2018',
-        'polymer.2016',
-        'codemotion.2016'
+        'commit-2018',
+        'polymer-2016',
+        'codemotion-2016'
       ]
     }, {
-      key     : 'bbva.2015',
+      key     : 'bbva-2015',
       title   : 'Orientando a Componentes la Web',
       caption : 'Arquitecturas de Componentes Web',
       image   : IMAGE + '/images/events/talks/talk.15.02.png',
       video   : VIDEO + '/videos/events/talks/talk.15.02.mp4',
-      path    : '/eventos/charlas/bbva-2015',
+      path    : '/comunidad/charlas/bbva-2015',
       place   : 'BBVA Innovation',
       author  : 'Javier Vélez',
       date    : '2015',
@@ -83,17 +84,17 @@ Config.define ({
         en tiempo récord.
         `,
       links   : [
-        'polymer.2016',
-        'codemotion.2016',
-        'commit.2018'
+        'polymer-2016',
+        'codemotion-2016',
+        'commit-2018'
       ]
     }, {
-      key     : 'polymer.2016',
+      key     : 'polymer-2016',
       title   : 'Patrones de Acceso a Datos en la Web',
       caption : 'Arquitecturas de Componentes Web',
       image   : IMAGE + '/images/events/talks/talk.16.01.png',
       video   : VIDEO + '/videos/events/talks/talk.16.01.mp4',
-      path    : '/eventos/charlas/polymer-2016',
+      path    : '/comunidad/charlas/polymer-2016',
       place   : 'Polymer Day',
       author  : 'Javier Vélez',
       date    : '2016',
@@ -116,17 +117,17 @@ Config.define ({
         las necesidades de configuración e inyección de fuentes de datos.
       `,
       links   : [
-        'codemotion.2016',
-        'commit.2018',
-        'codemotion.2017'
+        'codemotion-2016',
+        'commit-2018',
+        'codemotion-2017'
       ]
     }, {
-      key     : 'codemotion.2016',
+      key     : 'codemotion-2016',
       title   : 'Patrones de Composición en la Web',
       caption : 'Arquitecturas de Componentes Web',
       image   : IMAGE + '/images/events/talks/talk.16.02.png',
       video   : VIDEO + '/videos/events/talks/talk.16.02.mp4',
-      path    : '/eventos/charlas/codemotion-2016',
+      path    : '/comunidad/charlas/codemotion-2016',
       place   : 'Codemotion',
       author  : 'Javier Vélez',
       date    : '2016',
@@ -148,17 +149,17 @@ Config.define ({
         componentes en uso.  
         `,
       links   : [
-        'polymer.2016',
-        'codemotion.2017',
-        'commit.2018',
+        'polymer-2016',
+        'codemotion-2017',
+        'commit-2018',
       ]
     }, {
-      key     : 'kconnect.2017',
+      key     : 'kconnect-2017',
       title   : 'Arquitecturas Dirigidas por la Experiencia',
       caption : 'Arquitecturas & Experiencia de Usuario',
       image   : IMAGE + '/images/events/talks/talk.17.01.png',
       video   : VIDEO + '/videos/events/talks/talk.17.01.mp4',
-      path    : '/eventos/charlas/kconnect-2017',
+      path    : '/comunidad/charlas/kconnect-2017',
       place   : 'KConnect',
       author  : 'Javier Vélez',
       date    : '2017',
@@ -177,22 +178,22 @@ Config.define ({
         bien diferenciados. En la web nomádica, el usuario realizaba actividades de consumición voraz de la 
         información allí expuesta hasta esquilmar cada terreno digitales y pasar al siguiente. Durante la web 
         feudal, el usuario se convirtió en un auténtico vasallo fiel tributario a las arcas de enormes espacios
-        de plataformas a cambio de un triste like. Hoy poir hoy, el usuario es un ciudadano digital que vive una
+        de plataformas a cambio de un triste like. Hoy por hoy, el usuario es un ciudadano digital que vive una
         web democrática en la que son las organizaciones las que pelean por captar los breves espacios de atención
-        de sus clientes. Este recorrido historico tiene un relato de principios de soporte interesantes. 
+        de sus clientes. Este recorrido histórico tiene un relato de principios de soporte interesantes. 
       `,
       links   : [
-        'codemotion.2017',
-        'codemotion.2019',
-        'cto.2019',
+        'codemotion-2017',
+        'codemotion-2019',
+        'cto-2019',
       ]
     }, {
-      key     : 'codemotion.2017',
+      key     : 'codemotion-2017',
       title   : 'Sistemas de Diseño & Arquitecturas UX',
       caption : 'Arquitecturas & Experiencia de Usuario',
       image   : IMAGE + '/images/events/talks/talk.17.02.png',
       video   : VIDEO + '/videos/events/talks/talk.17.02.mp4',
-      path    : '/eventos/charlas/codemotion-2017',
+      path    : '/comunidad/charlas/codemotion-2017',
       place   : 'Codemotion',
       author  : 'Javier Vélez',
       date    : '2017',
@@ -203,7 +204,7 @@ Config.define ({
         Las tecnologías de componentes web son una realidad que ha llegado a nuestros días. Hoy por hoy todos
         los frameworks de mercado y todos los profesionales que desarrollan productos digitales sobre la web 
         hacen uso de este tipo de soluciones para encapsular modelos de interacción sobre la base de contenidos
-        visuales. Sin embargo, el cambio paradigmático no está tanto en aspectos tecnológicos como parecíera 
+        visuales. Sin embargo, el cambio paradigmático no está tanto en aspectos tecnológicos como pareciera 
         pensar inicialmente, sino más bien en consideraciones de carácter metodológico. Y es que lo verdaderamente 
         importante es crear catálogos de componentes bien formados que den respuesta precisa y adecuada a cada
         una de las necesidades de interacción que surgen en el marco de las soluciones web. Construir catálogo
@@ -216,17 +217,17 @@ Config.define ({
         en este tipo de iniciativas. 
       `,
       links   : [
-        'bbva.2015',
-        'polymer.2016',
-        'codemotion.2016'
+        'bbva-2015',
+        'polymer-2016',
+        'codemotion-2016'
       ]
     }, {
-      key     : 'codemotion.2018',
+      key     : 'codemotion-2018',
       title   : 'Modelos de API para el Diseño de Servicios',
       caption : 'Servicios & Arquitecturas Cloud',
       image   : IMAGE + '/images/events/talks/talk.18.01.png',
       video   : VIDEO + '/videos/events/talks/talk.18.01.mp4',
-      path    : '/eventos/charlas/codemotion-2018',
+      path    : '/comunidad/charlas/codemotion-2018',
       place   : 'Codemotion',
       author  : 'Javier Vélez',
       date    : '2018',
@@ -248,17 +249,17 @@ Config.define ({
       de diseño aplicables para cada uno de estos modelos.
       `,
       links   : [
-        'codemotion.2019',
-        'codemotion.2023',
-        'cto.2019',
-      ]
+        'codemotion-2019',
+        'codemotion-2023',
+        'cto-2019',
+      ],
     }, {
-      key     : 'commit.2018',
+      key     : 'commit-2018',
       title   : 'Arquitecturas Web Adaptativas',
       caption : 'Arquitecturas de Componentes Web',
       image   : IMAGE + '/images/events/talks/talk.18.02.png',
       video   : VIDEO + '/videos/events/talks/talk.18.02.mp4',
-      path    : '/eventos/charlas/commit-2018',
+      path    : '/comunidad/charlas/commit-2018',
       place   : 'Commit',
       author  : 'Javier Vélez',
       date    : '2018',
@@ -277,21 +278,21 @@ Config.define ({
         De acuerdo a estas ideas, el foco no está tanto en la construcción de los componentes idóneos para 
         resolver problemas particulares sino de ser capaces de crear estrategias de transformación adaptativa 
         que provoquen cambios puntuales irreversibles sobre la estructura y comportamiento de los componentes 
-        y de encapsular esas estrategias en activos arquitectonicos de primer nivel para contribuir de manera
-        formal y sistematica sobre el cuerpo de cualquier componente. 
+        y de encapsular esas estrategias en activos arquitectónicos de primer nivel para contribuir de manera
+        formal y sistemática sobre el cuerpo de cualquier componente. 
       `,
       links   : [
-        'techfest.2015',
-        'codemotion.2018',
-        'codemotion.2019'
+        'techfest-2015',
+        'codemotion-2018',
+        'codemotion-2019'
       ]
     }, {
-      key     : 'cto.2019',
+      key     : 'cto-2019',
       title   : 'Transformación Digital de la Experiencia',
       caption : 'Arquitecturas & Experiencia de Usuario',
       image   : IMAGE + '/images/events/talks/talk.19.01.png',
       video   : VIDEO + '/videos/events/talks/talk.19.01.mp4',
-      path    : '/eventos/charlas/cto-summit-2019',
+      path    : '/comunidad/charlas/cto-summit-2019',
       place   : 'CTO Summit',
       author  : 'Javier Vélez',
       date    : '2019',
@@ -307,26 +308,26 @@ Config.define ({
         digital. En particular, en todo este tiempo los usuarios han pasado de tener un rol meramente pasivo
         como meros consumidores observantes a mostrar una verdadera participación activa como contribuidores
         de contenido. Me gusta pensar que toda esta evolución se ha producido a lo largo de tres grandes
-        transformaciones que dan lugar a sendas webs bien difernciadas: la web nomádica, la web feudal y la 
-        web consumista, aquella que los usuarios vibimos hoy en dia. Y es que lo cierto es que cada etapa
-        de este recorrido historico tiene sus condiciones y sus principios fundacionales. Ser conocedores de
-        estos aspectos es especialmente relevante para los tecnicos y profesionales que creamos soluciones
+        transformaciones que dan lugar a sendas webs bien diferenciadas: la web nomádica, la web feudal y la 
+        web consumista, aquella que los usuarios vivimos hoy en dia. Y es que lo cierto es que cada etapa
+        de este recorrido histórico tiene sus condiciones y sus principios fundacionales. Ser conocedores de
+        estos aspectos es especialmente relevante para los técnicos y profesionales que creamos soluciones
         sobre las arquitecturas de canales digitales que proporciona la web y, si queremos ser buenos asesores
         de nuestros clientes, tendremos que conocer bien este relato y los principios asociados. Porque los
         usuarios siempre estarán donde quieran estar y no donde les pidamos que estén.
       `,
       links   : [
-        'techfest.2015',
-        'codemotion.2018',
-        'codemotion.2019'
+        'techfest-2015',
+        'codemotion-2018',
+        'codemotion-2019'
       ]
     }, {
-      key     : 'codemotion.2019',
+      key     : 'codemotion-2019',
       title   : 'Arquitecturas Dirigidas por la Experiencia',
       caption : 'Arquitecturas & Experiencia de Usuario',
       image   : IMAGE + '/images/events/talks/talk.19.02.png',
       video   : VIDEO + '/videos/events/talks/talk.19.02.mp4',
-      path    : '/eventos/charlas/codemotion-2019',
+      path    : '/comunidad/charlas/codemotion-2019',
       place   : 'Codemotion',
       author  : 'Javier Vélez',
       date    : '2019',
@@ -339,9 +340,9 @@ Config.define ({
         del servidor. Solo entonces son consumidos por clientes específicos que elaboran soluciones
         visuales a medida para los modelos de información así diseñados. Esta aproximación implica grandes 
         ventajas con respecto a los desarrolladores de back que gozan de libertad absoluta en cuanto a la 
-        toma de decisiones referia a cómo diseñar los modelos de información subyacentes y cómo exponderlos en 
+        toma de decisiones refería a cómo diseñar los modelos de información subyacentes y cómo exponerlos en 
         base a un espacio de recursos de acuerdo a los principios de las arquitecturas REST. Sin embargo, 
-        esta aproximación es penalízante en relación a los esfuerzos ímprobos que tienen que hacer los equipos
+        esta aproximación es penalizante en relación a los esfuerzos ímprobos que tienen que hacer los equipos
         de front para adaptarse de manera recurrente y sistemática a la demanda cambiante de la parte del back.
         Se impone, en este sentido, una inversión de control relacionada con la forma en la que deben ser 
         enfocados los esfuerzos de desarrollo. Dado que los modelos de interacción en la parte del front son 
@@ -351,20 +352,20 @@ Config.define ({
         interfaz.
       `,
       links   : [
-        'kconnect.2017',
-        'cto.2019',
-        'codemotion.2017',
+        'kconnect-2017',
+        'cto-2019',
+        'codemotion-2017',
       ]
     }, {
-      key     : 'commit.2023',
+      key     : 'commit-2023',
       title   : 'Modelos Propios de Componentes Web',
       caption : 'Servicios & Arquitecturas Cloud',
       image   : IMAGE + '/images/events/talks/talk.23.01.png',
       video   : VIDEO + '/videos/events/talks/talk.23.01.mp4',
-      path    : '/eventos/charlas/commit-2023',
-      place   : 'Codemotion',
+      path    : '/comunidad/charlas/commit-2023',
+      place   : 'Commit',
       author  : 'Javier Vélez',
-      date    : '2018',
+      date    : '2023',
       time    : '41:05',
       draft   : false,
       hidden  : false,
@@ -385,17 +386,17 @@ Config.define ({
       una sesión que no te deberías perder.
       `,
       links   : [
-        'polymer.2016',
-        'codemotion.2016',
-        'commit.2018',
+        'polymer-2016',
+        'codemotion-2016',
+        'commit-2018',
       ]
     }, {
-      key     : 'codemotion.2023',
+      key     : 'codemotion-2023',
       title   : 'Arquitecturas Dirigidas por el Diálogo',
       caption : 'Servicios & Arquitecturas Cloud',
       image   : IMAGE + '/images/events/talks/talk.23.02.png',
-      video   : VIDEO + '/videos/events/talks/talk.16.01.mp4',
-      path    : '/eventos/charlas/codemotion-2023',
+      video   : VIDEO + '/videos/events/talks/talk.23.02.mp4',
+      path    : '/comunidad/charlas/codemotion-2023',
       place   : 'Codemotion',
       author  : 'Javier Vélez',
       date    : '2023',
@@ -420,24 +421,25 @@ Config.define ({
         ser explorables a través de una interacción recurrente y sistemática.
       `,
       links   : [
-        'codemotion.2019',
-        'codemotion.2018',
-        'cto.2019',
+        'codemotion-2019',
+        'codemotion-2018',
+        'cto-2019',
       ]
     }]
   },
 
   'site.events.interviews' : {
+    key     : 'intervenciones',
     title   : 'Entrevistas & Intervenciones',
     caption : 'Apariciones puntuales en comunidad',
     icon    : '@site.icons.light.interview',
     items   : [{
-      key     : 'techfest.2015',
+      key     : 'techfest-2015',
       title   : 'Técnicas & Modelos de Metaprogramación',
       caption : 'Arquitecturas de Software Adaptativas',
       image   : IMAGE + '/images/events/interviews/interview.15.01.png',
       video   : VIDEO + '/videos/events/interviews/interview.15.01.mp4',
-      path    : '/eventos/entrevistas/techfest-2015',
+      path    : '/comunidad/intervenciones/techfest-2015',
       place   : 'TechFest',
       author  : 'Javier Vélez',
       date    : '2015',
@@ -454,23 +456,23 @@ Config.define ({
         determinadas técnicas y modelos de diseño arquitectónico tal es como el uso de traits, mixins, 
         roles, aspectos o subjects, propios del paradigma de la orientación a componentes, es de aplicación
         en estos casos. Muchos lenguajes, de hecho, invitan a llevar a cabo un proceso de ideación de 
-        soluciones basado en estas técnicas dando lugar a soluciones más flexibles y dinamicamente 
+        soluciones basado en estas técnicas dando lugar a soluciones más flexibles y dinámicamente 
         cambiantes a tenor de las condiciones ambientales. A lo largo de esta charla se hace un recorrido
         exhaustivo de este paradigma arquitectónico revisando los principios, técnicas y modelos sobre
         la base del stack tecnológico de la plataforma web.
       `,
       links   : [
-        'commit.2018',
-        'polymer.2016',
-        'codemotion.2016'
+        'commit-2018',
+        'polymer-2016',
+        'codemotion-2016'
       ]
     }, {
-      key     : 'codemotion.2016',
+      key     : 'codemotion-2016',
       title   : 'Patrones de Composición en la Web',
       caption : 'Arquitecturas de Componentes Web',
       image   : IMAGE + '/images/events/interviews/interview.16.01.png',
       video   : VIDEO + '/videos/events/interviews/interview.16.01.mp4',
-      path    : '/eventos/entrevistas/codemotion-2016',
+      path    : '/comunidad/intervenciones/codemotion-2016',
       place   : 'Codemotion',
       author  : 'Javier Vélez',
       date    : '2016',
@@ -492,17 +494,17 @@ Config.define ({
         componentes en uso.  
       `,
       links   : [
-        'polymer.2016',
-        'codemotion.2017',
-        'commit.2018',
+        'polymer-2016',
+        'codemotion-2017',
+        'commit-2018',
       ]
     }, {
-      key     : 'jsday.2016',
+      key     : 'jsday-2016',
       title   : 'Arquitecturas para la Reutilización',
       caption : 'Arquitecturas de Software Adaptativas',
       image   : IMAGE + '/images/events/interviews/interview.16.02.png',
       video   : VIDEO + '/videos/events/interviews/interview.16.02.mp4',
-      path    : '/eventos/entrevistas/jsday-2016',
+      path    : '/comunidad/intervenciones/jsday-2016',
       place   : 'JSDay',
       author  : 'Javier Vélez',
       date    : '2016',
@@ -513,31 +515,31 @@ Config.define ({
         Frecuentemente se argumenta que la reutilización es uno de los valores más importantes de las 
         soluciones de software. En efecto, cuando desarrollamos arquitecturas, uno de nuestros objetivos 
         fundamentales es conseguir que los activos construidos puedan ser reutilizados en diferentes
-        contextos arquitetónicos de uso. Entre otras cosas, esto contribuye al ahorro de costes en los 
+        contextos arquitectónicos de uso. Entre otras cosas, esto contribuye al ahorro de costes en los 
         procesos de desarrollo y a la homogeneidad transversal de las soluciones. Todo paradigma y en 
         particular la orientación a objetos caracterizada por los principios SOLID ha promovido modelos 
         de construcción orientados a la reutilización. Se argumenta que la construcción de objetos es el 
         camino mediante el cual estos activos pueden ser de aplicación en diferentes contextos arquitectónicos 
         siempre que se diseñen con el nivel adecuado de abstracción y desacoplamiento. Sin embargo, 
         cuando nos adentramos en nuevos paradigmas de programación como aquellos propios de la orientación 
-        a componentes encontramos que frequentemente construir menos asiste más en los procesos de reutilizar 
+        a componentes encontramos que frecuentemente construir menos asiste más en los procesos de reutilizar 
         más. Bajo esta hipótesis parece más interesante de cara la reutilización crear contribuciones parciales
         que puedan extender el comportamiento o estructura de los componentes para que adopten nuevas capacidades de 
         forma dinámica y convertir a estos rasgos de contribución puntual en los activos esenciales de la 
         reutilización.
       `,
       links   : [
-        'techfest.2015',
-        'commit.2018',
-        'iasa.2019.2'
+        'techfest-2015',
+        'commit-2018',
+        'iasa-2019-2'
       ]
     }, {
-      key     : 'google.2016',
+      key     : 'google-2016',
       title   : 'JavaScript vs Java',
       caption : 'Lenguajes & Paradigmas',
       image   : IMAGE + '/images/events/interviews/interview.16.03.png',
       video   : VIDEO + '/videos/events/interviews/interview.16.03.mp4',
-      path    : '/eventos/entrevistas/google-2016',
+      path    : '/comunidad/intervenciones/google-2016',
       place   : 'Google Campus',
       author  : 'Javier Vélez',
       date    : '2016',
@@ -561,17 +563,17 @@ Config.define ({
       donde Java termino perdiendo terreno en esta anunciada derrota.
       `,
       links   : [
-        'techfest.2015',
-        'jsday.2016',
-        'techfest.2017',
+        'techfest-2015',
+        'jsday-2016',
+        'techfest-2017',
       ]
     }, {
-      key     : 'polymer.2016',
+      key     : 'polymer-2016',
       title   : 'Patrones de Acceso a Datos',
       caption : 'Arquitecturas de Componentes Web',
       image   : IMAGE + '/images/events/interviews/interview.16.04.png',
       video   : VIDEO + '/videos/events/interviews/interview.16.04.mp4',
-      path    : '/eventos/entrevistas/polymer-2016',
+      path    : '/comunidad/intervenciones/polymer-2016',
       place   : 'Polymer Day',
       author  : 'Javier Vélez',
       date    : '2016',
@@ -594,17 +596,17 @@ Config.define ({
         las necesidades de configuración e inyección de fuentes de datos.
       `,
       links   : [
-        'codemotion.2016',
-        'commit.2018',
-        'codemotion.2017'
+        'codemotion-2016',
+        'commit-2018',
+        'codemotion-2017'
       ]
     }, {
-      key     : 'codemotion.2017',
+      key     : 'codemotion-2017',
       title   : 'Sistemas de Diseño & Arquitecturas UX',
       caption : 'Arquitecturas & Experiencia de Usuario',
       image   : IMAGE + '/images/events/interviews/interview.17.01.png',
       video   : VIDEO + '/videos/events/interviews/interview.17.01.mp4',
-      path    : '/eventos/entrevistas/codemotion-2017',
+      path    : '/comunidad/intervenciones/codemotion-2017',
       place   : 'Codemotion',
       author  : 'Javier Vélez',
       date    : '2017',
@@ -615,7 +617,7 @@ Config.define ({
         Las tecnologías de componentes web son una realidad que ha llegado a nuestros días. Hoy por hoy todos
         los frameworks de mercado y todos los profesionales que desarrollan productos digitales sobre la web 
         hacen uso de este tipo de soluciones para encapsular modelos de interacción sobre la base de contenidos
-        visuales. Sin embargo, el cambio paradigmático no está tanto en aspectos tecnológicos como parecíera 
+        visuales. Sin embargo, el cambio paradigmático no está tanto en aspectos tecnológicos como pareciera 
         pensar inicialmente, sino más bien en consideraciones de carácter metodológico. Y es que lo verdaderamente 
         importante es crear catálogos de componentes bien formados que den respuesta precisa y adecuada a cada
         una de las necesidades de interacción que surgen en el marco de las soluciones web. Construir catálogo
@@ -628,18 +630,18 @@ Config.define ({
         en este tipo de iniciativas. 
       `,
       links   : [
-        'codemotion.2016',
-        'polymer.2016',
-        'codemotion.2016'
+        'codemotion-2016',
+        'polymer-2016',
+        'codemotion-2016'
       ]
     },
     {
-      key     : 'techfest.2017',
+      key     : 'techfest-2017',
       title   : 'Funcional & Programación Declarativa',
       caption : 'Lenguajes & Paradigmas',
       image   : IMAGE + '/images/events/interviews/interview.17.02.png',
       video   : VIDEO + '/videos/events/interviews/interview.17.02.mp4',
-      path    : '/eventos/entrevistas/techfest-2017',
+      path    : '/comunidad/intervenciones/techfest-2017',
       place   : 'Techfest',
       author  : 'Javier Vélez',
       date    : '2017',
@@ -663,17 +665,17 @@ Config.define ({
         que todo desarrollador debe adquirir por medio del uso y aplicación de diversas técnicas.
       `,
       links   : [
-        'techfest.2015',
-        'jsday.2016',
-        'commit.2018'
+        'techfest-2015',
+        'jsday-2016',
+        'commit-2018'
       ]
     }, {
-      key     : 'cto.2018',
+      key     : 'cto-2018',
       title   : 'Programas y Estrategias de Capacitación',
       caption : 'Cultura & Desarrollo Profesional',
       image   : IMAGE + '/images/events/interviews/interview.18.01.png',
       video   : VIDEO + '/videos/events/interviews/interview.18.01.mp4',
-      path    : '/eventos/entrevistas/cto-summit-2018',
+      path    : '/comunidad/intervenciones/cto-summit-2018',
       place   : 'CTO Master',
       author  : 'Javier Vélez',
       date    : '2018',
@@ -685,7 +687,7 @@ Config.define ({
         transformación cultural verdaderamente dramática dentro de nuestra profesión. Sin la intención de hacer
         juicios de valor sobre este hecho, lo cierto es que los profesionales del sector tienen, buscan y 
         pretenden hoy en dia un plan de carrera horizontal frente a los clásicos movimientos de ascenso vertical 
-        sobre las axfixiantes pirámides corporativas. Los valores cambian y con movimientos sociales como el 
+        sobre las asfixiantes pirámides corporativas. Los valores cambian y con movimientos sociales como el 
         de la gran renuncia se prefieren factores de progreso profesional relativos al tipo de proyecto, el 
         ambiente laboral, el tipo de corporación, el teletrabajo y la conciliación familiar frente a los factores 
         convencionales de promoción basado en una nómina más abultada y un job position más largo y rimbombante.
@@ -700,17 +702,17 @@ Config.define ({
         diferencias en el futuro de nuestra profesión y como podremos hacer frente a las mismas.
       `,
       links   : [
-        'iasa.2019.1',
-        'iasa.2019.2',
-        'cto.2019'
+        'iasa-2019-1',
+        'iasa-2019-2',
+        'cto-2019'
       ]
     }, {
-      key     : 'commit.2018',
+      key     : 'commit-2018',
       title   : 'Arquitecturas Web Adaptativas',
       caption : 'Arquitecturas de Componentes Web',
       image   : IMAGE + '/images/events/interviews/interview.18.02.png',
       video   : VIDEO + '/videos/events/interviews/interview.18.02.mp4',
-      path    : '/eventos/entrevistas/commit-2018',
+      path    : '/comunidad/intervenciones/commit-2018',
       place   : 'Commit',
       author  : 'Javier Vélez',
       date    : '2018',
@@ -729,21 +731,21 @@ Config.define ({
         De acuerdo a estas ideas, el foco no está tanto en la construcción de los componentes idóneos para 
         resolver problemas particulares sino de ser capaces de crear estrategias de transformación adaptativa 
         que provoquen cambios puntuales irreversibles sobre la estructura y comportamiento de los componentes 
-        y de encapsular esas estrategias en activos arquitectonicos de primer nivel para contribuir de manera
-        formal y sistematica sobre el cuerpo de cualquier componente. 
+        y de encapsular esas estrategias en activos arquitectónicos de primer nivel para contribuir de manera
+        formal y sistemática sobre el cuerpo de cualquier componente. 
       `,
       links   : [
-        'techfest.2015',
-        'jsday.2016',
-        'iasa.2019.2'
+        'techfest-2015',
+        'jsday-2016',
+        'iasa-2019-2'
       ]
     }, {
-      key     : 'iasa.2019.1',
+      key     : 'iasa-2019-1',
       title   : 'Arquitectura & Transformación Digital',
       caption : 'Arquitectura Agile & Gobierno',
       image   : IMAGE + '/images/events/interviews/interview.19.01.png',
       video   : VIDEO + '/videos/events/interviews/interview.19.01.mp4',
-      path    : '/eventos/entrevistas/iasa-2019-1',
+      path    : '/comunidad/intervenciones/iasa-2019-1',
       place   : 'IASA',
       author  : 'Javier Vélez',
       date    : '2019',
@@ -770,17 +772,17 @@ Config.define ({
 
       `,
       links   : [
-        'iasa.2019.2',
-        'cto.2019',
-        'cto.2018'
+        'iasa-2019-2',
+        'cto-2019',
+        'cto-2018'
       ]
     }, {
-      key     : 'iasa.2019.2',
+      key     : 'iasa-2019-2',
       title   : 'Arquitecturas Ágiles & Emergentes',
       caption : 'Arquitectura Agile & Gobierno',
       image   : IMAGE + '/images/events/interviews/interview.19.02.png',
       video   : VIDEO + '/videos/events/interviews/interview.19.02.mp4',
-      path    : '/eventos/entrevistas/iasa-2019-2',
+      path    : '/comunidad/intervenciones/iasa-2019-2',
       place   : 'IASA',
       author  : 'Javier Vélez',
       date    : '2019',
@@ -803,20 +805,20 @@ Config.define ({
         arquitectónico se entendía como una actividad de oráculo en el esfuerzo de crear un todo sistémico bien
         formado e inamovible. En su lugar hacer arquitecturas ágiles significa ser capaz de promover esfuerzos 
         exploratorios de alcance local para resolver cada problema inmediato en el marco temporal en el que se 
-        aborda sin conflictos con las ideas de una construcción basada en la destrucción contínua e incremental.
+        aborda sin conflictos con las ideas de una construcción basada en la destrucción continua e incremental.
       `,
       links   : [
-        'iasa.2019.1',
-        'cto.2018',
-        'cto.2019'
+        'iasa-2019-1',
+        'cto-2018',
+        'cto-2019'
       ]
     }, {
-      key     : 'cto.2019',
+      key     : 'cto-2019',
       title   : 'Transformación Digital de la Experiencia',
       caption : 'Arquitecturas & Experiencia de Usuario',
       image   : IMAGE + '/images/events/interviews/interview.19.03.png',
       video   : VIDEO + '/videos/events/interviews/interview.19.03.mp4',
-      path    : '/eventos/entrevistas/cto-2019',
+      path    : '/comunidad/intervenciones/cto-2019',
       place   : 'CTO Summit',
       author  : 'Javier Vélez',
       date    : '2019',
@@ -832,26 +834,26 @@ Config.define ({
         particular, en todo este tiempo los usuarios han pasado de tener un rol meramente pasivo como meros 
         consumidores observantes a mostrar una verdadera participación activa como contribuidores de contenido. 
         Me gusta pensar que toda esta evolución se ha producido a lo largo de tres grandes transformaciones que 
-        dan lugar a sendas webs bien difernciadas: la web nomádica, la web feudal y la web consumista, aquella 
-        que los usuarios vibimos hoy en dia. Y es que lo cierto es que cada etapa de este recorrido historico
+        dan lugar a sendas webs bien diferenciadas: la web nomádica, la web feudal y la web consumista, aquella 
+        que los usuarios vivimos hoy en dia. Y es que lo cierto es que cada etapa de este recorrido histórico
         tiene sus condiciones y sus principios fundacionales. Ser conocedores de estos aspectos es especialmente 
-        relevante para los tecnicos y profesionales que creamos soluciones sobre las arquitecturas de canales 
+        relevante para los técnicos y profesionales que creamos soluciones sobre las arquitecturas de canales 
         digitales que proporciona la web y, si queremos ser buenos asesores de nuestros clientes, tendremos que 
         conocer bien este relato y los principios asociados. Porque los usuarios siempre estarán donde quieran 
         estar y no donde les pidamos que estén.
       `,
       links   : [
-        'cto.2018',
-        'iasa.2019.1',
-        'codemotion.2017'
+        'cto-2018',
+        'iasa-2019-1',
+        'codemotion-2017'
       ]
     }, {
-      key     : 'codemotion.2023',
+      key     : 'codemotion-2023',
       title   : 'La Gran Renuncia & Reinvención Social',
       caption : 'Arquitectura Agile & Gobierno',
       image   : IMAGE + '/images/events/interviews/interview.23.01.png',
       video   : VIDEO + '/videos/events/interviews/interview.23.01.mp4',
-      path    : '/eventos/entrevistas/codemotion-2023',
+      path    : '/comunidad/intervenciones/codemotion-2023',
       place   : 'Codemotion 2023',
       author  : 'Javier Vélez & Otros',
       date    : '2023',
@@ -864,7 +866,7 @@ Config.define ({
         diferentes al anterior mueven ahora a las nuevas generaciones a realizar sus procesos de búsqueda de 
         nuevas posiciones laborales. Cobra mayor relevancia el tipo de proyecto, la orientación innovadora 
         del mismo, el equipo de trabajo, la cultura de desarrollo ágil, la orientación a cliente, el uso de 
-        nuevas tecnologías en auge emergente, las formas de liderzgo por influencia no basadas en la autoridad,
+        nuevas tecnologías en auge emergente, las formas de liderazgo por influencia no basadas en la autoridad,
         y ante todo se demanda una nueva forma de concebir el trabajo con condiciones laborales más realistas 
         y actualizadas. Se acabaron los días de moverse por una motivación meramente económica y por llegar a 
         posiciones de absurdo liderazgo jerárquico que te sacan fuera de tu profesión. Se acabaron los días 
@@ -875,9 +877,157 @@ Config.define ({
         de estas características podemos hablar. Sino renuncio a tu oferta porque tú no estas hecho para mí.
       `,
       links   : [
-        'iasa.2019.1',
-        'cto.2018',
-        'iasa.2019.2',  
+        'iasa-2019-1',
+        'cto-2018',
+        'iasa-2019-2',  
+      ]
+    }]
+  },
+
+  'site.events.workshops' : {
+    key     : 'talleres',
+    title   : 'Talleres & Live Coding',
+    caption : 'Master classes y talleres en comunidad',
+    icon    : '@site.icons.light.workshop',
+    items   : [{
+      key     : 'google-2016-1',
+      title   : 'Programación Funcional en JavaScript I',
+      caption : 'El camino de la Programación Funcional',
+      image   : IMAGE + '/images/events/workshops/workshop.16.01.png',
+      video   : VIDEO + '/videos/events/workshops/workshop.16.01.mp4',
+      path    : '/comunidad/talleres/google-2016-1',
+      place   : 'Google Campus',
+      author  : 'Javier Vélez',
+      date    : '2016',
+      time    : '1:35',
+      draft   : false,
+      hidden  : false,
+      lead    : `
+        La programación funcional está cogiendo fuerte tracción en los últimos años dentro de 
+        la comunidad de desarrollo. Tal vez ello se deba al surgimiento de nuevas arquitecturas 
+        que demandan cotas de escalabilidad, resistencia y flexibilidad en el marco de soluciones 
+        centradas en procesos de transformación. Pero más allá de una simple moda, como trataremos 
+        de mostrar en este taller, la programación funcional conduce a soluciones de código 
+        robustas, versátiles y expresivas que difícilmente son comparables con las propias de la 
+        orientación a objetos.
+
+        Además JavaScript, como la mayoría de los lenguajes de scripting es un lenguaje idiomático 
+        que invita a pensar en términos funcionales. De hecho muchas veces, cuando programamos en 
+        Javascript, desarrollamos soluciones funcionales casi sin darnos cuenta. Pero para trabajar 
+        correctamente en el marco de este paradigma debemos saber, qué es exactamente la programación 
+        funcional, cuáles son sus ventajas y principios fundacionales, de qué mecanismos se sirve, qué 
+        técnicas de programación se utilizan, qué patrones de diseño funcional existen a nuestra disposición 
+        y qué estilos arquitectónicos emergen.
+      `,
+      links   : [
+        'google-2016-2',
+        'google-2016-3',
+        'google-2016-4'
+      ]
+    }, {
+      key     : 'google-2016-2',
+      title   : 'Programación Funcional en JavaScript II',
+      caption : 'El camino de la Programación Funcional',
+      image   : IMAGE + '/images/events/workshops/workshop.16.02.png',
+      video   : VIDEO + '/videos/events/workshops/workshop.16.02.mp4',
+      path    : '/comunidad/talleres/google-2016-2',
+      place   : 'Google Campus',
+      author  : 'Javier Vélez',
+      date    : '2016',
+      time    : '1:45',
+      draft   : false,
+      hidden  : false,
+      lead    : `
+        La programación funcional está cogiendo fuerte tracción en los últimos años dentro de 
+        la comunidad de desarrollo. Tal vez ello se deba al surgimiento de nuevas arquitecturas 
+        que demandan cotas de escalabilidad, resistencia y flexibilidad en el marco de soluciones 
+        centradas en procesos de transformación. Pero más allá de una simple moda, como trataremos 
+        de mostrar en este taller, la programación funcional conduce a soluciones de código 
+        robustas, versátiles y expresivas que difícilmente son comparables con las propias de la 
+        orientación a objetos.
+
+        Además JavaScript, como la mayoría de los lenguajes de scripting es un lenguaje idiomático 
+        que invita a pensar en términos funcionales. De hecho muchas veces, cuando programamos en 
+        Javascript, desarrollamos soluciones funcionales casi sin darnos cuenta. Pero para trabajar 
+        correctamente en el marco de este paradigma debemos saber, qué es exactamente la programación 
+        funcional, cuáles son sus ventajas y principios fundacionales, de qué mecanismos se sirve, qué 
+        técnicas de programación se utilizan, qué patrones de diseño funcional existen a nuestra disposición 
+        y qué estilos arquitectónicos emergen.
+      `,
+      links   : [
+        'google-2016-1',
+        'google-2016-3',
+        'google-2016-4'
+      ]
+    }, {
+      key     : 'google-2016-3',
+      title   : 'Programación Funcional en JavaScript III',
+      caption : 'El camino de la Programación Funcional',
+      image   : IMAGE + '/images/events/workshops/workshop.16.03.png',
+      video   : VIDEO + '/videos/events/workshops/workshop.16.03.mp4',
+      path    : '/comunidad/talleres/google-2016-3',
+      place   : 'Google Campus',
+      author  : 'Javier Vélez',
+      date    : '2016',
+      time    : '1:52',
+      draft   : false,
+      hidden  : false,
+      lead    : `
+        La programación funcional está cogiendo fuerte tracción en los últimos años dentro de 
+        la comunidad de desarrollo. Tal vez ello se deba al surgimiento de nuevas arquitecturas 
+        que demandan cotas de escalabilidad, resistencia y flexibilidad en el marco de soluciones 
+        centradas en procesos de transformación. Pero más allá de una simple moda, como trataremos 
+        de mostrar en este taller, la programación funcional conduce a soluciones de código 
+        robustas, versátiles y expresivas que difícilmente son comparables con las propias de la 
+        orientación a objetos.
+
+        Además JavaScript, como la mayoría de los lenguajes de scripting es un lenguaje idiomático 
+        que invita a pensar en términos funcionales. De hecho muchas veces, cuando programamos en 
+        Javascript, desarrollamos soluciones funcionales casi sin darnos cuenta. Pero para trabajar 
+        correctamente en el marco de este paradigma debemos saber, qué es exactamente la programación 
+        funcional, cuáles son sus ventajas y principios fundacionales, de qué mecanismos se sirve, qué 
+        técnicas de programación se utilizan, qué patrones de diseño funcional existen a nuestra disposición 
+        y qué estilos arquitectónicos emergen.
+      `,
+      links   : [
+        'google-2016-1',
+        'google-2016-2',
+        'google-2016-4'
+      ]
+    }, {
+      key     : 'google-2016-4',
+      title   : 'Programación Funcional en JavaScript IV',
+      caption : 'El camino de la Programación Funcional',
+      image   : IMAGE + '/images/events/workshops/workshop.16.04.png',
+      video   : VIDEO + '/videos/events/workshops/workshop.16.04.mp4',
+      path    : '/comunidad/talleres/google-2016-4',
+      place   : 'Google Campus',
+      author  : 'Javier Vélez',
+      date    : '2016',
+      time    : '1:40',
+      draft   : false,
+      hidden  : false,
+      lead    : `
+        La programación funcional está cogiendo fuerte tracción en los últimos años dentro de 
+        la comunidad de desarrollo. Tal vez ello se deba al surgimiento de nuevas arquitecturas 
+        que demandan cotas de escalabilidad, resistencia y flexibilidad en el marco de soluciones 
+        centradas en procesos de transformación. Pero más allá de una simple moda, como trataremos 
+        de mostrar en este taller, la programación funcional conduce a soluciones de código 
+        robustas, versátiles y expresivas que difícilmente son comparables con las propias de la 
+        orientación a objetos.
+
+        Además JavaScript, como la mayoría de los lenguajes de scripting es un lenguaje idiomático 
+        que invita a pensar en términos funcionales. De hecho muchas veces, cuando programamos en 
+        Javascript, desarrollamos soluciones funcionales casi sin darnos cuenta. Pero para trabajar 
+        correctamente en el marco de este paradigma debemos saber, qué es exactamente la programación 
+        funcional, cuáles son sus ventajas y principios fundacionales, de qué mecanismos se sirve, qué 
+        técnicas de programación se utilizan, qué patrones de diseño funcional existen a nuestra disposición 
+        y qué estilos arquitectónicos emergen.
+      `,
+      links   : [
+        'google-2016-1',
+        'google-2016-2',
+        'google-2016-3'
       ]
     }]
   }

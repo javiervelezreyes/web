@@ -8,7 +8,7 @@ Config.define ({
     caption : 'Catálogo de Publicaciones',
     lead    : `
       En esta sección se incluye la colección de publicaciones que he hecho para su descarga directa
-      en formato pdf. Cada libro aborda en produnda alguno de los perímetros de investigación en los
+      en formato pdf. Cada libro aborda en profundidad alguno de los perímetros de investigación en los
       que he trabajado.
     `
   },
@@ -33,7 +33,7 @@ Config.define ({
       determinadas técnicas y modelos de diseño arquitectónico tal es como el uso de traits, mixins, 
       roles, aspectos o subjects, propios del paradigma de la orientación a componentes, es de aplicación
       en estos casos. Muchos lenguajes, de hecho, invitan a llevar a cabo un proceso de ideación de 
-      soluciones basado en estas técnicas dando lugar a soluciones más flexibles y dinamicamente 
+      soluciones basado en estas técnicas dando lugar a soluciones más flexibles y dinámicamente 
       cambiantes a tenor de las condiciones ambientales. A lo largo de esta charla se hace un recorrido
       exhaustivo de este paradigma arquitectónico revisando los principios, técnicas y modelos sobre
       la base del stack tecnológico de la plataforma web.
@@ -58,7 +58,7 @@ Config.define ({
       determinadas técnicas y modelos de diseño arquitectónico tal es como el uso de traits, mixins, 
       roles, aspectos o subjects, propios del paradigma de la orientación a componentes, es de aplicación
       en estos casos. Muchos lenguajes, de hecho, invitan a llevar a cabo un proceso de ideación de 
-      soluciones basado en estas técnicas dando lugar a soluciones más flexibles y dinamicamente 
+      soluciones basado en estas técnicas dando lugar a soluciones más flexibles y dinámicamente 
       cambiantes a tenor de las condiciones ambientales. A lo largo de esta charla se hace un recorrido
       exhaustivo de este paradigma arquitectónico revisando los principios, técnicas y modelos sobre
       la base del stack tecnológico de la plataforma web.
@@ -83,7 +83,7 @@ Config.define ({
       determinadas técnicas y modelos de diseño arquitectónico tal es como el uso de traits, mixins, 
       roles, aspectos o subjects, propios del paradigma de la orientación a componentes, es de aplicación
       en estos casos. Muchos lenguajes, de hecho, invitan a llevar a cabo un proceso de ideación de 
-      soluciones basado en estas técnicas dando lugar a soluciones más flexibles y dinamicamente 
+      soluciones basado en estas técnicas dando lugar a soluciones más flexibles y dinámicamente 
       cambiantes a tenor de las condiciones ambientales. A lo largo de esta charla se hace un recorrido
       exhaustivo de este paradigma arquitectónico revisando los principios, técnicas y modelos sobre
       la base del stack tecnológico de la plataforma web.
@@ -108,7 +108,7 @@ Config.define ({
       determinadas técnicas y modelos de diseño arquitectónico tal es como el uso de traits, mixins, 
       roles, aspectos o subjects, propios del paradigma de la orientación a componentes, es de aplicación
       en estos casos. Muchos lenguajes, de hecho, invitan a llevar a cabo un proceso de ideación de 
-      soluciones basado en estas técnicas dando lugar a soluciones más flexibles y dinamicamente 
+      soluciones basado en estas técnicas dando lugar a soluciones más flexibles y dinámicamente 
       cambiantes a tenor de las condiciones ambientales. A lo largo de esta charla se hace un recorrido
       exhaustivo de este paradigma arquitectónico revisando los principios, técnicas y modelos sobre
       la base del stack tecnológico de la plataforma web.
@@ -133,7 +133,7 @@ Config.define ({
         determinadas técnicas y modelos de diseño arquitectónico tal es como el uso de traits, mixins, 
         roles, aspectos o subjects, propios del paradigma de la orientación a componentes, es de aplicación
         en estos casos. Muchos lenguajes, de hecho, invitan a llevar a cabo un proceso de ideación de 
-        soluciones basado en estas técnicas dando lugar a soluciones más flexibles y dinamicamente 
+        soluciones basado en estas técnicas dando lugar a soluciones más flexibles y dinámicamente 
         cambiantes a tenor de las condiciones ambientales. A lo largo de esta charla se hace un recorrido
         exhaustivo de este paradigma arquitectónico revisando los principios, técnicas y modelos sobre
         la base del stack tecnológico de la plataforma web.
