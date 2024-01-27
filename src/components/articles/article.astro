@@ -156,9 +156,19 @@ let tsize       = Config.key ('site.sizes.xshort')
   }
 
   @media (max-width: 1200px) {
-    .article .content figure figcaption {
+    .article .content figure {
       margin          : 0;
+      padding         : 0;
+      width           : 100%;
+    }
+    .article .content figure figcaption {
+      margin          : 0;      
       font-size       : 1.2rem;
+    }
+    .article .content figure img {
+      margin          : 0;
+      padding         : 0;
+      width           : 100%;
     }
     .article .content ul li {
       margin-left     : -20px;

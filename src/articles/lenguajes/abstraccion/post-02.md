@@ -109,7 +109,7 @@ La programación estructurada nació como una respuesta para hacer frente a los 
 
 Para los ingenieros de lenguajes, responsables de construir compiladores, este propósito fue un gran reto que tardo en afinarse algo más de 20 años. Pero, a mediados de los 50, los lenguajes así llamados de tercera generación, vieron la luz. Este hecho tuvo una gran aceptación y supuso un gran revulsivo dentro de la comunidad ingeniería del software.
 
-Este hecho tuvo una gran aceptación y supuso un gran revulsivo dentro de la comunidad ingeniería del software. Ahora los expertos podían centrar sus actividades en definir metodologías y procesos de alto nivel, principios y buenas prácticas y técnicas y patrones que ayudar a la comunidad de desarrolladores a realizar las actividades de programación de forma organizada, sistemática, homogénea y estándar.
+Ahora los expertos podían centrar sus actividades en definir metodologías y procesos de alto nivel, principios y buenas prácticas y técnicas y patrones que ayudar a la comunidad de desarrolladores a realizar las actividades de programación de forma organizada, sistemática, homogénea y estándar.
 
 A lo largo de este artículo, hemos prestado especial atención, precisamente, a estos aspectos más formales de los procesos de desarrollo de software. Aquellos que darían forma a un nuevo paradigma conocido como el nombre de programación estructurada. Como en todas las ideas, esta aproximación tenía sus limitaciones y lagunas y no tardaron en salirle detractores e impulsores de nuevas ideas disruptivas. Pero describir esta transición es ya objeto de un artículo distinto.
 
