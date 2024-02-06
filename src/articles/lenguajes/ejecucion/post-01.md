@@ -38,7 +38,7 @@ Si bien, como explicamos, no todos los modelos de ejecución son mutuamente inco
 <figure>
   <img src="/images/articles/lenguajes/ejecucion/post-01.01.png" 
        alt="Paradigmas de Construcción de Software">
-  <figcaption>Ejecución de Software</figcaption>
+  <figcaption>Ejecución de Software.</figcaption>
 </figure>
 
 Los modelos de ejecución existentes pueden clasificarse en función del perímetro de preocupación al que contribuyen. De acuerdo a esta idea, es posible establecer tres ejes dimensionales que, de manera ortogonal, conforman un espacio de análisis característico. En particular, estas dimensiones son las siguientes:

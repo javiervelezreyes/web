@@ -95,6 +95,7 @@ let tsize       = Config.key ('site.sizes.xshort')
 <style is:inline>
   .article {
     counter-reset     : figures;
+    counter-reset     : listing;
   }
   .article .content h1 { font-size : 30px; }
   .article .content h2 { font-size : 28px; }
@@ -147,6 +148,18 @@ let tsize       = Config.key ('site.sizes.xshort')
     line-height       : 1.8;
     background        : #F2F5F7 !important;
     border-radius     : 5px;
+    counter-increment : listing;
+  }
+  .article .content .listing::before {
+    content           : 'Listado ' counter(listing) '. ';
+    font-weight       : 900; 
+  }
+  .article .content .listing {
+    margin            : 20px;
+    font-size         : 18px;
+    font-weight       : 100;
+    text-align        : left;
+    line-height       : 1.8;
   }
   .article .content .video {
     margin            : 20px auto;

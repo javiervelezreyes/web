@@ -34,7 +34,7 @@ Con los ejemplos anteriores, parece que se presenta mucho más nítido el concep
 <figure>
   <img src="/images/articles/lenguajes/abstraccion/post-01.01.png" 
        alt="Paradigmas de Construcción de Software">
-  <figcaption>Construcción de Software</figcaption>
+  <figcaption>Construcción de Software.</figcaption>
 </figure>
 
 Pero el uso de un modelo de abstracción determinado no se limita a definir un tipo de artefacto arquitectónico característico para operar dentro del paradigma. Mucho más allá de eso, el uso de cada tipo de artefacto tiene una impronta directa en relación a cierto espacio de objetivos perseguidos, los principios de diseño que deben respetarse para alcanzar esos objetivos y las técnicas de soporte que debe proporcionar el lenguaje de programación subyacente.

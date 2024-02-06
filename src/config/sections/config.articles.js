@@ -42,6 +42,7 @@ Config.define ({
     series  : [
       '@site.articles.series.abstraccion',
       '@site.articles.series.ejecucion',
+      '@site.articles.series.ornitorrinco',
     ],
     draft   : false,
     hidden  : false
@@ -201,7 +202,7 @@ Config.define ({
     title    : 'Paradigmas & Modelos de Abstracción',
     caption  : 'El Software en la Fase de Diseño',
     path     : 'lenguajes/abstraccion',
-    slug     : 'javascript',
+    slug     : 'abstraccion',
     draft    : false,
     hidden   : false
   }, {
@@ -209,7 +210,15 @@ Config.define ({
     title    : 'Paradigmas & Modelos de Ejecución',
     caption  : 'El Software en la Fase de Ejecución',
     path     : 'lenguajes/ejecucion',
-    slug     : 'javascript',
+    slug     : 'ejecucion',
+    draft    : false,
+    hidden   : false
+  }, {
+    key      : 'ornitorrinco',
+    title    : 'El Efecto Ornitorrinco',
+    caption  : 'El Lenguaje es Anterior al Paradigma',
+    path     : 'lenguajes/ornitorrinco',
+    slug     : 'ornitorrinco',
     draft    : false,
     hidden   : false
   }, {
