@@ -43,6 +43,7 @@ Config.define ({
       '@site.articles.series.abstraccion',
       '@site.articles.series.ejecucion',
       '@site.articles.series.ornitorrinco',
+      '@site.articles.series.asincronia',
     ],
     draft   : false,
     hidden  : false
@@ -219,6 +220,14 @@ Config.define ({
     caption  : 'El Lenguaje es Anterior al Paradigma',
     path     : 'lenguajes/ornitorrinco',
     slug     : 'ornitorrinco',
+    draft    : false,
+    hidden   : false
+  },{
+    key      : 'asincronia',
+    title    : 'El Modelo de Ejecución Asíncrona',
+    caption  : 'El Rendimiento de lo No Bloqueante',
+    path     : 'lenguajes/asincronia',
+    slug     : 'asincronia',
     draft    : false,
     hidden   : false
   }, {
