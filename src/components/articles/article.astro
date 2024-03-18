@@ -127,16 +127,18 @@ let tsize       = Config.key ('site.sizes.xshort')
   }
   .article .content figure img {
     display           : block;
-    width             : 80%;
+    width             : 95%;
     margin            : 0 auto;
   }
+  .article .content figure {
+    counter-increment : figures;
+  } 
   .article .content figure figcaption {
     margin            : 20px 50px 40px 50px;
     font-size         : 18px;
     font-weight       : 100;
     text-align        : center;
     line-height       : 1.8;
-    counter-increment : figures;
   }
   .article .content figcaption::before {
     content           : 'Figura ' counter(figures) '. ';
