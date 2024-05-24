@@ -45,6 +45,7 @@ Config.define ({
       '@site.articles.series.ornitorrinco',
       '@site.articles.series.asincronia',
       '@site.articles.series.concurrente',
+      '@site.articles.series.reactiva',
     ],
     draft   : false,
     hidden  : false
@@ -225,7 +226,7 @@ Config.define ({
     hidden   : false
   }, {
     key      : 'asincronia',
-    title    : 'El Modelo de Ejecución Asíncrona',
+    title    : 'Ejecución Asíncrona',
     caption  : 'El Rendimiento de lo No Bloqueante',
     path     : 'lenguajes/asincronia',
     slug     : 'asincronia',
@@ -233,10 +234,18 @@ Config.define ({
     hidden   : false
   }, {
     key      : 'concurrente',
-    title    : 'El Modelo de Ejecución Concurrente',
+    title    : 'Ejecución Concurrente',
     caption  : 'Construcción Cooperativa & Competitiva',
     path     : 'lenguajes/concurrente',
     slug     : 'concurrente',
+    draft    : false,
+    hidden   : false
+  }, {
+    key      : 'reactiva',
+    title    : 'Ejecución Reactiva',
+    caption  : 'Declaración & Comportamiento Emergente',
+    path     : 'lenguajes/reactiva',
+    slug     : 'reactiva',
     draft    : false,
     hidden   : false
   }, {

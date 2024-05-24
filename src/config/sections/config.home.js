@@ -119,7 +119,7 @@ Config.define ({
     caption  : 'Redes, Teléfono & Mail',
     channels : [{
         key   : 'web',
-        title : 'En la Web',
+        title : 'Por Redes',
         icon  : '@site.icons.general.talk',
         links : [
           { label : 'Twitter'  , href : 'https://twitter.com/javiervelezreye'         },

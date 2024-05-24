@@ -10,7 +10,9 @@ export default Config.define ({
   'site.brand'    : 'Javier Vélez Reyes',
   'site.slogan'   : 'Speaking In Silver',
   'site.location' : 'Madrid (Spain)',
+  'site.image'    : '/images/commons/image.png',
   'site.logo'     : '/images/commons/logo.png',
+  'site.link'     : 'javiervelezreyes.com',
 
   'site.pages'  : [
     { key: 'home'      , label: 'Home'      , path: '/'          , open : true  },

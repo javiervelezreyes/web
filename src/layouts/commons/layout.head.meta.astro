@@ -1,6 +1,47 @@
+---
+import Config from '../../config/config.js'
+
+const DOT    = '·'
+const COMMA  = ','
+const HYPPEN = '-'
+const PATH   = '/'
+
+let Refs = x => x.key ('href')
+let Json = JSON.stringify
+
+let base    = Config.key ('site.link')
+let image   = Config.key ('site.image')
+let header  = Config.key ('site.home.header')
+let about   = Config.key ('site.home.about.description')
+let title   = header.key ('title')
+let caption = header.key ('caption')
+let links   = header.key ('links')
+
+let keys    = caption.replaceAll (DOT, COMMA)
+let refs    = links.map (Refs)
+let lead    = [title, about].join (HYPPEN)
+let user    = [base, image].join (PATH)
+let schema  = Json ({
+  '@context' : 'https://schema.org',
+  '@type'    : 'Person',
+  'name'     : title,
+  'url'      : base,
+  'sameAs'   : refs
+})
+---
+
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport"              content="width=device-width, initial-scale=1.0">
+<meta name="description"           content={lead}>
+<meta name="keywords"              content={keys}>
+<meta property="og:title"          content={title} />
+<meta property="og:type"           content="website" />
+<meta property="og:url"            content={base} />
+<meta property="og:image"          content={user} />
+<meta property="og:description"    content={lead} />
+<meta property="og:site_name"      content={title} />
+<meta property="og:locale"         content="es_ES" />
 
 <link rel="shortcut icon"                    href="/icons/favicon/favicon.ico" type="image/x-icon" />
 <link rel="apple-touch-icon"                 href="/icons/favicon/icon.png" />
@@ -12,3 +53,7 @@
 <link rel="apple-touch-icon" sizes="144x144" href="/icons/favicon/icon-144x144.png" />
 <link rel="apple-touch-icon" sizes="152x152" href="/icons/favicon/icon-152x152.png" />
 <link rel="apple-touch-icon" sizes="180x180" href="/icons/favicon/icon-180x180.png" />
+<link rel="canonical"                        href={base} />
+
+<script is:inline type="application/ld+json" set:html={schema}>
+</script>
