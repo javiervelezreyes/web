@@ -1,23 +1,30 @@
 ---
 import Config from '../../config/config.js'
 
-const DOT    = '·'
-const COMMA  = ','
-const HYPPEN = '-'
-const PATH   = '/'
+const DOT   = '·'
+const COMMA = ','
+const PATH  = '/'
+const SPC   = ' '
 
-let Refs = x => x.key ('href')
+function Refs (link) {
+  return link.key ('href')
+}
+function Clean (text) {
+  return text.replace(/\s+/g, SPC)
+}
+
 let Json = JSON.stringify
 
 let base    = Config.key ('site.link')
 let image   = Config.key ('site.image')
 let header  = Config.key ('site.home.header')
-let lead    = Config.key ('site.home.about.summary')
+let summary = Config.key ('site.home.about.summary')
 let title   = header.key ('title')
 let caption = header.key ('caption')
 let links   = header.key ('links')
 
-let keys    = caption.replaceAll (DOT, COMMA)
+let lead    = Clean (summary)
+let keys    = Clean (caption.replaceAll (DOT, COMMA))
 let refs    = links.map (Refs)
 let user    = [base, image].join (PATH)
 let schema  = Json ({
