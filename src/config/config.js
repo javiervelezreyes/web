@@ -15,11 +15,11 @@ export default Config.define ({
   'site.link'     : 'javiervelezreyes.com',
 
   'site.pages'  : [
-    { key: 'home'      , label: 'Home'      , path: '/'          , open : true  },
-    { key: 'courses'   , label: 'Cursos'    , path: '/cursos'    , open : false },
-    { key: 'books'     , label: 'Libros'    , path: '/libros'    , open : false },
-    { key: 'articles'  , label: 'Artículos' , path: '/articulos' , open : true  },
-    { key: 'events'    , label: 'Comunidad' , path: '/comunidad' , open : true  },
+    { key: 'home'      , label: 'Home'        , path: '/'            , open : true  },
+    { key: 'courses'   , label: 'Cursos'      , path: '/cursos'      , open : false },
+    { key: 'books'     , label: 'Libros'      , path: '/libros'      , open : false },
+    { key: 'articles'  , label: 'Artículos'   , path: '/articulos'   , open : true  },
+    { key: 'events'    , label: 'Divulgación' , path: '/divulgacion' , open : true  },
   ],
 
   'site.links' : [
