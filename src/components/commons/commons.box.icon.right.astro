@@ -20,14 +20,14 @@ let tsize   = Config.key ('site.sizes.regular')
   <div class="box">
     <div class="head">
       <div class="content">
-        <div class="title">{title}</div>
-        <div class="caption">{caption}</div>
+        <h2 class="title">{title}</h2>
+        <p class="caption">{caption}</p>
       </div>
       <div class="icon"><i class={icon}></i></div>
     </div>
     <div class="body">
       <div class="mdata">{mdata}</div>
-      <div class="lead">{lead}</div>
+      <p class="lead">{lead}</p>
       <div class="actions">
         {draft  && <a class="ui button disabled" href={path}>Próximamente</a> } 
         {!draft && <a class="ui button"          href={path}>Acceder</a> } 
@@ -72,7 +72,7 @@ let tsize   = Config.key ('site.sizes.regular')
   .box .head .content .caption {
     font-size       : var(--csize);
     font-weight     : 600;
-    line-height     : 1.5;
+    line-height     : .5;
   }
   .box .body {
     position        : relative;
@@ -102,13 +102,16 @@ let tsize   = Config.key ('site.sizes.regular')
   @media (max-width : 715px) {
     .box .head .icon  {
       display         : block;
+      margin-top      : 10px;
       font-size       : 10vw !important;
     }
     .box .head .title {
+      margin-right    : 20px;
       font-size       : 6vw !important;
     }
     .box .head .caption {
       font-size       : 3vw !important;
+      margin-right    : 20px;
     }
   }
 </style>
