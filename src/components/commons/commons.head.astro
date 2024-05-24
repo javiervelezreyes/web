@@ -12,7 +12,7 @@ let caption = Astro.props.caption
 ---
 
 <div class="ui center aligned container">
-  <h1 class="title">{title}</h1>
+  <div class="title">{title}</div>
   <p class="caption">{caption}</p>
   <div class="separator"></div>
 </div>
@@ -33,7 +33,7 @@ let caption = Astro.props.caption
     margin-top    : 0px !important;
     font-size     : var(--csize);
     font-weight   : var(--cweight);
-    line-height   : 1.5;
+    line-height   : 2.5;
     overflow-wrap : break-word;
   }
   .separator {

@@ -12,14 +12,13 @@ let Json = JSON.stringify
 let base    = Config.key ('site.link')
 let image   = Config.key ('site.image')
 let header  = Config.key ('site.home.header')
-let about   = Config.key ('site.home.about.description')
+let lead    = Config.key ('site.home.about.summary')
 let title   = header.key ('title')
 let caption = header.key ('caption')
 let links   = header.key ('links')
 
 let keys    = caption.replaceAll (DOT, COMMA)
 let refs    = links.map (Refs)
-let lead    = [title, about].join (HYPPEN)
 let user    = [base, image].join (PATH)
 let schema  = Json ({
   '@context' : 'https://schema.org',

@@ -15,7 +15,7 @@ let tsize  = Config.key ('site.sizes.medium')
 
 <div class="activity row">
   <div class="nine wide column">
-    <h3 class="head">{head}</h3>
+    <h2 class="head">{head}</h2>
     <p  class="text">{text}</p>
     <div class="action">
       { open && <a class="ui big button" href={link}>Saber Más</a>}
@@ -23,7 +23,7 @@ let tsize  = Config.key ('site.sizes.medium')
     </div>
   </div>
   <div class="seven wide column">
-    <img src={image} class="ui image">
+    <img src={image} class="ui image" alt={head}>
   </div>
 </div>
 
