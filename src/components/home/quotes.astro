@@ -2,10 +2,11 @@
 import Config  from '../../config/config.js'
 import Section from '../commons/commons.band.astro'
 
-let quotes = Config.key ('site.home.quotes')
-let tcolor = Config.key ('site.colors.texts.primary')
-let hsize  = Config.key ('site.sizes.large')
-let tsize  = Config.key ('site.sizes.medium')
+let quotes  = Config.key ('site.home.quotes')
+let tcolor  = Config.key ('site.colors.texts.primary')
+let hsize   = Config.key ('site.sizes.big')
+let tsize   = Config.key ('site.sizes.medium')
+let hweight = Config.key ('site.weights.bold')
 
 ---
 <Section light>
@@ -19,7 +20,7 @@ let tsize  = Config.key ('site.sizes.medium')
           return (
             <div class="quote hide">
               <i class={icon}></i>
-              <h1>{title}</h1>
+              <div class="head">{title}</div>
               <p>{caption}</p>
             </div>
           )
@@ -30,7 +31,7 @@ let tsize  = Config.key ('site.sizes.medium')
 
 </Section>
 
-<style define:vars={{ tcolor, hsize, tsize }}>
+<style define:vars={{ tcolor, hsize, tsize, hweight }}>
 
   .quotes .quote {
     margin    : 40px auto;
@@ -38,9 +39,13 @@ let tsize  = Config.key ('site.sizes.medium')
     width     : 100%;
     color     : var(--tcolor);
   }
-  .quote i  { font-size: 92px;         }
-  .quote h1 { font-size: var(--hsize); }
-  .quote p  { 
+  .quote .head { 
+    font-size   : var(--hsize);
+    font-weight : var(--hweight);
+    line-height : 1.5; 
+  }
+  .quote i { font-size: 92px; }
+  .quote p { 
     margin    : 40px auto;
     font-size : var(--tsize); 
   }
