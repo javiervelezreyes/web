@@ -24,7 +24,7 @@ let tsize   = Config.key ('site.sizes.short')
                 <div class="icon">
                   <i class={icon}></i>
                 </div> 
-                <h3 class="head">{head}</h3>
+                <p class="head"><strong>{head}</strong></p>
                 <p class="text">{text}</p>
               </div>
             )
@@ -55,6 +55,7 @@ let tsize   = Config.key ('site.sizes.short')
   .hlights .head {
     font-size      : var(--hsize);
     text-transform : uppercase;
+    margin         : 20px 0;
   }
   .hlights .text {
     font-size : var(--tsize);

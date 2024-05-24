@@ -40,14 +40,13 @@ Config.define ({
     description : `
       Ingeniero Informático por la Universidad Politécnica de Madrid y Doctor en Informática 
       por la Universidad Nacional de Educación a Distancia Javier tiene una dilatada trayectoria
-      académica y profesional de más de 20 años. Experto en arquitectura software y empresarial 
-      centra sus esfuerzos en la transformación digital de compañías y realiza actividades de 
-      innovación, training y evangelización en comunidad.
+      académica y profesional de más de 25 años. Experto en Arquitectura Empresarial, Experiencia
+      de Cliente e Inteligencia Artificial, centra sus esfuerzos en la transformación digital, en
+      la divulgación tecnológica y es una voz autorizada del sector.
     `,
     summary    : `
-      Javier Vélez Reyes es doctor en Informática con más de 20 años de experiencia en arquitectura
-      Empresarial, IA, Experiencia de Cliente y Transformación Digital. Es activo evangelizador en 
-      Comunidad.”
+      Javier Vélez Reyes PhD Informática. Arquitectura Empresarial, IA, Customer Experience, 
+      Transformación Digital. Divulgador Tecnologico. Voz de Influencia.
     `
   },
 

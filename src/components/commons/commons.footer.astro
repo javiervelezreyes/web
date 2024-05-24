@@ -24,11 +24,11 @@ let ecolor    = Config.key ('site.colors.surfaces.dark.secondary')
   <div class="ui container">
     <div class="ui stackable grid">
       <div class="eight wide column">
-        <h1 class="ui header primary">{htitle}</h1>
+        <div class="ui header primary head">{htitle}</div>
         <cite class="cite secondary">{htext}</cite>
       </div>
       <div class="four wide column">
-        <h4 class="ui header primary">{stitle}</h4>
+        <div class="ui header primary">{stitle}</div>
         <div class="ui link list">
           { 
             slinks.map (function (slink) {
@@ -40,7 +40,7 @@ let ecolor    = Config.key ('site.colors.surfaces.dark.secondary')
         </div>
       </div>
       <div class="four wide column">
-        <h4 class="ui header primary">{ctitle}</h4>
+        <div class="ui header primary">{ctitle}</div>
         <div class="ui link list">
           { 
             clinks.map (function (clink) {
@@ -70,8 +70,9 @@ let ecolor    = Config.key ('site.colors.surfaces.dark.secondary')
   .foot .container {
     margin: 30px auto 60px auto;
   }
-  .foot .primary   { color : var(--rcolor) !important; }
-  .foot .secondary { color : var(--tcolor) !important; 
+  .foot .primary      { color : var(--rcolor) !important; }
+  .foot .primary.head { font-size: 32px; }
+  .foot .secondary    { color : var(--tcolor) !important; 
     font-size: 1.1rem;
   }
   .foot .cite {
