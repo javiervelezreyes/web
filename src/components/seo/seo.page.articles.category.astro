@@ -25,10 +25,12 @@ function find (categories) {
     })
 }
 
+let title = ''
+let tags  = []
 async function doCategory (category) {
-  let title   = category.key ('title')
+      title   = category.key ('title')
+      tags    = category.key ('tags')
   let caption = category.key ('caption')
-  let tags    = category.key ('tags')
   let series  = category.key ('series')
   return SHelper.Json ({
     [CONTEXT]    : SCHEMA,
@@ -97,4 +99,8 @@ let Category   = category && await doCategory (category)
 ---
 
 <Base />
+
+<meta name="description" content={title}>
+<meta name="keywords"    content={tags.join (',')}>
+
 { Category && <script is:inline type="application/ld+json" set:html={Category}></script> }
