@@ -22,6 +22,7 @@ let mail           = Config.key ('site.links.mail') .key ('label')
 let phone          = Config.key ('site.links.phone').key ('label')
 let description    = Helper.Text (summary)
 let path           = HOME + Astro.url.pathname
+let link           = Astro.url.toString ()
 
 let Site = Helper.Json ({
   [CONTEXT]   : SCHEMA,
@@ -54,5 +55,6 @@ let Person = Helper.Json ({
 
 ---
 
+<link rel="canonical" href={link} />
 <script is:inline type="application/ld+json" set:html={Site}></script> 
 <script is:inline type="application/ld+json" set:html={Person}></script> 
