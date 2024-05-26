@@ -12,7 +12,7 @@ function Helper () {
   function When (...paths) {
     return function (path) {
       return paths.map (function (path) {
-        path.endsWith (SLASH) && (path = path.slice (0, -1))
+        path.endsWith (SLASH) && (path.length > 1) && (path = path.slice (0, -1))
         return RegExp (START + path.split(ANY).join(ALL) + END)
       }).some (function (exp) {
         return exp.test (path)
