@@ -5,15 +5,15 @@ const ANY   = '*'
 const ALL   = '[^/]*'
 const START = '^'
 const END   = '$'
-const SLASH = '/'
+const SEP   = '/'
 
 function Helper () {
 
   function When (...exps) {
     return function (path) {
+      path = Resolve (path)
       return exps.map (function (exp) {
-        path.endsWith (SLASH) && (path.length > 1) && (path = path.slice (0, -1))
-        return RegExp (START + exp.split(ANY).join(ALL) + END)
+        return RegExp (START + exp.split (ANY).join (ALL) + END)
       }).some (function (exp) {
         return exp.test (path)
       }) 
@@ -31,10 +31,24 @@ function Helper () {
       .replaceAll (BD, NL)
   }
 
+  function Resolve (path) {
+    let ok = !path.endsWith (SEP)
+    return (
+      !ok && path.slice (0, -1) ||
+       ok && path
+    )
+  }
+
+  function Slug (path) {
+    return Resolve (path).split (SEP).pop ()
+  }
+
   return { 
     When,
     Json,
-    Text
+    Text,
+    Resolve,
+    Slug
   }
 }
 

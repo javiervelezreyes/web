@@ -18,8 +18,9 @@ function find (...sections) {
   let item
   for (let section of sections) {
     for (let event of section) {
-      let ref   = event.key ('path')
-      let found = path == ref
+      let epath = event.key ('path')
+      let spath = Helper.Resolve (path)
+      let found = spath == epath
       found && (item = event)
     }
   }

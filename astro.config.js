@@ -20,12 +20,13 @@ export default defineConfig ({
   build     : {
     format  : 'directory'
   },
-  markdown: {
+  markdown  : {
     shikiConfig: {
-      theme: 'light-plus',
-      langs: [],
-      wrap: true,
+      theme : 'light-plus',
+      langs : [],
+      wrap  : true,
     },
   },
-  redirects : Redirects ()
+  redirects     : Redirects (),
+  trailingSlash : 'ignore'
 })
