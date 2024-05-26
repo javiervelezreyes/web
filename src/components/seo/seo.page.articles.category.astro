@@ -94,7 +94,7 @@ let logo       = Config.key ('site.logo')
 let categories = Config.key ('site.articles.categories')
 let category   = find (categories)
 let title      = category && category.key ('title')
-let tags       = category && category.key ('tags').join (',')
+let tags       = category && [title, ...category.key ('tags')].join (',')
 let Category   = category && await doCategory (category)
 ---
 

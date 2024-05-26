@@ -68,6 +68,6 @@ let Events  = doSections (talks, iviews, wshops)
 <Base />
 
 <meta name="description" content={title}>
-<meta name="keywords"    content={caption}>
+<meta name="keywords"    content={[title, caption].join ()}>
 
 <script is:inline type="application/ld+json" set:html={Events}></script> 
