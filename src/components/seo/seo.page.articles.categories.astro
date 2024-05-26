@@ -1,0 +1,60 @@
+---
+import Config from '../../config/config.js'
+import Helper from '../../helpers/helper.seo.js'
+import Base   from './seo.base.astro'
+
+const CONTEXT   = '@context'
+const TYPE      = '@type'
+const SCHEMA    = 'https://schema.org'
+const PAGE      = 'CollectionPage'
+const VOLUME    = 'PublicationVolume'
+const PERSON    = 'Person'
+const PUBLISHER = 'Organization'
+
+function doCategories (categories) {
+  return Helper.Json ({
+    [CONTEXT]    : SCHEMA,
+    [TYPE]       : PAGE,
+    name         : title,
+    description  : caption,
+    hasPart      : [...categories].filter (isHidden).map (doCategory)
+  })
+}
+
+function doCategory (category) {
+  let title   = category.key ('title')
+  let caption = category.key ('caption')
+  let tags    = category.key ('tags').join (',')
+  return {
+    [TYPE]      : VOLUME,
+    name        : title,
+    description : caption,
+    keywords    : tags,
+    author      : {
+      [TYPE] : PERSON,
+      name   : brand
+    },
+    publisher   : {
+      [TYPE] : PUBLISHER,
+      name   : brand,
+      url    : site,
+      logo   : logo
+    }
+  }
+}
+
+function isHidden (item) {
+  return !item.key ('hidden')
+}
+
+let site       = Config.key ('site.link')
+let brand      = Config.key ('site.brand') 
+let logo       = Config.key ('site.logo')
+let title      = Config.key ('site.articles.header.title')
+let caption    = Config.key ('site.articles.header.caption')
+let categories = Config.key ('site.articles.categories')
+let Categories = doCategories (categories)
+---
+
+<Base />
+<script is:inline type="application/ld+json" set:html={Categories}></script> 

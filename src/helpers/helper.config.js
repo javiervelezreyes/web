@@ -70,7 +70,6 @@ function Helper (config) {
   } 
 
   function key (exp) {
-    if (exp == 'site.events.talks.commit-2018') debugger
     let value = LConfig[exp]
     if (isOk (value)) return resolve (value)
     else {

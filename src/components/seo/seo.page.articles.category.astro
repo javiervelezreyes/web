@@ -1,0 +1,100 @@
+---
+import Config  from '../../config/config.js'
+import CHelper from '../../helpers/helper.content.js'
+import SHelper from '../../helpers/helper.seo.js'
+import Base    from './seo.base.astro'
+
+const CONTEXT   = '@context'
+const TYPE      = '@type'
+const SCHEMA    = 'https://schema.org'
+const PAGE      = 'CollectionPage'
+const PERSON    = 'Person'
+const PUBLISHER = 'Organization'
+const SERIE     = 'Series'
+const ARTICLE   = 'Article'
+
+let path = Astro.url.pathname 
+
+function find (categories) {
+  return [...categories]
+    .filter (isHidden)
+    .find (function (category) {
+      let cpath = category.key ('path') 
+      let spath = path 
+      return cpath == spath
+    })
+}
+
+async function doCategory (category) {
+  let title   = category.key ('title')
+  let caption = category.key ('caption')
+  let tags    = category.key ('tags')
+  let series  = category.key ('series')
+  return SHelper.Json ({
+    [CONTEXT]    : SCHEMA,
+    [TYPE]       : PAGE,
+    name         : title,
+    description  : caption,
+    keywords     : tags.join (','),
+    hasParts     : await Promise.all ([...series].filter (isHidden).map (doSerie))
+  })
+}
+
+async function doSerie (serie) {
+  function isHidden (article) {
+    let {mdata} = article
+    let hidden  = !!mdata.hidden
+    return !hidden
+  }
+  let title    = serie.key ('title')
+  let caption  = serie.key ('caption')
+  let path     = serie.key ('path')
+  let articles = await CHelper.getAll (path)
+  return {
+    [TYPE]      : SERIE,
+    name        : title,
+    description : caption,
+    hasPart     : articles.filter (isHidden). map (doArticle)
+  }
+}
+
+function doArticle (article) {
+  let {mdata}   = article
+  let {content} = article
+  let {title}   = mdata
+  let {author}  = mdata
+  let {date}    = mdata
+  let short     = content.short (150)
+  return {
+    [TYPE]    : ARTICLE,
+    headline  : {title},
+    author    : {
+      [TYPE] : PERSON,
+      name   : author
+    },
+    publisher : {
+      [TYPE] : PUBLISHER,
+      name   : brand,
+      logo   : logo,
+      url    : site
+    },
+    datePublished : date,
+    dateModified  : date,
+    articleBody   : short,
+  }
+}
+  
+function isHidden (item) {
+  return !item.key ('hidden')
+}
+
+let site       = Config.key ('site.link')
+let brand      = Config.key ('site.brand') 
+let logo       = Config.key ('site.logo')
+let categories = Config.key ('site.articles.categories')
+let category   = find (categories)
+let Category   = category && await doCategory (category)
+---
+
+<Base />
+{ Category && <script is:inline type="application/ld+json" set:html={Category}></script> }

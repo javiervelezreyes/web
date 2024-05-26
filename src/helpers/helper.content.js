@@ -43,7 +43,7 @@ function CHelper () {
   }
 
   function Short (text) {
-    return  function (max) {
+    return function (max) {
       let lines = text
         .substring (0, max)
         .split (WORD)

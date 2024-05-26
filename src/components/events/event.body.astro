@@ -17,7 +17,7 @@ let lead    = event.key ('lead')
 let others  = Links (event, events)
 let mdata   = [author, place, date, time].join (' · ')
 
-let icon    = Config.key ('site.icons.light.event')
+let icon    = Config.key ('site.icons.light.talk')
 let tcolor  = Config.key ('site.colors.texts.primary')
 let lcolor  = Config.key ('site.colors.lines.secondary')
 let tsize   = Config.key ('site.sizes.lite')
@@ -47,12 +47,11 @@ function Links (event, events) {
     <p class="lead">{lead}</p>
     <div class="links">
       <div class="head">
-        <Section title="Eventos Relacionadas" caption={caption} icon={icon}/>
+        <Section title="Eventos Relacionados" caption={caption} icon={icon}/>
       </div> 
       <div class="body">
         {
           others.map (function (other) {
-            debugger
             let title   = other.key ('title')
             let caption = other.key ('caption')
             let author  = other.key ('author')

@@ -1,0 +1,58 @@
+---
+import Config from '../../config/config.js'
+import Helper from '../../helpers/helper.seo.js'
+
+const CONTEXT      = '@context'
+const TYPE         = '@type'
+const SCHEMA       = 'https://schema.org'
+const PERSON       = 'Person'
+const WEBPAGE      = 'WebPage'
+const ORGANIZATION = 'Organization'
+const HOME         = 'Home'
+
+let title          = Config.key ('site.brand') 
+let logo           = Config.key ('site.logo') 
+let base           = Config.key ('site.link') 
+let location       = Config.key ('site.location') 
+let keys           = Config.key ('site.home.header.keys')
+let summary        = Config.key ('site.home.about.summary')
+let image          = Config.key ('site.home.header.image') 
+let links          = Config.key ('site.home.header.links').map (x => x.key ('href'))
+let mail           = Config.key ('site.links.mail') .key ('label')
+let phone          = Config.key ('site.links.phone').key ('label')
+let description    = Helper.Text (summary)
+let path           = HOME + Astro.url.pathname
+
+let Site = Helper.Json ({
+  [CONTEXT]   : SCHEMA,
+  [TYPE]      : WEBPAGE,
+  name        : title,
+  url         : base,
+  description : description,
+  breadcrumb  : path,
+  publisher   : {
+    [TYPE] : ORGANIZATION,
+    name   : title,
+    logo   : logo,
+    url    : base
+  }
+})
+
+let Person = Helper.Json ({
+  [CONTEXT]    : SCHEMA,
+  [TYPE]       : PERSON,
+  name         : title,
+  description  : description,
+  keys         : keys,
+  url          : base,
+  image        : base + image,
+  sameAs       : links,
+  email        : mail,
+  telephone    : phone,
+  workLocation : location
+})
+
+---
+
+<script is:inline type="application/ld+json" set:html={Site}></script> 
+<script is:inline type="application/ld+json" set:html={Person}></script> 

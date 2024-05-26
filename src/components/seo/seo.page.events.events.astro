@@ -1,0 +1,69 @@
+---
+import Config from '../../config/config.js'
+import Helper from '../../helpers/helper.seo.js'
+import Base   from './seo.base.astro'
+
+const CONTEXT    = '@context'
+const TYPE       = '@type'
+const SCHEMA     = 'https://schema.org'
+const COLLECTION = 'Collection'
+const PAGE       = 'CollectionPage'
+const VIDEO      = 'VideoObject'
+const PERSON     = 'Person'
+
+function doSections (...sections) {
+  return Helper.Json ({
+    [CONTEXT]   : SCHEMA,
+    [TYPE]      : PAGE,
+    name        : title,
+    description : caption,
+    hasPart     : sections.map (doSection),
+  })
+}
+
+function doSection (section) {
+  let title   = section.key ('title')
+  let caption = section.key ('caption')
+  let events  = [...section.key ('items')].filter (isHidden)
+  return {
+    [TYPE]      : COLLECTION,
+    name        : title,
+    description : caption,
+    hasPart     : events.map (doEvent),
+  }
+}
+
+function doEvent (event) {
+  return {
+    [TYPE]       : VIDEO,
+    name         : event.key ('title'),
+    description  : event.key ('caption'),
+    thumbnailUrl : event.key ('image'),
+    contentUrl   : event.key ('video'),
+    embedUrl     : link,
+    uploadDate   : event.key ('date'),
+    duration     : event.key ('time'),
+    author       : {
+      [TYPE] : PERSON,
+      name   : event.key ('author'),
+      url    : site
+    }
+  }
+}
+
+function isHidden (item) {
+  return !item.key ('hidden')
+}
+
+let link    = Astro.url
+let site    = Config.key ('site.link')
+let title   = Config.key ('site.events.header.title')
+let caption = Config.key ('site.events.header.caption')
+let talks   = Config.key ('site.events.talks')
+let iviews  = Config.key ('site.events.interviews')
+let wshops  = Config.key ('site.events.workshops')
+let Events  = doSections (talks, iviews, wshops)
+---
+
+<Base />
+<script is:inline type="application/ld+json" set:html={Events}></script> 

@@ -1,0 +1,71 @@
+---
+import Config  from '../../config/config.js'
+import CHelper from '../../helpers/helper.content.js'
+import SHelper from '../../helpers/helper.seo.js'
+import Base    from './seo.base.astro'
+
+const CONTEXT   = '@context'
+const TYPE      = '@type'
+const ID        = '@id'
+const SCHEMA    = 'https://schema.org'
+const ARTICLE   = 'Article'
+const WEBPAGE   = 'WebPage'
+const PERSON    = 'Person'
+const PUBLISHER = 'Organization'
+const SUMMARY   = 'summary_large_image'
+const SEP       = '/'
+
+let link        = Astro.url
+let path        = Astro.url.pathname
+let slug        = path.split (SEP).pop ()
+let article     = await CHelper.find (slug)
+
+let {mdata  }   = article
+let {content}   = article
+let {title  }   = mdata
+let {author }   = mdata
+let {date   }   = mdata
+let short       = content.short (150)
+let keys        = [author, date].join (',')
+let site        = Config.key ('site.link')
+let brand       = Config.key ('site.brand')
+let logo        = Config.key ('site.logo')
+let twitter     = '@javiervelezreye'
+
+let Article = SHelper.Json ({
+  [CONTEXT] : SCHEMA,
+  [TYPE]    : ARTICLE,
+  headline  : {title},
+  author    : {
+    [TYPE] : PERSON,
+     name  : author
+  },
+  publisher : {
+    [TYPE] : PUBLISHER,
+    name   : brand,
+    logo   : logo,
+    url    : site
+  },
+  datePublished : date,
+  dateModified  : date,
+  articleBody   : short,
+})
+---
+
+<Base />
+
+<meta name="keywords"            content={keys}>
+<meta name="description"         content={title}>
+
+<meta property="og:title"        content={title}>
+<meta property="og:type"         content={ARTICLE}>
+<meta property="og:url"          content={link}>
+<meta property="og:description"  content={short}> 
+<meta property="og:site_name"    content={site}>
+
+<meta name="twitter:card"        content={SUMMARY}>
+<meta name="twitter:site"        content={twitter}>
+<meta name="twitter:title"       content={title}>
+<meta name="twitter:description" content={short}>
+
+<script is:inline type="application/ld+json" set:html={Article}></script> 

@@ -1,0 +1,25 @@
+---
+import Helper     from '../../helpers/helper.seo.js' 
+import Home       from './seo.page.home.astro' 
+import Article    from './seo.page.articles.article.astro'
+import Category   from './seo.page.articles.category.astro' 
+import Categories from './seo.page.articles.categories.astro' 
+import Event      from './seo.page.events.event.astro' 
+import Events     from './seo.page.events.events.astro'
+
+let path = Astro.url.pathname
+
+let isHome       = Helper.When ('/')
+let isArticle    = Helper.When ('/articulos/*/*/*')
+let isCategory   = Helper.When ('/articulos/*')
+let isCategories = Helper.When ('/articulos')
+let isEvent      = Helper.When ('/comunidad/*/*')
+let isEvents     = Helper.When ('/comunidad')
+---
+
+{ isHome       (path) && <Home       /> }
+{ isArticle    (path) && <Article    /> }
+{ isCategory   (path) && <Category   /> }
+{ isCategories (path) && <Categories /> }
+{ isEvent      (path) && <Event      /> }
+{ isEvents     (path) && <Events     /> }

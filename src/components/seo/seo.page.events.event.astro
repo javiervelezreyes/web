@@ -1,0 +1,83 @@
+---
+import Config from '../../config/config.js'
+import Helper from '../../helpers/helper.seo.js'
+import Base   from './seo.base.astro'
+
+const CONTEXT = '@context'
+const TYPE    = '@type'
+const SCHEMA  = 'https://schema.org'
+const PERSON  = 'Person'
+const VIDEO   = 'VideoObject'
+const PLAYER  = 'player'
+const MOVIE   = 'video.movie'
+
+let link = Astro.url
+let path = Astro.url.pathname 
+
+function find (...sections) {
+  let item
+  for (let section of sections) {
+    for (let event of section) {
+      let ref   = event.key ('path')
+      let found = path == ref
+      found && (item = event)
+    }
+  }
+  return item 
+}
+
+let site    = Config.key ('site.link')
+let talks   = Config.key ('site.events.talks')      .key ('items')
+let iviews  = Config.key ('site.events.interviews') .key ('items')
+let wshops  = Config.key ('site.events.workshops')  .key ('items')
+let event   = find (talks, iviews, wshops)
+
+let title   = event.key ('title')
+let caption = event.key ('caption')
+let image   = event.key ('image')
+let video   = event.key ('video')
+let author  = event.key ('author')
+let date    = event.key ('date')
+let time    = event.key ('time')
+let place   = event.key ('place')
+let keys    = [author, date, place].join (',')
+let twitter = '@javiervelezreye'
+
+let Event = Helper.Json ({
+  [CONTEXT]    : SCHEMA,
+  [TYPE]       : VIDEO,
+  name         : title,
+  description  : caption,
+  thumbnailUrl : image,
+  contentUrl   : video,
+  embedUrl     : link,
+  uploadDate   : date,
+  duration     : time,
+  author       : {
+    [TYPE] : PERSON,
+    name   : author,
+    url    : site
+  }
+})
+---
+
+<Base />
+
+<meta name="description"         content={title}>
+<meta name="keywords"            content={keys}>
+
+<meta property="og:title"        content={title}>
+<meta property="og:description"  content={caption}>
+<meta property="og:image"        content={image}>
+<meta property="og:url"          content={link}>
+<meta property="og:type"         content={MOVIE}>
+<meta property="og:video"        content={video}>
+
+<meta name="twitter:card"        content={PLAYER}>
+<meta name="twitter:site"        content={twitter}>
+<meta name="twitter:title"       content={title}>
+<meta name="twitter:description" content={caption}>
+<meta name="twitter:image"       content={image}>
+<meta name="twitter:player"      content={video}>
+
+<script is:inline type="application/ld+json" set:html={Event}></script> 

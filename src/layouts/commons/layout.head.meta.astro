@@ -1,65 +1,20 @@
 ---
-import Config from '../../config/config.js'
-
-const DOT   = '·'
-const COMMA = ','
-const PATH  = '/'
-const SPC   = ' '
-
-function Refs (link) {
-  return link.key ('href')
-}
-function Clean (text) {
-  return text.replace(/\s+/g, SPC)
-}
-
-let Json = JSON.stringify
-
-let base    = Config.key ('site.link')
-let image   = Config.key ('site.image')
-let header  = Config.key ('site.home.header')
-let summary = Config.key ('site.home.about.summary')
-let title   = header.key ('title')
-let caption = header.key ('caption')
-let links   = header.key ('links')
-
-let lead    = Clean (summary)
-let keys    = Clean (caption.replaceAll (DOT, COMMA))
-let refs    = links.map (Refs)
-let user    = [base, image].join (PATH)
-let schema  = Json ({
-  '@context' : 'https://schema.org',
-  '@type'    : 'Person',
-  'name'     : title,
-  'url'      : base,
-  'sameAs'   : refs
-})
+import Seo from '../../components/seo/seo.astro'
 ---
 
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport"              content="width=device-width, initial-scale=1.0">
-<meta name="description"           content={lead}>
-<meta name="keywords"              content={keys}>
-<meta property="og:title"          content={title} />
-<meta property="og:type"           content="website" />
-<meta property="og:url"            content={base} />
-<meta property="og:image"          content={user} />
-<meta property="og:description"    content={lead} />
-<meta property="og:site_name"      content={title} />
-<meta property="og:locale"         content="es_ES" />
 
-<link rel="shortcut icon"                    href="/icons/favicon/favicon.ico" type="image/x-icon" />
-<link rel="apple-touch-icon"                 href="/icons/favicon/icon.png" />
-<link rel="apple-touch-icon" sizes="57x57"   href="/icons/favicon/icon-57x57.png" />
-<link rel="apple-touch-icon" sizes="72x72"   href="/icons/favicon/icon-72x72.png" />
-<link rel="apple-touch-icon" sizes="76x76"   href="/icons/favicon/icon-76x76.png" />
-<link rel="apple-touch-icon" sizes="114x114" href="/icons/favicon/icon-114x114.png" />
-<link rel="apple-touch-icon" sizes="120x120" href="/icons/favicon/icon-120x120.png" />
-<link rel="apple-touch-icon" sizes="144x144" href="/icons/favicon/icon-144x144.png" />
-<link rel="apple-touch-icon" sizes="152x152" href="/icons/favicon/icon-152x152.png" />
-<link rel="apple-touch-icon" sizes="180x180" href="/icons/favicon/icon-180x180.png" />
-<link rel="canonical"                        href={base} />
+<link rel="shortcut icon" type="image/x-icon" href="/icons/favicon/favicon.ico" />
+<link rel="apple-touch-icon"                  href="/icons/favicon/icon.png" />
+<link rel="apple-touch-icon" sizes="57x57"    href="/icons/favicon/icon-57x57.png" />
+<link rel="apple-touch-icon" sizes="72x72"    href="/icons/favicon/icon-72x72.png" />
+<link rel="apple-touch-icon" sizes="76x76"    href="/icons/favicon/icon-76x76.png" />
+<link rel="apple-touch-icon" sizes="114x114"  href="/icons/favicon/icon-114x114.png" />
+<link rel="apple-touch-icon" sizes="120x120"  href="/icons/favicon/icon-120x120.png" />
+<link rel="apple-touch-icon" sizes="144x144"  href="/icons/favicon/icon-144x144.png" />
+<link rel="apple-touch-icon" sizes="152x152"  href="/icons/favicon/icon-152x152.png" />
+<link rel="apple-touch-icon" sizes="180x180"  href="/icons/favicon/icon-180x180.png" />
 
-<script is:inline type="application/ld+json" set:html={schema}>
-</script>
+<Seo />

@@ -14,6 +14,13 @@ Config.define ({
       Experiencia de Cliente · Inteligencia Artificial & ML · 
       Transformación Digital
     `,
+    keys  : [
+      'Arquitectura Empresarial',
+      'Diseño & Construcción de Software ',
+      'Experiencia de Cliente',
+      'Inteligencia Artificial & ML',
+      'Transformación Digital'
+    ],
     links : [
       { icon : '@site.icons.general.linkedin' , href : 'https://es.linkedin.com/in/javiervelezreyes' },
       { icon : '@site.icons.general.youtube'  , href : 'https://youtube.com/user/javiervelezreyes'   },
@@ -93,7 +100,7 @@ Config.define ({
         y arquitectónico`
     }, { 
       key   : 'Ebooks',
-      head  : 'Ebooks & Documentación',
+      head  : 'Libros & Publicaciones',
       link  : '@site.pages.books',
       image : '/images/home/activity.02.png',
       text  : `Un catálogo de documentación técnica en formato descargable 

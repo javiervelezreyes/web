@@ -1,0 +1,35 @@
+---
+import Config from '../../config/config.js'
+import Helper from '../../helpers/helper.seo.js'
+import Base   from './seo.base.astro'
+
+const WEBSITE   = 'website'
+const SUMMARY   = 'summary'
+
+let title       = Config.key ('site.brand') 
+let base        = Config.key ('site.link') 
+let keys        = Config.key ('site.home.header.keys')
+let summary     = Config.key ('site.home.about.summary')
+let image       = Config.key ('site.home.header.image') 
+let description = Helper.Text (summary)
+let twitter     = '@javiervelezreye'
+
+---
+
+<Base />
+
+<meta name="description" content={description}>
+<meta name="keywords"    content={keys}>
+
+<meta property="og:title"       content={title}>
+<meta property="og:type"        content={WEBSITE}>
+<meta property="og:url"         content={base}>
+<meta property="og:image"       content={base + image}>
+<meta property="og:description" content={description}>
+<meta property="og:site_name"   content={title}>
+
+<meta name="twitter:card"        content={SUMMARY}>
+<meta name="twitter:site"        content={twitter}>
+<meta name="twitter:title"       content={title}>
+<meta name="twitter:description" content={description}>
+<meta name="twitter:image"       content={base + image}>

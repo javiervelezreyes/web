@@ -9,17 +9,16 @@ export default Config.define ({
 
   'site.brand'    : 'Javier Vélez Reyes',
   'site.slogan'   : 'Speaking In Silver',
-  'site.location' : 'Madrid (Spain)',
-  'site.image'    : '/images/commons/image.png',
   'site.logo'     : '/images/commons/logo.png',
   'site.link'     : 'javiervelezreyes.com',
+  'site.location' : 'Madrid (Spain)',
 
   'site.pages'  : [
-    { key: 'home'      , label: 'Home'        , path: '/'            , open : true  },
-    { key: 'courses'   , label: 'Cursos'      , path: '/cursos'      , open : false },
-    { key: 'books'     , label: 'Libros'      , path: '/libros'      , open : false },
-    { key: 'articles'  , label: 'Artículos'   , path: '/articulos'   , open : true  },
-    { key: 'events'    , label: 'Divulgación' , path: '/divulgacion' , open : true  },
+    { key: 'home'      , label: 'Home'          , path: '/'           , open : true  },
+    { key: 'courses'   , label: 'Cursos'        , path: '/cursos'     , open : false },
+    { key: 'books'     , label: 'Publicaciones' , path: '/libros'     , open : false },
+    { key: 'articles'  , label: 'Artículos'     , path: '/articulos'  , open : true  },
+    { key: 'events'    , label: 'Comunidad'     , path: '/comunidad'  , open : true  },
   ],
 
   'site.links' : [
