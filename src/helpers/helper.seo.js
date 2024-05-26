@@ -9,11 +9,11 @@ const SLASH = '/'
 
 function Helper () {
 
-  function When (...paths) {
+  function When (...exps) {
     return function (path) {
-      return paths.map (function (path) {
+      return exps.map (function (exp) {
         path.endsWith (SLASH) && (path.length > 1) && (path = path.slice (0, -1))
-        return RegExp (START + path.split(ANY).join(ALL) + END)
+        return RegExp (START + exp.split(ANY).join(ALL) + END)
       }).some (function (exp) {
         return exp.test (path)
       }) 
