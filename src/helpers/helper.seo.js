@@ -32,7 +32,7 @@ function Helper () {
   }
 
   function Resolve (path) {
-    let ok = !path.endsWith (SEP)
+    let ok = !path.endsWith (SEP) || path == SEP
     return (
       !ok && path.slice (0, -1) ||
        ok && path
