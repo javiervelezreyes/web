@@ -1,0 +1,34 @@
+---
+import Config from '../../config/config.js'
+import Layout from '../../layouts/layout.section.astro'
+import Head   from '../../components/activity/wshops/wshop.head.astro'
+import Body   from '../../components/activity/wshops/wshop.body.astro'
+
+let { wshop } = Astro.props
+
+let wshops  = Config .key ('site.workshops.talks')
+let title   = Config .key ('site.brand')
+let page    = Config .key ('site.pages.workshops')
+let section = page   .key ('label')
+let path    = page   .key ('path')
+
+export function getStaticPaths () {
+  let wshops   = Config.key ('site.workshops.talks')
+  let response = []
+  for (let wshop of wshops) {
+    let draft  = wshop.key ('draft')
+    let hidden = wshop.key ('hidden')
+    let path   = wshop.key ('path')
+    let slug   = path.split ('/').pop ()
+    let params = {slug}
+    let props  = {wshop}
+    !draft && !hidden && response.push ({ params, props })
+  }
+  return response
+}
+---
+
+<Layout title={title} section={section} path={path}>
+  <Head wshop={wshop} />
+  <Body wshop={wshop} wshops={wshops} />
+</Layout>

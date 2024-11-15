@@ -1,32 +1,31 @@
 import Config from '../../helpers/helper.config.js'
 
-
 Config.define ({
 
   'site.articles.header' : {
-    title   : 'Artículos & Opinión',
-    caption : 'Publicaciones Técnicas & Opinión',
+    title   : 'Publicaciones & Artículos',
+    caption : 'Publicaciones Técnicas Periódicas',
+    image   : '/images/home/activity.01.png',
     lead    : `
       Esta sección reúne la colección de artículos publicados organizados por categorías temáticas. 
-      Cada categoría agrupa series de interés y cada serie ordena una secuencia de artículos sobre
-      el mismo tópico. 
+      Cada categoría agrupa series de interés y cada serie ordena artículos sobre el mismo tópico. 
     `
   },
 
   'site.articles.categories' : [{
     key     : 'lenguajes',
-    title   : 'Lenguajes & Paradigmas',
-    caption : 'Desarrollo & Construcción de Software',
+    title   : 'Ingeniería & Desarrollo',
+    caption : 'Desarrollo y Construcción de Software',
     icon    : '@site.icons.light.development',
     path    : '/articulos/lenguajes',
     lead    : `
-      Todo proceso de digitalización nace de un esfuerzo de desarrollo articulado a través del uso de lenguajes. 
+      Todo proceso de digitalización nace de un esfuerzo de ingenería articulado a través del desarrollo. 
       Más allá de sintaxis particulares y modelos o estilos de codificación, resulta especialmente importante 
       prestar atención a las formas en la que es posible construir software hoy en día desde distintos paradigmas
       y modelos arquitectónicos. Si bien esto es cierto, cada lenguaje impone una interpretación del paradigma
       al que da soporte y cada esfuerzo de arquitectura hoy vive desplegado directamente sobre el código. 
       
-      Dentro de Lenguajes & Paradigmas centraremos nuestra atención en describir diferentes modelos, patrones,
+      Dentro de Ingeniería & Desarrollo centraremos nuestra atención en describir diferentes modelos, patrones,
       estilos, principios, técnicas y mecanismos que conforman la base conceptual de los más relevantes paradigmas 
       de construcción de software y ello lo haremos desde los ojos del desarrollador de soluciones de software.
       Si se dedica a desarrollar software, tal vez esta categoría le resulte un punto de referencia relevante 
@@ -140,7 +139,7 @@ Config.define ({
     key     : 'cultura',
     title   : 'Agile & Gobierno',
     caption : 'Cultura & Desarrollo Profesional',
-    icon    : '@site.icons.light.governance',
+    icon    : '@site.icons.light.strategy',
     path    : '/articulos/cultura',
     lead    : `
       Crear una organización implica crear un colectivo social. Cuando ese colectivo se pone a trabajar de forma intencional 
@@ -204,7 +203,7 @@ Config.define ({
     key      : 'abstraccion',
     title    : 'Paradigmas & Modelos de Abstracción',
     caption  : 'El Software en la Fase de Diseño',
-    path     : 'lenguajes/abstraccion',
+    path     : 'desarrollo/abstraccion',
     slug     : 'abstraccion',
     draft    : false,
     hidden   : false
@@ -212,7 +211,7 @@ Config.define ({
     key      : 'ejecucion',
     title    : 'Paradigmas & Modelos de Ejecución',
     caption  : 'El Software en la Fase de Ejecución',
-    path     : 'lenguajes/ejecucion',
+    path     : 'desarrollo/ejecucion',
     slug     : 'ejecucion',
     draft    : false,
     hidden   : false
@@ -220,7 +219,7 @@ Config.define ({
     key      : 'ornitorrinco',
     title    : 'El Efecto Ornitorrinco',
     caption  : 'El Lenguaje es Anterior al Paradigma',
-    path     : 'lenguajes/ornitorrinco',
+    path     : 'desarrollo/ornitorrinco',
     slug     : 'ornitorrinco',
     draft    : false,
     hidden   : false
@@ -228,7 +227,7 @@ Config.define ({
     key      : 'asincronia',
     title    : 'Ejecución Asíncrona',
     caption  : 'El Rendimiento de lo No Bloqueante',
-    path     : 'lenguajes/asincronia',
+    path     : 'desarrollo/asincronia',
     slug     : 'asincronia',
     draft    : false,
     hidden   : false
@@ -236,7 +235,7 @@ Config.define ({
     key      : 'concurrente',
     title    : 'Ejecución Concurrente',
     caption  : 'Construcción Cooperativa & Competitiva',
-    path     : 'lenguajes/concurrente',
+    path     : 'desarrollo/concurrente',
     slug     : 'concurrente',
     draft    : false,
     hidden   : false
@@ -244,7 +243,7 @@ Config.define ({
     key      : 'reactiva',
     title    : 'Ejecución Reactiva',
     caption  : 'Declaración & Comportamiento Emergente',
-    path     : 'lenguajes/reactiva',
+    path     : 'desarrollo/reactiva',
     slug     : 'reactiva',
     draft    : false,
     hidden   : false

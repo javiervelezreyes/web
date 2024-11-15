@@ -1,0 +1,66 @@
+---
+import Config from '../../../config/config.js'
+import Box    from '../../commons/commons.box.image.astro'
+
+let wshops = [...Config.key ('site.workshops.talks')].filter (isHidden)
+
+function isHidden (wshop) {
+  return !wshop.key ('hidden')
+}
+
+---
+
+<div class="ui container wshops">
+  <div class="section">
+    {
+      wshops.map (function (wshop) {
+        let title   = wshop.key ('title')
+        let caption = wshop.key ('caption')
+        let image   = wshop.key ('image')
+        let place   = wshop.key ('place')
+        let date    = wshop.key ('date')
+        let time    = wshop.key ('time')
+        let lead    = wshop.key ('lead')
+        let path    = wshop.key ('path')
+        let draft   = !!wshop.key ('draft')
+        let mdata   = [place, date, time].join (' · ')
+        return (
+          <div class="wshop">
+            <Box 
+              title={title} 
+              caption={caption} 
+              image={image} 
+              mdata={mdata} 
+              lead={lead} 
+              path={path}
+              draft={draft} />
+          </div> 
+        )
+      })
+    }
+    </div>
+</div> 
+
+<style>
+  .wshops .head {
+    margin          : 100px auto 50px auto;
+    text-align      : center;
+  }
+  .wshops .section {
+    display         : flex;
+    justify-content : center;
+    align-items     : flex-start;
+    flex-wrap       : wrap;
+    gap             : 10px;
+    margin          : 20px auto;
+  }
+  .wshops .section .wshop {
+    flex            : 0 1 49%;
+  }
+  @media (max-width: 720px) {
+    .wshops .section .wshop {
+      margin        : 0 20px;
+      flex          : 0 1 100%;
+    }
+  }
+</style>

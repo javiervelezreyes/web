@@ -1,0 +1,23 @@
+---
+import Document from './commons/layout.document.astro'
+import Head     from './commons/layout.head.astro'
+import Page     from './commons/layout.page.astro'
+import Header   from '../components/commons/commons.header.astro'
+import Top      from '../components/commons/commons.top.astro'
+import Footer   from '../components/commons/commons.footer.astro'
+
+let { title   } = Astro.props
+let { section } = Astro.props
+let { path    } = Astro.props
+let text        = `${title} - ${section}`
+---
+
+<Document>
+	<Head title={text}/>
+	<Page>
+		<Header/>
+		<Top section={section} path={path} />
+    	<slot/>
+		<Footer/>
+	</Page>
+</Document>

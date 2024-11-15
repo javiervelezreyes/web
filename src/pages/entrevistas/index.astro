@@ -1,0 +1,16 @@
+---
+import Config from '../../config/config.js'
+import Layout from '../../layouts/layout.section.astro'
+import Head   from '../../components/activity/iviews/iviews.head.astro'
+import Body   from '../../components/activity/iviews/iviews.body.astro'
+
+let title   = Config .key ('site.brand')
+let page    = Config .key ('site.pages.interviews')
+let section = page   .key ('label')
+let path    = page   .key ('path')
+---
+
+<Layout title={title} section={section} path={path}>
+  <Head/>
+  <Body/>
+</Layout>

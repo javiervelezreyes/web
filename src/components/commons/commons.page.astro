@@ -1,0 +1,92 @@
+---
+import Config from '../../config/config.js'
+
+let tcolor = Config.key ('site.colors.texts.primary')
+let lcolor = Config.key ('site.colors.lines.secondary')
+let hsize  = Config.key ('site.sizes.large')
+let csize  = Config.key ('site.sizes.regular')
+let tsize  = Config.key ('site.sizes.xshort')
+---
+
+<div class="ui container">
+  <div class="page">
+    <div class="body">
+      <div class="content">
+        <slot/>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<style define:vars={{ tcolor, lcolor, hsize, csize, tsize }}>
+  .page {
+    margin            : 100px auto;
+  }
+  .page .body {
+    width             : 100%;
+    min-height        : 100vh;
+    margin-top        : 30px;
+    padding           : 100px 150px;
+    color             : var(--tcolor);
+    border            : 1px solid var(--lcolor);
+    box-shadow        : 0 1px 2px 0 rgba(34,36,38,.15);
+    border-radius     : 5px;
+  }
+  
+  @media (max-width: 1200px) {
+    .page .body {
+      padding : 50px;
+    }
+  }
+
+  @media (max-width: 500px) {
+    .page .body    { padding : 20px; }
+  }
+</style>
+
+<style is:inline>
+  .page {
+    counter-reset     : figures;
+    counter-reset     : listing;
+  }
+  .page .content h1 { font-size : 30px; }
+  .page .content h2 { font-size : 28px; }
+  .page .content h3 { font-size : 20px; }
+  .page .content h5 { font-size : 20px; font-weight: 100; }
+  .page .content p  { 
+    font-size    : 18px; 
+    text-align   : justify;
+    line-height  : 1.8;
+  }
+  .page .content ul li {
+    margin            : 20px auto;
+    padding-left      : 10px;
+    list-style        : square;
+    font-size         : 18px;
+  }
+  .page .content ol li {
+    margin            : 20px auto;
+    padding-left      : 10px;
+    list-style        : decimal;
+    font-size         : 18px;
+  }
+  .page .content blockquote {
+    margin            : 20px;
+    padding           : 20px;
+    background        : #F2F5F7;
+    border-left       : 3px solid #C1CCD6;
+    border-radius     : 5px;
+  }
+
+  @media (max-width: 1200px) {
+    .page .content ul li {
+      margin-left     : -20px;
+      padding         : 0;
+    }
+    .page .content ol li {
+      margin-left     : -20px;
+      padding         : 0;
+    }
+  }
+</style>

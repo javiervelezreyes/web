@@ -85,12 +85,12 @@ let video   = Config.key ('site.home.promo.video')
   let show  = true
   let ok    = video.canPlayType (TYPE)
   if (ok) {
-    frame.addEventListener (EVENT, function () {
+    frame.addEventListener (EVENT, async function () {
       let classes = layer.classList
       if (show) {
         classes.remove (SHOW)
         classes.add    (HIDE)
-        video.play ()
+        await video.play ()
         video.currentTime = 0
       }
       else {

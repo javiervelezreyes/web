@@ -1,0 +1,132 @@
+<div class="reader">
+  <div class="ui icon buttons">
+    <button class="ui basic button dec">
+      <i class="fas fa-minus"></i>
+    </button>
+    <button class="ui basic button play">
+      <i class="fas fa-play"></i>
+    </button>
+    <button class="ui basic button stop">
+      <i class="fas fa-stop"></i>
+    </button>
+    <button class="ui basic button inc">
+      <i class="fas fa-plus"></i>
+    </button>
+  </div>
+</div>
+
+<script type="module" is:inline>
+  const TEXT   = '.article .content'
+  const EVENT  = 'click'
+  const PLAY   = '.play'
+  const STOP   = '.stop'
+  const INC    = '.inc'
+  const DEC    = '.dec'
+  const ICON   = '.play i'
+  const IPLAY  = 'fa-play'
+  const IPAUSE = 'fa-pause'
+  const LANG   = 'es-ES'
+  const RATE   = 1.5
+  const MAX    = 2
+  const MIN    = .1
+  const DELTA  = .5
+  const PITCH  = 1
+
+  function Voice (text) {
+
+    let voice
+    let message
+    let rate = RATE
+
+    function Create () {
+      voice   = window.speechSynthesis    
+      message = new SpeechSynthesisUtterance (text)
+      message.lang  = LANG
+      message.pitch = PITCH
+      message.rate  = rate || RATE
+      voice.speak (message)
+      voice.pause ()
+    }
+
+    function check () {
+      return voice && message
+    }
+
+    function play () {
+      !check () && Create ()
+      voice.resume ()
+    }
+
+    function pause () {
+      !check () && Create ()
+      voice.pause ()
+    }
+
+    function stop () {
+      voice && voice.cancel ()
+      Create ()
+    }
+
+    function inc () {
+      rate = Math.min (MAX, rate + DELTA)
+      stop ()
+    }
+
+    function dec () {
+      rate = Math.max (MIN, rate - DELTA)
+      stop ()
+    }
+
+    return {
+      play,
+      pause,
+      stop,
+      inc,
+      dec
+    }
+
+  }
+
+  let text  = document.querySelector (TEXT).textContent
+  let play  = document.querySelector (PLAY)
+  let stop  = document.querySelector (STOP)
+  let inc   = document.querySelector (INC)
+  let dec   = document.querySelector (DEC)
+  let voice = Voice (text)
+  
+  function doPlay () {
+    let icon  = play.querySelector (ICON)
+    let isOn  = icon.classList.contains (IPAUSE)
+    let isOff = icon.classList.contains (IPLAY)
+    icon.classList.toggle (IPLAY,  isOn)
+    icon.classList.toggle (IPAUSE, isOff)
+    isOn  && voice.pause ()
+    isOff && voice.play ()
+  }
+
+  function doStop () {
+    let icon  = play.querySelector (ICON)
+    icon.classList.add (IPLAY)
+    icon.classList.remove (IPAUSE)
+    voice.stop ()
+  }
+
+  function doInc () {
+    let icon  = play.querySelector (ICON)
+    icon.classList.add (IPLAY)
+    icon.classList.remove (IPAUSE)
+    voice.inc ()
+  }
+
+  function doDec () {
+    let icon  = play.querySelector (ICON)
+    icon.classList.add (IPLAY)
+    icon.classList.remove (IPAUSE)
+    voice.dec ()
+  }
+
+  play .addEventListener (EVENT, doPlay)
+  stop .addEventListener (EVENT, doStop)
+  inc  .addEventListener (EVENT, doInc)
+  dec  .addEventListener (EVENT, doDec)
+</script>

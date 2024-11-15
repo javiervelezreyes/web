@@ -10,7 +10,7 @@ Todo paradigma se puede describir a partir de 3 ejes dimensionales. El eje de lo
 Entre cada uno de los 3 ejes anteriores pueden trazarse sendos planos de actividad. El plano arquitectónico, dibujado entre las dimensiones de los objetivos y los principios, describe todos los tipos de modelos arquitectónicos que pueden desarrollarse en el marco del paradigma. El plano de diseño, es un espacio de actividad que describe mediante patrones cómo pueden idearse soluciones alineadas con los principios de diseño a partir de los mecanismos del entorno computacional. Y finalmente, el plano tecnológico describe cómo utilizar dichos mecanismos para encontrar los objetivos perseguidos. La figura 1 ilustra lo expuesto.
 
 <figure>
-  <img src="/images/articles/recortes/componentes/post-02.01.png" 
+  <img src="/images/activity/articles/recortes/componentes/post-02.01.png" 
        alt="El Paradigma de Orientación a Componentes">
   <figcaption>El Paradigma de Orientación a Componentes</figcaption>
 </figure>
@@ -30,7 +30,7 @@ Como ya avanzábamos en el artículo anterior, la orientación a componentes hab
 Cada una de estas 4 características se pueden  organizar en un modelo piramidal de dependencias conocido como la pirámide de objetivos de la orientación a componentes (figura 2). El mensaje que desprende esta representación es que, a la postre, cada objetivo supone una contribución a la necesidad de aumentar la productividad. En efecto, la simplicidad ayuda a obtener unos procesos de desarrollo más democráticos donde perfiles no cualificados puedan contribuir a hacer realidad una ganancia en productividad. Además si los componentes son capaces de operar con altas cotas de automatismo dicha productividad aumenta ya que los esfuerzos dejan de estar en manos del desarrollador de soluciones específicas para residir en artefactos altamente eficaces. Y a su vez, el uso de artefactos de aplicabilidad recurrente en el seno de distintas arquitectura de cliente – esto es la reutilización – también conduce a un claro aumento de la productividad. 
 
 <figure>
-  <img src="/images/articles/recortes/componentes/post-02.02.png" 
+  <img src="/images/activity/articles/recortes/componentes/post-02.02.png" 
        alt="Pirámide de Objetivos de la Orientación a Componentes">
   <figcaption>Pirámide de Objetivos de la Orientación a Componentes</figcaption>
 </figure>
@@ -42,7 +42,7 @@ Por lo tanto, puede decirse, sin pérdida de generalidad,  que la productividad 
 Las ventajas de la productividad en la economía de escala se consiguen por los beneficios de crear múltiples copias idénticas de un producto determinado. Por ejemplo, Microsoft ha basado gran parte de su estrategia de negocio en hacer un único sistema operativo estándar y distribuirlo de forma clonada por todo el mundo (figura 3a).
  
 <figure>
-  <img src="/images/articles/recortes/componentes/post-02.03.png" 
+  <img src="/images/activity/articles/recortes/componentes/post-02.03.png" 
        alt="Economía de Escala & Economía de Alcance">
   <figcaption>Economía de Escala & Economía de Alcance</figcaption>
 </figure>

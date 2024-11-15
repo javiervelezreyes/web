@@ -1,0 +1,50 @@
+---
+import Config from '../../../config/config.js'
+import Helper from '../../../helpers/helper.content.js'
+
+
+let Serie    = Astro.props.serie
+let Article  = Astro.props.article
+let serie    = Serie.key ('path')
+let tcolor   = Config.key ('site.colors.texts.primary')
+let hcolor   = Config.key ('site.colors.texts.tertiary')
+let articles = await Helper.getAll (serie)
+---
+
+<div class="links">
+  { 
+    articles.map (function (article) {
+      let { mdata } = article
+      let { title } = mdata
+      let { slug  } = mdata
+      let { path  } = mdata
+      let active = article.path == Article.path
+      return (
+        !active && <div class="link"><a href={slug} alt={title}>{title}</a></div> ||
+         active && <div class="link active">{title}</div>
+      )
+    }) 
+  }
+</div>
+
+<style define:vars={{ tcolor, hcolor }}>
+  .links {
+    margin      : 10px 0 30px 0;
+    text-align  : right;
+  }
+  .links .link {
+    line-height : 2;
+    font-size   : 16px;
+  }
+  .links .link a {
+    font-size   : 16px;
+    color       : var(--tcolor) !important;
+  }
+  .links .link a:hover {
+    font-weight : 900;
+    color       : var(--hcolor) !important;
+  }
+  .links .link.active {
+    font-weight : 900;
+  }
+</style> 

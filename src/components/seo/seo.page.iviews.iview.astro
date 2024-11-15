@@ -1,0 +1,80 @@
+---
+import Config from '../../config/config.js'
+import Helper from '../../helpers/helper.seo.js'
+import Base   from './seo.base.astro'
+
+const CONTEXT = '@context'
+const TYPE    = '@type'
+const SCHEMA  = 'https://schema.org'
+const PERSON  = 'Person'
+const VIDEO   = 'VideoObject'
+const PLAYER  = 'player'
+const MOVIE   = 'video.movie'
+
+let link = Astro.url
+let path = Astro.url.pathname 
+
+function find (iviews) {
+  let item
+  for (let iview of iviews) {
+    let epath = iview.key ('path')
+    let spath = Helper.Resolve (path)
+    let found = spath == epath
+    found && (item = iview)
+  }
+  return item 
+}
+
+let site    = Config.key ('site.link')
+let iviews  = Config.key ('site.interviews.talks')
+let iview   = find (iviews)
+
+let title   = iview.key ('title')
+let caption = iview.key ('caption')
+let image   = iview.key ('image')
+let video   = iview.key ('video')
+let author  = iview.key ('author')
+let date    = iview.key ('date')
+let time    = iview.key ('time')
+let place   = iview.key ('place')
+let keys    = [author, date, place].join (',')
+let twitter = '@javiervelezreye'
+
+let IView = Helper.Json ({
+  [CONTEXT]    : SCHEMA,
+  [TYPE]       : VIDEO,
+  name         : title,
+  description  : caption,
+  thumbnailUrl : image,
+  contentUrl   : video,
+  embedUrl     : link,
+  uploadDate   : date,
+  duration     : time,
+  author       : {
+    [TYPE] : PERSON,
+    name   : author,
+    url    : site
+  }
+})
+---
+
+<Base />
+
+<meta name="description"         content={title}>
+<meta name="keywords"            content={keys}>
+
+<meta property="og:title"        content={title}>
+<meta property="og:description"  content={caption}>
+<meta property="og:image"        content={image}>
+<meta property="og:url"          content={link}>
+<meta property="og:type"         content={MOVIE}>
+<meta property="og:video"        content={video}>
+
+<meta name="twitter:card"        content={PLAYER}>
+<meta name="twitter:site"        content={twitter}>
+<meta name="twitter:title"       content={title}>
+<meta name="twitter:description" content={caption}>
+<meta name="twitter:image"       content={image}>
+<meta name="twitter:player"      content={video}>
+
+<script is:inline type="application/ld+json" set:html={IView}></script> 

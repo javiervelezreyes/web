@@ -1,0 +1,20 @@
+---
+import Head from '../../commons/commons.head.main.astro'
+
+let { wshop } = Astro.props
+
+let title    = wshop.key ('title')
+let caption  = wshop.key ('caption')
+---
+
+<div class="ui container">
+  <div class="wshop">
+    <div class="head"><Head title={title} caption={caption}/></div>
+  </div>
+</div>
+
+<style>
+  .wshop {
+    margin-top: 100px;
+  }
+</style>

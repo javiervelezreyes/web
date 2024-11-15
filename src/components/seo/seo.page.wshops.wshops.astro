@@ -1,0 +1,58 @@
+---
+import Config from '../../config/config.js'
+import Helper from '../../helpers/helper.seo.js'
+import Base   from './seo.base.astro'
+
+const CONTEXT    = '@context'
+const TYPE       = '@type'
+const SCHEMA     = 'https://schema.org'
+const COLLECTION = 'Collection'
+const VIDEO      = 'VideoObject'
+const PERSON     = 'Person'
+
+function doWShops (wshops) {
+  return Helper.Json ({
+    [CONTEXT]   : SCHEMA,
+    [TYPE]      : COLLECTION,
+    name        : title,
+    description : caption,
+    hasPart     : wshops.filter (isHidden).map (doWShop),
+  })
+}
+
+function doWShop (wshop) {
+  return {
+    [TYPE]       : VIDEO,
+    name         : wshop.key ('title'),
+    description  : wshop.key ('caption'),
+    thumbnailUrl : wshop.key ('image'),
+    contentUrl   : wshop.key ('video'),
+    embedUrl     : link,
+    uploadDate   : wshop.key ('date'),
+    duration     : wshop.key ('time'),
+    author       : {
+      [TYPE] : PERSON,
+      name   : wshop.key ('author'),
+      url    : site
+    }
+  }
+}
+
+function isHidden (wshop) {
+  return !wshop.key ('hidden')
+}
+
+let link    = Astro.url
+let site    = Config.key ('site.link')
+let title   = Config.key ('site.workshops.header.title')
+let caption = Config.key ('site.workshops.header.caption')
+let wshops  = [...Config.key ('site.workshops.talks')]
+let mdata   = doWShops (wshops)
+---
+
+<Base />
+
+<meta name="description" content={title}>
+<meta name="keywords"    content={[title, caption].join ()}>
+
+<script is:inline type="application/ld+json" set:html={mdata}></script> 

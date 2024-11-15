@@ -1,17 +1,25 @@
 ---
 import Config from '../../config/config.js'
 
+const SEP   = ' | '
+const EMPTY = ' '
+
 let title   = Config.key ('site.home.header.title')
 let mark    = Config.key ('site.home.header.watermark')
 let image   = Config.key ('site.home.header.image')
-let caption = Config.key ('site.home.header.caption')
+let caption = Config.key ('site.home.header.caption').reduce (Item, EMPTY)
 let links   = Config.key ('site.home.header.links')
 let figures = Config.key ('site.home.header.figures')
 
 let scolor  = Config.key ('site.colors.surfaces.dark.primary')
 let rcolor  = Config.key ('site.colors.texts.reverse')
-let tcolor  = Config.key ('site.colors.palette.gray.70')
-let bcolor  = Config.key ('site.colors.palette.aqua.50')
+
+function Item (text, item, idx) {
+  return (
+     idx && text + SEP + item ||
+    !idx && text + item 
+  )
+}
 ---
 
   <div class="hero">
@@ -54,7 +62,7 @@ let bcolor  = Config.key ('site.colors.palette.aqua.50')
     </div>
   </div>
 
-<style define:vars={{ scolor, bcolor, tcolor, rcolor }}>
+<style define:vars={{ scolor, rcolor }}>
   .hero {
     position        : relative;
     height          : 900px;
@@ -67,8 +75,7 @@ let bcolor  = Config.key ('site.colors.palette.aqua.50')
   .hero .image {
     position        : absolute;
     top             : 103px;
-    left            : calc(50% - 783px);
-    
+    left            : calc(50% - 783px);  
   }
   .hero .watermark {
     padding         : 250px 20px;
@@ -99,6 +106,7 @@ let bcolor  = Config.key ('site.colors.palette.aqua.50')
     text-align      : left;
     line-height     : 1.5;
     color           : rgba(255, 255, 255, .7) !important;
+    letter-spacing  : .15rem;
   }
   .hero .about .follow {
     position        : relative;

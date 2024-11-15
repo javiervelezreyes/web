@@ -1,0 +1,66 @@
+---
+import Config from '../../../config/config.js'
+import Box    from '../../commons/commons.box.image.astro'
+
+let iviews = [...Config.key ('site.interviews.talks')].filter (isHidden)
+
+function isHidden (iview) {
+  return !iview.key ('hidden')
+}
+
+---
+
+<div class="ui container iviews">
+  <div class="section">
+    {
+      iviews.map (function (iview) {
+        let title   = iview.key ('title')
+        let caption = iview.key ('caption')
+        let image   = iview.key ('image')
+        let place   = iview.key ('place')
+        let date    = iview.key ('date')
+        let time    = iview.key ('time')
+        let lead    = iview.key ('lead')
+        let path    = iview.key ('path')
+        let draft   = !!iview.key ('draft')
+        let mdata   = [place, date, time].join (' · ')
+        return (
+          <div class="iview">
+            <Box 
+              title={title} 
+              caption={caption} 
+              image={image} 
+              mdata={mdata} 
+              lead={lead} 
+              path={path}
+              draft={draft} />
+          </div> 
+        )
+      })
+    }
+    </div>
+</div> 
+
+<style>
+  .iviews .head {
+    margin          : 100px auto 50px auto;
+    text-align      : center;
+  }
+  .iviews .section {
+    display         : flex;
+    justify-content : center;
+    align-items     : flex-start;
+    flex-wrap       : wrap;
+    gap             : 10px;
+    margin          : 20px auto;
+  }
+  .iviews .section .iview {
+    flex            : 0 1 49%;
+  }
+  @media (max-width: 720px) {
+    .iviews .section .iview {
+      margin        : 0 20px;
+      flex          : 0 1 100%;
+    }
+  }
+</style>

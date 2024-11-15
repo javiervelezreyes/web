@@ -6,6 +6,10 @@ import Category   from './seo.page.articles.category.astro'
 import Categories from './seo.page.articles.categories.astro' 
 import Event      from './seo.page.events.event.astro' 
 import Events     from './seo.page.events.events.astro'
+import IView      from './seo.page.iviews.iview.astro' 
+import IViews     from './seo.page.iviews.iviews.astro'
+import WShop      from './seo.page.wshops.wshop.astro' 
+import WShops     from './seo.page.wshops.wshops.astro'
 
 let path = Astro.url.pathname
 
@@ -13,8 +17,12 @@ let isHome       = Helper.When ('/')
 let isArticle    = Helper.When ('/articulos/*/*/*')
 let isCategory   = Helper.When ('/articulos/*')
 let isCategories = Helper.When ('/articulos')
-let isEvent      = Helper.When ('/comunidad/*/*')
-let isEvents     = Helper.When ('/comunidad')
+let isEvent      = Helper.When ('/eventos/*')
+let isEvents     = Helper.When ('/eventos')
+let isIView      = Helper.When ('/entrevistas/*')
+let isIViews     = Helper.When ('/entrevistas')
+let isWShop      = Helper.When ('/talleres/*')
+let isWShops     = Helper.When ('/talleres')
 ---
 
 { isHome       (path) && <Home       /> }
@@ -23,3 +31,7 @@ let isEvents     = Helper.When ('/comunidad')
 { isCategories (path) && <Categories /> }
 { isEvent      (path) && <Event      /> }
 { isEvents     (path) && <Events     /> }
+{ isIView      (path) && <IView      /> }
+{ isIViews     (path) && <IViews     /> }
+{ isWShop      (path) && <WShop      /> }
+{ isWShops     (path) && <WShops     /> }

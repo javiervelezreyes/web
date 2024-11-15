@@ -1,19 +1,17 @@
 import Config from '../../helpers/helper.config.js'
-
-const VIDEO = 'https://storage.googleapis.com/assets.javiervelezreyes.com'
-const IMAGE = ''
-
 Config.define ({
 
   'site.home.header' : {
     title       : 'Javier Vélez Reyes',
     watermark   : 'Javier Vélez',
     image       : '/images/commons/user.png',
-    caption     : `
-      Arquitectura Empresarial · Diseño & Construcción de Software ·
-      Experiencia de Cliente · Inteligencia Artificial & ML · 
-      Transformación Digital
-    `,
+    caption     : [
+      'Estrategia & Innovación Digital',
+      'Arquitectura Empresarial & Soluciones',
+      'IA, Data & ML',
+      'Diseño & Experiencia de Cliente',
+      'Cultura & Transformación'
+    ],
     keys  : [
       'Arquitectura Empresarial',
       'Diseño & Construcción de Software ',
@@ -45,11 +43,11 @@ Config.define ({
     title       : 'Javier Vélez Reyes',
     caption     : 'Trayectoria & Recorrido Profesional',
     description : `
-      Ingeniero Informático por la Universidad Politécnica de Madrid y Doctor en Informática 
-      por la Universidad Nacional de Educación a Distancia Javier tiene una dilatada trayectoria
-      académica y profesional de más de 25 años. Experto en Arquitectura Empresarial, Experiencia
-      de Cliente e Inteligencia Artificial, centra sus esfuerzos en la transformación digital, en
-      la divulgación tecnológica y es una voz autorizada del sector.
+      Doctor en Informática por la Universidad Politécnica de Madrid Javier tiene una 
+      dilatada trayectoria académica y profesional de más de 25 años de experiencia. Experto en 
+      Estrategia & Innovación Digital, Arquitectura Empresarial, Experiencia de Cliente e 
+      Inteligencia Artificial, centra sus esfuerzos en la transformación digital de organizaciones, 
+      en la divulgación tecnológica y es una voz autorizada del sector.
     `,
     summary    : `
       Javier Vélez Reyes PhD Informática. Arquitectura Empresarial, IA, Customer Experience, 
@@ -58,72 +56,112 @@ Config.define ({
   },
 
   'site.home.highlights' : [{
+    icon : '@site.icons.light.development',
+    head : 'Ingeniería & Desarrollo',
+    text : 'Construcción de Software. Paradigmas de Programación. Modelos de Abstracción y Ejecución'
+  }, {
     icon : '@site.icons.light.architecture',
-    head : 'Arquitectura',
-    text : 'Ideación de modelos de solución innovadores con tecnologías emergentes'
+    head : 'Arquitectura & Diseño',
+    text : 'Arquitectura de Soluciones. Patrones y Modelos. Pincipios Funfacionales. Patrones de Diseño'
   }, {
     icon : '@site.icons.light.data',
-    head : 'Data & IA',
-    text : 'Arquitectura de datos, analítica, big data, IA & ML, data mesh & data fabric'
-  }, {
-    icon : '@site.icons.light.governance',
-    head : 'Gobierno',
-    text : 'Arquitectura Empresarial, gobierno, cultura, centros de excelencia'
+    head : 'Data & Inteligencia',
+    text : 'Análisis de datos. Inteligencia de Negocio. Gobierno del Dato. Inteligencia y Aprendizaje Automático'
   }, {
     icon : '@site.icons.light.experience',
-    head : 'Diseño & UX',
-    text : 'Evangelización de conocimiento y actividades de difusión en comunidad'
+    head : 'Experiencia & Cliente',
+    text : 'Diseño de Producto. Modelos de Uso. Arquitecturas de Canal. Experiencia de Cliente y Negocio'
+  }, {
+    icon : '@site.icons.light.strategy',
+    head : 'Estrategia & Innovación',
+    text : 'Transformación Digital. Estrategia & Operación. Organización Empresarial. Innovación Continua'
   }],
 
   'site.home.promo' : {
-    image : IMAGE + '/images/home/promo.png',
-    video : VIDEO + '/videos/promo/2021/promo.03.mp4',
+    image : '/images/home/promo.png',
+    video : '/videos/promo.03.mp4',
   },
 
   'site.home.stats' : [
     { label : 'Researching & Innovación',    value  : 2003 },
-    { label : 'Training & Mentoring',        value  : 1998 },
-    { label : 'Diseño & Arquitectura',       value  : 1995 },
-    { label : 'Difusión & Evangelización',   value  : 2012 },
+    { label : 'Training & Formación',        value  : 1998 },
+    { label : 'Estrategia & Consultoría',    value  : 2000 },
+    { label : 'Divulgación & Top Voice',     value  : 2010 },
   ],
+
+  'site.home.service' : {
+    title    : 'Servicios',
+    caption  : 'Divulgación, Formación & Consultoría', 
+    link     : '@site.pages.courses',
+    services : [{ 
+      key   : 'Speaker',
+      head  : 'Speaker & Divulgador',      
+      text  : `Javier es recococida voz de autoridad dentro del sector y 
+      cuenta con una narrativa motivadora e inspiracional que nunca deja 
+      indiferente a nadie`
+    }, { 
+      key   : 'Mentor',
+      head  : 'Formador & Coach',
+      text  : `Formador vocacional Javier lleva más de dos decadas 
+      vinculando a la docencia universitaria y la formación técnica y
+      profesional`,
+    }, { 
+      key   : 'Advisor',
+      head  : 'Consultor & Advisor',
+      text  : `Como adjunto a la dirección Javier ha trabajado en la 
+      definición estratégica de negocios y la innovación digital de
+      importantes compañías`,
+     }
+  ]},
 
   'site.home.activity' : {
     title      : 'Actividad',
     caption    : 'Clases, Articulos & Difusión', 
     activities : [{ 
-      key   : 'Courses',
-      head  : 'Cursos & Master Classes',
-      link  : '@site.pages.courses',
-      image : '/images/home/activity.01.png',
-      text  : `Cursos y master classes donde se revisan de manera vidual y 
-        pildórica las bases fundacionales del espacio tecnológico, digital
-        y arquitectónico`
-    }, { 
-      key   : 'Ebooks',
-      head  : 'Libros & Publicaciones',
-      link  : '@site.pages.books',
-      image : '/images/home/activity.02.png',
-      text  : `Un catálogo de documentación técnica en formato descargable 
-        donde se abordan en profundidad diferentes tópicos de interés de 
-        manera completa y precisa`,
-    }, { 
       key   : 'Articles',
-      head  : 'Artículos & Opinión',
+      head  : 'Publicaciones & Artículos',
       link  : '@site.pages.articles',
-      image : '/images/home/activity.03.png',
+      image : '/images/home/activity.01.png',
       text  : `Publicaciones periódicas de carácter abierto que dan forma a 
         diferentes streams de trabajo e investigación donde me encuentro 
         implicado`,
      }, { 
       key   : 'Events',
-      head  : 'Comunidad & Difusión',
+      head  : 'Eventos & Divulgación',
       link  : '@site.pages.events',
-      image : '/images/home/activity.04.png',
-      text  : `Entrevistas, conferencias, eventos en los que he participado
+      image : '/images/home/activity.02.png',
+      text  : `Encuentros, conferencias y eventos en los que he participado
         de manera activa como speaker o colaborando en la organización y 
         difusión`,
-    }
+     }, { 
+      key   : 'IViews',
+      head  : 'Intervenciones & Entrevistas',
+      link  : '@site.pages.interviews',
+      image : '/images/home/activity.03.png',
+      text  : `Entrevistas e intervenciones en comunidad participando como
+        voz autorizada unas veces para posicionar mi opinion profesional y
+        para presentar mi trabajo`
+    }, { 
+      key   : 'wshops',
+      head  : 'Talleres & Live Coding',
+      link  : '@site.pages.workshops',
+      image : '/images/home/activity.04.png',
+      text  : `Un catálogo de los principales  talleres y master classes 
+        que he impartido en comunidad en los últimos años sobre topicos de 
+        fuerte interés y actualidad`,
+    }, 
   ]},
+
+  'site.home.subscribe' : {
+    head     : 'La Tribu',
+    caption  : 'Súmate a la Tribu para Recibir Notificaciones de Interés',
+    fields   : [
+      { key : 'user', type : 'text',     text : 'nombre'},
+      { key : 'mail', type : 'text',     text : 'mail'  },
+      { key : 'gdpr', type : 'checkbox', text : 'Acepto Política GDPR' },
+    ],
+    action   : 'Suscribete'
+  },
 
   'site.home.contact' : {
     title    : 'Contacto',
@@ -176,7 +214,7 @@ Config.define ({
       dejara de ser el código fuente mantenible y cuidado para pasar a ser un activo generado cuya 
       construcción de dirigirá por un diálogo interactivo e intencional.`
   }, {
-    icon     : '@site.icons.light.governance',
+    icon     : '@site.icons.light.strategy',
     title    : 'El mayor activo que puede construir una organización es su estrategia de avance digital',
     caption  : `Cuando hablamos de transformación digital frecuentemente se piensa en un cambio 
       generacional de la tecnología y los procesos de negocio. El mayor valor de estos esfuerzos está,
@@ -211,20 +249,22 @@ Config.define ({
     sections : {
       title : 'Secciones',
       links : [ 
-        { label: 'Cursos'    , path: '/cursos'   },
-        { label: 'Libros'    , path: '/libros'    },
-        { label: 'Artículos' , path: '/articulos' },
-        { label: 'Comunidad' , path: '/comunidad' }
+        { label: 'Sobre Mi'    , path: '/#about'       },
+        { label: 'Servicios'   , path: '/#servicios'   },
+        { label: 'Actividad'   , path: '/#actividad'   },
+        { label: 'Suscripción' , path: '/#suscripcion' },
+        { label: 'Contacto'    , path: '/#contacto'    },
+        { label: 'GDPR',         path: '/docs/gdpr'    }
       ]
     },
     contact : {
       title : 'Contacto',
       links : [
         { icon : '@site.icons.general.mail'     , label : 'Mail'     , href : 'mailto:javier.velez.reyes@gmail.com'         },
-        { icon : '@site.icons.general.github'   , label : 'Github'   , href : 'https://github.com/javiervelezreyes'         },
-        { icon : '@site.icons.general.twitter'  , label : 'Twitter'  , href : 'https://twitter.com/javiervelezreye'         },
         { icon : '@site.icons.general.linkedin' , label : 'LinkedIn' , href : 'https://es.linkedin.com/in/javiervelezreyes' },
         { icon : '@site.icons.general.youtube'  , label : 'Youtube'  , href : 'https://youtube.com/user/javiervelezreyes'   },
+        { icon : '@site.icons.general.github'   , label : 'Github'   , href : 'https://github.com/javiervelezreyes'         },
+        { icon : '@site.icons.general.twitter'  , label : 'Twitter'  , href : 'https://twitter.com/javiervelezreye'         },
       ],
     }
   }

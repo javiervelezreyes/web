@@ -1,0 +1,69 @@
+---
+import Config  from '../../config/config.js'
+import Head    from '../commons/commons.head.section.astro' 
+import Section from '../commons/commons.band.astro'
+
+let service  = Config  .key ('site.home.service')
+let title    = service.key ('title')
+let caption  = service.key ('caption')
+let services = [...service.key ('services')]
+
+let tcolor   = Config.key ('site.colors.texts.primary')
+let hsize    = Config.key ('site.sizes.big')
+let tsize    = Config.key ('site.sizes.medium')
+---
+
+<Head title={title} caption={caption}/>
+
+<Section>
+  <div class="services">
+    <div class="ui two column centered doubling stackable grid container">
+      <div class="row">
+        {
+          services.map (function (service) {
+            let head = service.key ('head')
+            let text = service.key ('text')
+            return (
+              <div class="column service">
+                <div class="ui center aligned segment">
+                  <p class="head"><strong>{head}</strong></p>
+                  <p class="text">{text}</p>
+                  <div class="action">
+                    <a href="#contacto" class="ui big button">
+                      Contratar
+                    </a>
+                  </div>
+                </div>
+              </div>
+            )
+          })
+        }
+      </div>
+    </div>
+  </div>
+</Section>
+
+<style define:vars={{ tcolor, hsize, tsize }}>
+  .services {
+    color: var(--tcolor);
+  }
+  .services .service {
+    margin      : 20px auto !important;
+  }
+  .services .service .head {
+    font-size   : var(--hsize);
+    text-align  : left;
+  }
+  .services .service .text {
+    font-size   : var(--tsize);
+    text-align  : left;
+  }
+  .services .service .icon {
+    font-size   : 60px;
+    text-align  : left;
+  }
+  .services .service .action {
+    text-align  : left;
+    margin      : 10px auto;
+  }
+</style>

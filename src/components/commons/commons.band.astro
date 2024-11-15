@@ -1,19 +1,23 @@
 ---
 import Config from '../../config/config.js'
 
-let slight = Config.key ('site.colors.surfaces.light.primary')
-let sdark  = Config.key ('site.colors.surfaces.dark.secondary')
-let llight = Config.key ('site.colors.lines.secondary')
-let ldark  = Config.key ('site.colors.lines.primary')
-let tlight = Config.key ('site.colors.texts.primary')
-let tdark  = Config.key ('site.colors.texts.reverse')
+let slight   = Config.key ('site.colors.surfaces.light.primary')
+let sdark    = Config.key ('site.colors.surfaces.dark.secondary')
+let sprimary = Config.key ('site.colors.surfaces.regular.primary')
+let llight   = Config.key ('site.colors.lines.secondary')
+let ldark    = Config.key ('site.colors.lines.primary')
+let lprimary = Config.key ('site.colors.lines.reverse')
+let tlight   = Config.key ('site.colors.texts.primary')
+let tdark    = Config.key ('site.colors.texts.reverse')
+let tprimary = Config.key ('site.colors.texts.reverse')
 
-let light = Astro.props.light
-let dark  = Astro.props.dark
+let light    = Astro.props.light
+let dark     = Astro.props.dark
+let primary  = Astro.props.primary
 
-let scolor = light && slight || dark && sdark
-let lcolor = light && llight || dark && ldark
-let tcolor = light && tlight || dark && tdark
+let scolor   = light && slight || dark && sdark || primary && sprimary
+let lcolor   = light && llight || dark && ldark || primary && lprimary
+let tcolor   = light && tlight || dark && tdark || primary && tprimary
 ---
 
 <div class="section">
@@ -21,7 +25,6 @@ let tcolor = light && tlight || dark && tdark
     <slot/>  
   </div>
 </div>
-
 
 <style define:vars={{scolor, lcolor, tcolor}}>
   .section {

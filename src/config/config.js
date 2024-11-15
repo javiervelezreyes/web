@@ -1,9 +1,9 @@
 import Config from '../helpers/helper.config.js'
 import             './sections/config.home.js'
 import             './sections/config.articles.js'
-import             './sections/config.books.js'
 import             './sections/config.events.js'
-import             './sections/config.training.js'
+import             './sections/config.iviews.js'
+import             './sections/config.wshops.js'
 
 export default Config.define ({
 
@@ -14,11 +14,19 @@ export default Config.define ({
   'site.location' : 'Madrid (Spain)',
 
   'site.pages'  : [
-    { key: 'home'      , label: 'Home'          , path: '/'           , open : true  },
-    { key: 'courses'   , label: 'Cursos'        , path: '/cursos'     , open : false },
-    { key: 'books'     , label: 'Publicaciones' , path: '/libros'     , open : false },
-    { key: 'articles'  , label: 'Artículos'     , path: '/articulos'  , open : true  },
-    { key: 'events'    , label: 'Comunidad'     , path: '/comunidad'  , open : true  },
+    { key: 'home'       , label: 'Home'          , path: '/'            , open : true  },
+    { key: 'articles'   , label: 'Artículos'     , path: '/articulos'   , open : true  },
+    { key: 'events'     , label: 'Eventos'       , path: '/eventos'     , open : true  },
+    { key: 'interviews' , label: 'Entrevistas'   , path: '/entrevistas' , open : true  },
+    { key: 'workshops'  , label: 'Talleres'      , path: '/talleres'    , open : true  },
+  ],
+
+  'site.sections'  : [
+    { key: 'home'      , label: 'Home'          , tag: 'about'       },
+    { key: 'services'  , label: 'Servicios'     , tag: 'servicios'   },
+    { key: 'activity'  , label: 'Actividad'     , tag: 'actividad'   },
+    { key: 'subscribe' , label: 'Tribu'         , tag: 'suscripcion' },
+    { key: 'contact'   , label: 'Contacto'      , tag: 'contacto'    },
   ],
 
   'site.links' : [
@@ -44,14 +52,13 @@ export default Config.define ({
 
   'site.icons.light' : [
     { key: 'architecture' , icon : 'pe-7s-vector'   },
-    { key: 'data'         , icon : 'pe-7s-graph1'   },
-    { key: 'governance'   , icon : 'pe-7s-network'  },
-    { key: 'experience'   , icon : 'pe-7s-id'       },
     { key: 'development'  , icon : 'pe-7s-plugin'   },
-    { key: 'talk'         , icon : 'pe-7s-display2' },
+    { key: 'data'         , icon : 'pe-7s-graph1'   },
+    { key: 'experience'   , icon : 'pe-7s-users'    },
+    { key: 'strategy'     , icon : 'pe-7s-light'    },
+    { key: 'event'        , icon : 'pe-7s-display2' },
     { key: 'interview'    , icon : 'pe-7s-micro'    },
     { key: 'workshop'     , icon : 'pe-7s-tools'    },
-    { key: 'class'        , icon : 'pe-7s-display1' },
     { key: 'clipping'     , icon : 'pe-7s-scissors' },
   ],
 
@@ -68,13 +75,14 @@ export default Config.define ({
     { key: '90'   , value : '#2A3F4D' },
     { key: '100'  , value : '#1C2B36' },
   ], 
-
+  
   'site.colors.palette.turquoise' : [
     { key: '10'  , value : '#EBF5F4' },
     { key: '20'  , value : '#C7E8ED' },
     { key: '30'  , value : '#81D8E6' },
     { key: '40'  , value : '#45BCD1' },
     { key: '50'  , value : '#159AB3' },
+    { key: '50'  , value : '#0187AE' },
     { key: '60'  , value : '#067A91' },
     { key: '70'  , value : '#09596B' },
     { key: '80'  , value : '#0C424D' },
@@ -123,7 +131,7 @@ export default Config.define ({
   ],
 
   'site.colors.surfaces.regular' : [
-    { key: 'primary'   , value : '@site.colors.palette.aqua.70' },
+    { key: 'primary'   , value : '@site.colors.palette.turquoise.50' },
     { key: 'secondary' , value : '@site.colors.palette.gray.50' },
     { key: 'tertiary'  , value : '@site.colors.palette.aqua.50' },
   ],
@@ -155,6 +163,18 @@ export default Config.define ({
     { key: 'xbold'  , value : '800' },
   ],
 
+  'site.services.mailing' : {
+    'host'  : 'https://assets.mailerlite.com',
+    'path'  : '/jsonp/1112156/forms/133107449592808800/subscribe'
+  },
+
+  'site.services.analytics' : {
+    'host'  : 'https://www.googletagmanager.com',
+    'path'  : '/gtag/js',
+    'id'    : 'G-VCBHDKLX6N',
+    'key'   : 'site.services.analytics'
+  },
+
   'site.redirects' : [
     { key: 'el-efecto-ornitorrinco'                             , path : '/articulos/lenguajes#ornitorrinco'                                    },
     { key: 'la-funcion-que-no-lo-era'                           , path : '/articulos/recortes/javascript/la-funcion-que-no-lo-era'              },
@@ -173,10 +193,11 @@ export default Config.define ({
   ],
 
   'site.references' : [
-    { key : 'color'         , ref: 'tinyurl.com/2eh9t2cf' },
-    { key : 'icons.general' , ref: 'tinyurl.com/y8rrtn2v' },
-    { key : 'icons.light'   , ref: 'tinyurl.com/2zctchhp' },
-    { key : 'animation'     , ref: 'tinyurl.com/2hlvu3by' },
+    { key : 'color'         , ref : 'tinyurl.com/2eh9t2cf' },
+    { key : 'icons.general' , ref : 'tinyurl.com/y8rrtn2v' },
+    { key : 'icons.light'   , ref : 'tinyurl.com/2zctchhp' },
+    { key : 'animation'     , ref : 'tinyurl.com/2hlvu3by' },
+    { key : 'images'        , ref : 'tinyurl.com/y6wpy99p' },
   ],
 
 })

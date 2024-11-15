@@ -1,0 +1,229 @@
+.player {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+  position: relative;
+}
+
+.player .frame {
+  position: relative;
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #dce3e8;
+  border-radius: 5px;
+  background-color: #fff;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.player .frame .content {
+  position: relative;
+  padding-top: 56.25%;
+  width: 100%;
+  height: 0;
+}
+
+.player .frame .content .video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.player .frame .content .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  -transition: all 100ms ease-in-out;
+  background-color: #fff;
+  opacity: 1;
+}
+
+.player .frame .content .overlay.hidden {
+  opacity: 0;
+  -transition: all 100ms ease-in-out;
+}
+
+.player .controls {
+  position: absolute;
+  bottom: 0;
+  width: calc(100% - 10px);
+  display: flex;
+  align-items: center;
+  background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.7) 100%);
+  padding: 10px 5px;
+  margin: 5px;
+  box-sizing: border-box;
+  opacity: 0;
+  transition: opacity 200ms;
+}
+
+.player:hover .controls {
+  opacity: 1;
+}
+
+.player .controls .icon {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 15px;
+  cursor: pointer;
+  margin: 0 5px;
+  position: relative;
+}
+
+.player .controls .time {
+  position: relative;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.player .controls .time .text {
+  position: absolute;
+  top: -20px;
+  font-size: 12px;
+  color: white;
+  text-shadow: 0 0 5px black;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.player .controls .toggle {
+  display: none;
+}
+
+.player .controls .ltoggle {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+  margin: 5px;
+  padding: 0 10px 10px 0;
+  position: relative;
+  display: block;
+}
+
+.player .controls .volume,
+.player .controls .rate {
+  position: relative;
+}
+
+.player .controls .volume .range.vertical,
+.player .controls .rate .range.vertical {
+  display: none;
+  height: 120px;
+  position: absolute;
+  bottom: 50px;
+  left: 15px; 
+}
+
+.player .controls .volume .toggle:checked + .range.vertical,
+.player .controls .rate .toggle:checked + .range.vertical {
+  display: block;
+}
+
+/* RANGE */
+
+.hcontainer, .vcontainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px; 
+  height: 100px;
+  background: green;
+  position: relative;
+}
+
+.range {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.range.horizontal {
+  height: 5px;
+  width: 95%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.range.horizontal .previous {
+  height: 5px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  background-color: #ffffff;
+  width: 0%;
+  flex-grow: 1;
+}
+
+.range.horizontal .next {
+  height: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  background-color: #ffffff80;
+  width: 100%;
+  flex-grow: 1;
+}
+
+.range.horizontal .pointer {
+  width: 15px;
+  height: 15px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  position: absolute;
+  cursor: pointer;
+  top: -5px;
+  left: 0%;
+  margin-left: -7.5px;
+  margin-right: 7.5px;
+}
+
+.range.vertical {
+  flex-direction: column;
+  height: 95%;
+  width: 5px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.range.vertical .previous {
+  width: 5px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  background-color: #ffffff;
+  height: 0%;
+  flex-grow: 1;
+}
+
+.range.vertical .next {
+  width: 5px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  background-color: #ffffff80;
+  height: 100%;
+  flex-grow: 1;
+}
+
+.range.vertical .pointer {
+  width: 15px;
+  height: 15px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  position: absolute;
+  cursor: pointer;
+  right: -5px;
+  bottom: 0%;
+  margin-bottom: -7.5px;
+  margin-top: 7.5px;
+}

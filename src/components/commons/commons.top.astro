@@ -4,20 +4,21 @@ import Config from '../../config/config.js'
 let {section} = Astro.props
 let {path   } = Astro.props
 
-let pages  = Config.key ('site.pages')
-let tcolor = Config.key ('site.colors.texts.primary')
-let rcolor = Config.key ('site.colors.texts.reverse')
-let scolor = Config.key ('site.colors.palette.aqua.50')
-let links  = Links (pages)
+let sections  = Config.key ('site.sections')
+let tcolor    = Config.key ('site.colors.texts.primary')
+let rcolor    = Config.key ('site.colors.texts.reverse')
+let scolor    = Config.key ('site.colors.surfaces.regular.primary')
+let links     = Links (sections)
 
-function Links (pages) {
-  return [...pages]
-    .map (function (page) {
-      let label  = page.key ('label')
-      let path   = page.key ('path')
-      let open   = page.key ('open')
-      let active = label == section 
-      return { label, path, active, open }
+function Links (sections) {
+  return [...sections]
+    .map (function (section) {
+      let key    = section.key ('key')
+      let label  = section.key ('label')
+      let tag    = section.key ('tag')
+      let path   = '/#' + tag 
+      let active = key == Astro.props.active
+      return { label, path, active }
     })
 }
 ---
@@ -33,11 +34,7 @@ function Links (pages) {
           let {label}  = link
           let {path}   = link
           let {active} = link
-          let {open}   = link
-          return (
-            <>{ open && <a class="link" active={active} href={path}>{label}</a>}</>
-            <>{!open && <span class="link">{label}</span>}</>
-          )
+          return <a class="link" active={active} href={path}>{label}</a>
         })
       }
     </div>

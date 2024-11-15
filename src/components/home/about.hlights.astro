@@ -7,12 +7,12 @@ let scolor  = Config.key ('site.colors.surfaces.light.primary')
 let lcolor  = Config.key ('site.colors.lines.tertiary')
 let tcolor  = Config.key ('site.colors.texts.primary')
 let hsize   = Config.key ('site.sizes.medium')
-let tsize   = Config.key ('site.sizes.short')
+let tsize   = Config.key ('site.sizes.lite')
 ---
 
 <Section>
   <div class="hlights">
-    <div class="ui four column doubling stackable grid container">
+    <div class="ui three column centered doubling stackable grid container">
       <div class="row">
         {
           hlights.map (function (hlight) {
@@ -20,7 +20,7 @@ let tsize   = Config.key ('site.sizes.short')
             let head = hlight.key ('head')
             let text = hlight.key ('text')
             return (
-              <div class="column">
+              <div class="column hlight">
                 <div class="icon">
                   <i class={icon}></i>
                 </div> 
@@ -36,7 +36,10 @@ let tsize   = Config.key ('site.sizes.short')
 </Section>
 
 <style define:vars={{ scolor, lcolor, tcolor,  hsize, tsize }}>
-  .hlights .icon {
+  .hlights .hlight {
+    padding: 30px 0;
+  }
+  .hlights .hlight .icon {
     width          : 100px;
     height         : 100px;
     margin         : 0 auto;
@@ -45,25 +48,38 @@ let tsize   = Config.key ('site.sizes.short')
     text-align     : center;
     vertical-align : middle;
     background     : var(--scolor);
+    font-size      : 50px;
+    font-weight    : 100;
+    line-height    : 100px;
+    color          : var(--tcolor);
   }
-  .hlights .icon {
-    font-size   : 50px;
-    font-weight : 100;
-    line-height : 100px;
-    color       : var(--tcolor);
-  }
-  .hlights .head {
+  .hlights .hlight .head {
     font-size      : var(--hsize);
     text-transform : uppercase;
     margin         : 20px 0;
+    text-align     : center;
   }
-  .hlights .text {
-    font-size : var(--tsize);
+  .hlights .hlight .text {
+    font-size      : var(--tsize);
+    text-align     : center;
+  }
+
+  @media (max-width: 1200px) {
+    .hlights .hlight .head {
+      font-size      : 1.5rem;
+    }
+    .hlights .hlight .text {
+      font-size      : 1.2rem;
+    }
   }
 
   @media (max-width: 768px) {
-    .hlights .text {
-      max-width : 250px;
+    .hlights .hlight {
+      padding: 60px 0;
+    }
+    .hlights .hlight .text {
+      font-size :  var(--tsize);
+      max-width : 400px;
       margin    : 0 auto;
     }
   }

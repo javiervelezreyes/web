@@ -1,20 +1,29 @@
 ---
-import Config   from '../config/config.js'
-import Layout   from '../layouts/layout.home.astro'
-import Hero     from '../components/home/hero.astro'
-import About    from '../components/home/about.astro'
-import Activity from '../components/home/activity.astro'
-import Contact  from '../components/home/contact.astro'
-import Quotes   from '../components/home/quotes.astro'
+import Config    from '../config/config.js'
+import Layout    from '../layouts/layout.home.astro'
+import Hero      from '../components/home/hero.astro'
+import About     from '../components/home/about.astro'
+import Services  from '../components/home/services.astro'
+import Activity  from '../components/home/activity.astro'
+import Subscribe from '../components/home/subscribe.astro'
+import Contact   from '../components/home/contact.astro'
+import Quotes    from '../components/home/quotes.astro'
 
 let brand = Config.key ('site.brand')
 ---
 
 <Layout title={brand}>
   <Hero/>
+  <a name="about"></a>
   <About/>
-  <Activity/>
+  <a name="servicios"></a>
+  <Services/>
   <Quotes/>
+  <a name="actividad"></a>
+  <Activity/>
+  <a name="suscripcion"></a>
+  <Subscribe/>
+  <a name="contacto"></a>  
   <Contact/>
 </Layout>
 

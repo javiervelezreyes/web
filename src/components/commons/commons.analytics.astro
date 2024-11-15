@@ -1,0 +1,94 @@
+---
+import Config from '../../config/config.js'
+
+let mdata  = Config.key ('site.services.analytics')
+let tsize  = Config.key ('site.sizes.medium')
+let config = asJson (mdata) 
+
+function asJson (config) {
+  let cfg = {}
+  for (let mdata of config) {
+    let [key, value] = mdata
+    cfg[key] = value
+  }
+  return JSON.stringify (cfg)
+}
+
+---
+
+<div id="opt-in" class="ui modal">  
+  <div class="header">Consentimiento de Cookies</div>
+    <div class="content">
+      <p>
+        En este sitio web utilizamos cookies para mejorar tu experiencia de navegación
+        y entender mejor tua preferencias. Eso nos ayuda a entenderte mejor y a centrarnos
+        en aquellos tópicos que son de tu interés. Por favor, acepta nuestro uso de cookies.
+      </p>
+    </div>
+    <div class="actions">
+      <div class="ui approve primary button">Aceptar</div>
+      <div class="ui cancel button">Rechazar</div>
+    </div>
+  </div> 
+</div>
+
+<meta id="config-analytics" content={config}>
+
+<script type="module">
+  import Helper from '/scripts/lib.analytics.js'
+
+  const MODAL = '#opt-in'
+  const SHOW  = 'show'
+  const HIDE  = 'hide'
+
+  function Config () {
+    let node = document.querySelector ('#config-analytics')
+    if (node) {
+      let text  = node.getAttribute ('content')
+      let mdata = JSON.parse (text)
+      return mdata
+    }
+  }
+
+  let dialog = $ (MODAL)
+  let config = Config ()
+  let helper = Helper (config)
+  let show   = helper.ask () 
+
+  if (show) {
+    dialog
+      .modal ({
+        closable  : false,
+        onApprove () {
+          helper.accept ()
+          dialog.modal (HIDE)
+        },
+        onDeny () {
+          helper.reject ()
+          dialog.modal (HIDE)
+        }
+      })
+      .modal (SHOW)
+  }
+
+  helper.check () && helper.load ()
+
+</script>
+
+<style define:vars={{ tsize }}>
+  .modal .header {
+    font-size   : var(--tsize) !important;
+  }
+  .modal .content {
+    font-size   : var(--tsize) !important;
+    font-weight : 100 !important;
+    text-align  : justify;
+  }
+  .modal .action  {
+    margin          : 40px auto;
+    display         : flex;
+    justify-content : center;
+    align-items     : center;
+  }
+</style>
+

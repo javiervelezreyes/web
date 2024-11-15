@@ -16,7 +16,7 @@ Sin embargo, la orientación a componentes es un paradigma sin un lenguaje de so
 Esta elección tiene, sin embargo, una repercusión importante. Las capacidades operativas que pueden articularse con componentes se verán, en general, fuertemente condicionadas por la pila tecnológica elegida y, en particular, por los mecanismos proporcionados por el lenguaje en relación a su sintaxis y semántica asociada. Al ser los componentes objetos, las técnicas básicas al servicio de la composición son la encapsulación, la delegación, la herencia, la genericidad y el polimorfismo. Si los componentes hubiesen sido funciones, dichas técnicas se restringirían a la aplicación del orden superior, la evaluación parcial y la composición funcional.
 
 <figure>
-  <img src="/images/articles/recortes/componentes/post-04.01.png" 
+  <img src="/images/activity/articles/recortes/componentes/post-04.01.png" 
        alt="El Modelo de Componente">
   <figcaption>El Modelo de Componente</figcaption>
 </figure>
@@ -34,7 +34,7 @@ Nuestro foco de atención a lo largo de este artículo será, en este mismo sent
 Todos tenemos una idea intuitiva de lo que es un componente: una etiqueta personalizada fuera del léxico estándar HTML que presenta un rendering y comportamiento reactivo específico y que atiende a unos objetivos claramente definidos en el marco de algún problema. No obstante, precisar algo más esta idea en busca de las partes constituyentes de los componentes nos resultará conveniente.
 
 <figure>
-  <img src="/images/articles/recortes/componentes/post-04.02.png" 
+  <img src="/images/activity/articles/recortes/componentes/post-04.02.png" 
        alt=" Perfiles de Contrato">
   <figcaption> Perfiles de Contrato</figcaption>
 </figure>
@@ -66,7 +66,7 @@ Con todo lo anterior queremos estresar la idea de que la descripción de los con
 Lo que desde luego pone de manifiesto lo anterior, es que con frecuencia las capacidades de los 4 perfiles de contrato de un componente desbordan el espacio sintáctico donde se ubican y alcanzan otros espacios sintácticos. Todo ello invita a pensar que deberían formularse otras formas de describir la operativa de los componentes para liberarnos de las ataduras de lo sintáctico.
 
 <figure>
-  <img src="/images/articles/recortes/componentes/post-04.03.png" 
+  <img src="/images/activity/articles/recortes/componentes/post-04.03.png" 
        alt="Planos de Actividad">
   <figcaption> Planos de Actividad</figcaption>
 </figure>

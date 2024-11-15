@@ -1,0 +1,58 @@
+---
+import Config from '../../config/config.js'
+import Helper from '../../helpers/helper.seo.js'
+import Base   from './seo.base.astro'
+
+const CONTEXT    = '@context'
+const TYPE       = '@type'
+const SCHEMA     = 'https://schema.org'
+const COLLECTION = 'Collection'
+const VIDEO      = 'VideoObject'
+const PERSON     = 'Person'
+
+function doIViews (iviews) {
+  return Helper.Json ({
+    [CONTEXT]   : SCHEMA,
+    [TYPE]      : COLLECTION,
+    name        : title,
+    description : caption,
+    hasPart     : iviews.filter (isHidden).map (doIView),
+  })
+}
+
+function doIView (iview) {
+  return {
+    [TYPE]       : VIDEO,
+    name         : iview.key ('title'),
+    description  : iview.key ('caption'),
+    thumbnailUrl : iview.key ('image'),
+    contentUrl   : iview.key ('video'),
+    embedUrl     : link,
+    uploadDate   : iview.key ('date'),
+    duration     : iview.key ('time'),
+    author       : {
+      [TYPE] : PERSON,
+      name   : iview.key ('author'),
+      url    : site
+    }
+  }
+}
+
+function isHidden (iview) {
+  return !iview.key ('hidden')
+}
+
+let link    = Astro.url
+let site    = Config.key ('site.link')
+let title   = Config.key ('site.interviews.header.title')
+let caption = Config.key ('site.interviews.header.caption')
+let iviews  = [...Config.key ('site.interviews.talks')]
+let mdata   = doIViews (iviews)
+---
+
+<Base />
+
+<meta name="description" content={title}>
+<meta name="keywords"    content={[title, caption].join ()}>
+
+<script is:inline type="application/ld+json" set:html={mdata}></script> 

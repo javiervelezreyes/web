@@ -14,7 +14,7 @@ Es fácil hacerse una idea general de la propuesta arquitectónica que estos mod
 Una arquitectura hexagonal conceptualiza la construcción de soluciones de software en base a la identificación de una colección de puertos y el desarrollo de una serie de adaptadores que se conectan a dichos puertos. Esta idea permiten implementar el modelo de negocio del aplicativo que se desea construir de una manera aislada de cualquier tipo de dependencia exterior de manera que los puertos se corresponden con puntos de entrada y salida a un núcleo funcional que puede ser atacado por distinto tipos de clientes o sistemas.
 
 <figure>
-  <img src="/images/articles/recortes/opinion/post-03.01.png" 
+  <img src="/images/activity/articles/recortes/opinion/post-03.01.png" 
        alt="Ejemplo de arquitectura hexagonal">
   <figcaption>Ejemplo de arquitectura hexagonal</figcaption>
 </figure>

@@ -20,7 +20,7 @@ Como puede apreciarse en la figura 1, desde una perspectiva de caja negra, los p
 - **Nivel de proyecto.** A nivel de proyecto, por el contrario, el ejercicio de construcción compositiva de una solución particular se enmarca en los requerimientos de un proyecto específico y consiste, en este sentido, en seleccionar componentes del catálogo de dominio para aplicarlos en el ámbito del proyecto particular.
 
 <figure>
-  <img src="/images/articles/recortes/componentes/post-03.01.png" 
+  <img src="/images/activity/articles/recortes/componentes/post-03.01.png" 
        alt="Proceso de Composición. Perspectiva de Caja Negra">
   <figcaption>Proceso de Composición. Perspectiva de Caja Negra</figcaption>
 </figure>
@@ -37,7 +37,7 @@ Y es que la adaptatividad, pese a que hasta la fecha no tiene un soporte muy só
 Una vez hecha esta rectificación lexicográfica, que ilustramos en la figura 2, ya podemos sentirnos más tranquilos. Difícil iba a ser entendernos si utilizáramos el mismo término para referirnos indistintamente a instancias, componentes y meta-componentes.
 
 <figure>
-  <img src="/images/articles/recortes/componentes/post-03.02.png" 
+  <img src="/images/activity/articles/recortes/componentes/post-03.02.png" 
        alt="Tipos de Artefactos en la Orientación a Componentes">
   <figcaption>Tipos de Artefactos en la Orientación a Componentes</figcaption>
 </figure>
@@ -67,7 +67,7 @@ Desde una perspectiva de caja blanca, nos preocupamos de estudiar cada una de la
 Como se puede apreciar en la figura 3, cada meta-componente de catálogo atraviesa un proceso de 4 fases en cascada hasta estar preparado para operar en el marco de un proyecto particular. A estas actividades hemos incluido en la figura el punto de anclaje de una actividad más de encapsulación y generalización cuya responsabilidad es articular las promociones de componentes al catálogo de dominio propias de las estrategias ascendente e híbrida tal y como fueron descritas en la sección anterior.
 
 <figure>
-  <img src="/images/articles/recortes/componentes/post-03.03.png" 
+  <img src="/images/activity/articles/recortes/componentes/post-03.03.png" 
        alt="Proceso de Composición. Perspectiva de Caja Blanca">
   <figcaption>Proceso de Composición. Perspectiva de Caja Blanca</figcaption>
 </figure>
@@ -91,7 +91,7 @@ Nuevamente, debemos destacar aquí que la clave diferencial con respecto a propu
 La figura 4 viene a representar esquemáticamente esta diferencia esencial entre las arquitecturas polimórficas de orientación a objetos y las arquitecturas rígidas con transformadores propias de la orientación a componentes. Como puede apreciarse en la arquitectura de objetos (a) se ha definido apriorísticamente un contrato abstracto B para dar receptividad sustitutiva a todos los tipos de artefactos, presentes y venideros, que respondan a cierto comportamiento. Por el contrario, en la arquitectura de componentes (b), es responsabilidad de cada componente adaptarse previamente para encajar en el marco de la arquitectura.  Típicamente esta adaptación está soportada por el ecosistema de meta-programas que también forman parte de la arquitectura.
 
 <figure>
-  <img src="/images/articles/recortes/componentes/post-03.03.png" 
+  <img src="/images/activity/articles/recortes/componentes/post-03.03.png" 
        alt="Arquitecturas Polimórficas (OOP) vs Arquitecturas Rígidas (COP)">
   <figcaption>Arquitecturas Polimórficas (OOP) vs Arquitecturas Rígidas (COP)</figcaption>
 </figure>

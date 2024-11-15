@@ -1,0 +1,199 @@
+---
+import Config  from '../../config/config.js'
+import Section from '../commons/commons.band.astro'
+
+let subscribe = Config.key ('site.home.subscribe')
+let head      = subscribe.key ('head')
+let caption   = subscribe.key ('caption')
+let fields    = subscribe.key ('fields')
+let action    = subscribe.key ('action')
+let user      = fields.key ('user') 
+let mail      = fields.key ('mail') 
+let gdpr      = fields.key ('gdpr')
+let config    = asJson (Config.key ('site.services.mailing'))
+
+let hcolor    = Config.key ('site.colors.texts.reverse')
+let tcolor    = Config.key ('site.colors.palette.gray.30')
+let hsize     = Config.key ('site.sizes.large')
+let tsize     = Config.key ('site.sizes.medium')
+let fsize     = Config.key ('site.sizes.lite')
+
+function asJson (config) {
+  let cfg = {}
+  for (let mdata of config) {
+    let [key, value] = mdata
+    cfg[key] = value
+  }
+  return JSON.stringify (cfg)
+}
+
+---
+
+<Section primary>
+  <div class="ui container">
+    <div class="subscribe">
+      <h2 class="head">{head}</h2>
+      <p class="text">{caption}</p>
+      <form class="ui form">
+        <div class="field">
+          <div class="two fields">
+            <div class="field">
+              <input id="user" type={user.key ('type')} placeholder={user.key ('text')}>
+            </div>
+            <div class="field">
+              <input id="mail" type={mail.key ('type')} placeholder={mail.key ('text')}>
+            </div>
+            <div class="field" hidden>
+              <input id="lock" type="text">
+            </div>
+          </div>
+        </div>
+        <div class="field">
+          <div class="ui checkbox">
+            <input id="gdpr" type={gdpr.key ('type')} tabindex="0">
+            <label class="label">
+              <a href="/docs/gdpr">{gdpr.key ('text')}</a>
+            </label>
+          </div>
+        </div>
+        <button id="btnOpen" class="ui big button" type="button">{action}</button>
+      </form>
+    </div>
+  </div>
+</Section>
+
+<meta id="config-mailing" content={config}>
+
+<div id="modal-ok" class="ui modal">
+  <div class="header">Estas a punto de pertenecer a La Tribu</div>
+  <div class="content">
+    <p>Solo necesitas un paso más. Hemos enviado un mensaje a la dirección de 
+      correo electrónico que nos has proporcionado. Por favor, revisa tu buzón 
+      y sigue las instrucciones que encontrarás allí.
+    </p>
+  </div>
+  <div class="actions">
+    <div class="ui approve primary button">Aceptar</div>
+    <div class="ui cancel button">Cancelar</div>
+  </div>
+</div>
+
+<div id="modal-ko" class="ui modal">
+  <div class="header">Parece que hay algun error en los datos</div>
+  <div class="content">
+    <p>Hemos analizado tus datos y no parecen correctos. Para que podamos incluirte 
+      en la tribu tienes que proporcionarnos un nombre de usuario real, una dirección
+      de correo electrónico correcta y aceptar la política de protección de datos.
+    </p>
+  </div>
+  <div class="actions">
+    <div class="ui cancel button">Cerrar</div>
+  </div>
+</div>
+
+<script type="module">
+  import Helper from '/scripts/lib.mailing.js'
+
+  const EVENT  = 'click'
+  const OPEN   = '#btnOpen'
+  const SHOW   = 'show'
+  const HIDE   = 'hide'
+  const USER   = '#user'
+  const MAIL   = '#mail'
+  const GDPR   = '#gdpr'
+  const MOK    = '#modal-ok'
+  const MKO    = '#modal-ko'
+  const REGEX  = '^([\\w.-]+)@([a-zA-Z]+)\\.([a-zA-Z]{2,4})$'
+  const EMPTY  = ''
+
+  let open = document.querySelector (OPEN)
+
+  let okUser  = x => !!x
+  let okMail  = x => RegExp (REGEX).test (x)
+  let clear   = x => x.value = EMPTY
+
+  function Config () {
+    let node = document.querySelector ('#config-mailing')
+    if (node) {
+      let text  = node.getAttribute ('content')
+      let mdata = JSON.parse (text)
+      return mdata
+    }
+  }
+
+  function doRegister (event) {
+    event.preventDefault ()
+    let okmodal = $ (MOK)
+    let komodal = $ (MKO)
+    let nuser   = document.querySelector (USER)
+    let nmail   = document.querySelector (MAIL)
+    let ngdpr   = document.querySelector (GDPR)
+    let user    = nuser .value
+    let mail    = nmail .value
+    let gdpr    = ngdpr .checked
+    let ok      = okUser (user) && okMail (mail) && gdpr
+    let dialog  = ok && okmodal || !ok && komodal
+   
+    let config = Config ()
+    let helper = Helper (config)
+
+    dialog
+      .modal ({
+        closable : false,
+        onApprove () {
+          helper.subscribe ({ user, mail })
+          clear (nuser)
+          clear (nmail)
+          dialog.modal (HIDE)
+        },
+        onDeny () {
+          clear (nuser)
+          clear (nmail)
+          dialog.modal (HIDE)
+        }
+      })
+      .modal (SHOW)
+  }
+
+  open.addEventListener (EVENT, doRegister)
+</script>
+
+<style define:vars={{ hcolor, tcolor, hsize, tsize, fsize }}>
+  .subscribe {
+    margin      : 90px auto;
+    color       : var(--hcolor);
+  }
+  .subscribe .head {
+    font-size   : var(--hsize);
+  }
+  .subscribe .text {
+    margin      : 20px auto 60px auto;
+    font-size   : var(--tsize);
+    color       : var(--tcolor) !important;
+  }
+  .subscribe .field {
+    font-size   : var(--fsize);
+  }
+  .subscribe .label a {
+    font-size   : var(--fsize) !important;
+    font-weight : 500 !important;
+    color       : var(--tcolor) !important;
+  }
+  .subscribe .label a:hover {
+    color       : #ccc !important;
+  }
+  .modal .header {
+    font-size   : var(--tsize) !important;
+  }
+  .modal .content {
+    font-size   : var(--tsize) !important;
+    font-weight : 100 !important;
+    text-align  : justify;
+  }
+  .modal .action  {
+    margin          : 40px auto;
+    display         : flex;
+    justify-content : center;
+    align-items     : center;
+  }
+</style>

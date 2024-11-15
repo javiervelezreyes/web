@@ -7,30 +7,17 @@ const CONTEXT    = '@context'
 const TYPE       = '@type'
 const SCHEMA     = 'https://schema.org'
 const COLLECTION = 'Collection'
-const PAGE       = 'CollectionPage'
 const VIDEO      = 'VideoObject'
 const PERSON     = 'Person'
 
-function doSections (...sections) {
+function doEvents (events) {
   return Helper.Json ({
     [CONTEXT]   : SCHEMA,
-    [TYPE]      : PAGE,
-    name        : title,
-    description : caption,
-    hasPart     : sections.map (doSection),
-  })
-}
-
-function doSection (section) {
-  let title   = section.key ('title')
-  let caption = section.key ('caption')
-  let events  = [...section.key ('items')].filter (isHidden)
-  return {
     [TYPE]      : COLLECTION,
     name        : title,
     description : caption,
-    hasPart     : events.map (doEvent),
-  }
+    hasPart     : events.filter (isHidden).map (doEvent),
+  })
 }
 
 function doEvent (event) {
@@ -51,18 +38,16 @@ function doEvent (event) {
   }
 }
 
-function isHidden (item) {
-  return !item.key ('hidden')
+function isHidden (event) {
+  return !event.key ('hidden')
 }
 
 let link    = Astro.url
 let site    = Config.key ('site.link')
 let title   = Config.key ('site.events.header.title')
 let caption = Config.key ('site.events.header.caption')
-let talks   = Config.key ('site.events.talks')
-let iviews  = Config.key ('site.events.interviews')
-let wshops  = Config.key ('site.events.workshops')
-let Events  = doSections (talks, iviews, wshops)
+let events  = [...Config.key ('site.events.talks')]
+let mdata   = doEvents (events)
 ---
 
 <Base />
@@ -70,4 +55,4 @@ let Events  = doSections (talks, iviews, wshops)
 <meta name="description" content={title}>
 <meta name="keywords"    content={[title, caption].join ()}>
 
-<script is:inline type="application/ld+json" set:html={Events}></script> 
+<script is:inline type="application/ld+json" set:html={mdata}></script> 

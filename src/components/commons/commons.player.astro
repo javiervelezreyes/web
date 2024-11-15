@@ -1,0 +1,50 @@
+  ---
+  let {video} = Astro.props
+  let {image} = Astro.props
+  ---
+  
+  <link rel="stylesheet" href="/styles/player.css">
+
+  <div class="ui container">
+    <div class="player" video={video} image={image}>
+      <div class="frame">
+        <div class="content">
+          <div id="video" class="video"></div>
+          <div class="overlay"></div>
+        </div>
+      </div>
+      <div class="controls">
+        <button class="icon play"><i class="fas fa-play"></i></button>
+        <button class="icon stop"><i class="fas fa-stop"></i></button>
+        <div class="time">
+          <div class="text"></div>
+          <div class="range horizontal">
+            <div class="previous"></div>
+            <div class="pointer"></div>
+            <div class="next"></div>
+          </div>
+        </div>
+        <div class="volume">
+          <label class="ltoggle" for="toggleVolume"><i class="fas fa-volume-up"></i></label>
+          <input id="toggleVolume" class="toggle" type="checkbox">
+          <div class="range vertical">
+            <div class="next"></div>
+            <div class="pointer"></div>
+            <div class="previous"></div>
+          </div>
+        </div>
+        <div class="rate">
+          <label class="ltoggle" for="toggleRate"><i class="fas fa-tachometer-alt"></i></label>
+          <input id="toggleRate" class="toggle" type="checkbox">
+          <div class="range vertical">
+            <div class="next"></div>
+            <div class="pointer"></div>
+            <div class="previous"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="/scripts/lib.player.js"></script>
+

@@ -1,0 +1,37 @@
+---
+import Config from '../../config/config.js'
+import Layout from '../../layouts/layout.section.astro'
+import Head   from '../../components/activity/events/event.head.astro'
+import Body   from '../../components/activity/events/event.body.astro'
+
+let { talk } = Astro.props
+
+let talks   = Config .key ('site.events.talks')
+let title   = Config .key ('site.brand')
+let page    = Config .key ('site.pages.events')
+let section = page   .key ('label')
+let path    = page   .key ('path')
+
+export function getStaticPaths () {
+  let talks    = Config.key ('site.events.talks')
+  let response = []
+  for (let talk of talks) {
+    let draft  = talk.key ('draft')
+    let hidden = talk.key ('hidden')
+    let path   = talk.key ('path')
+    let slug   = path.split ('/').pop ()
+    let params = {slug}
+    let props  = {talk}
+    !draft && !hidden && response.push ({ params, props })
+  }
+  return response
+}
+
+---
+
+<Layout title={title} section={section} path={path}>
+  <Head event={talk} />
+  <Body event={talk} events={talks} />
+</Layout>
+
+

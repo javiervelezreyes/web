@@ -1,0 +1,29 @@
+---
+import Document from './commons/layout.document.astro'
+import Head     from './commons/layout.head.astro'
+import Layout   from './commons/layout.page.astro'
+import Header   from '../components/letters/letter.header.astro'
+import Hero     from '../components/letters/letter.hero.astro'
+import Top      from '../components/letters/letter.top.astro'
+import Page     from '../components/letters/letter.page.astro'
+import Footer   from '../components/letters/letter.footer.astro'
+
+let { skip } = Astro.props
+let text     = `Javier Velez Reyes - Newsletter`
+---
+
+<Document>
+	<Head title={text}/>
+	<Layout>
+		<div class="ui container">
+			<Header/>
+			<Hero/>
+			<Top/>
+			<Page>
+				<slot/>
+			</Page>
+			<Footer skip={skip}/>
+		</div>
+	</Layout>
+</Document>
+
