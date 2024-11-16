@@ -78,8 +78,9 @@ Config.define ({
   }],
 
   'site.home.promo' : {
-    image : '/images/home/promo.png',
-    video : '/videos/promo.03.mp4',
+    loader : '/images/home/promo.loader.png',
+    cover  : '/images/home/promo.cover.png',
+    video  : '/videos/promo.03.mp4',
   },
 
   'site.home.stats' : [
