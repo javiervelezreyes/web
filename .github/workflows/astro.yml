@@ -39,12 +39,6 @@ jobs:
       - name: Download Git LFS
         run: |
           curl -fsSL https://github.com/git-lfs/git-lfs/releases/download/v3.5.1/git-lfs-linux-amd64-v3.5.1.tar.gz | tar -xz --strip-components=1 -C /usr/local/bin
-      - name: Install Git LFS
-        run: | 
-          ls -l /usr/local/bin
-          echo $PATH
-          git-lfs --version
-          # git lfs install
       - name: Pull LFS objects
         run: git lfs pull
       - name: Detect package manager
