@@ -316,11 +316,11 @@ const TOPAUSE  = 'fa-pause';
 const SEP      = ' / ';
 const ON       = true;
 const OFF      = false;
-const BEGIN    = 50;
-const LONG     = 4000;
+const BEGIN    = 1;
+const LONG     = 3500;
 const SHORT    = 500;
 
-let Begin = x => 100 * x.time ().time.point < BEGIN;
+let Begin = x => (x.time ().time.point | 0) < BEGIN;
 
 function Player (node) {
   async function render (id, image) {
@@ -358,12 +358,12 @@ function Player (node) {
     }
     
     function refresh (state) {
+      play = state;
       let $icon = $play.querySelector (ICON);
       $icon[CLASSES].remove (TOPLAY);
       $icon[CLASSES].remove (TOPAUSE);
       if (state == ON ) $icon[CLASSES].add (TOPAUSE);
       if (state == OFF) $icon[CLASSES].add (TOPLAY);
-      play = state;
     }
 
     async function onPlay () {
@@ -372,22 +372,25 @@ function Player (node) {
         let begin = Begin (video); 
         let delay = begin && LONG || !begin && SHORT;
         await video.play ();
-        await cover.hide (delay);
+        if (play == ON)  await cover.hide (delay);
+        if (play == OFF) await cover.show ();
       }
       async function doPause () {
         refresh (OFF);
         await cover.show  ();
         await video.pause ();
       }
+
       let state = play;
-      if (state == OFF) await doPlay  (); 
-      if (state == ON)  await doPause ();
+      if (state == ON)   doPause();
+      if (state == OFF)  doPlay ();
+
     }
 
     async function onStop () {
+      refresh (OFF);
       await cover.show ();
       await video.stop ();
-      refresh (OFF);
     }
 
     async function onTime ({ data }) {
@@ -403,8 +406,7 @@ function Player (node) {
     }
 
     video.bind ({
-
-      async Time (ctx) {
+      Time (ctx) {
         let value  = ctx.time.value;
         let text   = ctx.time.text;
         let total  = ctx.size.text;
