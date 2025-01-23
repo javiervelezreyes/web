@@ -365,6 +365,32 @@ Config.define ({
         'codemotion-2018',
         'cto-2019'
       ]
+    }, {
+      'key'     : 'scodigo-2024',
+      'title'   : 'El Horizonte de la Inteligencia Artificial',
+      'caption' : 'Inteligencia, Futuro & Experiencia',
+      'image'   : '/images/activity/events/event.24.01.png',
+      'video'   : '049q-ogFJu8',
+      'path'    : '/eventos/scodigo-2024',
+      'place'   : 'Sirviendo Código',
+      'author'  : 'Javier Vélez',
+      'date'    : '2024',
+      'time'    : '56:47',
+      'draft'   : false,
+      'hidden'  : false,
+      'lead'    : `
+          Que la inteligencia artificial generativa (GenAI) ha llegado para quedarse es algo que hoy ya nadie podrá poner en duda. Hay gente que aún sigue 
+          argumentando que a eso que hacen las máquinas no se le puede llamar inteligencia, pero tal vez esas voces hablan más desde el temor a un futuro 
+          desconocido que desde una reflexión sosegada y objetiva. Lo que desde luego sí parece evidente es que este nuevo actor que ha entrado en el sistema 
+          supondrá un claro revulsivo en los próximos años en el desarrollo de nuestra profesión. A lo largo de esta charla queremos precisamente abundar 
+          en esta afirmación huyendo de optimismos baratos y catastrofismos infundados. Nos interesa dar una respuesta no sólo acerca del impacto que esta 
+          tecnología tendrá en el futuro próximo en los procesos de diseño, desarrollo, construcción y mantenimiento del código sino también de cómo será 
+          su esencia arquitectónica, funcional y experiencial. Si trabajas en esta profesión esto te interesa.`,
+      'links'   : [
+        'codemotion-2023',
+        'codemotion-2018',
+        'codemotion-2019'
+      ]
     }
   ]
   
