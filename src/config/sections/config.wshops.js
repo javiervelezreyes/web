@@ -531,6 +531,31 @@ Config.define ({
       'madridjs-2023-3',
       'madridjs-2022-2',
     ]
+  },  {
+    key     : 'madridjs-2025-1',
+    title   : 'Desarrollo Orientado a Tareas en JavaScript',
+    caption : 'Madrid JS. Desarrollo Orientado a Tareas en JavaScript',
+    image   : '/images/activity/madridjs/madrid.js.2501.png',
+    video   : '0sMYShvNltM',
+    path    : '/talleres/madridjs-2025-1',
+    place   : 'Madrid JS',
+    author  : 'Javier Vélez',
+    date    : '2025',
+    time    : '02:10',
+    draft   : false,
+    hidden  : false,
+    lead    : `Cuando pensamos en JavaScript en seguida nos viene a la mente la idea de crear productos de software de manera ágil y productiva. No en 
+      vano, nuestro lenguaje brilla especialmente por sus caracteristicas de desarrollo flexible y su plasticidad expresiva. Pero JavaScript no solo 
+      se queda ahí sino que, entre otras cosas, también nos permite hacer un desarrollo orientado a la microtarea. No son pocas las APIs del lenguaje 
+      que ofrecen espacios de anclaje para intertar tareas de esta naturaleza orientadas a distintos propósitos. A lo largo de esta charla exploraremos 
+      precisamente todas estas no tan conocidas capacidades de JavaScript. Hablaremos de distintos modelos de desarrollo de microtareas, desde tareas 
+      diferidas, tareas centradas en la animación, tareas para los tiempos de inactividad, etc. Aprenderemos a construir este tipo de lógica y a crear 
+      software de esta forma a través de procesos de composición y orquestación. Esta es, sin lugara dudas, una charla que no te debes perder!`,
+    links   : [
+      'madridjs-2020-1',
+      'madridjs-2023-2',
+      'madridjs-2022-2',
+    ]
   }]
 
 })
