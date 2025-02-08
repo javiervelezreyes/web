@@ -37,16 +37,6 @@ export function getStaticPaths () {
 
 ---
 
-<Layout title={title} section={section} path={path}>
-  <Head poster={talk} />
-  <Body poster={talk} posters={posters} />
-</Layout>
-
-<div class="mdata">
-  <div id="date">{date}</div>
-  <div id="time">{time}</div>
-</div>
-
 <script>
   function check () {
     let sdate = date.textContent
@@ -60,3 +50,13 @@ export function getStaticPaths () {
   let ok  = check ()
   if (!ok) window.location.href = '/404'
 </script>
+
+<Layout title={title} section={section} path={path}>
+  <Head poster={talk} />
+  <Body poster={talk} posters={posters} />
+</Layout>
+
+<div class="mdata">
+  <div id="date">{date}</div>
+  <div id="time">{time}</div>
+</div>
