@@ -48,7 +48,8 @@ export function getStaticPaths () {
     return publish < now
   }
   let ok  = check ()
-  if (!ok) window.location.href = '/404'
+  if (ok) document.body.style  = 'visibility: visible'
+  else    window.location.href = '/404'
 </script>
 
 <Layout title={title} section={section} path={path}>
@@ -60,3 +61,9 @@ export function getStaticPaths () {
   <div id="date">{date}</div>
   <div id="time">{time}</div>
 </div>
+
+<style>
+  body {
+    visibility: hidden;
+  }
+</style>
