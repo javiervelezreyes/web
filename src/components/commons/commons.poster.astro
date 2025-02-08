@@ -1,0 +1,44 @@
+---
+import Config  from '../../config/config.js'
+
+let { image } = Astro.props
+
+let tcolor = Config.key ('site.colors.texts.primary')
+let lcolor = Config.key ('site.colors.lines.secondary')
+let hsize  = Config.key ('site.sizes.regular')
+let csize  = Config.key ('site.sizes.xshort')
+let tsize  = Config.key ('site.sizes.medium')
+---
+
+<div class="box">
+  <div class="head">
+    <div class="image">
+      <img src={image} alt="poster">
+    </div>
+  </div>
+</div>
+
+<style define:vars={{ tcolor, lcolor, hsize, csize, tsize }}>
+  .box {
+    position        : relative;
+    width           : 100%;
+    padding         : 10px;
+    color           : var(--tcolor);
+    border          : 1px solid var(--lcolor);
+    box-shadow      : 0 1px 2px 0 rgba(34,36,38,.15);
+    border-radius   : 5px;
+  }
+  .box .head {
+    display         : inline-block;
+    width           : 100%;
+  }
+  .box .head .image {
+    width           : 100%;
+    height          : 100%;
+  }
+  .box .head .image  img {
+    width           : 100%;
+    height          : 100%;
+    border-radius   : 3px;
+  }
+</style>

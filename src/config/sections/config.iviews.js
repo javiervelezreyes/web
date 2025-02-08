@@ -14,19 +14,19 @@ Config.define ({
   },
 
   'site.interviews.talks' : [{
-      'key'     : 'techfest-2015',
-      'title'   : 'Técnicas & Modelos de Metaprogramación',
-      'caption' : 'Arquitecturas de Software Adaptativas',
-      'image'   : '/images/activity/interviews/interview.15.01.png',
-      'video'   : 'hPjiYsCb5DM',
-      'path'    : '/entrevistas/techfest-2015',
-      'place'   : 'TechFest',
-      'author'  : 'Javier Vélez',
-      'date'    : '2015',
-      'time'    : '2:38',
-      'draft'   : false,
-      'hidden'  : false,
-      'lead'    : `
+      key     : 'techfest-2015',
+      title   : 'Técnicas & Modelos de Metaprogramación',
+      caption : 'Arquitecturas de Software Adaptativas',
+      image   : '/images/activity/interviews/interview.15.01.png',
+      video   : 'hPjiYsCb5DM',
+      path    : '/entrevistas/techfest-2015',
+      place   : 'TechFest',
+      author  : 'Javier Vélez',
+      date    : '2015',
+      time    : '2:38',
+      draft   : false,
+      hidden  : false,
+      lead    : `
           Los procesos de construcción de soluciones de software pasan habitualmente por la creación de arquitecturas sólidas. Este tipo de diseños 
           son aquellas que cumplen con los principios fundacionales del paradigma de la orientación a objetos, de sus siglas en inglés SOLID. Sin 
           embargo, en ocasiones resulta conveniente aplicar otro tipo de estrategia para la creación de software. Esto es especialmente cierto en 
@@ -42,19 +42,19 @@ Config.define ({
         'codemotion-2016'
       ]
     }, {
-      'key'     : 'codemotion-2016',
-      'title'   : 'Patrones de Composición en la Web',
-      'caption' : 'Arquitecturas de Componentes Web',
-      'image'   : '/images/activity/interviews/interview.16.01.png',
-      'video'   : '-FgfFP4ErbE',
-      'path'    : '/entrevistas/codemotion-2016',
-      'place'   : 'Codemotion',
-      'author'  : 'Javier Vélez',
-      'date'    : '2016',
-      'time'    : '2:22',
-      'draft'   : false,
-      'hidden'  : false,
-      'lead'    : `
+      key     : 'codemotion-2016',
+      title   : 'Patrones de Composición en la Web',
+      caption : 'Arquitecturas de Componentes Web',
+      image   : '/images/activity/interviews/interview.16.01.png',
+      video   : '-FgfFP4ErbE',
+      path    : '/entrevistas/codemotion-2016',
+      place   : 'Codemotion',
+      author  : 'Javier Vélez',
+      date    : '2016',
+      time    : '2:22',
+      draft   : false,
+      hidden  : false,
+      lead    : `
           La llegada de las tecnologías de componentes web ha cambiado radicalmente la manera en la que se diseñan y construyen soluciones de frontend. 
           Ya sea porque se apliquen estrategias de modularidad basada en el uso masivo de componentes o por que se elaboren nutridos catálogos de 
           componentes que responden a las necesidades recurrentes de interacción visual propias de la plataforma web, lo ciertoes que hoy por hoy todo 
@@ -69,19 +69,19 @@ Config.define ({
         'commit-2018'
       ]
     }, {
-      'key'     : 'jsday-2016',
-      'title'   : 'Arquitecturas para la Reutilización',
-      'caption' : 'Arquitecturas de Software Adaptativas',
-      'image'   : '/images/activity/interviews/interview.16.02.png',
-      'video'   : 'ZKqGxpzI4yM',
-      'path'    : '/entrevistas/jsday-2016',
-      'place'   : 'JSDay',
-      'author'  : 'Javier Vélez',
-      'date'    : '2016',
-      'time'    : '2:22',
-      'draft'   : false,
-      'hidden'  : false,
-      'lead'    : `
+      key     : 'jsday-2016',
+      title   : 'Arquitecturas para la Reutilización',
+      caption : 'Arquitecturas de Software Adaptativas',
+      image   : '/images/activity/interviews/interview.16.02.png',
+      video   : 'ZKqGxpzI4yM',
+      path    : '/entrevistas/jsday-2016',
+      place   : 'JSDay',
+      author  : 'Javier Vélez',
+      date    : '2016',
+      time    : '2:22',
+      draft   : false,
+      hidden  : false,
+      lead    : `
           Frecuentemente se argumenta que la reutilización es uno de los valores más importantes de las soluciones de software. En efecto, cuando desarrollamos 
           arquitecturas, uno de nuestros objetivos fundamentales es conseguir que los activos construidos puedan ser reutilizados en diferentes contextos 
           arquitectónicos de uso. Entre otras cosas, esto contribuye al ahorro de costes en los procesos de desarrollo y a la homogeneidad transversal 
@@ -98,19 +98,19 @@ Config.define ({
         'iasa-2019-2'
       ]
     }, {
-      'key'     : 'google-2016',
-      'title'   : 'JavaScript vs Java',
-      'caption' : 'Lenguajes & Paradigmas',
-      'image'   : '/images/activity/interviews/interview.16.03.png',
-      'video'   : 'f_v-6Xxtthc',
-      'path'    : '/entrevistas/google-2016',
-      'place'   : 'Google Campus',
-      'author'  : 'Javier Vélez',
-      'date'    : '2016',
-      'time'    : '1:13:34',
-      'draft'   : false,
-      'hidden'  : false,
-      'lead'    : `
+      key     : 'google-2016',
+      title   : 'JavaScript vs Java',
+      caption : 'Lenguajes & Paradigmas',
+      image   : '/images/activity/interviews/interview.16.03.png',
+      video   : 'f_v-6Xxtthc',
+      path    : '/entrevistas/google-2016',
+      place   : 'Google Campus',
+      author  : 'Javier Vélez',
+      date    : '2016',
+      time    : '1:13:34',
+      draft   : false,
+      hidden  : false,
+      lead    : `
           Nadie puede negar méritos a Java. Este lenguaje de programación nació y se ha mantenido honrosamente durante la friolera de más de 20 años como el 
           abanderado de las arquitecturas robustas. Sus propios creadores lo mantuvieron sin complejos. El código en Java es más verboso pero más legible y 
           mantenible. Y es verdad, trabajar con Java siempre fue una garantía de éxito en tanto que, a poco que no fueras demasiado torpe, las soluciones de 
@@ -127,19 +127,19 @@ Config.define ({
         'techfest-2017'
       ]
     }, {
-      'key'     : 'polymer-2016',
-      'title'   : 'Patrones de Acceso a Datos',
-      'caption' : 'Arquitecturas de Componentes Web',
-      'image'   : '/images/activity/interviews/interview.16.04.png',
-      'video'   : 'VSNzbyKC_CE',
-      'path'    : '/entrevistas/polymer-2016',
-      'place'   : 'Polymer Day',
-      'author'  : 'Javier Vélez',
-      'date'    : '2016',
-      'time'    : '2:32',
-      'draft'   : false,
-      'hidden'  : false,
-      'lead'    : `
+      key     : 'polymer-2016',
+      title   : 'Patrones de Acceso a Datos',
+      caption : 'Arquitecturas de Componentes Web',
+      image   : '/images/activity/interviews/interview.16.04.png',
+      video   : 'VSNzbyKC_CE',
+      path    : '/entrevistas/polymer-2016',
+      place   : 'Polymer Day',
+      author  : 'Javier Vélez',
+      date    : '2016',
+      time    : '2:32',
+      draft   : false,
+      hidden  : false,
+      lead    : `
           La orientación a componentes web se ha convertido en un revulsivo en los últimos años para construir soluciones digitales de última generación. El 
           hecho de hacer uso de componentes como piezas de interacción visual encapsuladas y reutilizables ofrece grandes ventajas a los procesos de 
           construcción compositiva y arroja un escenario de mayor simplicidad a la hora de idear soluciones de escalabilidadcreciente en complejidad. Dentro 
@@ -155,19 +155,19 @@ Config.define ({
         'codemotion-2017'
       ]
     }, {
-      'key'     : 'codemotion-2017',
-      'title'   : 'Sistemas de Diseño & Arquitecturas UX',
-      'caption' : 'Arquitecturas & Experiencia de Usuario',
-      'image'   : '/images/activity/interviews/interview.17.01.png',
-      'video'   : 'pYjg1hbEdPI',
-      'path'    : '/entrevistas/codemotion-2017',
-      'place'   : 'Codemotion',
-      'author'  : 'Javier Vélez',
-      'date'    : '2017',
-      'time'    : '2:22',
-      'draft'   : false,
-      'hidden'  : false,
-      'lead'    : `
+      key     : 'codemotion-2017',
+      title   : 'Sistemas de Diseño & Arquitecturas UX',
+      caption : 'Arquitecturas & Experiencia de Usuario',
+      image   : '/images/activity/interviews/interview.17.01.png',
+      video   : 'pYjg1hbEdPI',
+      path    : '/entrevistas/codemotion-2017',
+      place   : 'Codemotion',
+      author  : 'Javier Vélez',
+      date    : '2017',
+      time    : '2:22',
+      draft   : false,
+      hidden  : false,
+      lead    : `
           Las tecnologías de componentes web son una realidad que ha llegado a nuestros días. Hoy por hoy todoslos frameworks de mercado y todos los profesionales 
           que desarrollan productos digitales sobre la web hacen uso de este tipo de soluciones para encapsular modelos de interacción sobre la base de contenidos
           visuales. Sin embargo, el cambio paradigmático no está tanto en aspectos tecnológicos como pareciera pensar inicialmente, sino más bien en consideraciones 
@@ -183,19 +183,19 @@ Config.define ({
         'codemotion-2016'
       ]
     }, {
-      'key'     : 'techfest-2017',
-      'title'   : 'Funcional & Programación Declarativa',
-      'caption' : 'Lenguajes & Paradigmas',
-      'image'   : '/images/activity/interviews/interview.17.02.png',
-      'video'   : 'FhnWbL9Nt00',
-      'path'    : '/entrevistas/techfest-2017',
-      'place'   : 'Techfest',
-      'author'  : 'Javier Vélez',
-      'date'    : '2017',
-      'time'    : '3:16',
-      'draft'   : false,
-      'hidden'  : false,
-      'lead'    : `
+      key     : 'techfest-2017',
+      title   : 'Funcional & Programación Declarativa',
+      caption : 'Lenguajes & Paradigmas',
+      image   : '/images/activity/interviews/interview.17.02.png',
+      video   : 'FhnWbL9Nt00',
+      path    : '/entrevistas/techfest-2017',
+      place   : 'Techfest',
+      author  : 'Javier Vélez',
+      date    : '2017',
+      time    : '3:16',
+      draft   : false,
+      hidden  : false,
+      lead    : `
           Frecuentemente, cuando pensamos en la programación funcional, en especial desde lenguajes que resultan foráneos a este paradigma, caemos en el error 
           de pensar en que programar de acuerdo a estos principios, consiste básicamente en utilizar algunas primitivas centradas en operaciones sobre listas 
           con transformadores de orden superior. Sin embargo, la programación funcional cae lejos de estas ideas y va mucho más allá de eso. Cuando ideamos 
@@ -212,19 +212,19 @@ Config.define ({
         'commit-2018'
       ]
     }, {
-      'key'     : 'cto-2018',
-      'title'   : 'Programas y Estrategias de Capacitación',
-      'caption' : 'Cultura & Desarrollo Profesional',
-      'image'   : '/images/activity/interviews/interview.18.01.png',
-      'video'   : 'FtHC-uohciI',
-      'path'    : '/entrevistas/cto-summit-2018',
-      'place'   : 'CTO Master',
-      'author'  : 'Javier Vélez',
-      'date'    : '2018',
-      'time'    : '3:02',
-      'draft'   : false,
-      'hidden'  : false,
-      'lead'    : `
+      key     : 'cto-2018',
+      title   : 'Programas y Estrategias de Capacitación',
+      caption : 'Cultura & Desarrollo Profesional',
+      image   : '/images/activity/interviews/interview.18.01.png',
+      video   : 'FtHC-uohciI',
+      path    : '/entrevistas/cto-summit-2018',
+      place   : 'CTO Master',
+      author  : 'Javier Vélez',
+      date    : '2018',
+      time    : '3:02',
+      draft   : false,
+      hidden  : false,
+      lead    : `
           Resultaría largo y elaborado hacer un análisis causal de por qué en los últimos años se ha producido unatransformación cultural verdaderamente dramática 
           dentro de nuestra profesión. Sin la intención de hacerjuicios de valor sobre este hecho, lo cierto es que los profesionales del sector tienen, buscan y 
           pretenden hoy en dia un plan de carrera horizontal frente a los clásicos movimientos de ascenso vertical sobre las asfixiantes pirámides corporativas. 
@@ -243,19 +243,19 @@ Config.define ({
         'cto-2019'
       ]
     }, {
-      'key'     : 'commit-2018',
-      'title'   : 'Arquitecturas Web Adaptativas',
-      'caption' : 'Arquitecturas de Componentes Web',
-      'image'   : '/images/activity/interviews/interview.18.02.png',
-      'video'   : 'h3kJRlUR_Pg',
-      'path'    : '/entrevistas/commit-2018',
-      'place'   : 'Commit',
-      'author'  : 'Javier Vélez',
-      'date'    : '2018',
-      'time'    : '2:26',
-      'draft'   : false,
-      'hidden'  : false,
-      'lead'    : `
+      key     : 'commit-2018',
+      title   : 'Arquitecturas Web Adaptativas',
+      caption : 'Arquitecturas de Componentes Web',
+      image   : '/images/activity/interviews/interview.18.02.png',
+      video   : 'h3kJRlUR_Pg',
+      path    : '/entrevistas/commit-2018',
+      place   : 'Commit',
+      author  : 'Javier Vélez',
+      date    : '2018',
+      time    : '2:26',
+      draft   : false,
+      hidden  : false,
+      lead    : `
           Frecuentemente, cuando desarrollamos productos digitales basados en componentes web, de manera consciente o inconsciente, aplicamos los principios del 
           paradigma de orientación objetos, aquellos referidos habitualmente a través de sus siglas en ingles SOLID. Este hecho conduce a solucionesbien formadas, 
           sólidas y robustas. Sin embargo, con frecuencia este tipo de problemas requiere de aproximaciones divergentes que aplican técnicas y modelos arquitectónicos 
@@ -271,19 +271,19 @@ Config.define ({
         'iasa-2019-2'
       ]
     }, {
-      'key'     : 'iasa-2019-1',
-      'title'   : 'Arquitectura & Transformación Digital',
-      'caption' : 'Arquitectura Agile & Gobierno',
-      'image'   : '/images/activity/interviews/interview.19.01.png',
-      'video'   : 'yXbxbY-0rns',
-      'path'    : '/entrevistas/iasa-2019-1',
-      'place'   : 'IASA',
-      'author'  : 'Javier Vélez',
-      'date'    : '2019',
-      'time'    : '9:40',
-      'draft'   : false,
-      'hidden'  : false,
-      'lead'    : `
+      key     : 'iasa-2019-1',
+      title   : 'Arquitectura & Transformación Digital',
+      caption : 'Arquitectura Agile & Gobierno',
+      image   : '/images/activity/interviews/interview.19.01.png',
+      video   : 'yXbxbY-0rns',
+      path    : '/entrevistas/iasa-2019-1',
+      place   : 'IASA',
+      author  : 'Javier Vélez',
+      date    : '2019',
+      time    : '9:40',
+      draft   : false,
+      hidden  : false,
+      lead    : `
           La responsabilidad de la arquitectura como disciplina en general, y la labor de los arquitectos en particular, ha sido siempre un punto de encendida 
           controversia dentro de la profesión. Qué es exactamente un arquitecto, cuáles son sus responsabilidades, qué tipo de conocimiento le abala, dónde 
           residen sus puntos de contribución en el marco de un producto y cuándo debe aportar valor dentro de un proyecto son preguntas recurrentes. Este espacio 
@@ -300,19 +300,19 @@ Config.define ({
         'cto-2018'
       ]
     }, {
-      'key'     : 'iasa-2019-2',
-      'title'   : 'Arquitecturas Ágiles & Emergentes',
-      'caption' : 'Arquitectura Agile & Gobierno',
-      'image'   : '/images/activity/interviews/interview.19.02.png',
-      'video'   : 'Q-7Ajt-ymCA',
-      'path'    : '/entrevistas/iasa-2019-2',
-      'place'   : 'IASA',
-      'author'  : 'Javier Vélez',
-      'date'    : '2019',
-      'time'    : '1:34:13',
-      'draft'   : false,
-      'hidden'  : false,
-      'lead'    : `
+      key     : 'iasa-2019-2',
+      title   : 'Arquitecturas Ágiles & Emergentes',
+      caption : 'Arquitectura Agile & Gobierno',
+      image   : '/images/activity/interviews/interview.19.02.png',
+      video   : 'Q-7Ajt-ymCA',
+      path    : '/entrevistas/iasa-2019-2',
+      place   : 'IASA',
+      author  : 'Javier Vélez',
+      date    : '2019',
+      time    : '1:34:13',
+      draft   : false,
+      hidden  : false,
+      lead    : `
           La transformación cultural que vino de la mano de las metodologías ágiles puso rápidamente foco de atención en los procesos de desarrollo de software. 
           Se trataba de crear productos más orientados al cliente con una participación activa del mismo en los procesos continuos de toma de decisiones y
           permitir que el proceso de construcción de los productos digitales fuera más una actividad de exploración y descubrimiento continuo sobre un espacio 
@@ -331,19 +331,19 @@ Config.define ({
         'cto-2019'
       ]
     }, {
-      'key'     : 'cto-2019',
-      'title'   : 'Transformación Digital de la Experiencia',
-      'caption' : 'Arquitecturas & Experiencia de Usuario',
-      'image'   : '/images/activity/interviews/interview.19.03.png',
-      'video'   : 'OsgS-PYazDo',
-      'path'    : '/entrevistas/cto-2019',
-      'place'   : 'CTO Summit',
-      'author'  : 'Javier Vélez',
-      'date'    : '2019',
-      'time'    : '5:10',
-      'draft'   : false,
-      'hidden'  : false,
-      'lead'    : `
+      key     : 'cto-2019',
+      title   : 'Transformación Digital de la Experiencia',
+      caption : 'Arquitecturas & Experiencia de Usuario',
+      image   : '/images/activity/interviews/interview.19.03.png',
+      video   : 'OsgS-PYazDo',
+      path    : '/entrevistas/cto-2019',
+      place   : 'CTO Summit',
+      author  : 'Javier Vélez',
+      date    : '2019',
+      time    : '5:10',
+      draft   : false,
+      hidden  : false,
+      lead    : `
           En los últimos 20 años la web se ha reinventado recurrentemente a si misma pasando de ser un mero expositor de contenidos estáticos a ser una 
           verdadera plataforma de ejecución que da soporte a toda la interacción colaborativa entre los usuarios. Y es que ciertamente, el cambio no ha 
           sido meramente tecnológico, que también, sino que se advierte una transformación igualmente relevante de carácter cultural referida a la forma 
@@ -361,19 +361,19 @@ Config.define ({
         'codemotion-2017'
       ]
     }, {
-      'key'     : 'codemotion-2023',
-      'title'   : 'La Gran Renuncia & Reinvención Social',
-      'caption' : 'Arquitectura Agile & Gobierno',
-      'image'   : '/images/activity/interviews/interview.23.01.png',
-      'video'   : 'SbYsnck6nLM',
-      'path'    : '/entrevistas/codemotion-2023',
-      'place'   : 'Codemotion 2023',
-      'author'  : 'Javier Vélez & Otros',
-      'date'    : '2023',
-      'time'    : '45:16',
-      'draft'   : false,
-      'hidden'  : false,
-      'lead'    : `
+      key     : 'codemotion-2023',
+      title   : 'La Gran Renuncia & Reinvención Social',
+      caption : 'Arquitectura Agile & Gobierno',
+      image   : '/images/activity/interviews/interview.23.01.png',
+      video   : 'SbYsnck6nLM',
+      path    : '/entrevistas/codemotion-2023',
+      place   : 'Codemotion 2023',
+      author  : 'Javier Vélez & Otros',
+      date    : '2023',
+      time    : '45:16',
+      draft   : false,
+      hidden  : false,
+      lead    : `
           Se está produciendo un gran cambio cultural dentro de nuestra profesión. Una transformación que tiene un gran calado social y que trasciende 
           más allá de nuestras fronteras. Todo un nuevo ecosistema de valores diferentes al anterior mueven ahora a las nuevas generaciones a realizar 
           sus procesos de búsqueda de nuevas posiciones laborales. Cobra mayor relevancia el tipo de proyecto, la orientación innovadora del mismo, el 

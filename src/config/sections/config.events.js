@@ -15,19 +15,19 @@ Config.define ({
 
   'site.events.talks' : [
     {
-      'key'     : 'techfest-2015',
-      'title'   : 'Técnicas & Modelos de Metaprogramación',
-      'caption' : 'Arquitecturas de Software Adaptativas',
-      'image'   : '/images/activity/events/event.15.01.png',
-      'video'   : 'APDAA61UsAk',
-      'path'    : '/eventos/techfest-2015',
-      'place'   : 'TechFest',
-      'author'  : 'Javier Vélez',
-      'date'    : '2015',
-      'time'    : '55:30',
-      'draft'   : false,
-      'hidden'  : false,
-      'lead'    : `
+      key     : 'techfest-2015',
+      title   : 'Técnicas & Modelos de Metaprogramación',
+      caption : 'Arquitecturas de Software Adaptativas',
+      image   : '/images/activity/events/event.15.01.png',
+      video   : 'APDAA61UsAk',
+      path    : '/eventos/techfest-2015',
+      place   : 'TechFest',
+      author  : 'Javier Vélez',
+      date    : '2015',
+      time    : '55:30',
+      draft   : false,
+      hidden  : false,
+      lead    : `
           Los procesos de construcción de soluciones de software pasan habitualmente por la creación de arquitecturas sólidas. Este tipo de 
           diseños son aquellas que cumplen con los principios fundacionales del paradigma de la orientación a objetos, de sus siglas en inglés
           SOLID. Sin embargo, en ocasiones resulta conveniente aplicar otro tipo de estrategia para la creación de software. Esto es 
@@ -44,19 +44,19 @@ Config.define ({
         'codemotion-2016'
       ]
     }, {
-      'key'     : 'bbva-2015',
-      'title'   : 'Orientando a Componentes la Web',
-      'caption' : 'Arquitecturas de Componentes Web',
-      'image'   : '/images/activity/events/event.15.02.png',
-      'video'   : 'YW9bB6qHTvI',
-      'path'    : '/eventos/bbva-2015',
-      'place'   : 'BBVA Innovation',
-      'author'  : 'Javier Vélez',
-      'date'    : '2015',
-      'time'    : '51:00',
-      'draft'   : false,
-      'hidden'  : false,
-      'lead'    : `
+      key     : 'bbva-2015',
+      title   : 'Orientando a Componentes la Web',
+      caption : 'Arquitecturas de Componentes Web',
+      image   : '/images/activity/events/event.15.02.png',
+      video   : 'YW9bB6qHTvI',
+      path    : '/eventos/bbva-2015',
+      place   : 'BBVA Innovation',
+      author  : 'Javier Vélez',
+      date    : '2015',
+      time    : '51:00',
+      draft   : false,
+      hidden  : false,
+      lead    : `
           La web está cambiando y la forma de desarrollar soluciones sobre ella también. En los últimos años hemos observado cómo la llegada 
           de los estándares en materia de componentes web ha supuesto un clarorevulsivo en cuanto a la aproximación tecnológica para crear 
           soluciones de frontend. Los componentes se han convertido así en el activo arquitectónico fundamental para encapsular modelos de 
@@ -74,19 +74,19 @@ Config.define ({
         'commit-2018'
       ]
     }, {
-      'key'     : 'polymer-2016',
-      'title'   : 'Patrones de Acceso a Datos en la Web',
-      'caption' : 'Arquitecturas de Componentes Web',
-      'image'   : '/images/activity/events/event.16.01.png',
-      'video'   : 'MxCBdxup-H0',
-      'path'    : '/eventos/polymer-2016',
-      'place'   : 'Polymer Day',
-      'author'  : 'Javier Vélez',
-      'date'    : '2016',
-      'time'    : '49:21',
-      'draft'   : false,
-      'hidden'  : false,
-      'lead'    : `
+      key     : 'polymer-2016',
+      title   : 'Patrones de Acceso a Datos en la Web',
+      caption : 'Arquitecturas de Componentes Web',
+      image   : '/images/activity/events/event.16.01.png',
+      video   : 'MxCBdxup-H0',
+      path    : '/eventos/polymer-2016',
+      place   : 'Polymer Day',
+      author  : 'Javier Vélez',
+      date    : '2016',
+      time    : '49:21',
+      draft   : false,
+      hidden  : false,
+      lead    : `
           La orientación a componentes web se ha convertido en un revulsivo en los últimos años para construir soluciones digitales de última 
           generación. El hecho de hacer uso de componentes como piezas de interacción visual encapsuladas y reutilizables ofrece grandes 
           ventajas a los procesos de construccióncompositiva y arroja un escenario de mayor simplicidad a la hora de idear soluciones de 
@@ -103,19 +103,19 @@ Config.define ({
         'codemotion-2017'
       ]
     }, {
-      'key'     : 'codemotion-2016',
-      'title'   : 'Patrones de Composición en la Web',
-      'caption' : 'Arquitecturas de Componentes Web',
-      'image'   : '/images/activity/events/event.16.02.png',
-      'video'   : 'm7MzzjapoUo',
-      'path'    : '/eventos/codemotion-2016',
-      'place'   : 'Codemotion',
-      'author'  : 'Javier Vélez',
-      'date'    : '2016',
-      'time'    : '50:56',
-      'draft'   : false,
-      'hidden'  : false,
-      'lead'    : `
+      key     : 'codemotion-2016',
+      title   : 'Patrones de Composición en la Web',
+      caption : 'Arquitecturas de Componentes Web',
+      image   : '/images/activity/events/event.16.02.png',
+      video   : 'm7MzzjapoUo',
+      path    : '/eventos/codemotion-2016',
+      place   : 'Codemotion',
+      author  : 'Javier Vélez',
+      date    : '2016',
+      time    : '50:56',
+      draft   : false,
+      hidden  : false,
+      lead    : `
           La llegada de las tecnologías de componentes web ha cambiado radicalmente la manera en la que se diseñan y construyen soluciones de 
           frontend. Ya sea porque se apliquen estrategias de modularidad basada en el uso masivo de componentes o por que se elaboren nutridos 
           catálogos de componentes que responden a las necesidades recurrentes de interacción visual propias de la plataforma web, lo ciertoes 
@@ -131,19 +131,19 @@ Config.define ({
         'commit-2018'
       ]
     }, {
-      'key'     : 'kconnect-2017',
-      'title'   : 'Arquitecturas Dirigidas por la Experiencia',
-      'caption' : 'Arquitecturas & Experiencia de Usuario',
-      'image'   : '/images/activity/events/event.17.01.png',
-      'video'   : 'pLuacJgjmJk',
-      'path'    : '/eventos/kconnect-2017',
-      'place'   : 'KConnect',
-      'author'  : 'Javier Vélez',
-      'date'    : '2017',
-      'time'    : '12:48',
-      'draft'   : false,
-      'hidden'  : false,
-      'lead'    : `
+      key     : 'kconnect-2017',
+      title   : 'Arquitecturas Dirigidas por la Experiencia',
+      caption : 'Arquitecturas & Experiencia de Usuario',
+      image   : '/images/activity/events/event.17.01.png',
+      video   : 'pLuacJgjmJk',
+      path    : '/eventos/kconnect-2017',
+      place   : 'KConnect',
+      author  : 'Javier Vélez',
+      date    : '2017',
+      time    : '12:48',
+      draft   : false,
+      hidden  : false,
+      lead    : `
           Desde que naciera allá por el año 1995, la web se ha reinventado dramáticamente de forma sistemática hasta convertirse en una realidad 
           muy diferente a lo que es hoy por hoy. En efecto, los expertos de la profesión hemos asistido a estos cambios desde los días en los que 
           la web era un mero expositor de contenidos hasta estos actuales en los que la web se ha convertido en una verdadera plataforma de 
@@ -161,19 +161,19 @@ Config.define ({
         'cto-2019'
       ]
     }, {
-      'key'     : 'codemotion-2017',
-      'title'   : 'Sistemas de Diseño & Arquitecturas UX',
-      'caption' : 'Arquitecturas & Experiencia de Usuario',
-      'image'   : '/images/activity/events/event.17.02.png',
-      'video'   : 'Q-YCFpe7W44',
-      'path'    : '/eventos/codemotion-2017',
-      'place'   : 'Codemotion',
-      'author'  : 'Javier Vélez',
-      'date'    : '2017',
-      'time'    : '40:09',
-      'draft'   : false,
-      'hidden'  : false,
-      'lead'    : `
+      key     : 'codemotion-2017',
+      title   : 'Sistemas de Diseño & Arquitecturas UX',
+      caption : 'Arquitecturas & Experiencia de Usuario',
+      image   : '/images/activity/events/event.17.02.png',
+      video   : 'Q-YCFpe7W44',
+      path    : '/eventos/codemotion-2017',
+      place   : 'Codemotion',
+      author  : 'Javier Vélez',
+      date    : '2017',
+      time    : '40:09',
+      draft   : false,
+      hidden  : false,
+      lead    : `
           Las tecnologías de componentes web son una realidad que ha llegado a nuestros días. Hoy por hoy todoslos frameworks de mercado y todos los 
           profesionales que desarrollan productos digitales sobre la web hacen uso de este tipo de soluciones para encapsular modelos de interacción 
           sobre la base de contenidosvisuales. Sin embargo, el cambio paradigmático no está tanto en aspectos tecnológicos como pareciera pensar 
@@ -190,19 +190,19 @@ Config.define ({
         'codemotion-2016'
       ]
     }, {
-      'key'     : 'codemotion-2018',
-      'title'   : 'Modelos de API para el Diseño de Servicios',
-      'caption' : 'Servicios & Arquitecturas Cloud',
-      'image'   : '/images/activity/events/event.18.01.png',
-      'video'   : 'BnHatgtkJFA',
-      'path'    : '/eventos/codemotion-2018',
-      'place'   : 'Codemotion',
-      'author'  : 'Javier Vélez',
-      'date'    : '2018',
-      'time'    : '41:05',
-      'draft'   : false,
-      'hidden'  : false,
-      'lead'    : `
+      key     : 'codemotion-2018',
+      title   : 'Modelos de API para el Diseño de Servicios',
+      caption : 'Servicios & Arquitecturas Cloud',
+      image   : '/images/activity/events/event.18.01.png',
+      video   : 'BnHatgtkJFA',
+      path    : '/eventos/codemotion-2018',
+      place   : 'Codemotion',
+      author  : 'Javier Vélez',
+      date    : '2018',
+      time    : '41:05',
+      draft   : false,
+      hidden  : false,
+      lead    : `
           Dentro del mundo de la computación distribuida, la orientación a servicios ha sido el paradigma arquitectónico de mayor aplicación recurrente. 
           En efecto, hoy por hoy cualquier solución desarrolla y despliega su parte back de acuerdo a una colección de servicios que expone el modelo 
           de información requerido. En ese sentido, se ha alcanzado un alto grado de madurez a través de un recorrido evolutivo que abarca los últimos 
@@ -218,19 +218,19 @@ Config.define ({
         'cto-2019'
       ]
     }, {
-      'key'     : 'commit-2018',
-      'title'   : 'Arquitecturas Web Adaptativas',
-      'caption' : 'Arquitecturas de Componentes Web',
-      'image'   : '/images/activity/events/event.18.02.png',
-      'video'   : '3trVtXOtYLs',
-      'path'    : '/eventos/commit-2018',
-      'place'   : 'Commit',
-      'author'  : 'Javier Vélez',
-      'date'    : '2018',
-      'time'    : '47:49',
-      'draft'   : false,
-      'hidden'  : false,
-      'lead'    : `
+      key     : 'commit-2018',
+      title   : 'Arquitecturas Web Adaptativas',
+      caption : 'Arquitecturas de Componentes Web',
+      image   : '/images/activity/events/event.18.02.png',
+      video   : '3trVtXOtYLs',
+      path    : '/eventos/commit-2018',
+      place   : 'Commit',
+      author  : 'Javier Vélez',
+      date    : '2018',
+      time    : '47:49',
+      draft   : false,
+      hidden  : false,
+      lead    : `
           Frecuentemente, cuando desarrollamos productos digitales basados en componentes web, de manera consciente o inconsciente, aplicamos los 
           principios del paradigma de orientación objetos, aquellos referidos habitualmente a través de sus siglas en ingles SOLID. Este hecho conduce 
           a solucionesbien formadas, sólidas y robustas. Sin embargo, con frecuencia este tipo de problemas requiere de aproximaciones divergentes que
@@ -246,19 +246,19 @@ Config.define ({
         'codemotion-2019'
       ]
     }, {
-      'key'     : 'cto-2019',
-      'title'   : 'Transformación Digital de la Experiencia',
-      'caption' : 'Arquitecturas & Experiencia de Usuario',
-      'image'   : '/images/activity/events/event.19.01.png',
-      'video'   : 'spBDg464IPg',
-      'path'    : '/eventos/cto-summit-2019',
-      'place'   : 'CTO Summit',
-      'author'  : 'Javier Vélez',
-      'date'    : '2019',
-      'time'    : '33:11',
-      'draft'   : false,
-      'hidden'  : false,
-      'lead'    : `
+      key     : 'cto-2019',
+      title   : 'Transformación Digital de la Experiencia',
+      caption : 'Arquitecturas & Experiencia de Usuario',
+      image   : '/images/activity/events/event.19.01.png',
+      video   : 'spBDg464IPg',
+      path    : '/eventos/cto-summit-2019',
+      place   : 'CTO Summit',
+      author  : 'Javier Vélez',
+      date    : '2019',
+      time    : '33:11',
+      draft   : false,
+      hidden  : false,
+      lead    : `
           En los últimos 20 años la web se ha reinventado recurrentemente a si misma pasando de ser un mero expositor de contenidos estáticos a ser una 
           verdadera plataforma de ejecución que da soporte a toda la interacción colaborativa entre los usuarios. Y es que ciertamente, el cambio no ha 
           sido meramente tecnológico, que también, sino que se advierte una transformación igualmente relevantede carácter cultural referida a la forma 
@@ -276,19 +276,19 @@ Config.define ({
         'codemotion-2019'
       ]
     }, {
-      'key'     : 'codemotion-2019',
-      'title'   : 'Arquitecturas Dirigidas por la Experiencia',
-      'caption' : 'Arquitecturas & Experiencia de Usuario',
-      'image'   : '/images/activity/events/event.19.02.png',
-      'video'   : 'G1_gWqolA6g',
-      'path'    : '/eventos/codemotion-2019',
-      'place'   : 'Codemotion',
-      'author'  : 'Javier Vélez',
-      'date'    : '2019',
-      'time'    : '44:03',
-      'draft'   : false,
-      'hidden'  : false,
-      'lead'    : `
+      key     : 'codemotion-2019',
+      title   : 'Arquitecturas Dirigidas por la Experiencia',
+      caption : 'Arquitecturas & Experiencia de Usuario',
+      image   : '/images/activity/events/event.19.02.png',
+      video   : 'G1_gWqolA6g',
+      path    : '/eventos/codemotion-2019',
+      place   : 'Codemotion',
+      author  : 'Javier Vélez',
+      date    : '2019',
+      time    : '44:03',
+      draft   : false,
+      hidden  : false,
+      lead    : `
           El desarrollo de soluciones digitales se ha enfocado, de manera convencional, como un proceso que nacedel diseño formal y sistemático de 
           modelos de información que se desarrollan y despliegan en el lado del servidor. Solo entonces son consumidos por clientes específicos que 
           elaboran solucionesvisuales a medida para los modelos de información así diseñados. Esta aproximación implica grandes ventajas con respecto 
@@ -306,19 +306,19 @@ Config.define ({
         'codemotion-2017'
       ]
     }, {
-      'key'     : 'commit-2023',
-      'title'   : 'Modelos Propios de Componentes Web',
-      'caption' : 'Servicios & Arquitecturas Cloud',
-      'image'   : '/images/activity/events/event.23.01.png',
-      'video'   : 'qxAuVr9PZek',
-      'path'    : '/eventos/commit-2023',
-      'place'   : 'Commit',
-      'author'  : 'Javier Vélez',
-      'date'    : '2023',
-      'time'    : '41:05',
-      'draft'   : false,
-      'hidden'  : false,
-      'lead'    : `
+      key     : 'commit-2023',
+      title   : 'Modelos Propios de Componentes Web',
+      caption : 'Servicios & Arquitecturas Cloud',
+      image   : '/images/activity/events/event.23.01.png',
+      video   : 'qxAuVr9PZek',
+      path    : '/eventos/commit-2023',
+      place   : 'Commit',
+      author  : 'Javier Vélez',
+      date    : '2023',
+      time    : '41:05',
+      draft   : false,
+      hidden  : false,
+      lead    : `
           Que hoy por hoy las arquitecturas de canales se han orientado fuertemente a componentes es una realidadirrefutable. Importantes compañías del 
           sector tecnológico han desarrollado frameworks que proporcionanmodelos de componentes al que se suben los desarrolladores para realizar 
           soluciones competitivas. Este modelo es una aproximación de éxito si se busca entrega temprana, pero puede conducir a situaciones dealto 
@@ -336,19 +336,19 @@ Config.define ({
         'commit-2018'
       ]
     }, {
-      'key'     : 'codemotion-2023',
-      'title'   : 'Arquitecturas Dirigidas por el Diálogo',
-      'caption' : 'Servicios & Arquitecturas Cloud',
-      'image'   : '/images/activity/events/event.23.02.png',
-      'video'   : 'IgPKF-m7g4w',
-      'path'    : '/eventos/codemotion-2023',
-      'place'   : 'Codemotion',
-      'author'  : 'Javier Vélez',
-      'date'    : '2023',
-      'time'    : '42:15',
-      'draft'   : false,
-      'hidden'  : false,
-      'lead'    : `
+      key     : 'codemotion-2023',
+      title   : 'Arquitecturas Dirigidas por el Diálogo',
+      caption : 'Servicios & Arquitecturas Cloud',
+      image   : '/images/activity/events/event.23.02.png',
+      video   : 'IgPKF-m7g4w',
+      path    : '/eventos/codemotion-2023',
+      place   : 'Codemotion',
+      author  : 'Javier Vélez',
+      date    : '2023',
+      time    : '42:15',
+      draft   : false,
+      hidden  : false,
+      lead    : `
           De manera convencional, la manera en la que se ha enfrentado el desarrollo de soluciones digitales ha sido mediante la exposición de una 
           colección de capacidades y servicios enumerados de manera explícita y extensiva para ser consumidos por el usuario final. Desde el lado del 
           front, el éxito de cada productoresidía en la manera en la que dichos servicios se ponían a disposición del usuario de forma cómoda y sencilla 
@@ -366,19 +366,19 @@ Config.define ({
         'cto-2019'
       ]
     }, {
-      'key'     : 'scodigo-2024',
-      'title'   : 'El Horizonte de la Inteligencia Artificial',
-      'caption' : 'Inteligencia, Futuro & Experiencia',
-      'image'   : '/images/activity/events/event.24.01.png',
-      'video'   : '049q-ogFJu8',
-      'path'    : '/eventos/scodigo-2024',
-      'place'   : 'Sirviendo Código',
-      'author'  : 'Javier Vélez',
-      'date'    : '2024',
-      'time'    : '56:47',
-      'draft'   : false,
-      'hidden'  : false,
-      'lead'    : `
+      key     : 'scodigo-2024',
+      title   : 'El Horizonte de la Inteligencia Artificial',
+      caption : 'Inteligencia, Futuro & Experiencia',
+      image   : '/images/activity/events/event.24.01.png',
+      video   : '049q-ogFJu8',
+      path    : '/eventos/scodigo-2024',
+      place   : 'Sirviendo Código',
+      author  : 'Javier Vélez',
+      date    : '2024',
+      time    : '56:47',
+      draft   : false,
+      hidden  : false,
+      lead    : `
           Que la inteligencia artificial generativa (GenAI) ha llegado para quedarse es algo que hoy ya nadie podrá poner en duda. Hay gente que aún sigue 
           argumentando que a eso que hacen las máquinas no se le puede llamar inteligencia, pero tal vez esas voces hablan más desde el temor a un futuro 
           desconocido que desde una reflexión sosegada y objetiva. Lo que desde luego sí parece evidente es que este nuevo actor que ha entrado en el sistema 
@@ -395,5 +395,3 @@ Config.define ({
   ]
   
 })
-
-

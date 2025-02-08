@@ -150,7 +150,15 @@ Config.define ({
       text  : `Un catálogo de los principales  talleres y master classes 
         que he impartido en comunidad en los últimos años sobre topicos de 
         fuerte interés y actualidad`,
-    }, 
+    }, { 
+      key   : 'posters',
+      head  : 'Pósters & Infografías',
+      link  : '@site.pages.posters',
+      image : '/images/home/activity.05.png',
+      text  : `Infografías publicadas sobre mis principales áreas de 
+        expertise desde arquitectura empresarial o estrategia
+        digital hasta IA, experiencia de cliente o diseño de producto`,
+    },
   ]},
 
   'site.home.subscribe' : {

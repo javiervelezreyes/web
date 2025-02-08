@@ -4,6 +4,7 @@ import             './sections/config.articles.js'
 import             './sections/config.events.js'
 import             './sections/config.iviews.js'
 import             './sections/config.wshops.js'
+import             './sections/config.posters.js'
 
 export default Config.define ({
 
@@ -19,6 +20,7 @@ export default Config.define ({
     { key: 'events'     , label: 'Eventos'       , path: '/eventos'     , open : true  },
     { key: 'interviews' , label: 'Entrevistas'   , path: '/entrevistas' , open : true  },
     { key: 'workshops'  , label: 'Talleres'      , path: '/talleres'    , open : true  },
+    { key: 'posters'    , label: 'Posters'       , path: '/posters'     , open : true  },
   ],
 
   'site.sections'  : [
@@ -60,6 +62,7 @@ export default Config.define ({
     { key: 'interview'    , icon : 'pe-7s-micro'    },
     { key: 'workshop'     , icon : 'pe-7s-tools'    },
     { key: 'clipping'     , icon : 'pe-7s-scissors' },
+    { key: 'poster'       , icon : 'pe-7s-photo-gallery'},
   ],
 
   'site.colors.palette.gray' : [
@@ -180,16 +183,16 @@ export default Config.define ({
     { key: 'la-funcion-que-no-lo-era'                           , path : '/articulos/recortes/javascript/la-funcion-que-no-lo-era'              },
     { key: 'las-tres-evaluaciones-de-la-programacion-funcional' , path : '/articulos/recortes/javascript/las-tres-evaluaciones-del-funcional'   },
     { key: 'optimizacion-por-recursion-en-la-cola'              , path : '/articulos/recortes/javascript/optimizacion-por-recursion-en-la-cola' },
-    { key: 'taller-de-programacion-funcional-en-javascript'     , path : '/comunidad#talleres'                                                   },
+    { key: 'taller-de-programacion-funcional-en-javascript'     , path : '/comunidad#talleres'                                                  },
     
-    { key: 'orientacion-a-componentes-como-empezo-todo'         , path : '/articulos/recortes/componentes/como-empezo-todo'         },
-    { key: 'orientacion-a-componentes-los-objetivos'            , path : '/articulos/recortes/componentes/componentes-objetivos'    },
-    { key: 'orientacion-a-componentes-el-proceso'               , path : '/articulos/recortes/componentes/componentes-proceso'      },
-    { key: 'componentes-modelos-de-componente'                  , path : '/articulos/recortes/componentes/componentes-modelos'      },
+    { key: 'orientacion-a-componentes-como-empezo-todo'         , path : '/articulos/recortes/componentes/como-empezo-todo'                     },
+    { key: 'orientacion-a-componentes-los-objetivos'            , path : '/articulos/recortes/componentes/componentes-objetivos'                },
+    { key: 'orientacion-a-componentes-el-proceso'               , path : '/articulos/recortes/componentes/componentes-proceso'                  },
+    { key: 'componentes-modelos-de-componente'                  , path : '/articulos/recortes/componentes/componentes-modelos'                  },
     
-    { key: 'java-el-cobol-del-futuro'                           , path : '/articulos/recortes/opinion/java-el-cobol-del-futuro'      },
-    { key: 'el-feudalismo-llega-a-la-web'                       , path : '/articulos/recortes/opinion/el-feudalismo-llega-a-la-web'      },
-    { key: 'ni-nueva-ni-arquitectura-ni-hexagonal'              , path : '/articulos/recortes/opinion/ni-nueva-ni-arquitectura-ni-hexagonal'      },
+    { key: 'java-el-cobol-del-futuro'                           , path : '/articulos/recortes/opinion/java-el-cobol-del-futuro'                 },
+    { key: 'el-feudalismo-llega-a-la-web'                       , path : '/articulos/recortes/opinion/el-feudalismo-llega-a-la-web'             },
+    { key: 'ni-nueva-ni-arquitectura-ni-hexagonal'              , path : '/articulos/recortes/opinion/ni-nueva-ni-arquitectura-ni-hexagonal'    },
   ],
 
   'site.references' : [
