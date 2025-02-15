@@ -16,7 +16,7 @@ let image   = poster.key ('image')
 let author  = poster.key ('author')
 let date    = poster.key ('date')
 let lead    = poster.key ('lead')
-let others  = Links (poster, posters)
+let links   = Links (poster, posters)
 let mdata   = [author, date].join (' · ')
 
 let icon    = Config.key ('site.icons.light.poster')
@@ -34,7 +34,9 @@ function Links (poster, posters) {
   })
 }
 
-function check (date, time) {
+function check (link) {
+  let date = link.key ('date')
+  let time = link.key ('time')
   let [day, month, year] = date.split (DATE)
   let [hour, minute]     = time.split (TIME)
   let publish = new Date (`${year}-${month}-${day}T${hour}:${minute}:00`)
@@ -49,7 +51,7 @@ function check (date, time) {
     <div class="mdata">{mdata}</div>
     <p class="lead">{lead}</p>
     <div class="download">
-      <a class="ui huge toggle -primary button -active" href={image} download={key}> Descargar </a>
+      <a class="ui huge toggle button" href={image} download={key}> Descargar </a>
     </div>
     <div class="links">
       <div class="head">
@@ -57,18 +59,16 @@ function check (date, time) {
       </div>
       <div class="body">
         {
-          others
-            .map (function (other) {
-              let title   = other.key ('title')
-              let caption = other.key ('caption')
-              let author  = other.key ('author')
-              let date    = other.key ('date')
-              let time    = other.key ('time')
-              let lead    = other.key ('lead')
-              let draft   = other.key ('draft')
-              let path    = other.key ('path')
+          links
+            .map (function (link) {
+              let title   = link.key ('title')
+              let caption = link.key ('caption')
+              let author  = link.key ('author')
+              let lead    = link.key ('lead')
+              let draft   = link.key ('draft')
+              let path    = link.key ('path')
               let mdata   = [author, date].join (' · ')
-              let ok      = check (date, time)
+              let ok      = check (link)
               return (
                 <div class="link">
                   <Box 

@@ -2,21 +2,10 @@
 import Config from '../../../config/config.js'
 import Box    from '../../commons/commons.box.poster.astro'
 
-const DATE = '/'
-const TIME = ':'
-
 let posters = [...Config.key ('site.posters.graphs')].filter (isHidden)
 
 function isHidden (poster) {
   return !poster.key ('hidden')
-}
-
-function check (date, time) {
-  let [day, month, year] = date.split (DATE)
-  let [hour, minute]     = time.split (TIME)
-  let publish = new Date (`${year}-${month}-${day}T${hour}:${minute}:00`)
-  let now     = new Date ()
-  return publish < now
 }
 ---
 
@@ -24,23 +13,19 @@ function check (date, time) {
   <div class="section">
     {
       posters
-        .filter (function (poster) {
-          let date = poster.key ('date')
-          let time = poster.key ('time')
-          return check (date, time)
-        })
         .map (function (poster) {
           let title   = poster.key ('title')
           let caption = poster.key ('caption')
           let image   = poster.key ('image')
           let author  = poster.key ('author')
           let date    = poster.key ('date')
+          let time    = poster.key ('time')
           let lead    = poster.key ('lead')
           let path    = poster.key ('path')
           let draft   = !!poster.key ('draft')
           let mdata   = [author, date].join (' · ')
           return (
-            <div class="poster">
+            <div class="poster hidden" date={date} time={time}>
               <Box 
                 title={title} 
                 caption={caption} 
@@ -54,9 +39,30 @@ function check (date, time) {
         })
     }
     </div>
-</div> 
+</div>
+
+<script type="module">
+  import Helper from '/scripts/lib.poster.js'
+
+  const POSTER = '.poster'
+  const DATE   = 'date'
+  const TIME   = 'time'
+  const HIDDEN = 'hidden'
+
+  let posters = document.querySelectorAll (POSTER)
+  for (let poster of posters) {
+    let date = poster.getAttribute (DATE)
+    let time = poster.getAttribute (TIME)
+    let ok   = Helper.check (date, time)
+     ok && poster.classList.remove (HIDDEN)
+    !ok && poster.remove ()
+  }
+</script>
 
 <style>
+  .hidden {
+    display: none
+  }
   .posters .head {
     margin          : 100px auto 50px auto;
     text-align      : center;

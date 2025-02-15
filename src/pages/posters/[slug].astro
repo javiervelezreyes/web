@@ -4,10 +4,6 @@ import Layout from '../../layouts/layout.section.astro'
 import Head   from '../../components/activity/posters/poster.head.astro'
 import Body   from '../../components/activity/posters/poster.body.astro'
 
-const DATE = '/'
-const TIME = ':'
-
-let { talk } = Astro.props
 let { slug } = Astro.params
 
 let posters = Config .key ('site.posters.graphs')
@@ -15,7 +11,6 @@ let title   = Config .key ('site.brand')
 let page    = Config .key ('site.pages.posters')
 let section = page   .key ('label')
 let path    = page   .key ('path')
-
 let poster  = posters .key (slug)
 let date    = poster  .key ('date')
 let time    = poster  .key ('time') 
@@ -23,13 +18,13 @@ let time    = poster  .key ('time')
 export function getStaticPaths () {
   let posters  = Config.key ('site.posters.graphs')
   let response = []
-  for (let talk of posters) {
-    let draft  = talk.key ('draft')
-    let hidden = talk.key ('hidden')
-    let path   = talk.key ('path')
+  for (let poster of posters) {
+    let draft  = poster.key ('draft')
+    let hidden = poster.key ('hidden')
+    let path   = poster.key ('path')
     let slug   = path.split ('/').pop ()
     let params = {slug}
-    let props  = {talk}
+    let props  = {poster}
     !draft && !hidden && response.push ({ params, props })
   }
   return response
@@ -37,30 +32,17 @@ export function getStaticPaths () {
 
 ---
 
-<script>
-  function check () {
-    let sdate = date.textContent
-    let stime = time.textContent
-    let [day, month, year] = sdate.split ('/')
-    let [hour, minute]     = stime.split (':')
-    let publish = new Date (`${year}-${month}-${day}T${hour}:${minute}:00`)
-    let now     = new Date ()
-    return publish < now
-  }
-  let ok  = check ()
-  if (ok) document.body.style  = 'visibility: visible'
-  else    window.location.href = '/404'
-</script>
-
 <Layout title={title} section={section} path={path}>
-  <Head poster={talk} />
-  <Body poster={talk} posters={posters} />
+  <Head poster={poster} />
+  <Body poster={poster} posters={posters} />
 </Layout>
 
 <div class="mdata">
-  <div id="date">{date}</div>
-  <div id="time">{time}</div>
+  <div class="date">{date}</div>
+  <div class="time">{time}</div>
 </div>
+
+<script type="module" is:inline src="/scripts/lib.poster.js"></script>
 
 <style>
   body {
