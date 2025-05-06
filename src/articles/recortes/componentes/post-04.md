@@ -2,7 +2,7 @@
 title  : Componentes & Modelos
 slug   : componentes-modelos
 author : Javier Vélez
-date   : Apr 2017
+date   : Abril 2017
 ---
 
 El primer paso para acercarnos a la programación orientada a componentes es entender la anatomía interna de los mismos. A lo largo de este artículo analizaremos las partes constituyentes de estos artefactos y describiremos la responsabilidad de dichas partes en relación al modelo de comportamiento que deben presentar los componentes.

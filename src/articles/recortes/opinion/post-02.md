@@ -2,7 +2,7 @@
 title  : El Feudalismo llega a la Web
 slug   : el-feudalismo-llega-a-la-web
 author : Javier Vélez
-date   : Jan 2016
+date   : Enero 2016
 ---
 
 La historia de la humanidad se reproduce dentro de Internet. Desde una perspectiva equidistante parece que el siglo XXI no tiene que ver tanto con la sociedad de la información y conocimiento que nos han vendido sino, más bien, con un régimen digito-feudal más propio del medievo.  

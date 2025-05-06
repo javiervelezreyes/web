@@ -2,7 +2,7 @@
 title  : Programación Orientada a Componentes
 slug   : programacion-orientada-a-componentes
 author : Javier Vélez
-date   : Nov 2023
+date   : Noviembre 2023
 ---
 
 ## Introducción

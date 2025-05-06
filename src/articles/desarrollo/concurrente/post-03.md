@@ -2,7 +2,7 @@
 title  : Modelo de Semáforos
 slug   : modelo-de-semaforos
 author : Javier Vélez
-date   : Ene 2024
+date   : Enero 2024
 ---
 
 ## Introducción

@@ -367,7 +367,7 @@ Config.define ({
       image   : '/images/activity/interviews/interview.23.01.png',
       video   : 'SbYsnck6nLM',
       path    : '/entrevistas/codemotion-2023',
-      place   : 'Codemotion 2023',
+      place   : 'Codemotion',
       author  : 'Javier Vélez & Otros',
       date    : '2023',
       time    : '45:16',
@@ -390,7 +390,69 @@ Config.define ({
         'cto-2018',
         'iasa-2019-2'
       ]
-    }
+    }, {
+      key     : 'try-it-2025',
+      title   : 'Impacto de la IA en la Ingeniería del Software',
+      caption : 'Inteligencia Artificial & Desarrollo',
+      image   : '/images/activity/interviews/interview.25.01.png',
+      video   : 'BabqNnGljdo',
+      path    : '/entrevistas/try-it-2025',
+      place   : 'Try IT',
+      author  : 'Javier Vélez & Otros',
+      date    : '2025',
+      time    : '01:30:07',
+      draft   : false,
+      hidden  : false,
+      lead    : `
+          El desarrollo de la Inteligencia Artificial Generativa, tal como la conocemos hoy, está suponiendo un fuerte revulsivo en términos generales.
+          En el plano cultural la IA se presenta como un gran habilitador que ofrece nuevas oportunidades de acceso inteligente a la información y como
+          un agente de cambio que vendrá a reconceptualizar muchas de las experiencias digitales a las que hoy estamos acostubrados. Sin embargo, el 
+          gran perímetro que está experimentando un fuerte proceso de transformación movido por la intromisión de la IA es el del desarrollo y la 
+          construcción de software y productos digitales. Por un lado, la IA no sólo parece prometer acortar los tiempos de desarrollo de manera antes
+          insospechada sino que desbloquea oportunidades de negocio centradas en una fuerte adaptación a cliente y en un aumento de alcance sobre las 
+          capacidades tradicionalmente asignadas a los equipos de desarrollo. Pero, más allá de eso, la Inteligencia Artificial se presenta como una 
+          firme promesa que transformará incluso la esencia misma del software. Desde una perspectiva arquitectónica y tecnológica es muy probable que
+          la anatomía y artefactos de los productos digitales de un futuro inmediato tengan poco que ver con los activos del presente centrados en 
+          especificaciones de codigo fuente expresadas en lenguajes de tercera generación. Desde pun punto de vista metodológico, los procesos de
+          desarrollo típicamente basados en valores como la reusabilidad, la modularidad, el mantenimiento o el desarrollo iterativo e incremental 
+          parece que deben ser revisitados. A lo largo de este ameno debate se discuten estos y otros tópicos que describen el espacio donde la Ingeniería 
+          del Software se encuentra con La Inteligencia Artificial.`,
+      'links'   : [
+        'erni-2025',
+        'cto-2018',
+        'iasa-2019-2'
+      ]
+    }, {
+      key     : 'erni-2025',
+      title   : 'El Futuro del Desarrollo en la Era de la IA ',
+      caption : 'Inteligencia Artificial & Desarrollo',
+      image   : '/images/activity/interviews/interview.25.02.png',
+      video   : 'OaZerulF1j4',
+      path    : '/entrevistas/erni-2025',
+      place   : 'ERNI',
+      author  : 'Javier Vélez & Otros',
+      date    : '2025',
+      time    : '01:16:51',
+      draft   : false,
+      hidden  : false,
+      lead    : `
+          Qué es la Inteligencia Humana, qué es la Inteligencia Artificial, qué es una Inteligencia Artificial General y hasta qué punto puede y debe 
+          considerarse a la Inteligencia Artificial una ideación de laboratorio que persigue o consigue alcanzar la Inteligencia Racional del Hombre. 
+          Estas y otras preguntas son, habitualmente, punto de partida insoslayable en los debates de estos días que giran en torno a las nuevas capacidades
+          de transformación digital que se están desbloqueando con los avances de sistemas de redes neuronales conexionistas. Mas allá de adentrarnos
+          en esta suerte de debates bizantinos, es oportuno poner en valor las nuevas capacidades que la IA está poniendo a nuestra disposición para crear
+          un nuevo marco de experiencias dirigido por unas interacciones entre el hombre y la máquina centradas en el lenguaje y dirigidas por procesos 
+          de diálogo convergentes y basados en negociación argumentativa. Es en realidad esta última característica lo que supone un verdadero revulsivo 
+          con respecto a lo que ya habiamos conseguido con generaciones de avances anteriores. Se trata de un nuevo espectro de opciones centrados en 
+          aceleración, adaptación y alcance pero democratizadas en su acceso a través del uso del lenguaje natural y una comunicación más orgánica y natural.
+          A lo largo de este debate haremos un intersante recorrido sobre toda la carrera que está recorriendo la Inteligencia Artificial Generativa y 
+          discutiremos hasta qué punto este nuevo actor va a suponer un cambio en la forma en que concebimos nuestra profesión como ingenieros.`,
+      'links'   : [
+        'try-it-2025',
+        'cto-2018',
+        'iasa-2019-2'
+      ]
+    }, 
   ]
 
 })

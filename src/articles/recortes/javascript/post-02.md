@@ -2,7 +2,7 @@
 title  : La Función Que No Lo Era
 slug   : la-funcion-que-no-lo-era
 author : Javier Vélez
-date   : Oct 2015
+date   : Octubre 2015
 ---
 
 La nueva versión de JavaScript nos ofrece algunas capacidades adicionales para mejorar la experiencia de desarrollo. En su gran mayoría parecen características que vienen a proporcionar azúcar sintáctico y por tanto no resultan disruptivas en ningún sentido. Pero, ¿de verdad es esto cierto? Hoy contamos la historia de un nuevo tipo de funciones que nunca lo fueron.

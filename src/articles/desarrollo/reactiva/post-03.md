@@ -2,7 +2,7 @@
 title  : Modelo de Señales
 slug   : modelo-de-senales
 author : Javier Vélez
-date   : Mar 2024
+date   : Marzo 2024
 ---
 
 ## Introducción

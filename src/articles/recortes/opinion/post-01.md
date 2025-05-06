@@ -2,7 +2,7 @@
 title  : Java, El Cobol del Futuro
 slug   : java-el-cobol-del-futuro
 author : Javier Vélez
-date   : Jan 2016
+date   : Enero 2016
 ---
 
 Los tiempos cambian, los tipos de proyecto también. Y con ellos se demandan nuevas soluciones tecnológicas. El mantra de crear arquitecturas robustas, extensibles y reutilizables ha dejado paso a la idea de construir software desechable, escalable y ajustado a las necesidades del día a día. Java es una víctima de este cambio.

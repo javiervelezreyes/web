@@ -230,7 +230,7 @@ Config.define ({
       sin embargo, en el racional del propio cambio en sí mismo.`
   }, {
     icon     : '@site.icons.light.experience',
-    title    : 'La omnicanalidad es sin duda una de las señas de identidad más preponderantes de la digitalización',
+    title    : 'La omnicanalidad es la seña de identidad más preponderante de la digitalización',
     caption  : `El esfuerzo de los arquitectos de software de los próximos años no consistirá en la 
       creación de nuevos canales para atraer el tráfico de clientes sino de crear procesos que nos
       acerquen a aquellos canales donde los clientes quieren estar.`
@@ -242,10 +242,16 @@ Config.define ({
      que es necesario mitigar aplicando diseños defensivos. `
   }, {
     icon     : '@site.icons.light.data',
-    title    : 'No se trata de tomar decisiones dirigidas por los datos sino de crear empresas entradas en ellos',
+    title    : 'No es tanto tomar decisiones dirigidas por datos sino crear empresas centradas en ellos',
     caption  : `El valor diferencial de la inteligencia operativa y los procesos de negocio hace tiempo 
       que se perdió en base a la externalización y la estandarización homologada. Nuestro valor, hoy 
       por hoy es crear corporaciones donde el dato sea el producto central.`
+  }, {
+    icon     : '@site.icons.light.architecture',
+    title    : 'Aprendimos que el mero acto de digitalización del negocio era un valor en si mismo',
+    caption  : `Pasamos muchos años creyendo que nuestra actividad era dar resolución operativa a 
+      perimetros de negocio cuando en realidad a menudo el propio acto de materialización digital del
+      espacio problema era ya una solución en sí mismo.`
   }],
 
   'site.home.footer' : {

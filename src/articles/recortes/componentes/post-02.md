@@ -2,7 +2,7 @@
 title  : Componentes & Objetivos 
 slug   : componentes-objetivos
 author : Javier Vélez
-date   : Feb 2017
+date   : Febrero 2017
 ---
 
 Todo paradigma se puede describir a partir de 3 ejes dimensionales. El eje de los objetivos responde a la pregunta del qué, caracterizando los propósitos fundamentales en contraposición con otros paradigmas. El eje de los principios se asocia al cómo ya que trata de ofrecer directrices para alcanzar los objetivos de manera canónica. Finalmente el eje de los mecanismos responde a la pregunta del con qué, indicando cuáles deben ser las capacidades del entorno computacional para posibilitar el desarrollo.

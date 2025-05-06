@@ -2,7 +2,7 @@
 title  : Ejecución Asíncrona
 slug   : ejecucion-asincrona
 author : Javier Vélez
-date   : Ene 2024
+date   : Enero 2024
 ---
 
 ## Introducción

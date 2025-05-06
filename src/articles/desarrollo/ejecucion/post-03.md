@@ -2,7 +2,7 @@
 title  : La Dimensión Temporal
 slug   : modelos-de-ejecucion-temporal
 author : Javier Vélez
-date   : Dic 2023
+date   : Diciembre 2023
 ---
 
 ## Introducción

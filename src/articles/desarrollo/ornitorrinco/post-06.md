@@ -2,7 +2,7 @@
 title  : Conformidad Total & Parcial
 slug   : conformidad-total-y-parcial
 author : Javier Vélez
-date   : Ene 2024
+date   : Diciembre 2023
 ---
 
 ## Introducción

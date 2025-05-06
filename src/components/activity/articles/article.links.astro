@@ -17,7 +17,6 @@ let articles = await Helper.getAll (serie)
       let { mdata } = article
       let { title } = mdata
       let { slug  } = mdata
-      let { path  } = mdata
       let active = article.path == Article.path
       return (
         !active && <div class="link"><a href={slug} alt={title}>{title}</a></div> ||

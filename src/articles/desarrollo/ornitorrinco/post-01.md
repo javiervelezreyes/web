@@ -2,7 +2,7 @@
 title  : El Efecto Ornitorrinco
 slug   : el-efecto-ornitorrinco
 author : Javier Vélez
-date   : Dic 2023
+date   : Diciembre 2023
 ---
 
 ## Introducción

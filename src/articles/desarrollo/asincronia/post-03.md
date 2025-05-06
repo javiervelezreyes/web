@@ -2,7 +2,7 @@
 title  : Modelo de Diferimiento
 slug   : modelo-de-diferimiento
 author : Javier Vélez
-date   : Ene 2024
+date   : Enero 2024
 ---
 
 ## Introducción

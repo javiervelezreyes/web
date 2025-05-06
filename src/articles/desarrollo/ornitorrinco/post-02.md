@@ -2,7 +2,7 @@
 title  : Clases & Funciones
 slug   : clases-y-funciones
 author : Javier Vélez
-date   : Dic 2023
+date   : Diciembre 2023
 ---
 
 ## Introducción

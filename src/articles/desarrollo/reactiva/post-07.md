@@ -2,7 +2,7 @@
 title  : Modelos de Streams
 slug   : modelos-de-streams
 author : Javier Vélez
-date   : Mar 2024
+date   : Marzo 2024
 hidden : true
 ---
 

@@ -556,6 +556,33 @@ Config.define ({
       'madridjs-2023-2',
       'madridjs-2022-2',
     ]
+  }, {
+    key     : 'madridjs-2025-2',
+    title   : 'Estrategias de Routing en JavaScript',
+    caption : 'Madrid JS. Estrategias de Routing en JavaScript',
+    image   : '/images/activity/madridjs/madrid.js.2502.png',
+    video   : '7yPEZqLk2Ks',
+    path    : '/talleres/madridjs-2025-2',
+    place   : 'Madrid JS',
+    author  : 'Javier Vélez',
+    date    : '2025',
+    time    : '02:07',
+    draft   : false,
+    hidden  : false,
+    lead    : `Al desarrollar soluciones de front, de forma convencional solemos hacer uso de modelos de enrutamiento para crear experiencias integradas y 
+      cohesivas. Estas soluciones encapsulan no sólo una elaborada lógica de gestión de vistas, sino, adicionalmente, una apropiada estrategia que vincula 
+      cada vista con una URL diferente. Este tipo de artefactos se ha convertido en un elemento tan nuclear en el desarrollo web que, hoy en día, lo exponen 
+      como capacidad la mayoría de los frameworks de segunda generación, como Vue, React o Angular. Además, los frameworks de tercera generación, como NextJs, 
+      NuxtJs o Gatsby, exponen mejoras sustanciales al basar la lógica de enrutamiento en una actividad implícita que mimetiza la estructura de rutas dentro 
+      del árbol de páginas del proyecto. Sin embargo, dado su enfoque encapsulado, poco se sabe de los internals de funcionamiento de este tipo de sistemas. 
+      A lo largo de esta charla, desarrollaremos en live coding un sistema de enrutamiento sencillo que nos permita ir descubriendo cada una de sus partes 
+      integrantes y secretos. Además, orientaremos el desarrollo de esta solución al uso de componentes web estándar, lo que nos permitirá no sólo conocer 
+      las peculiaridades que ello encierra, sino poner las mismas en retrospectiva comparativa con el funcionamiento de otras soluciones conocidas del mercado.`,
+    links   : [
+      'madridjs-2024-3',
+      'madridjs-2024-4',
+      'madridjs-2025-1',
+    ]
   }]
 
 })

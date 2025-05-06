@@ -2,7 +2,7 @@
 title  : Modelo de Canales
 slug   : modelo-de-canales
 author : Javier Vélez
-date   : Ene 2024
+date   : Enero 2024
 ---
 
 ## Introducción

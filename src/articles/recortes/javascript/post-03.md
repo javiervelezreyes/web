@@ -2,7 +2,7 @@
 title  : Las 3 Evaluaciones del Funional
 slug   : las-tres-evaluaciones-del-funcional
 author : Javier Vélez
-date   : Ago 2017
+date   : Agosto 2017
 ---
 
 Son muchos los caballos de batalla que caracterizan el paradigma de programación funcional. Pero sin lugar a dudas, uno de los elementos esenciales que hace de este tipo de programación algo diferente son sus modelos de evaluación. En este articulo los repasamos de forma comparada. 

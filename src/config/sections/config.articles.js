@@ -103,7 +103,10 @@ Config.define ({
       'Análisis'      , 'Decisioning'    , 
       'Valor' 
     ], 
-    series  : [],
+    series  : [
+      '@site.articles.series.enjambre',
+      '@site.articles.series.conexionista',
+    ],
     draft   : false,
     hidden  : false
   }, {
@@ -137,12 +140,12 @@ Config.define ({
     hidden  : false
   }, {
     key     : 'cultura',
-    title   : 'Agile & Gobierno',
-    caption : 'Cultura & Desarrollo Profesional',
+    title   : 'Arquitectura Empresarial',
+    caption : 'Organización & Cultura',
     icon    : '@site.icons.light.strategy',
     path    : '/articulos/cultura',
     lead    : `
-      Crear una organización implica crear un colectivo social. Cuando ese colectivo se pone a trabajar de forma intencional 
+      Crear una organización implica desarrollar un colectivo social. Cuando ese colectivo se pone a trabajar de forma intencional 
       en relación a un marco de objetivos se crea una cultura de desarrollo y desempeño. Las costumbres, ceremonias, actitudes, 
       creencias y valores dentro del colectivo caracterizan la cultura. Las personalidades, ambiciones, intereses, emociones e 
       influencias condicionan la misma. Crear valor de negocio siempre se expresa antes como un esfuerzo contra la cultura que 
@@ -269,6 +272,22 @@ Config.define ({
     caption  : 'Predicando en el Desierto',
     path     : 'recortes/opinion',
     slug     : 'opinion',
+    draft    : false,
+    hidden   : false
+  }, {
+    key      : 'enjambre',
+    title    : 'Inteligencia Artificial en Enjambre',
+    caption  : 'Inteligencia Artificial Distribuída',
+    path     : 'data/enjambre',
+    slug     : 'enjambre',
+    draft    : false,
+    hidden   : false
+  }, {
+    key      : 'conexionista',
+    title    : 'Inteligencia Artificial Conexionista',
+    caption  : 'Inteligencia Dirigida por los Datos',
+    path     : 'data/conexionista',
+    slug     : 'conexionista',
     draft    : false,
     hidden   : false
   }]

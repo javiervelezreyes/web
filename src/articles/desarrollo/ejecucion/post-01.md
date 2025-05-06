@@ -2,7 +2,7 @@
 title  : Modelos de Ejecución
 slug   : modelos-de-ejecucion
 author : Javier Vélez
-date   : Dic 2023
+date   : Diciembre 2023
 ---
 
 ## Introducción

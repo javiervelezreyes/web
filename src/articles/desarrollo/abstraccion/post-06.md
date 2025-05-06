@@ -2,7 +2,7 @@
 title  : Programación Orientada a Servicios
 slug   : programacion-orientada-a-servicios
 author : Javier Vélez
-date   : Nov 2023
+date   : Noviembre 2023
 ---
 
 ## Introducción

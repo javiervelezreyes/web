@@ -2,7 +2,7 @@
 title  : Ni Nueva, Ni Arquitectura, Ni Hegagonal
 slug   : ni-nueva-ni-arquitectura-ni-hexagonal
 author : Javier Vélez
-date   : Jan 2016
+date   : Enero 2016
 ---
 
 Recientemente se viene hablando dentro de la comunidad de desarrollo de las arquitecturas hexagonales. En sentido estricto, este modelo es una buena propuesta como marco conceptual donde se circunscriben buenas practicas conocidas vinculadas al desarrollo de software. Sin embargo, este tipo de arquitecturas ni son nuevas, ni son arquitecturas, ni son hexagonales.

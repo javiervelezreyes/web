@@ -2,7 +2,7 @@
 title  : Ejecución Reactiva
 slug   : ejecucion-reactiva
 author : Javier Vélez
-date   : Mar 2024
+date   : Marzo 2024
 ---
 
 ## Introducción

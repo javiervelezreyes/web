@@ -2,7 +2,7 @@
 title  : Modelos de Abstracción
 slug   : modelos-de-abstraccion
 author : Javier Vélez
-date   : Nov 2023
+date   : Noviembre 2023
 ---
 
 ## Introducción

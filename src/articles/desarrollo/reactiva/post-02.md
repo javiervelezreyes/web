@@ -2,7 +2,7 @@
 title  : Modelo de Notificaciones
 slug   : modelo-de-notificaciones
 author : Javier Vélez
-date   : Mar 2024
+date   : Marzo 2024
 ---
 
 ## Introducción

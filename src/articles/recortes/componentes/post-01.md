@@ -2,7 +2,7 @@
 title  : Como Empezó Todo
 slug   : como-empezo-todo
 author : Javier Vélez
-date   : Jan 2017
+date   : Enero 2017
 ---
 
 La orientación a componentes es un paradigma de programación que arrancó dentro del mundo académico allá por el año 2000. Aunque sus desarrollos iniciales fueron en el campo del back, el término no se ha popularizado hasta su reciente llegada al terreno del front. Esta serie de artículos es un intento por precisar qué se encierra dentro de esta nueva aproximación de construcción de software.

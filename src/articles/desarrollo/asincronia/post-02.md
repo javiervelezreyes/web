@@ -2,7 +2,7 @@
 title  : Modelo de Continuaciones
 slug   : modelo-de-continuaciones
 author : Javier Vélez
-date   : Ene 2024
+date   : Enero 2024
 ---
 
 ## Introducción

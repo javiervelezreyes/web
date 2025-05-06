@@ -2,7 +2,7 @@
 title  : Optimización por Recursion en la Cola
 slug   : optimizacion-por-recursion-en-la-cola
 author : Javier Vélez
-date   : Oct 2015
+date   : Octubre 2015
 ---
 
 Las técnicas de optimización por recursión en la cola son una novedad de ES6 que ayudan a mejorar el rendimiento en ejecución. En este artículo discutimos en qué consisten estas técnicas y su relevancia práctica. 

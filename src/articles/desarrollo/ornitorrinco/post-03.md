@@ -2,7 +2,7 @@
 title  : Tipos & Prototipos
 slug   : tipos-y-prototipos
 author : Javier Vélez
-date   : Ene 2024
+date   : Diciembre 2023
 ---
 
 ## Introducción

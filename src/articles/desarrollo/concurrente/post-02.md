@@ -2,7 +2,7 @@
 title  : Modelo de Cerrojos
 slug   : modelo-de-cerrojos
 author : Javier Vélez
-date   : Ene 2024
+date   : Enero 2024
 ---
 
 ## Introducción

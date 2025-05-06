@@ -2,7 +2,7 @@
 title  : Modelo de Regiones Críticas
 slug   : modelo-de-regiones-criticas
 author : Javier Vélez
-date   : Ene 2024
+date   : Enero 2024
 ---
 
 ## Introducción

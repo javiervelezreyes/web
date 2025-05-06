@@ -2,7 +2,7 @@
 title  : Programación Orientada a Objetos
 slug   : programacion-orientada-a-objetos
 author : Javier Vélez
-date   : Nov 2023
+date   : Noviembre 2023
 ---
 
 ## Introducción

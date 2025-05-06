@@ -2,7 +2,7 @@
 title  : Componentes & Proceso 
 slug   : componentes-proceso
 author : Javier Vélez
-date   : Mar 2017
+date   : Marzo 2017
 ---
 
 La orientación a componentes se presentaba en el artículo anterior como un nuevo intento de buscar desarrollos más ágiles y productivos. Pero, ¿cómo se traduce ese esfuerzo en términos concretos? Hoy hablamos de las implicaciones del uso de componentes dentro de los procesos de desarrollo.

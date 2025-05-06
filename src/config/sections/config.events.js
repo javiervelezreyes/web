@@ -379,7 +379,7 @@ Config.define ({
       draft   : false,
       hidden  : false,
       lead    : `
-          Que la inteligencia artificial generativa (GenAI) ha llegado para quedarse es algo que hoy ya nadie podrá poner en duda. Hay gente que aún sigue 
+          Que la inteligencia artificial generativa ha llegado para quedarse es algo que hoy ya nadie podrá poner en duda. Hay gente que aún sigue 
           argumentando que a eso que hacen las máquinas no se le puede llamar inteligencia, pero tal vez esas voces hablan más desde el temor a un futuro 
           desconocido que desde una reflexión sosegada y objetiva. Lo que desde luego sí parece evidente es que este nuevo actor que ha entrado en el sistema 
           supondrá un claro revulsivo en los próximos años en el desarrollo de nuestra profesión. A lo largo de esta charla queremos precisamente abundar 
@@ -390,6 +390,34 @@ Config.define ({
         'codemotion-2023',
         'codemotion-2018',
         'codemotion-2019'
+      ]
+    }, {
+      key     : 'try-it-2025',
+      title   : 'La Era de la Inteligencia Artificial',
+      caption : 'Hacia Un Nuevo Paradigma',
+      image   : '/images/activity/events/event.25.01.png',
+      video   : '4lg6jDGq01I',
+      path    : '/eventos/try-it-2025',
+      place   : 'Try IT',
+      author  : 'Javier Vélez',
+      date    : '2025',
+      time    : '01:04:49',
+      draft   : false,
+      hidden  : false,
+      lead    : `
+          Vivimos atrapados en un proceso de cambio continuo de transformación Digital. Visto desde la perspectiva de la experiencia, acertamos a diferenciar
+          entre una edad de Nomadismo Digital, otra subsiguiente de Feudalismo Digital y una tercera centrada en el Consumismo Digital. Ahora, con la
+          llegada de la Inteligencia Artificial, estamos entrando en una nueva era basada en el Modernismo Digital. Un mundo de agentes autónomos 
+          capaces de operar por si mismos y de servir de intermediación en nuestros procesos de acceso a la información y el conocimiento. Esto ya supone
+          todo un revulsivo a nivel cultural. Pero donde verdaderamente la Inteligencia Artificial que estamos viendo nacer y desarrollarse en nuestros días
+          aparecerá como un verdadero agente de cambio es en el espacio de nuestra profesión como ingenieros de software. A lo largo de esta charla revisitaremos
+          los factores de impacto fundamental que se dibujan como verdaderos puntales de cambio tando desde un punto de vista conceptual, tecnológico o
+          arquitectónico como procedimental y metodología. Revisaremos la carrera que está experimentando la Inteligencia Artificial Generativa y la 
+          pondremos en valor en el marco de las actividades de construcción y diseño de los productos digitales de nueva generación.`,
+      'links'   : [
+        'scodigo-2024',
+        'codemotion-2023',
+        'codemotion-2018',
       ]
     }
   ]

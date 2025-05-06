@@ -2,7 +2,7 @@
 title  : La Dimensión Espacial
 slug   : modelos-de-ejecucion-espacial
 author : Javier Vélez
-date   : Dic 2023
+date   : Diciembre 2023
 ---
 
 ## Introducción

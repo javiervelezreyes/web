@@ -2,7 +2,7 @@
 title  : Modelo de Enlaces
 slug   : modelo-de-enlaces
 author : Javier Vélez
-date   : Mar 2024
+date   : Marzo 2024
 ---
 
 ## Introducción

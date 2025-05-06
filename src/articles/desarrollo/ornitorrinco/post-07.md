@@ -2,7 +2,7 @@
 title  : Contratos & Protocolos
 slug   : contratos-y-protocolos
 author : Javier Vélez
-date   : Ene 2024
+date   : Diciembre 2023
 ---
 
 ## Introducción

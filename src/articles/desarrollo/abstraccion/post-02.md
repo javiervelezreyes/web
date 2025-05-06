@@ -2,7 +2,7 @@
 title  : Programación Estructurada
 slug   : programacion-estructurada
 author : Javier Vélez
-date   : Nov 2023
+date   : Noviembre 2023
 ---
 
 ## Introducción
