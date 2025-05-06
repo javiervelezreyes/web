@@ -395,7 +395,7 @@ Config.define ({
       title   : 'Impacto de la IA en la Ingeniería del Software',
       caption : 'Inteligencia Artificial & Desarrollo',
       image   : '/images/activity/interviews/interview.25.01.png',
-      video   : 'BabqNnGljdo',
+      video   : 'l2GrXRq_kr8',
       path    : '/entrevistas/try-it-2025',
       place   : 'Try IT',
       author  : 'Javier Vélez & Otros',

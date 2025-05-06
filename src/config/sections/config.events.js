@@ -396,7 +396,7 @@ Config.define ({
       title   : 'La Era de la Inteligencia Artificial',
       caption : 'Hacia Un Nuevo Paradigma',
       image   : '/images/activity/events/event.25.01.png',
-      video   : '4lg6jDGq01I',
+      video   : 'm7eYN983gps',
       path    : '/eventos/try-it-2025',
       place   : 'Try IT',
       author  : 'Javier Vélez',
