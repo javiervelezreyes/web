@@ -18,8 +18,9 @@ let articles = await Helper.getAll (serie)
       let { title } = mdata
       let { slug  } = mdata
       let active = article.path == Article.path
+      let href   = `/articulos/${serie}/${slug}`
       return (
-        !active && <div class="link"><a href={slug} alt={title}>{title}</a></div> ||
+        !active && <div class="link"><a href={href} alt={title}>{title}</a></div> ||
          active && <div class="link active">{title}</div>
       )
     }) 
