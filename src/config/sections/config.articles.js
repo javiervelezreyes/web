@@ -106,6 +106,7 @@ Config.define ({
     series  : [
       '@site.articles.series.enjambre',
       '@site.articles.series.conexionista',
+      '@site.articles.series.profundas'
     ],
     draft   : false,
     hidden  : false
@@ -284,10 +285,18 @@ Config.define ({
     hidden   : false
   }, {
     key      : 'conexionista',
-    title    : 'Inteligencia Artificial Conexionista',
+    title    : 'Inteligencia Artificial Conexionista I',
     caption  : 'Inteligencia Dirigida por los Datos',
     path     : 'data/conexionista',
     slug     : 'conexionista',
+    draft    : false,
+    hidden   : false
+  }, {
+    key      : 'profundas',
+    title    : 'Inteligencia Artificial Conexionista II',
+    caption  : 'Redes Neuronales Profundas',
+    path     : 'data/profundas',
+    slug     : 'profundas',
     draft    : false,
     hidden   : false
   }]

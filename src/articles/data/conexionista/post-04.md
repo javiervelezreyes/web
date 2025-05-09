@@ -45,7 +45,7 @@ A lo largo de la siguiente sección, profundizaremos en la descripción detallad
 
 ## Modelos de Aprendizaje en Acción
 
-Como hemos explicado en la sección anterior, en el ámbito de las Inteligencia Artificial Conexionista se reconocen distintos modelos de aprendizaje, cada uno con sus propias particularidades y aplicaciones. Sin embargo, un denominador común a todos ellos es la necesidad fundamental de contar con datos de entrenamiento suficientes en términos de volumen y que sean representativos del problema que se busca resolver.
+Como hemos explicado en la sección anterior, en el ámbito de la Inteligencia Artificial Conexionista se reconocen distintos modelos de aprendizaje, cada uno con sus propias particularidades y aplicaciones. Sin embargo, un denominador común a todos ellos es la necesidad fundamental de contar con datos de entrenamiento suficientes en términos de volumen y que sean representativos del problema que se busca resolver.
 
 Es crucial reiterar que todos los modelos de aprendizaje previamente mencionados se pueden agrupar en dos grandes categorías, las aproximaciones supervisadas y las no supervisadas. Esta dicotomía fundamental radica en la presencia o ausencia de etiquetas informativas asociadas a los datos de entrenamiento.
 
