@@ -106,7 +106,8 @@ Config.define ({
     series  : [
       '@site.articles.series.enjambre',
       '@site.articles.series.conexionista',
-      '@site.articles.series.profundas'
+      '@site.articles.series.profundas',
+      '@site.articles.series.estructurales'
     ],
     draft   : false,
     hidden  : false
@@ -285,18 +286,26 @@ Config.define ({
     hidden   : false
   }, {
     key      : 'conexionista',
-    title    : 'Inteligencia Artificial Conexionista I',
-    caption  : 'Inteligencia Dirigida por los Datos',
+    title    : 'Inteligencia Neuronal',
+    caption  : 'Inteligencia y Comportamiento Aprendido',
     path     : 'data/conexionista',
     slug     : 'conexionista',
     draft    : false,
     hidden   : false
   }, {
     key      : 'profundas',
-    title    : 'Inteligencia Artificial Conexionista II',
-    caption  : 'Redes Neuronales Profundas',
+    title    : 'Redes Neuronales Profundas',
+    caption  : 'El Descubrimiento del Conexionismo',
     path     : 'data/profundas',
     slug     : 'profundas',
+    draft    : false,
+    hidden   : false
+  }, {
+    key      : 'estructurales',
+    title    : 'Redes Neuronales Estructurales',
+    caption  : 'La Conquista del Estacio & el Tiempo',
+    path     : 'data/estructurales',
+    slug     : 'estructurales',
     draft    : false,
     hidden   : false
   }]
