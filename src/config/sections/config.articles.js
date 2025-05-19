@@ -286,24 +286,24 @@ Config.define ({
     hidden   : false
   }, {
     key      : 'conexionista',
-    title    : 'Inteligencia Neuronal',
-    caption  : 'Inteligencia y Comportamiento Aprendido',
+    title    : 'Inteligencia Artificial Conexionista I',
+    caption  : 'Inteligencia Dirigida por los Datos',
     path     : 'data/conexionista',
     slug     : 'conexionista',
     draft    : false,
     hidden   : false
   }, {
     key      : 'profundas',
-    title    : 'Redes Neuronales Profundas',
-    caption  : 'El Descubrimiento del Conexionismo',
+    title    : 'Inteligencia Artificial Conexionista II',
+    caption  : 'Redes Neuronales Profundas',
     path     : 'data/profundas',
     slug     : 'profundas',
     draft    : false,
     hidden   : false
   }, {
     key      : 'estructurales',
-    title    : 'Redes Neuronales Estructurales',
-    caption  : 'La Conquista del Estacio & el Tiempo',
+    title    : 'Inteligencia Artificial Conexionista III',
+    caption  : 'Redes Neuronales Estructurales',
     path     : 'data/estructurales',
     slug     : 'estructurales',
     draft    : false,
