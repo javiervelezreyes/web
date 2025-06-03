@@ -427,7 +427,7 @@ Config.define ({
       title   : 'El Futuro del Desarrollo en la Era de la IA ',
       caption : 'Inteligencia Artificial & Desarrollo',
       image   : '/images/activity/interviews/interview.25.02.png',
-      video   : 'OaZerulF1j4',
+      video   : 'uyaurmEx08s',
       path    : '/entrevistas/erni-2025',
       place   : 'ERNI',
       author  : 'Javier Vélez & Otros',
@@ -452,7 +452,7 @@ Config.define ({
         'cto-2018',
         'iasa-2019-2'
       ]
-    }, 
+    } 
   ]
 
 })
