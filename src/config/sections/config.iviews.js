@@ -453,7 +453,7 @@ Config.define ({
       ]
     }, {
       key     : 'producto-2025',
-      title   : 'IA. Revolución o Evolución Digital ',
+      title   : 'La Revolución Digital de la IA ',
       caption : 'Inteligencia Artificial & Producto',
       image   : '/images/activity/interviews/interview.25.03.png',
       video   : 'tfyhiBRaCLQ',
