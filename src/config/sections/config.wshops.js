@@ -606,9 +606,32 @@ Config.define ({
       un recorrido hasta centrarnos en un nuevo modelo de APIs centradas en el diálogo y presentaremos técnicas, mecanismos y patrones vinculadas a esta aproximación. 
       Esta es, sin lugar a dudas, una charla que no te deberías perder.`,
     links   : [
-      'madridjs-2024-3',
       'madridjs-2024-4',
       'madridjs-2025-1',
+      'madridjs-2025-2',
+    ]
+  }, {
+    key     : 'madridjs-2025-4',
+    title   : 'Arquitecturas Liquidas en JavaScript',
+    caption : 'Madrid JS. Arquitecturas Liquidas en JavaScript',
+    image   : '/images/activity/madridjs/madrid.js.2504.png',
+    video   : 'nE_5UayOoSw',
+    path    : '/talleres/madridjs-2025-4',
+    place   : 'Madrid JS',
+    author  : 'Javier Vélez',
+    date    : '2025',
+    time    : '02:28',
+    draft   : false,
+    hidden  : false,
+    lead    : `Actualmente sigue siendo una realidad asumida que las experiencias Web se diseñan y desarrollan para ser desplegadas en un único marco visual. Sin embargo, 
+      dada la proliferación de los sistemas multiplantalla que se ha venido dando en los últimos tiempos, estas ideas, propias de los origenes de la Web como plataforma, 
+      tal vez deban ser revisitadas. Crear soluciones donde una misma experiencia interactiva pueda llegar a ser controlada desde diferentes ventanas independientes que 
+      se coordinan compositivamente entre si para conformar un visual cohesivo ofrece importantes ventajas. A lo largo de esta charla pondremos numerosos ejemplos de live 
+      coding en este sentido y desarrollaremos un marco de trabajo para este tipo de arquitecturas de carácter líquido`,
+    links   : [
+      'madridjs-2025-1',
+      'madridjs-2025-2',
+      'madridjs-2025-3',
     ]
   }]
 

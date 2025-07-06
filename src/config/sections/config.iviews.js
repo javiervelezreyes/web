@@ -36,7 +36,7 @@ Config.define ({
           cabo un proceso de ideación de soluciones basado en estas técnicas dando lugar a soluciones más flexibles y dinámicamente cambiantes 
           a tenor de las condiciones ambientales. A lo largo de esta charla se hace un recorridoexhaustivo de este paradigma arquitectónico 
           revisando los principios, técnicas y modelos sobrela base del stack tecnológico de la plataforma web.`,
-      'links'   : [
+      links   : [
         'commit-2018',
         'polymer-2016',
         'codemotion-2016'
@@ -63,7 +63,7 @@ Config.define ({
           autónoma y encapsulada ofrece importantes ventajas para el desarrollo. Sin embargo, unasolución visual bien formada requiere de grados 
           apropiados de cohesión entre los componentes que forman parte de la interfaz. Precisamente por este motivo es importante identificar aquellos 
           patrones de composición que dentro del plano declarativo puedan ser utilizados para enlazar colectivamente los componentes en uso.`,
-      'links'   : [
+      links   : [
         'polymer-2016',
         'codemotion-2017',
         'commit-2018'
@@ -92,7 +92,7 @@ Config.define ({
           construir menos asiste más en los procesos de reutilizar más. Bajo esta hipótesis parece más interesante de cara la reutilización crear 
           contribuciones parcialesque puedan extender el comportamiento o estructura de los componentes para que adopten nuevas capacidades de forma 
           dinámica y convertir a estos rasgos de contribución puntual en los activos esenciales de la reutilización.`,
-      'links'   : [
+      links   : [
         'techfest-2015',
         'commit-2018',
         'iasa-2019-2'
@@ -121,7 +121,7 @@ Config.define ({
           en Internet. Era importante correr más que tu competencia. Y sobretodo, si tenías que morir, era importante que murieras pronto. En este nuevo marco 
           de producto mínimo viable la agilidad en el desarrollo de productos emergentes y corta duración se convirtió en la gran bala de plata y aquí es donde 
           Java termino perdiendo terreno en esta anunciada derrota.`,
-      'links'   : [
+      links   : [
         'techfest-2015',
         'jsday-2016',
         'techfest-2017'
@@ -149,7 +149,7 @@ Config.define ({
           una inyección conveniente de las fuentes de datos a la que de manera necesaria deben estar conectados para poder crear solucionesde frontend 
           cohesivas y funcionales. A lo largo de esta charla centramos nuestra atención, precisamente,en la descripción de distintos patrones arquitectónicos 
           de componentes web dirigidos a dar soporte a las necesidades de configuración e inyección de fuentes de datos.`,
-      'links'   : [
+      links   : [
         'codemotion-2016',
         'commit-2018',
         'codemotion-2017'
@@ -177,7 +177,7 @@ Config.define ({
           en desarrollo de componentes locales a proyecto para crear un verdadero lenguaje de composición declarativo que deforma a toda una superficie visual 
           funcional y sin fisuras experienciales. Conocer los principios fundacionales del paradigma de componentes, la estructura anatómica y contractual de 
           los mismos y lasetapas del proceso metodológico de construcción de catálogos es punto clave para la obtención de éxito en este tipo de iniciativas. `,
-      'links'   : [
+      links   : [
         'codemotion-2016',
         'polymer-2016',
         'codemotion-2016'
@@ -206,7 +206,7 @@ Config.define ({
           operar sobre la base de un conjunto de datos que se consideran punto fijo de la operación. En un paradigma donde el concepto de instrucción, sentencia 
           y orden de ejecución carece de sentido, crear una función global a través de estrategias de composición funcional es la gran habilidad que todo 
           desarrollador debe adquirir por medio del uso y aplicación de diversas técnicas.`,
-      'links'   : [
+      links   : [
         'techfest-2015',
         'jsday-2016',
         'commit-2018'
@@ -237,7 +237,7 @@ Config.define ({
           perfiles centrados en el desarrollo con posicionamiento en el conocimiento tecnológico de un montón de siglas y perfiles de dirección arquitectónica 
           y estratégica que requieren otrotipo de conocimientos, habilidades, valores e inquietudes. Estará por descubrir cómo impactarán estas diferencias en 
           el futuro de nuestra profesión y como podremos hacer frente a las mismas.`,
-      'links'   : [
+      links   : [
         'iasa-2019-1',
         'iasa-2019-2',
         'cto-2019'
@@ -265,7 +265,7 @@ Config.define ({
           ser capaces de crear estrategias de transformación adaptativa que provoquen cambios puntuales irreversibles sobre la estructura y comportamiento de los 
           componentes y de encapsular esas estrategias en activos arquitectónicos de primer nivel para contribuir de maneraformal y sistemática sobre el cuerpo de 
           cualquier componente. `,
-      'links'   : [
+      links   : [
         'techfest-2015',
         'jsday-2016',
         'iasa-2019-2'
@@ -294,7 +294,7 @@ Config.define ({
           madurez, hojas de ruta y procesos de transformación digital. Y por si esto fuera poco, los cambios de transformación cultural que de la mano de las 
           metodologías ágiles se han venido promoviendo en los últimos años han promovido una reconceptualización en la que la arquitectura deja de estar concentrada 
           en un rol específico para ser una habilidad transversal que con frecuencia debe difundirse y cultivarse entre todos los miembros de cada equipo de trabajo.`,
-      'links'   : [
+      links   : [
         'iasa-2019-2',
         'cto-2019',
         'cto-2018'
@@ -325,7 +325,7 @@ Config.define ({
           formado e inamovible. En su lugar hacer arquitecturas ágiles significa ser capaz de promover esfuerzos exploratorios de alcance local para 
           resolver cada problema inmediato en el marco temporal en el que se aborda sin conflictos con las ideas de una construcción basada en la destrucción 
           continua e incremental.`,
-      'links'   : [
+      links   : [
         'iasa-2019-1',
         'cto-2018',
         'cto-2019'
@@ -344,18 +344,17 @@ Config.define ({
       draft   : false,
       hidden  : false,
       lead    : `
-          En los últimos 20 años la web se ha reinventado recurrentemente a si misma pasando de ser un mero expositor de contenidos estáticos a ser una 
-          verdadera plataforma de ejecución que da soporte a toda la interacción colaborativa entre los usuarios. Y es que ciertamente, el cambio no ha 
-          sido meramente tecnológico, que también, sino que se advierte una transformación igualmente relevante de carácter cultural referida a la forma 
-          en la que los usuarios perciben y consumen este medio digital. En particular, en todo este tiempo los usuarios han pasado de tener un rol 
-          meramente pasivo como meros consumidores observantes a mostrar una verdadera participación activa como contribuidores de contenido. Me gusta 
-          pensar que toda esta evolución se ha producido a lo largo de tres grandes transformaciones que dan lugar a sendas webs bien diferenciadas: 
-          la web nomádica, la web feudal y la web consumista, aquella que los usuarios vivimos hoy en dia. Y es que lo cierto es que cada etapa de este 
-          recorrido históricotiene sus condiciones y sus principios fundacionales. Ser conocedores de estos aspectos es especialmente relevante para 
-          los técnicos y profesionales que creamos soluciones sobre las arquitecturas de canales digitales que proporciona la web y, si queremos ser 
-          buenos asesores de nuestros clientes, tendremos que conocer bien este relato y los principios asociados. Porque los usuarios siempre estarán 
-          donde quieran estar y no donde les pidamos que estén.`,
-      'links'   : [
+          En los últimos 20 años la web se ha reinventado recurrentemente a si misma pasando de ser un mero expositor de contenidos estáticos a ser una verdadera 
+          plataforma de ejecución que da soporte a toda la interacción colaborativa entre los usuarios. Y es que ciertamente, el cambio no ha sido meramente tecnológico, 
+          que también, sino que se advierte una transformación igualmente relevante de carácter cultural referida a la forma en la que los usuarios perciben y consumen 
+          este medio digital. En particular, en todo este tiempo los usuarios han pasado de tener un rol meramente pasivo como meros consumidores observantes a mostrar 
+          una verdadera participación activa como contribuidores de contenido. Me gusta pensar que toda esta evolución se ha producido a lo largo de tres grandes 
+          transformaciones que dan lugar a sendas webs bien diferenciadas: la web nomádica, la web feudal y la web consumista, aquella que los usuarios vivimos hoy en dia. 
+          Y es que lo cierto es que cada etapa de este recorrido históricotiene sus condiciones y sus principios fundacionales. Ser conocedores de estos aspectos es 
+          especialmente relevante para los técnicos y profesionales que creamos soluciones sobre las arquitecturas de canales digitales que proporciona la web y, si 
+          queremos ser buenos asesores de nuestros clientes, tendremos que conocer bien este relato y los principios asociados. Porque los usuarios siempre estarán donde 
+          quieran estar y no donde les pidamos que estén.`,
+      links   : [
         'cto-2018',
         'iasa-2019-1',
         'codemotion-2017'
@@ -385,7 +384,7 @@ Config.define ({
           valorados en base a objetivos razonables y bien definidos gozando de importantes grados de libertad en relación a dónde, cómo y cuándo 
           desarrollo mi trabajo. Si eres capaz de definir un puesto de estas características podemos hablar. Sino renuncio a tu oferta porque tú no 
           estas hecho para mí.`,
-      'links'   : [
+      links   : [
         'iasa-2019-1',
         'cto-2018',
         'iasa-2019-2'
@@ -417,7 +416,7 @@ Config.define ({
           desarrollo típicamente basados en valores como la reusabilidad, la modularidad, el mantenimiento o el desarrollo iterativo e incremental 
           parece que deben ser revisitados. A lo largo de este ameno debate se discuten estos y otros tópicos que describen el espacio donde la Ingeniería 
           del Software se encuentra con La Inteligencia Artificial.`,
-      'links'   : [
+      links   : [
         'erni-2025',
         'cto-2018',
         'iasa-2019-2'
@@ -447,10 +446,40 @@ Config.define ({
           aceleración, adaptación y alcance pero democratizadas en su acceso a través del uso del lenguaje natural y una comunicación más orgánica y natural.
           A lo largo de este debate haremos un intersante recorrido sobre toda la carrera que está recorriendo la Inteligencia Artificial Generativa y 
           discutiremos hasta qué punto este nuevo actor va a suponer un cambio en la forma en que concebimos nuestra profesión como ingenieros.`,
-      'links'   : [
+      links   : [
         'try-it-2025',
         'cto-2018',
         'iasa-2019-2'
+      ]
+    }, {
+      key     : 'producto-2025',
+      title   : 'IA. Revolución o Evolución Digital ',
+      caption : 'Inteligencia Artificial & Producto',
+      image   : '/images/activity/interviews/interview.25.03.png',
+      video   : 'tfyhiBRaCLQ',
+      path    : '/entrevistas/producto-2025',
+      place   : 'Tenemos Que Hablar de Producto',
+      author  : 'Javier Vélez & Álvaro Pérez Bello',
+      date    : '2025',
+      time    : '01:04:17',
+      draft   : false,
+      hidden  : false,
+      lead    : `
+          Que la Inteligencia Artificial está suponiendo un revulsivo nunca antes visto hasta la fecha es algo de lo que ya no cabe ninguna duda. Todas las 
+          profesiones están experimentando transformaciones muy relevantes que imponen una nueva forma de concebir el trabajo, y cuando menos podemos afirmar 
+          que en pocos años esta etapa de digitalización provocará serios cambios en la manera en que desarrollamos nuestras actividades profesionales.
+          Sin embargo, el cambio es una realidad que trasciende este perímetro, evidenciándose plenamente como una auténtica revolución cultural que impone 
+          nuevas formas de relacionarnos con la tecnología. No en vano, la Inteligencia Artificial ya se está manifestando en forma de agentes locales que 
+          intermedian en nuestras actividades cotidianas de acceso al conocimiento y a los servicios en la nube. Lejos de visiones catastrofistas, este cambio
+          debe entenderse como una oportunidad para descubrir e idear una nueva generación de productos digitales que pongan el foco en las necesidades de los 
+          usuarios finales, más allá de características de innovación superflua. Se trata de concebir nuevos modelos de interacción centrados en el lenguaje y 
+          en procesos de negociación dialógica argumentativa contra agentes especializados que funcionen como aliados, extendiendo las fronteras de producción, 
+          adaptación y alcance. A diferencia de ocasiones anteriores, esta nueva evolución no tendrá a la comunidad de tecnólogos como los actores principales 
+          del cambio. Esta será la transformación en la que los diseñadores de producto asumirán un protagonismo central.`,
+      links   : [
+        'try-it-2025',
+        'erni-2025',
+        'cto-2018'
       ]
     } 
   ]
