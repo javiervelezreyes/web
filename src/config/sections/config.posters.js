@@ -502,7 +502,7 @@ Config.define ({
       suelo usar este modelo de madurez para dar respuesta a esta pregunta. Asumiendo que todo este movimiento se popularizó a mediados 
       de 2020 podemos reconocer 6 claros horizontes temporales dentro de este recorrido. A fecha de esta publicación, estamos entrando 
       en la etapa deliberativa marcada por el uso masivo de cadenas de razonamiento profundo y ya se empieza a hablar de una subsiguiente 
-      fase operacional caracterizada por una inteligencia agentica capaz de operar de forma autónoma o supervisada en nombre del usuario. 
+      fase operacional caracterizada por una inteligencia asistencial capaz de operar de forma autónoma o supervisada en nombre del usuario. 
       En las próximas semanas me gustaría repasar con vosotros cada una de las fases de esta hoja de ruta.`,
     links   : [ 'poster-20250604', 'poster-20250603', 'poster-20250602' ]
   }, {
@@ -541,7 +541,7 @@ Config.define ({
       era de productos digitales. Sin embargo, esta interacción esta fuertemente centrada en el procesamiento de texto. Necesitábamos 
       dar un nuevo paso de gigante para hacernos entender con nuestras máquinas en toda suerte de formatos modales, desde una locución 
       de voz o un audio hasta una imagen o un video. Este fue un salto cualitativo importante en la carrera de futuro de la Inteligencia 
-      Artificial y se marca como horizonte modal H2 dentro de mi modelo de madurez. Por que lo cierto es que hasta la llegada de las 
+      Artificial y se marca como horizonte modal H2 dentro del modelo de madurez. Por que lo cierto es que hasta la llegada de las 
       inteligencias multimodales, todas las entradas de recursos de medios tendrían que traducirse previamente a texto para poder ser 
       convenientemente interpretadas por un motor de lenguaje.`,
     links   : [ 'poster-20250902', 'poster-20250901', 'poster-20250604' ]
@@ -561,8 +561,8 @@ Config.define ({
       techo nuevamente y las voces expertas de fabricante anunciaban que el aumento en capacidad de comportamiento inteligente ya no 
       era cuestión de mas carga neuronal. En lugar de eso teníamos que enseñar a nuestros sistemas a pensar. Por medio de la introducción 
       de cadenas, árboles y grafos de razonamiento, la Inteligencia Artificial adquiriría habilidades en la descomposición de problemas, 
-      la planificación o la exploración estratégica, lo que se traduciría a mejores resultados incluso en modelos más pequeños y baratos. 
-      Había llegado el horizonte H3 de la Inteligencia Artificial Deliberativa según como se nombra en mi modelo de madurez. Aún estamos 
+      la planificación o la exploración estratégica, lo que se traduciría en mejores resultados incluso en modelos más pequeños y baratos. 
+      Había llegado el horizonte H3 de la Inteligencia Artificial Deliberativa según como se posiciona en el modelo de madurez. Aún estamos 
       inmersos en esa carrera de mercado y cada vez sorprenden más los resultados obtenidos.`,
     links   : [ 'poster-20250903', 'poster-20250902', 'poster-20250901' ]
   }, {
@@ -579,9 +579,9 @@ Config.define ({
     lead    : `
       La Inteligencia Artificial va camino de convertirse en una verdadera herramienta operativa que nos asista en la realización de 
       tareas complejas. Reservar las butacas para un teatro, planificar las vacaciones gestionando vuelo, estancia y ruta de ocio, 
-      organizar en trabajo, responder a nuestros correos, levantarnos con un resumen de la prensa cada mañana. Todo ello son tareas 
-      que nuestro Agente Inteligente puede resolver por nosotros. Este será el siguiente paso que  yo he marcado como el horizonte H4 
-      de futuro de la Inteligencia Artificial. Ya se empiezan a vislumbrar los primeros pilotos autónomos que son capaces de articular 
+      organizar el trabajo, responder a nuestros correos, levantarnos con un resumen de la prensa cada mañana. Todo ello son tareas 
+      que la IA operacional puede resolver por nosotros. Este será el siguiente paso que aparece como horizonte H4 
+      dentro del modelo de madurez. Ya se empiezan a vislumbrar los primeros pilotos autónomos que son capaces de articular 
       tareas complejas con perfecta eficacia. Inmersos en ese momento que nos dobla la esquina, nos parecerán extraños los días en los 
       que la Inteligencia Artificial era poco más que un asistente de recuperación de información en Internet.`,
     links   : [ 'poster-20250904', 'poster-20250903', 'poster-20250902' ]
@@ -597,12 +597,12 @@ Config.define ({
     draft   : false,
     hidden  : false,
     lead    : `
-      La Inteligencia Artificial Agentica se habrá desplegado al plano social cuando alcancemos el horizonte H5 de mi modelo de madurez. 
-      No es un juego de oráculo sino la transición natural de haber alcanzado el conocimiento operativo. Cuando cada organización y 
-      cliente con presencia activa en Internet disponga de un agente inteligente, las interacciones en la red se convertirán en verdaderos 
-      procesos dialógicos basados en episodios de negociación argumentativa donde tu agente negociará con el agente del teatro o de las 
-      líneas aéreas el mejor precio para una butaca o un billete a Paris. En esos días, la racionalidad con responsabilidad individual y 
-      social será fundamental para el éxito de las interacciones. Ya nos habló John Nash  mucho de esto hace años.`,
+      La Inteligencia Artificial se habrá desplegado al plano social cuando alcancemos el horizonte H5 del modelo de madurez. No es un juego 
+      de oráculo sino la transición natural de haber alcanzado la inteligencia operacional en la fase anterior. Las soluciones de IA, que 
+      hasta la fecha habían mantenido un forzado enfoque monolítico, se convierten ahora en verdaderas arquitecturas modulares con inteligencias 
+      locales moduladas en forma de agentes especializados que resuelven problemas complejos ejecutando protocolos de interacción, coordinación 
+      y cooperación. Se abre la puerta a un nuevo tipo de arquitecturas de inteligencia distribuida donde la unidad de especialización es el 
+      agente inteligente y la ejecución de protocolos el medio para la consecución de unos objetivos compartidos.`,
     links   : [  'poster-20251001', 'poster-20250904', 'poster-20250903' ]
   }, {
     key     : 'poster-20251003',
@@ -616,13 +616,14 @@ Config.define ({
     draft   : false,
     hidden  : false,
     lead    : `
-      Alcanzado el horizonte H6 de la fase inmersiva, la Inteligencia Artificial Agentica se ha convertido en una realidad cotidiana 
-      que permea todas nuestras vidas. De manera autónoma, continua y transparente los agentes en nuestros relojes, tarjetas, teléfonos, 
-      coches, semáforos, interactúan, negocian acciones y se coordinan para poder articular una respuesta bien orquestada que de lugar a 
-      una experiencia plena caracterizada por una conducción sin conductores donde los humanos solo seremos pasajeros consumidores de un 
-      servicio de transporte autónomo. Similares escenarios podrían idearse. El final sólo lo pones tu con tu imaginación. Parece una 
-      realidad lejana propia de una ficción distópica y futurista. Pero lo cierto es que al ritmo de avance de nuestros progresos en 
-      Inteligencia Artificial este tipo de escenarios puede no estar tan lejos.`,
+      Alcanzado el horizonte H6 de la fase inmersiva, la Inteligencia Artificial Agentica se habrá convertido en una realidad cotidiana 
+      que permea cada pequeño espacio de nuestras vidas. De manera autónoma, continua y transparente los agentes en nuestros relojes, 
+      tabletas, televisores, teléfonos, aparatos de cocina, coches, semáforos y un largo etcétera interactuarán negociando acciones y 
+      se coordinarán para poder dar respuesta a las necesidades del usuario. Viviremos, por ejemplo, experiencias protagonizadas por 
+      vehículos autónomos que se coordinan con otros coches en la carretera para ofrecernos un servicio de desplazamiento donde los 
+      humanos sólo tendremos que relajarnos y disfrutar del trayecto. Otros escenarios podrán imaginarse. Parece una realidad lejana 
+      propia de una ficción distópica y futurista. Pero lo cierto es que al ritmo de avance de nuestros progresos en Inteligencia 
+      Artificial este tipo de escenarios puede no estar tan lejos.`,
     links   : [ 'poster-20251002', 'poster-20251001', 'poster-20250904' ]
   }, {
     key     : 'poster-20251004',
