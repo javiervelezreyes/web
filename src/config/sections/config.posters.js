@@ -627,7 +627,7 @@ Config.define ({
     links   : [ 'poster-20251002', 'poster-20251001', 'poster-20250904' ]
   }, {
     key     : 'poster-20251004',
-    title   : 'IA Generativa & Desarrollo',
+    title   : 'IA & Espacio de Operación',
     caption : 'Niveles de Competencia',
     image   : '/images/activity/posters/poster.251004.png',
     path    : '/posters/poster-20251004',
@@ -647,8 +647,8 @@ Config.define ({
     links   : [ 'poster-20251003', 'poster-20251002', 'poster-20251001' ]
   }, {
     key     : 'poster-20251005',
-    title   : 'IA Generativa & Desarrollo',
-    caption : 'Roles & Equipo',
+    title   : 'IA & Espacio de Operación',
+    caption : 'Nivel de Infraestructura',
     image   : '/images/activity/posters/poster.251005.png',
     path    : '/posters/poster-20251005',
     author  : 'Javier Vélez',
@@ -657,19 +657,17 @@ Config.define ({
     draft   : false,
     hidden  : false,
     lead    : `
-      La estructura de roles que dará forma a los equipos de desarrollo de productos de negocio de mañana centrados en Inteligencia 
-      Artificial está aún por conformar. Sin embargo hay ya algunas ideas que son una realidad. Se tratará de estructuras de equipo 
-      con competencias interdisciplinares mucho más equilibradas en el desarrollo operativo. Si algo claro traerá la nueva era de la 
-      Inteligencia Artificial a nuestras vidas en el futuro inmediato es un proceso de democratización productiva que allanará los 
-      caminos y eliminará barreras de fricción, permitiendo que perfiles sin conocimientos técnicos profundos puedan mantener un diálogo 
-      intención continuo con la arquitectura inteligente para prescribir modelos de comportamiento emergentes. Los equipos serán una 
-      moneda de doble cara donde los expertos en negocio diseñarán la inteligencia y los técnicos construirán la plataforma donde dicha 
-      inteligencia tiene lugar.`,
+      Podrá parecer una tontería pero en pro de una defensa de la seguridad muy mal entendida son muchos los clientes y técnicos que 
+      abogan por una Inteligencia Artificial desplegada de manera personalizada y en local. Cierto es que la inteligencia local tiene 
+      su espacio en este panorama pero esta reservada para pequeños modelos de lenguaje desplegados en wearables y dispositivos personales 
+      e incluso herramientas de escritorio. Pero dentro del ámbito empresarial donde nos centramos en esta discusión, el hospedaje de los 
+      grandes modelos de lenguaje debe estar a cargo de grandes proveedores de nube. A la postre, son ellos los únicos que tienen 
+      infraestructura suficiente para correrlos y entrenarlos. Ni tu ni yo estamos en este nivel.`,
     links   : [ 'poster-20251004', 'poster-20251003', 'poster-20251002' ]
   }, {
     key     : 'poster-20251101',
-    title   : 'IA Generativa & Desarrollo',
-    caption : 'Proceso & Actividades',
+    title   : 'IA & Espacio de Operación',
+    caption : 'Nivel de Modelo',
     image   : '/images/activity/posters/poster.251101.png',
     path    : '/posters/poster-20251101',
     author  : 'Javier Vélez',
@@ -678,22 +676,40 @@ Config.define ({
     draft   : false,
     hidden  : false,
     lead    : `
-      Los procesos de desarrollo de productos digitales del mañana también se verán fuertemente afectados por la llegada de las 
-      arquitecturas Centradas en Inteligencia Artificial. Las metodologías dejarán de estar centradas en el desarrollo de activos de 
-      especificación formal algorítmica basados en lenguajes de tercera generación para convertirse en especificaciones intencionales 
-      expresadas en lenguaje natural. La cultura de desarrollo basada en esfuerzos de mantenimiento correctivo y evolutivo cederán espacio 
-      a un proceso basado en la reconstrucción sistemática y automática de los productos en atención a los deltas de cambio que se produzcan 
-      en las especificaciones intencionales. Y así mismo, los limites fronterizos en la experiencia de uso de los productos serán mucho 
-      más difusos. Pero eso ya os lo contaré otro día.`,
+      El uso de modelos generalistas, descargados directamente de un marketplace como base para la creación de modelos de negocio personalizados 
+      por medio de técnicas de entrenamiento propias de la ciencia de datos, como LoRA o fine tunning, es una práctica equivocada relativamente 
+      habitual. Los arquitectos de negocio debemos entender que nuestra responsabilidad no cae dentro de este perímetro. Muy al contrario, 
+      nuestra labor será consumir grandes modelos de lenguaje expuestos como servicios en la nube. No debemos incurrir en el error de competir 
+      con los grandes vendors de mercado. Ellos tienen tiempo dedicado, hordas de ingenieros de Inteligencia Artificial muy especializados, 
+      grandes recursos y contratos privilegiados con los proveedores de infraestructura que nosotros nunca tendremos.`,
     links   : [ 'poster-20251005', 'poster-20251004', 'poster-20251003' ]
   }, {
     key     : 'poster-20251102',
-    title   : 'Arquitecturas Centradas en IA',
-    caption : 'Perspectiva General',
+    title   : 'IA & Espacio de Operación',
+    caption : 'Nivel de Producto',
     image   : '/images/activity/posters/poster.251102.png',
     path    : '/posters/poster-20251102',
     author  : 'Javier Vélez',
     date    : '12/11/2025',
+    time    : '12:00',
+    draft   : false,
+    hidden  : false,
+    lead    : `
+      En el nivel de producto, las organizaciones encuentran el espacio de acción para dar satisfacción a sus necesidades. Es precisamente dentro 
+      de este perímetro donde nuestra labor como arquitectos empresariales coge un mayor protagonismo. Nuestra misión es entender el offering de 
+      capacidades ofrecido por los grandes players de mercado y consumirlo en forma de servicios en la nube. A diez mil pies de altura este camino 
+      pasa por conectar la Inteligencia Artificial general o especializada a los perímetros informacionales y operacionales de la compañía usando 
+      técnicas RAG y CMP respectivamente. Después el producto se crea, esencialmente, a través de esfuerzos de especificación intencional expresados 
+      en lenguaje natural para crear el modelo de comportamiento de producto deseado.`,
+    links   : [ 'poster-20251101', 'poster-20251005', 'poster-20251004', ]
+  }, {
+    key     : 'poster-20251103',
+    title   : 'Arquitecturas Centradas en IA',
+    caption : 'Perspectiva General',
+    image   : '/images/activity/posters/poster.251103.png',
+    path    : '/posters/poster-20251103',
+    author  : 'Javier Vélez',
+    date    : '19/11/2025',
     time    : '12:00',
     draft   : false,
     hidden  : false,
@@ -705,15 +721,15 @@ Config.define ({
       poner esfuerzo en descubrir modelos, principios, patrones técnicas y mecanismos. De momento, me gustaría compartir con vosotros 
       este nuevo marco de referencia arquitectónico que he ideado y entrar a discutir cada una de las capas del mismo en las próximas 
       semanas.`,
-    links   : [ 'poster-20251101', 'poster-20251005', 'poster-20251004', ]
+    links   : [ 'poster-20251102', 'poster-20251101', 'poster-20251005' ]
   }, {
-    key     : 'poster-20251103',
+    key     : 'poster-20251104',
     title   : 'Arquitecturas Centradas en IA',
     caption : 'Capa de Canales',
-    image   : '/images/activity/posters/poster.251103.png',
-    path    : '/posters/poster-20251103',
+    image   : '/images/activity/posters/poster.251104.png',
+    path    : '/posters/poster-20251104',
     author  : 'Javier Vélez',
-    date    : '19/11/2025',
+    date    : '26/11/2025',
     time    : '12:00',
     draft   : false,
     hidden  : false,
@@ -725,15 +741,15 @@ Config.define ({
       y palancas de interacción centrados en el diálogo, y el diseño de productos digitales tendrá que adaptarse bajo el espacio de uso 
       de tales palancas. Los conceptos de experiencia fluida en entornos de una omnicanalidad inmersiva multimodal cogerán más fuerza 
       que nunca hasta tal punto de que probablemente se cambie la anatomía de los dispositivos de acceso según hoy los conocemos.`,
-    links   : [ 'poster-20251102', 'poster-20251101', 'poster-20251005' ]
+    links   : [ 'poster-20251103', 'poster-20251102', 'poster-20251101' ]
   }, {
-    key     : 'poster-20251104',
+    key     : 'poster-20251201',
     title   : 'Arquitecturas Centradas en IA',
     caption : 'Capa de Diálogo',
-    image   : '/images/activity/posters/poster.251104.png',
-    path    : '/posters/poster-20251104',
+    image   : '/images/activity/posters/poster.251201.png',
+    path    : '/posters/poster-20251201',
     author  : 'Javier Vélez',
-    date    : '26/11/2025',
+    date    : '03/11/2025',
     time    : '12:00',
     draft   : false,
     hidden  : false,
@@ -745,15 +761,15 @@ Config.define ({
       salidas modales. Este es el relato para arquitecturas basadas en LLM del horizonte H1 de la Inteligencia Artificial. Pero con 
       el uso de modelos modales del horizonte H2 estas fases preliminares de transformación ya no resultan necesarias. Además de esto, 
       el mantenimiento de la sesión de diálogo también es parte de la responsabilidad de esta capa.`,
-    links   : [ 'poster-20251103', 'poster-20251102', 'poster-20251101' ]
+    links   : [ 'poster-20251104', 'poster-20251103', 'poster-20251102' ]
   }, {
-    key     : 'poster-20251201',
+    key     : 'poster-20251202',
     title   : 'Arquitecturas Centradas en IA',
     caption : 'Capa de Contexto',
-    image   : '/images/activity/posters/poster.251201.png',
-    path    : '/posters/poster-20251201',
+    image   : '/images/activity/posters/poster.251202.png',
+    path    : '/posters/poster-20251202',
     author  : 'Javier Vélez',
-    date    : '03/12/2025',
+    date    : '10/12/2025',
     time    : '12:00',
     draft   : false,
     hidden  : false,
@@ -764,15 +780,15 @@ Config.define ({
       En segundo, la consulta se enriquece con el contexto de conocimiento local competente para la naturaleza de la consulta formulada 
       de acuerdo a la técnica de Retrieval Augmented Generation o RAG. Esta capa de contexto es fundamental para centrar el modelo de 
       razonamiento de la arquitectura en el marco de conocimiento especializado del negocio.`,
-    links   : [ 'poster-20251104', 'poster-20251103', 'poster-20251102' ]
+    links   : [ 'poster-20251201', 'poster-20251104', 'poster-20251103' ]
   }, {
-    key     : 'poster-20251202',
+    key     : 'poster-20251203',
     title   : 'Arquitecturas Centradas en IA',
     caption : 'Capa de Operación',
-    image   : '/images/activity/posters/poster.251202.png',
-    path    : '/posters/poster-20251202',
+    image   : '/images/activity/posters/poster.251203.png',
+    path    : '/posters/poster-20251203',
     author  : 'Javier Vélez',
-    date    : '10/12/2025',
+    date    : '17/12/2025',
     time    : '12:00',
     draft   : false,
     hidden  : false,
@@ -785,15 +801,15 @@ Config.define ({
       H3 la inteligencia será capaz de diseñar cadenas de razonamiento elaboradas para trazar un plan. Hasta ese punto los agentes 
       serán solo informadores de acciones a realizar (function calling). Pero a partir del horizonte operativo (H4) éstos tendrán 
       la capacidad de atender de manera autónoma sobre cada una de sus tareas encomendadas.`,
-    links   : [ 'poster-20251201', 'poster-20251104', 'poster-20251103' ]
+    links   : [ 'poster-20251202', 'poster-20251201', 'poster-20251104' ]
   }, {
-    key     : 'poster-20251203',
+    key     : 'poster-20251204',
     title   : 'Arquitecturas Centradas en IA',
     caption : 'Capa de Servicios',
-    image   : '/images/activity/posters/poster.251203.png',
-    path    : '/posters/poster-20251203',
+    image   : '/images/activity/posters/poster.251204.png',
+    path    : '/posters/poster-20251204',
     author  : 'Javier Vélez',
-    date    : '17/12/2025',
+    date    : '24/12/2025',
     time    : '12:00',
     draft   : false,
     hidden  : false,
@@ -806,7 +822,29 @@ Config.define ({
       en comandos y otros que se orientarán a levantar canales de comunicación dialógica intencional. Con el tiempo es de esperar que 
       este segundo tipo de interacciones vaya ganando terreno a los modelos de la generación anterior.
     `,
-    links   : [ 'poster-20251202', 'poster-20251201', 'poster-20251104' ]
+    links   : [ 'poster-20251203', 'poster-20251202', 'poster-20251201' ]
+  }, {
+    key     : 'poster-20251205',
+    title   : 'La IA en 2025',
+    caption : 'Publicaciones & Reflexiones',
+    image   : '/images/activity/posters/poster.251205.png',
+    path    : '/posters/poster-20251205',
+    author  : 'Javier Vélez',
+    date    : '31/12/2025',
+    time    : '12:00',
+    draft   : false,
+    hidden  : false,
+    lead    : `
+      A lo largo de todo el año 2025 hemos hecho un recorrido por los principales puntos de toque de la Inteligencia Artificial. 
+      Comenzamos posicionando la IA en el marco evolutivo de los modelos de experiencia de usuario, separamos polvo de paja al 
+      posicionar esta corriente de inteligencia artificial dentro del espacio conexionista, presentamos sus fundamentos teóricos 
+      hablando del modelo de neurona artificial y de sus modelos de operación y entrenamiento, abrazamos el debate sobre qué es 
+      verdaderamente inteligencia, estudiamos el conjunto de hitos históricos que nos trajo hasta aquí, discutimos como la IA de 
+      nueva generación ha supuesto una verdadera conquista del lenguaje que ha revolucionado los modelos de interacción, discutimos 
+      los factores de impacto de esta era de transformación digital, presentamos el modelo de madurez de la Inteligencia Artificial 
+      discutiendo cada uno de sus horizontes, abordamos los niveles de operación de esta tecnología, y finalmente, presentamos el 
+      modelo de referencia de las arquitecturas de Inteligencia Artificial actuales.`,
+    links   : [ 'poster-20251204', 'poster-20251203', 'poster-20251202' ]
   }
 ]
 
