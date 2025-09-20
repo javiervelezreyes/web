@@ -26,16 +26,18 @@ Config.define ({
       { icon : '@site.icons.general.twitter'  , href : 'https://twitter.com/javiervelezreye'         }
     ],
     figures : [
-      { ref: '/images/home/hero.01.png', title: 'La Era del Consumismo Web'    },
+      { ref: '/images/home/hero.11.png', title: 'UX & Inteligencia Artificial' },
       { ref: '/images/home/hero.02.png', title: 'Experiencias Líquidas'        },
-      { ref: '/images/home/hero.03.png', title: 'Descubrimiento de Audiencias' },
-      { ref: '/images/home/hero.04.png', title: 'Arquitecturas Adaptativas'    },
-      { ref: '/images/home/hero.05.png', title: 'Modelos Customer Centric'     },
-      { ref: '/images/home/hero.06.png', title: 'Inteligencia Operacional'     },
-      { ref: '/images/home/hero.07.png', title: 'Desarrollo por Objetivos'     },
-      { ref: '/images/home/hero.08.png', title: 'Modelos de Composición'       },
       { ref: '/images/home/hero.09.png', title: 'Computación Cloud'            },
+      { ref: '/images/home/hero.12.png', title: 'IA & Modelos de Aprendizaje'  },
+      { ref: '/images/home/hero.03.png', title: 'Descubrimiento de Audiencias' },
+      { ref: '/images/home/hero.13.png', title: 'IA & Factores de Impacto'     },
       { ref: '/images/home/hero.10.png', title: 'Modelos de Componente'        },
+      { ref: '/images/home/hero.14.png', title: 'IA & Fases & Retos'           },
+      { ref: '/images/home/hero.04.png', title: 'Arquitecturas Adaptativas'    },
+      { ref: '/images/home/hero.15.png', title: 'IA & Diseño de Protucto'      },
+      { ref: '/images/home/hero.05.png', title: 'Modelos Customer Centric'     },
+      { ref: '/images/home/hero.16.png', title: 'IA & Niveles de Competencia'  },
     ]
   },
 
