@@ -62,11 +62,11 @@ Config.define ({
   }, {
     icon : '@site.icons.light.architecture',
     head : 'Arquitectura & Diseño',
-    text : 'Arquitectura de Soluciones. Patrones y Modelos. Pincipios Funfacionales. Patrones de Diseño'
+    text : 'Arquitectura de Soluciones. Modelos de Referencia. Pincipios Funfacionales. Patrones de Diseño'
   }, {
     icon : '@site.icons.light.data',
     head : 'Data & Inteligencia',
-    text : 'Análisis de datos. Inteligencia de Negocio. Gobierno del Dato. Inteligencia y Aprendizaje Automático'
+    text : 'Arquitecturas de datos. Modelos de Lenguaje. Inteligencia Distribuída. Entornos Multiagenticos'
   }, {
     icon : '@site.icons.light.experience',
     head : 'Experiencia & Cliente',
@@ -74,7 +74,7 @@ Config.define ({
   }, {
     icon : '@site.icons.light.strategy',
     head : 'Estrategia & Innovación',
-    text : 'Transformación Digital. Estrategia & Operación. Organización Empresarial. Innovación Continua'
+    text : 'Transformación Digital. Arquitectura Empresarial. Estructura Organizacional. Innovación Continua'
   }],
 
   'site.home.promo' : {
