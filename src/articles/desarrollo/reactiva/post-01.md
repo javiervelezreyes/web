@@ -24,7 +24,7 @@ Muchos de estos elementos constituyen núcleos de interés en el marco del probl
 Las arquitecturas de ejecución reactiva tienen por objeto dar una respuesta sencilla y eficaz a este problema dotando a la solución del entramado de enlaces necesario para que se produzca el disparo de cada reacción pertinente cuando se encuentren las condiciones ambientales necesarias sobre cada una de las señales. Por sencilla nos referimos al hecho de que el vínculo entre cada señal y sus reacciones asociadas debe poder llevarse a cabo de la forma más declarativa y simple posible. Por eficaz hacemos referencia a que la respuesta de cada fragmento reactivo debe producirse adecuadamente en tiempo y forma como para que induzca el comportamiento global sistémico perseguido.
 
 <figure>
-  <img src="/images/activity/articles/lenguajes/reactiva/post-01.01.png" 
+  <img src="/images/activity/articles/desarrollo/reactiva/post-01.01.png" 
        alt="Modelos de Ejecución Reactiva">
   <figcaption>Modelos de Ejecución Reactiva.</figcaption>
 </figure>
@@ -44,7 +44,7 @@ En particular, si analizamos las soluciones reactivas desde una perspectiva espa
 Por su parte, si el análisis lo realizamos desde una perspectiva temporal, igualmente es posible diferenciar entre arquitecturas simples y complejas. En este caso, en las primeras, cada cambio sobre cada señal de estado encuentra una reacción instantánea en elementos reactivos de la solución. Por el contrario, en las segundas, las señales son atendidas en el marco de ventanas temporales de tamaño configurable y las reacciones son disparadas sólo cuando se encuentran ciertas estructuras de cambio secuencial sobre la base de las señales. Este segundo tipo de arquitecturas permite articular técnicas de correlación que resultan muy potentes para identificar señales complejas por composición temporal.
 
 <figure>
-  <img src="/images/activity/articles/lenguajes/reactiva/post-01.02.png" 
+  <img src="/images/activity/articles/desarrollo/reactiva/post-01.02.png" 
        alt="Arquitecturas Reactivas">
   <figcaption>Arquitecturas Reactivas.</figcaption>
 </figure>
@@ -56,7 +56,7 @@ Otro aspecto relevante de análisis interesante gira en torno al carácter de ac
 Aunque en un principio cabría pensar que los modelos ideales de ejecución reactiva son aquellos que presentan un claro desacoplamiento tanto espacial como temporal, lo cierto es que esto no tiene por qué ser así. Sobre la dimensión espacial, el acoplamiento permite mantener el control de asociación que se produce entre cada señal y su conjunto de reacciones asociadas en el marco de la arquitectura lo cual simplifica notablemente las actividades de gobierno y desarrollo. Por su parte, sobre la dimensión temporal, aunque el desacoplamiento permite articular cierta suerte de respuestas diferidas sobre el estado de las señales lo más frecuente es desear que el comportamiento reactivo sistémico se produzca instantáneamente después del cambio de las señales.
 
 <!-- <figure>
-  <img src="/images/activity/articles/lenguajes/reactiva/post-01.03.png" 
+  <img src="/images/activity/articles/desarrollo/reactiva/post-01.03.png" 
        alt="Arquitecturas Reactivas & Acoplamiento">
   <figcaption>Arquitecturas Reactivas & Acoplamiento.</figcaption>
 </figure> -->

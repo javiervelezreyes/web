@@ -20,7 +20,7 @@ En el desarrollo de software muchos problemas pueden describirse en términos de
 Todo esto es así con independencia de los artefactos de soporte que se utilicen para conferir ejecución paralela a los agentes. Este es un asunto del que ya nos ocuparemos más adelante. Porque lo que verdaderamente es relevante aquí, es establecer los mecanismos de coordinación pertinentes que permitan a los agentes acompasar sus operaciones de contribución en tiempo y forma tal que se garantice el avance adecuado de la actividad como un todo sistémico. 
 
 <figure>
-  <img src="/images/activity/articles/lenguajes/concurrente/post-01.01.png" 
+  <img src="/images/activity/articles/desarrollo/concurrente/post-01.01.png" 
        alt="Ejecución Concurrente">
   <figcaption>Ejecución Concurrente.</figcaption>
 </figure>
@@ -77,7 +77,7 @@ Como descubriremos a lo largo de esta serie, sobre cada uno de estos dos tipos d
 Pero con independencia de todo lo anterior, lo cierto es que en el desarrollo de la lógica de coordinación concurrente pueden reconocerse una colección de patrones de diseño que resultan de aplicación recurrente en las fases de bloqueo y desbloqueo. En la figura 2, pueden verse representados algunos de los más relevantes. En el caso de ser aplicados sobre arquitecturas de memoria compartida los cilindros representan colas de bloqueo mientras que si usamos arquitecturas de mensajería dichos cilindros corresponderían a canales de comunicación entre agentes.
 
 <figure>
-  <img src="/images/activity/articles/lenguajes/concurrente/post-01.02.png" 
+  <img src="/images/activity/articles/desarrollo/concurrente/post-01.02.png" 
        alt="Patrones de Coordinación">
   <figcaption>Patrones de Coordinación.</figcaption>
 </figure>

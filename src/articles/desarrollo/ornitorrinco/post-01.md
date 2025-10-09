@@ -38,7 +38,7 @@ JavaScript no tiene tipos fuertes, ni soporta sustitución Liskoviana. No cierra
 Quiero pensar que todo esto es asi, no de forma incidental, como se ha venido creyendo, sino estratégica. Si no existen tipos fuertes, tal vez ello sea para permitir una conversión más flexible durante la dinámica de ejecución. Si los objetos son entidades abiertas quizá sea para poder crear arquitecturas adaptativas que devengan en cambios evolutivos a lo largo del tiempo con naturalidad. Si no se dan estirpes polimórficas igual es porque el lenguaje invita a pensar en modelos de objetos basados en prototipos operados por clonación y referencia. Si no se ofrece encapsulación quizá es para dejar en manos del desarrollador la modulación adecuada de los principios de protección de la información.
 
 <figure>
-  <img src="/images/activity/articles/lenguajes/ornitorrinco/post-01.01.png" 
+  <img src="/images/activity/articles/desarrollo/ornitorrinco/post-01.01.png" 
        alt="Modelos de Orientación a Objetos">
   <figcaption>Modelos de Orientación a Objetos.</figcaption>
 </figure>

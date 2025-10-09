@@ -34,7 +34,7 @@ La realización de actividades de desarrollo basadas en programación asíncrona
 En efecto, una vez que cierta función o procedimiento ha abandonado el flujo normal de control para ejecutarse de forma paralela resulta imposible que lo retome más adelante tras su terminación. La única solución en estos casos es proporcionar, en la secuencia de llamada, la lógica de continuación suficiente que pueda ser utilizada para procesar subsiguientemente el valor de retorno de la función.
 
 <figure>
-  <img src="/images/activity/articles/lenguajes/asincronia/post-01.01.png" 
+  <img src="/images/activity/articles/desarrollo/asincronia/post-01.01.png" 
        alt="Modelos de Asincronía">
   <figcaption>Modelos de Asincronía.</figcaption>
 </figure>

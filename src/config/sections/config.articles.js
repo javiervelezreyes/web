@@ -13,11 +13,11 @@ Config.define ({
   },
 
   'site.articles.categories' : [{
-    key     : 'lenguajes',
+    key     : 'desarrollo',
     title   : 'Ingeniería & Desarrollo',
     caption : 'Desarrollo y Construcción de Software',
     icon    : '@site.icons.light.development',
-    path    : '/articulos/lenguajes',
+    path    : '/articulos/desarrollo',
     lead    : `
       Todo proceso de digitalización nace de un esfuerzo de ingenería articulado a través del desarrollo. 
       Más allá de sintaxis particulares y modelos o estilos de codificación, resulta especialmente importante 

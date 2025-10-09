@@ -32,7 +32,7 @@ En concreto, en linea con lo anterior, es correcto decir que la orientación a o
 Con los ejemplos anteriores, parece que se presenta mucho más nítido el concepto de modelo de abstracción y su relación dentro del marco de un paradigma. Es interesante advertir cómo, en efecto, cada modelo de abstracción ofrece un tipo de artefacto arquitectónico propio que presenta una estructura anatómica y una pragmática de operación característica. Pensar en un paradigma, a menudo se traduce en reflexionar en base al modelo de abstracción del mismo. Adquirir competencias en el desarrollo de arquitecturas de un nuevo paradigma, exige un cambio mental que es, sin lugar a dudas el mayor reto cognitivo que los desarrolladores hacemos en nuestro recorrido profesional. 
 
 <figure>
-  <img src="/images/activity/articles/lenguajes/abstraccion/post-01.01.png" 
+  <img src="/images/activity/articles/desarrollo/abstraccion/post-01.01.png" 
        alt="Paradigmas de Construcción de Software">
   <figcaption>Construcción de Software.</figcaption>
 </figure>

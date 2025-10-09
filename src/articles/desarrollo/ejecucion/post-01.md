@@ -36,7 +36,7 @@ El uso simultáneo de diferentes modelos de ejecución dentro de un mismo paradi
 Si bien, como explicamos, no todos los modelos de ejecución son mutuamente incompatibles, sí que existen ciertas restricciones en relación a su aplicación conjugada que deberían tenerse en cuenta. Hacer una descripción detallada de ese tipo de restricciones resultaría un tanto complejo y prematuro en este punto. Sin embargo, para arrojar un poco de luz en este sentido, sí que podemos proporcionar un espacio de descripción característico que ayude a entender el propósito que persigue cada modelo de ejecución y la relación específica que tienen unos con otros. 
 
 <figure>
-  <img src="/images/activity/articles/lenguajes/ejecucion/post-01.01.png" 
+  <img src="/images/activity/articles/desarrollo/ejecucion/post-01.01.png" 
        alt="Paradigmas de Construcción de Software">
   <figcaption>Ejecución de Software.</figcaption>
 </figure>

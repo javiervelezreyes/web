@@ -179,7 +179,7 @@ export default Config.define ({
   },
 
   'site.redirects' : [
-    { key: 'el-efecto-ornitorrinco'                             , path : '/articulos/lenguajes#ornitorrinco'                                    },
+    { key: 'el-efecto-ornitorrinco'                             , path : '/articulos/desarrollo#ornitorrinco'                                   },
     { key: 'la-funcion-que-no-lo-era'                           , path : '/articulos/recortes/javascript/la-funcion-que-no-lo-era'              },
     { key: 'las-tres-evaluaciones-de-la-programacion-funcional' , path : '/articulos/recortes/javascript/las-tres-evaluaciones-del-funcional'   },
     { key: 'optimizacion-por-recursion-en-la-cola'              , path : '/articulos/recortes/javascript/optimizacion-por-recursion-en-la-cola' },
