@@ -749,7 +749,7 @@ Config.define ({
     image   : '/images/activity/posters/poster.251201.png',
     path    : '/posters/poster-20251201',
     author  : 'Javier Vélez',
-    date    : '03/11/2025',
+    date    : '03/12/2025',
     time    : '12:00',
     draft   : false,
     hidden  : false,
